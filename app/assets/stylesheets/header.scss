@@ -11,6 +11,7 @@
   color: $light;
 }
 
+
 .header-bg-home {
   background: linear-gradient(
   to bottom,
@@ -33,8 +34,17 @@
 .home-header {
   background: image-url('main-hero-compressor.jpg') $darknight no-repeat top center;
 }
-.workshop-header {
-  background: image-url('accenture.png') $darknight no-repeat top center;
+.fast-track-header {
+  background: image-url('http://res.cloudinary.com/coder-factory/image/upload/v1418032899/ontrain2_u37tnf.jpg') $darknight no-repeat top center;
+}
+.ft-application-header {
+  background: image-url('http://res.cloudinary.com/coder-factory/image/upload/v1418033799/background_jetg2c.jpg') $darknight no-repeat top center;
+}
+.community-header {
+  background: image-url('http://res.cloudinary.com/coder-factory/image/upload/v1418034058/heart_fivwmy.jpg') $darknight no-repeat top center;
+}
+.workshops-header {
+  background: image-url('desk.jpg') $darknight no-repeat top center;
 }
 
 .call-to-action-wrapper {

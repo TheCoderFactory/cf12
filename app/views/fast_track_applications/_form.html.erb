@@ -1,30 +1,16 @@
+<section class="darknight">
 <div class="row">
-  <div class="col-md-10 col-md-offset-1">
-    <div class="text-center">
-      <h1 id="fast-track">Fast Track Application</h1>
-      <p class="lead blue-font">This is your first step towards an exciting new life in the world of tech. As places are limited, you are advised to complete your application to the best of your ability.</p>
-    </div>
+  <div class="col-xs-12 col-lg-offset-2 col-lg-8">
+    <br>
     <div class="panel panel-default">
       <div class="panel-body">
+      <p class="lead blue-font">This is your first step towards an exciting new life in the world of tech. As places are limited, you are advised to complete your application to the best of your ability.</p>
         <%= simple_form_for(@fast_track_application) do |f| %>
           <%= f.error_notification %>
             <%= invisible_captcha %>
             <h2>Part 1</h2>
             <br>
-            <div class="alert alert-default">
-              <label class="check_boxes optional control-label">Which programme are you applying for?</label>
-              <br>
-              <label for="fast_track_application_programme_choice_24_week_programme_aud_21900">
-                <input class="" id="fast_track_application_programme_choice_24_week_programme_aud_21900" name="fast_track_application[programme_choice][]" type="checkbox" value="24 week programme (AUD $21900)" /> 24 week programme (AUD $21900)
-              </label>
-              <br>
-              <label for="fast_track_application_programme_choice_12_week_programme_aud_14200">
-                <input class="" id="fast_track_application_programme_choice_12_week_programme_aud_14200" name="fast_track_application[programme_choice][]" type="checkbox" value="12 week programme (AUD $14200)" /> 12 week programme (AUD $14200)
-              </label>
-              <input name="fast_track_application[programme_choice][]" type="hidden" value="" />
-              <br>
-
-              </div>
+            
             <div class="form-group">
               <%= f.input :one_line, label: 'Use one sentence to describe yourself', input_html: { class: 'form-control' } %>
 
@@ -107,7 +93,8 @@
                 <%= f.input :email, input_html: { class: 'form-control' } %>
               </div>
           <div class="submit">
-            <%= f.submit 'Apply for Fast Track', class: 'btn btn-material-lightblue btn-lg' %>
+            <%= f.submit 'Apply for Fast Track', class: 'btn-block btn-block-dirtygold' %>
+            <br><br>
             <p class="blue-font">A confirmation will be sent to you almost immediately.</p>
           </div>
 

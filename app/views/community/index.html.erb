@@ -1,29 +1,13 @@
 <%= content_for :title, 'Join the Coder Factory Community' %>
 <%= content_for :description, 'Check out the great community events and supportive partners. Join our thriving community of creators, makers and coders.' %>
 <% active_nav_item :community %>
+<% content_for :header, 'community-header' %>
+<% @community = true %>
 
-
-
-				<h1>We <span class="red"><i class="fa fa-heart"></i></span>community</h1>
-				<h2 class="subtitle">Be a part of a vibrant and welcoming<br> community of coders and technology fans.</h2>
-				<br>
-				
-					<!-- <div class="text-center">
-					
-					<a href="#" class="btn btn-primary btn-lg btn-raised wow fadeInUp" data-toggle="modal" data-target="#register">Join the movement</a>
-				</div> -->
-					<div class="learn-more">
-						<a href="#feature-1">learn more<br /><i class="fa fa-angle-down"></i></a>
-					</div>
-
-	
-
-
-<section class="section" id="events">
-	<div class="container">
+<section class="vibrant">
 		<div class="row">
-			<div class="col-xs-12 col-lg-offset-1 col-lg-10">
-				<h2 class="main-title wow fadeInUp text-center">Events & Meetup Groups</h2>
+			<div class="col-xs-12 col-lg-offset-2 col-lg-8">
+				<h2 class="section-heading">Events & Meetup Groups</h2>
 				<div class="row">
 					<div class="col-lg-6">
 						<div class="panel panel-material-lightblue wow fadeInUp" data-wow-delay="0.6s">
@@ -32,9 +16,10 @@
 						  </div>
 						  <div class="panel-body blue-font">
 						    <p class="panel-text">A fortnightly meetup for coders of all stripes. Beginners going through tutorials, experienced coders working on their own projects. Be inspired and socialise with other tech fans. </p>
-						  <a href="http://www.meetup.com/Sunday-Coder-Club/" target="_blank" class="btn btn-material-lightblue btn-sm">Sydney</a>
+						    <br>
+						  <a href="http://www.meetup.com/Sunday-Coder-Club/" target="_blank" class="btn-block btn-block-darknight btn-small">Sydney</a>
 						  &nbsp;
-						  <a href="http://www.meetup.com/Brisbane-Coder-Club/" target="_blank" class="btn btn-material-lightblue btn-sm">Brisbane</a>
+						  <a href="http://www.meetup.com/Brisbane-Coder-Club/" target="_blank" class="btn-block btn-block-darknight btn-small">Brisbane</a>
 						  </div>
 
 						</div>
@@ -45,9 +30,9 @@
 						    <h3><i class="fa fa-lg fa-graduation-cap"></i> Sydney on Rails</h3>
 						  </div>
 						  <div class="panel-body blue-font">
-						    <p class="panel-text">A fortnightly workshop session to help you get started with Ruby on Rails. Aimed at total beginners, it's a great opportunity to be introduced to the community.</p>
+						    <p class="panel-text">A fortnightly workshop session to help you get started with Ruby on Rails. Aimed at total beginners, it's a great opportunity to be introduced to the community and create your first application.</p>
 						    <br>
-						  <a href="http://www.meetup.com/Sydney-on-Rails/" target="_blank" class="btn btn-material-orange btn-sm">Sydney</a>
+						  <a href="http://www.meetup.com/Sydney-on-Rails/" target="_blank" class="btn-block btn-block-darknight btn-small">Sydney</a>
 						  </div>
 						</div>
 					</div>
@@ -60,8 +45,8 @@
 						  </div>
 						  <div class="panel-body blue-font">
 						    <p class="panel-text">A large community of web app coders coming together to learn and connect. With industry experts presenting and sharing their knowledge, it's a great place to learn something new.</p>
-
-						  <a href="http://www.meetup.com/SydneyWebApps/" target="_blank" class="btn btn-material-lightgreen btn-sm">Sydney</a>
+						    <br>
+						  <a href="http://www.meetup.com/SydneyWebApps/" target="_blank" class="btn-block btn-block-darknight btn-small">Sydney</a>
 						  </div>
 						</div>
 					</div>
@@ -76,30 +61,26 @@
 
 								<p class="panel-text">This group is a fanatastic opportunity for young entrepreneurs to meet each other, share ideas and learn about how technology can bring their dreams to life.</p>
 								<br>
-						  <a href="http://www.meetup.com/Entrepreneurial-Australians/" target="_blank" class="btn btn-material-pink btn-sm">Sydney</a>
+						  <a href="http://www.meetup.com/Entrepreneurial-Australians/" target="_blank" class="btn-block btn-block-darknight btn-small">Sydney</a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="text-center"><a href="#" class="btn btn-flat btn-link disabled">Want to list your meetup group here?</a>
-				<a href="#contact" class="btn btn-primary btn-flat">Get in touch.</a>
+				
 			</div>
-		<div class="learn-more wow fadeInUp text-center" data-wow-delay="1.25s">
-			<a href="#what" style="color:#1f2b3a"><br /><i class="fa fa-angle-down"></i></a>
-		</div>
+		
 			</div>
 		</div>
 	</div>
 </section>
 
 
-<section class="section lightgray" id="partners">
-	<div class="container">
+<section id="partners">
 		<div class="row">
-			<div class="col-xs-12 col-lg-offset-1 col-lg-10">
-				<h2 class="main-title wow fadeInUp text-center">Our Amazing Partners</h2>
+			<div class="col-xs-12 col-lg-offset-2 col-lg-8">
+				<h2 class="section-heading dark">Our Amazing Partners</h2>
 				
-						<p class="lead blue-font text-center">These great companies support the Coder Factory tech community and a diverse and welcoming industry.</p>
+						<p class="lead blue-font text-center">These great companies support the Coder Factory tech community and are doing their part to create a diverse and welcoming industry.</p>
 						<div class="row">
 							<div class="panel panel-default">
 					<div class="panel-body blue-font partner-logo-box">
@@ -235,12 +216,9 @@
 					</div>
 					</div>
 				</div>
-				<div class="text-center"><a href="#" class="btn btn-flat btn-link disabled">Want to show your support?</a>
-				<a href="#" class="btn btn-primary btn-flat">Become a community partner.</a>
+				
 			</div>
-		<div class="learn-more wow fadeInUp text-center" data-wow-delay="1.25s">
-			<a href="#what" style="color:#1f2b3a"><br /><i class="fa fa-angle-down"></i></a>
-		</div>
+		
 			</div>
 		</div>
 	</div>
@@ -276,11 +254,10 @@
 	</div>
 </section> -->
 
-<section class="section" id="hackathons">
-	<div class="container">
+<section class="calm" id="hackathons">
 		<div class="row">
-			<div class="col-xs-12 col-lg-offset-1 col-lg-10">
-				<h2 class="main-title wow fadeInUp text-center">Hackathons (coming soon)</h2>
+			<div class="col-xs-12 col-lg-offset-2 col-lg-8">
+				<h2 class="section-heading">Hackathons (coming soon)</h2>
 				<div class="panel panel-default">
 					<div class="panel-body blue-font">
 						<p class="lead">Coder Factory has some awesome and exciting hackathons on the way which will be disrupting the way that hackathons are run.</p>

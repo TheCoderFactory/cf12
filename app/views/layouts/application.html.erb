@@ -94,7 +94,7 @@
         <% if @full_header %>
         <div class="call-to-action-wrapper">
           <h2 class="call-to-action-headline">Build your future</h2>
-          <p class="call-to-action-info">There will be two kinds of people in this world in the near future, those who understand how the technology around us works, and those who don't. Start your journey today!</p>
+          <p class="lead call-to-action-info">There will be two kinds of people in this world in the near future, those who understand how the technology around us works, and those who don't. Start your journey today!</p>
         </div>
         <% end %>
 
@@ -119,9 +119,41 @@
           </h1>
         </div>
         <% end %>
+        <% if @fast_track_header %>
+          <div class="call-to-action-wrapper">
+          <h1 class="call-to-action-headline">Fast Track</h1>
+        <p class="lead call-to-action-info">Your boarding pass to the exciting world of high tech.</p>
+        <br>
+        <a href="/" class="btn-block btn-block-darknight">Download Info Pack</a>  <a href="/fast-track-application" class="btn-block btn-block-dirtygold">Apply Now</a>
+        <% end %>
+        <% if @ft_appliction %>
+          <div class="call-to-action-wrapper">
+          <h1 class="call-to-action-headline">Fast Track Application</h1>
+          </div>
+        <% end %>
+        <% if @community %>
+          <div class="call-to-action-wrapper">
+          <h1 class="call-to-action-headline">We <span class="red"><i class="fa fa-heart"></i></span> community</h1>
+        <p class="lead call-to-action-info">Be a part of a vibrant and welcoming<br> community of coders and technology fans.</p></div>
+        <% end %>
+        <% if @workshops %>
+          <div class="call-to-action-wrapper">
+          <h1 class="call-to-action-headline"><%= @product_category.name %></h1>
+        <p class="lead call-to-action-info">Anyone can do it! And it's fun.</p></div>
+        <% end %>
+        <% if @product %>
+          <div class="call-to-action-wrapper">
+            <h1 class="call-to-action-headline"><%= @product.name %></h1>
+            <p class="lead call-to-action-info"><%= @product.short_description.html_safe %></p></div>
 
+        <% end %>
       </div>
-
+      <!-- <div class="bar">
+          <div class="inner">
+            <p class="call">Call us today on <b>01202 901 101</b> if you have any questions.</p>
+            <p class="offer"><b>This week only!</b> FREE next day shipping on all orders over &pound;30.</p>
+          </div>
+        </div> -->
 
     </header>
 

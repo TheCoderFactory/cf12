@@ -1,6 +1,7 @@
 @import
 
 // App Variables & Settings
+"bootstrap.min.css",
 "config.scss",
 "reset.scss",
 
@@ -75,15 +76,46 @@
 }
 
 
+.darknight {
+	background-color: $darknight;
+}
+.calm {
+	background-color: $calm;
+}
+.dirty-gold {
+	background-color: $dirty-gold;
+}
+.vibrant {
+	background-color: $vibrant;
+}
+.section-heading {
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 20px;
+	color: white;
+}
+.dark {
+	color: $darknight;
+}
 
+.red {
+	color: $vibrant;
+}
+.section-buttons {
+	margin: 30px 10px;
+	text-align: center;
+}
 
+/*.course-content {
+	color: white;
+}*/
 
-
-
-
-
-
-
+#dropdown 
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 
 
 
@@ -418,14 +450,14 @@ section.content {
 				margin:25px 0;
 				font-size:0.8em;
 				td { border:1px solid #C4DDDE; background:#f4f9f9; line-height:1.5; padding:10px; vertical-align:middle;}
-				td.buy { width:150px; background:$light;}
+				td.buy { width:30%; background:$light;}
 				td h4 { font-size:1.2em; color:#216D74;}
 				td p.stock { float:right; margin-top:10px;}
 				td p.stock.yes { color:#5DBCC4; font-size:1em; background:image-url('tick.svg') no-repeat 0 3px; background-size:13px; padding-left:18px; font-weight:600}
 				td p.stock.no { color:#c04a4a; font-size:1em; background:image-url('unhappy.svg') no-repeat 0 3px; background-size:13px; padding-left:18px; font-weight:600;}
 
 				td form {
-					input { float:right; background:#256D73; border:0; font-family:$body-font; height:24px; padding:4px 12px; color:$light; border-radius:4px; font-weight:bold; font-size:0.9em; margin-left:4px;}
+					input { float:right; background:$dirty-gold; border:0; font-family:$body-font; height:24px; padding:4px 12px; color:$light; border-radius:4px; font-weight:bold; font-size:0.9em; margin-left:4px;}
 					select {
 						-webkit-appearance: none;
 						background:image-url('down-arrow.svg') #DEE9EB no-repeat 24px 11px;
@@ -553,6 +585,10 @@ section.content {
 			margin-bottom:25px;
 			padding:15px;
 			padding-left:50px;
+			position: fixed;
+			right: 0;
+			top: 0;
+			z-index:5000;
 			p.buttons {
 				margin-top:15px;
 				a {

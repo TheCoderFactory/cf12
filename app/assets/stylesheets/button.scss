@@ -24,6 +24,11 @@
     opacity: 0.5;
   }
 }
+.btn-block:hover {
+  /*opacity: 0.8;*/
+  text-decoration: none;
+  color: white;
+}
 
 .btn-block-calm {
   background: $calm;
@@ -62,6 +67,9 @@
   &:hover {
     background: darken($dirty-gold, 25);
   }
+}
+.btn-small {
+  padding:5px;
 }
 
 .btn-circle {

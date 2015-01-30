@@ -53,6 +53,10 @@
   font-size: 1.1em;
   text-decoration: none;
 }
+.logo:hover {
+  text-decoration: none;
+  color: $light;
+}
 
 .logo-title {
   font-size: $font-size-large;

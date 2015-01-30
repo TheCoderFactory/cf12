@@ -1,14 +1,6 @@
 GIT
-  remote: https://github.com/TheCoderFactory/stripe
-  revision: 672574492d99d0a82e63b69cf7c7130ce0dc40f0
-  specs:
-    shoppe-stripe (1.2.1)
-      coffee-rails
-      shoppe
-      stripe (~> 1.8.7)
-
-PATH
-  remote: ../shoppe
+  remote: https://github.com/TheCoderFactory/CFShoppe
+  revision: 4b8b644917f1af3335e2716086ddb2469cb44560
   specs:
     shoppe (1.0.6)
       bcrypt (~> 3.1, >= 3.1.2)
@@ -28,6 +20,15 @@ PATH
       roo (>= 1.13.0)
       sass-rails (~> 5.0)
       uglifier (>= 2.2, < 3.0)
+
+GIT
+  remote: https://github.com/TheCoderFactory/stripe
+  revision: 672574492d99d0a82e63b69cf7c7130ce0dc40f0
+  specs:
+    shoppe-stripe (1.2.1)
+      coffee-rails
+      shoppe
+      stripe (~> 1.8.7)
 
 GEM
   remote: https://rubygems.org/
@@ -175,6 +176,7 @@ GEM
       daemon_controller (>= 1.2.0)
       rack
       rake (>= 0.8.1)
+    pg (0.18.1)
     polyamorous (1.1.0)
       activerecord (>= 3.0)
     quiet_assets (1.1.0)
@@ -311,6 +313,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   passenger
+  pg
   quiet_assets
   rack-zippy
   rails (= 4.2.0)

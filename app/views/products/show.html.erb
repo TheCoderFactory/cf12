@@ -1,16 +1,19 @@
 <%# active_nav_item :catalogue %>
 <% @page_title = @product.name + " - " + @product.product_category.name %>
-<div class="product">
-  <% if @product.default_image %>
-    <div class="img" style="background-image:url(<%= asset_path @product.default_image %>)"></div>
-  <% end %>
-  <h2>
-    <%= @product.name %>
-  </h2>
-  <p class="intro">
-    <%= @product.short_description %>
-  </p>
+
+<div class="row">
+  <div class="col-xs-12 col-lg-8 col-lg-offset-2">
+  
+  
+  
+  <div class="workshop-description">
+    <%= @product.description.html_safe %>
+  </div>
+  <div class="product">
+  <div style="background-color: #<%= @product.in_the_box %>">
   <% if @product.has_variants? %>
+  <h3 class="section-heading">Choose your workshop</h3>
+
     <table class="variants">
       <% @product_variants.each do |variant| %>
         <tr>
@@ -31,11 +34,12 @@
             </p>
           </td>
           <td class="buy">
-            <%= form_tag buy_product_path(@product.product_category.permalink, @product.permalink, :variant => variant.id), :class => (variant.in_stock? ? 'in-stock' : 'no-stock') do %>
-              <p>
-                <%= select_tag 'quantity', options_for_select([1,2,3,4,5,6,7,8,9]), :disabled => !variant.in_stock? %>
-                <%= submit_tag 'Add to basket', :disabled => !variant.in_stock? %>
-              </p>
+          
+            <%= form_tag buy_product_path(@product.product_category.permalink, @product.permalink, :variant => variant.id), :class => (variant.in_stock? ? 'in-stock form-inline' : 'no-stock form-inline') do %>
+              <div class="form-group">
+                <%= select_tag 'quantity', options_for_select([1,2,3,4,5,6,7,8,9]), :disabled => !variant.in_stock?, id: 'dropdown', class: 'form-control' %>
+                <%= submit_tag 'Add to basket', :disabled => !variant.in_stock?, class: 'btn-block btn-block-dirtygold btn-block-small' %>
+              </div>
             <% end %>
           </td>
         </tr>
@@ -107,3 +111,5 @@
     <%# markdown @product.description %>
   </div>
 </div>
+
+</div></div></div>

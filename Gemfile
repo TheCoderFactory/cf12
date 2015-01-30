@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
-gem 'shoppe', path: '../shoppe'
+gem 'shoppe', git: 'https://github.com/TheCoderFactory/CFShoppe'
 gem 'shoppe-stripe', :require => 'shoppe/stripe', git: 'https://github.com/TheCoderFactory/stripe'
 gem 'devise'
 gem 'simple_form'
@@ -40,7 +40,7 @@ end
 
 group :production do
   gem 'rails_12factor'
-  # gem 'pg'
+  gem 'pg'
   gem "passenger"
 end
 # Use SCSS for stylesheets

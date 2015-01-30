@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  mount Shoppe::Engine => "/shoppe"
+  mount Shoppe::Engine => "/store"
   get 'thanks', to: 'thanks#index'
 
   get 'fast-track-application', to: 'fast_track_applications#new'
