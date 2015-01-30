@@ -8,7 +8,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :slug
       t.boolean :publish
       t.date :published_date
-      t.references :author, index: true
+      # t.references :author, index: true
 
       t.timestamps null: false
     end
