@@ -1,3 +1,4 @@
+<% unless @hide_basket %>
 <div class="basket">
   <% if has_order? && current_order.has_items? %>
     <p class="quantity"><b><%= pluralize(current_order.total_items, 'item') %></b> in your shopping bag</p>
@@ -6,7 +7,7 @@
       <p>Includes  discount</p>
     <% end %>
     <p class="buttons">
-      <%= link_to "View my bag", basket_path %>
+      <%# link_to "View my bag", basket_path %>
       <%= link_to "Checkout", checkout_path, :class => 'checkout' %>
     </p>
   <% else %>
@@ -14,3 +15,4 @@
     <p class="empty">How dare it be?! Why not add some stuff to it?</p>
   <% end %>
 </div>
+<% end %>

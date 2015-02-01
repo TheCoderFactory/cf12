@@ -1,15 +1,42 @@
 <% @page_title = 'Checkout' %>
-<%= render 'checkout_sidebar' %>
+<% @hide_newsletter_registration = true %>
+<% @hide_basket = true %>
+<%= content_for :header, 'checkout-header' %>
+
+<div class="row"><div class="col-xs-12 col-lg-8 col-lg-offset-2">
+<div class="panel panel-default"><div class="panel-body">
 <div class="checkout">
-  <h2>Let's do this thing!</h2>
+  <h2>Payment</h2>
   <p class="intro">
-    Brilliant! We have everything we need to place the order. Check the items below carefully,
-    and if you're happy click 'Place Order' to submit the order.
+    Please click on the Pay button to secure your place.
   </p>
   <%= render 'shared/order_items', :order => current_order, :readonly => true %>
-  <%= form_tag checkout_confirmation_path, :method => :patch, :class => 'disableable' do %>
-    <p class="submit">
-      <%= submit_tag "Place Order", :class => 'order' %>
-    </p>
-  <% end %>
+  <div class="pull-right">
+  <form accept-charset="UTF-8" action="<%= checkout_payment_path %>" method="post">
+  <div style="display:none">
+    <input name="utf8" type="hidden" value="&#x2713;" />
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+  </div>
+  <noscript>You must <a href="http://www.enable-javascript.com" target="_blank">enable JavaScript</a> in your web browser in order to pay via Stripe.</noscript>
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<%= Shoppe.settings.stripe_publishable_key %>"
+    data-amount="<%= current_order.total.to_i * 100 %>"
+    data-name="Coder Factory"
+    data-description="<%= pluralize(current_order.order_items.count, 'item') %>"
+    data-image="<%= asset_url('FBlogo.png') %>"
+    data-email='<%= current_order.email_address %>'
+    data-currency="aud"
+    data-label="Pay now">
+  </script>
+</form>
 </div>
+
+  <%# form_tag checkout_confirmation_path, :method => :patch, :class => 'disableable' do %>
+    <!-- <p class="submit">
+      <%# submit_tag "Place Order", :class => 'order' %>
+    </p> -->
+  <%# end %>
+</div>
+</div></div></div></div>
+

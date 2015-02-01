@@ -1,20 +1,47 @@
 <% active_nav_item :catalogue %>
-<% @page_title = 'Catalogue' %>
+<% @page_title = 'Choose your Coder Factory course.' %>
 <% @course_header = true %>
-<div class="categories">
-  <ul>
-    <% for category in @product_categories %>
-      <li>
-        <!-- <div class="img" style="<%# category.image ? 'background-image:url(' + category.image.path + ' )' : 'background-color:#efefef' %>"></div> -->
-        <div class="space">
-          <h4>
-            <%= link_to category.name, products_path(category.permalink) %>
-          </h4>
-          <p>
-            <%= category.description %>
-          </p>
-        </div>
-      </li>
-    <% end %>
-  </ul>
-</div>
+<%= content_for :header, 'small-header' %>
+
+<ul class="course-list">
+
+    <li class="course-item" style="background: #2C3E50;">
+      <div class="course-item-content">
+        <h4 class="course-logo-ft" style="color: #2C3E50;">f</h4>
+        <h2 class="course-item-headline">
+          Full Time Courses
+        </h2>
+        <p class="course-item-info">
+          Make a career change with our 24 week intensive full time courses.
+        </p>
+        <a href="/fast-track" class="btn-block btn-block-light">View Courses</a>
+        
+      </div>
+    </li>
+    <li class="course-item" style="background: #48A85A;">
+      <div class="course-item-content">
+        <h4 class="course-logo-ft" style="color: #48A85A;">w</h4>
+        <h2 class="course-item-headline">
+          Weekend Workshops
+        </h2>
+        <p class="course-item-info">
+          Stay current and gain insight with our fast-paced and fun short-form offerings.
+        </p>
+        <a href="/products/workshops" class="btn-block btn-block-light">View Workshops</a>
+        
+      </div>
+    </li>
+    <li class="course-item" style="background: #487AA8;">
+      <div class="course-item-content">
+        <h4 class="course-logo-ft" style="color: #487AA8;">p</h4>
+        <h2 class="course-item-headline">
+          Part Time Courses
+        </h2>
+        <p class="course-item-info">
+          Learn to build web applications while you keep you day job.
+        </p>
+        <a href="products/part-time-courses" class="btn-block btn-block-light btn-center">View Courses</a>
+        
+      </div>
+    </li>
+</ul>

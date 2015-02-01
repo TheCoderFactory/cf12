@@ -1,4 +1,7 @@
 <% @page_title = 'Your Shopping Bag' %>
+<% @hide_newsletter_registration = true %>
+
+<div class="row"><div class="col-xs-12 col-lg-8 col-lg-offset-2">
 <div class="checkout">
   <h2>Your items</h2>
   <p class="intro">
@@ -8,3 +11,4 @@
   <%= render 'shared/order_items', :order => current_order %>
 </div>
 <%= link_to "Checkout", checkout_path, :class => 'checkout' %>
+</div></div>

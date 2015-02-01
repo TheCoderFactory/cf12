@@ -1,18 +1,38 @@
 <% @page_title = 'Checkout' %>
-<%= render 'orders/checkout_sidebar' %>
+<div class="row"><div class="col-xs-12 col-lg-8 col-lg-offset-2">
 <div class="checkout">
   <p class="secure">Secure connection</p>
   <h3>Pay using your credit/debit card</h3>
-  <form action='<%= checkout_payment_path %>' method='post' class='stripeForm' id="payment-form">
+  <form action='<%= checkout_payment_path %>' method='post' class='stripeForm form-horizontal' id="payment-form">
   <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
   <!-- <input type='hidden' name='stripe_token' data-stripe='token' /> -->
-  <input type='text' data-stripe='number' placeholder='XXXX XXXX XXXX XXXX'>
-  <input type='text' data-stripe='exp_month' placeholder='MM'>
-  <input type='text' data-stripe='exp_year' placeholder='YYYY'>
-  <input type="text" size="4" data-stripe="cvc" placeholder='XXX'/>
-  <input type="submit" value="Continue">
+  <div class="form-group">
+    <label for="card" class="col-sm-2 control-label">Card number</label>
+    <div class="col-sm-3">
+      <input id="card" type='text' data-stripe='number' placeholder='XXXX XXXX XXXX XXXX' class="form-control">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="exp_month" class="col-sm-2 control-label">Expiry</label>
+    <div class="col-sm-2">
+      <input type='text' data-stripe='exp_month' placeholder='MM' id="exp_month" class="form-control">
+      <input type='text' data-stripe='exp_year' placeholder='YYYY' class="form-control">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="cvc" class="col-sm-2 control-label">CVC</label>
+    <div class="col-sm-3">
+      <input type="text" size="4" data-stripe="cvc" placeholder='CVC' id="cvc" class="form-control" />
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="submit" value="Continue">
+    </div>
+  </div>
 </form>
 </div>
+</div></div>
 <%= shoppe_stripe_javascript %>
 <script>
 jQuery(function($) {

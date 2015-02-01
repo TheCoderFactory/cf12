@@ -30,7 +30,7 @@ class ProductsController < ApplicationController
     product_to_order = params[:variant] ? @product.variants.find(params[:variant].to_i) : @product
     current_order.order_items.add_item(product_to_order, params[:quantity].blank? ? 1 : params[:quantity].to_i)
     respond_to do |wants|
-      wants.html { redirect_to basket_path }
+      wants.html { redirect_to checkout_path }
       wants.json { render :json => {:added => true} }
     end
   rescue Shoppe::Errors::NotEnoughStock => e

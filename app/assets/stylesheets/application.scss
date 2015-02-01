@@ -98,9 +98,6 @@
 	color: $darknight;
 }
 
-.red {
-	color: $vibrant;
-}
 .section-buttons {
 	margin: 30px 10px;
 	text-align: center;
@@ -117,13 +114,51 @@
     appearance: none;
 }
 
+.panel, .panel-body {
+	border-radius: 0;
+}
 
-
-
-
-
-
-
+label {
+	font-weight: normal;
+}
+.pink {
+	color: $vibrant;
+}
+.highlight {
+	background-color: $subtle;
+	padding: 10px 30px;
+	margin: 20px -15px -15px;
+}
+.highlight ol li {
+	line-height: 1.5em;
+	margin-left: 20px;
+}
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 23px;
+  line-height: 1.846;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  -webkit-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+}
+.thumbnail > img,
+.thumbnail a > img {
+  margin-left: auto;
+  margin-right: auto;
+}
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: #2196f3;
+}
+.thumbnail .caption {
+  padding: 9px;
+  color: #666666;
+}
 //
 // The inner container for the page
 //
@@ -296,9 +331,9 @@ section.content {
 		// checkout page
 		//
 		div.checkout {
-			p.secure {float:right; margin-top:10px;color:#ee9200; background:image-url('secure.svg') no-repeat 0 1px; background-size:12px; padding-left:18px; font-size:0.8em;}
+			p.secure {float:right; margin-top:10px;color:$slime;}
 
-			h2 { font-size:2.0em;color:#216d74;}
+			h2 {}
 			p.intro { margin:15px 0; line-height:1.5; margin-bottom:25px; }
 			table.orderItems { margin-top:0;}
 			h3 { font-size:1.3em; font-weight:normal; color:#333; margin-bottom:25px;}
@@ -312,11 +347,11 @@ section.content {
 		  }
 
 
-			p.submit {
+			/*p.submit {
 				text-align:right;
 				margin-top:30px;
 				input {
-					background:image-url('card.svg') #226E75 no-repeat 22px 9px;
+					background:image-url('card.svg') $slime no-repeat 22px 9px;
 					background-size:20px;
 					border:0;
 					padding:8px 22px 8px 54px;
@@ -329,17 +364,17 @@ section.content {
 					&.order { background-image:image-url('send.svg')}
 					&.disabled { background:image-url('button-spinner.gif') #ccc no-repeat; background-size:16px; background-position:center; color:transparent;}
 				}
-			}
+			}*/
 
 			div.customer {
-				font-size:0.8em;
+				/*font-size:0.8em;*/
 				overflow:hidden;
 				fieldset {
 					width:50%;
 					float:left;
 					legend { font-size:1.2em; font-weight:bold;}
 					dl.delivery { display:none;}
-					dt { color:#888; margin-top:0px;}
+					dt { color:$darknight; margin-top:0px;}
 					dt label.req:after { content:'*'; color:red; margin-left:5px;}
 					dd {
 						margin:10px 0;
@@ -413,7 +448,7 @@ section.content {
 		//
 		table.orderItems {
 			width:100%;
-			font-size:0.8em;
+			/*font-size:0.8em;*/
 			margin:25px 0;
 			thead td { border:0; color:#999; padding:0 10px; padding-bottom:6px;}
 			th, td { border:1px solid #ccc; padding:10px;}
@@ -431,8 +466,10 @@ section.content {
 			}
 			tfoot td {
 				text-align:right;
-				font-weight:bold;
+				font-weight:normal;
+				border:0;
 			}
+			tfoot td.money { border: 1px solid #ccc;}
 		}
 
 		//
@@ -628,9 +665,9 @@ section.content {
 			padding:15px 25px;
 			border-bottom-left-radius:10px;
 			border-bottom-right-radius:10px;
-			h2 { font-size:1.4em; color:#216D74;margin-top:25px;}
+			h2 { }
 			dl {
-				font-size:0.8em;
+				/*font-size:0.8em;*/
 				margin:30px 0;
 				line-height:1.5;
 				dt { font-weight:bold; margin:10px 0;}

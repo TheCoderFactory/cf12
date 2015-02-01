@@ -46,6 +46,13 @@
 .workshops-header {
   background: image-url('desk.jpg') $darknight no-repeat top center;
 }
+.women-header {
+  background: image-url('julia.jpg') $darknight no-repeat top center;
+}
+.small-header {
+  height: 100px;
+  background: $darknight;
+}
 
 .call-to-action-wrapper {
   width: 90%;
@@ -55,6 +62,7 @@
   margin: 9% auto;
 
 }
+
 
 .call-to-action-headline {
   text-transform: uppercase;

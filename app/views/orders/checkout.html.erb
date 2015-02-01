@@ -1,16 +1,22 @@
 <% @page_title = 'Checkout' %>
-<%= render 'checkout_sidebar' %>
+<% @hide_newsletter_registration = true %>
+<% @hide_basket = true %>
+<%= content_for :header, 'small-header' %>
+
+<%# render 'checkout_sidebar' %>
+<div class="row"><div class="col-xs-12 col-lg-8 col-lg-offset-2">
+<div class="panel panel-default"><div class="panel-body">
 <div class="checkout">
-  <p class="secure">Secure connection</p>
-  <h2>Place your order</h2>
-  <p class="intro">
-    Fantastic! You're ready to place your order, just follow the instructions below and
-    we'll get your products shipped to you as quickly as we can.
+  <p class="secure"><i class="fa fa-lock"></i> Secure connection</p>
+  <h2>Finalise your order</h2>
+  <p class="lead">
+    Fantastic! There are places available. Finalise your booking now to secure your space.<br><a href="/products">Or look for more courses</a>.
   </p>
-  <h3>Review the products in your shopping bag</h3>
+ 
   <%= render 'shared/order_items', :order => @order %>
+  <hr>
   <% unless @order.delivery_required? && @order.delivery_service.nil? %>
-    <h3>Complete your details below to complete your order</h3>
+    <p class="lead">Fill out your details to complete your order:</p>
     <%= form_for @order, :url => checkout_path, :html => {:class => 'checkout disableable'} do |f| %>
       <%= f.error_messages %>
       <div class="customer">
@@ -99,11 +105,12 @@
           </dl>
         <% end %>
       </div>
-      <p class="submit">
-        <%= f.submit "Continue to payment" %>
-      </p>
+      
+        <%= f.submit "Continue to payment", class: 'btn-block btn-block-calm' %>
+      
     <% end %>
   <% else %>
     <p>Please call us to place this order. </p>
   <% end %>
 </div>
+</div></div></div></div>

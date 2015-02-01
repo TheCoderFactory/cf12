@@ -133,7 +133,7 @@
         <% end %>
         <% if @community %>
           <div class="call-to-action-wrapper">
-          <h1 class="call-to-action-headline">We <span class="red"><i class="fa fa-heart"></i></span> community</h1>
+          <h1 class="call-to-action-headline">We <span class="pink"><i class="fa fa-heart"></i></span> community</h1>
         <p class="lead call-to-action-info">Be a part of a vibrant and welcoming<br> community of coders and technology fans.</p></div>
         <% end %>
         <% if @workshops %>
@@ -146,6 +146,22 @@
             <h1 class="call-to-action-headline"><%= @product.name %></h1>
             <p class="lead call-to-action-info"><%= @product.short_description.html_safe %></p></div>
 
+        <% end %>
+        <% if @thanks %>
+          <div class="call-to-action-wrapper">
+            <h1 class="call-to-action-headline">Thanks!</h1>
+            <p class="lead call-to-action-info">Your journey into the future has begun.</p>
+            <p><a href="/community">Join our community</a></p>
+          </div>
+        <% end %>
+        <% if @women_in_tech %>
+        <div class="row"><div class="col-lg-6 col-lg-offset-6">
+          <div class="call-to-action-wrapper right-wrapper">
+            <h1 class="call-to-action-headline">Women in tech!</h1>
+            <br><br><br><br><br>
+            <p class="lead call-to-action-info">Julia Claven, Coder Factory</p>
+          </div>
+          </div></div>
         <% end %>
       </div>
       <!-- <div class="bar">
@@ -179,16 +195,23 @@
         </section>
     </section>
 
-
+    <% unless @hide_newsletter_registration %>
     <section class="register-newsletter">
       <div class="register-newsletter-wrapper">
         <p class="register-newsletter-tagline">So much is happening at CoderFactory...</p>
-
-        <input type="text" class="input-text" placeholder="Enter Email Address" />
-        <button type="submit" class="btn-block btn-block-dirtygold">Recieve Updates!</button>
-
+        <form action="//coderfactory.us7.list-manage.com/subscribe/post?u=1c644187b6d7e06d32bcae158&amp;id=2afdc8b0c3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <input type="email" value="" name="EMAIL" id="mce-EMAIL" class="input-text" placeholder="Enter Email Address" />
+          <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+          </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_1c644187b6d7e06d32bcae158_2afdc8b0c3" tabindex="-1" value=""></div>
+            <br>
+        <input type="submit" class="btn-block btn-block-dirtygold" value="Receive Updates!" name="subscribe" id="mc-embedded-subscribe" >
+        </form>
       </div>
     </section>
+    <% end %>
 
 
     <footer class="main-footer">

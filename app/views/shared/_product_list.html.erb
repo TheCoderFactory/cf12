@@ -1,5 +1,4 @@
-
-    <% for product in products.includes(:product_category) %>
+<% for product in products.includes(:product_category) %>
       
         <div class="course-item" style="background-color: #<%= product.in_the_box %>;">
 
@@ -9,7 +8,7 @@
             <h3 class="course-item-headline">
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-<%= product.product_attributes.first.value if product.product_attributes.first %> red fa-stack-1x"></i>
+                <i class="fa fa-<%= product.product_attributes.find_by(key: 'icon').value if product.product_attributes.find_by(key: 'icon') %> fa-stack-1x" style="color: #<%= product.product_attributes.find_by(key: 'color').value %>"></i>
               </span>
               <%= link_to product.name, product_path(product.product_category.permalink, product.permalink) %>
             </h3>

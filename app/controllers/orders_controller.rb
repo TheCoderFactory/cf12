@@ -78,10 +78,12 @@ class OrdersController < ApplicationController
     
     
     if request.patch?
-      @order.attributes = params[:order].permit(:first_name, :last_name, :company, :billing_address1, :billing_address2, :billing_address3, :billing_address4, :billing_country_id, :billing_postcode, :email_address, :phone_number, :delivery_name, :delivery_address1, :delivery_address2, :delivery_address3, :delivery_address4, :delivery_postcode, :delivery_country_id, :separate_delivery_address)
+      @order.attributes = params[:order].permit(:first_name,
+                                                :last_name, 
+                                                :company, :billing_address1, :billing_address2, :billing_address3, :billing_address4, :billing_country_id, :billing_postcode, :email_address, :phone_number, :delivery_name, :delivery_address1, :delivery_address2, :delivery_address3, :delivery_address4, :delivery_postcode, :delivery_country_id, :separate_delivery_address)
       @order.ip_address = request.ip
       if @order.proceed_to_confirm
-        redirect_to checkout_payment_path
+        redirect_to checkout_confirmation_path
       end
     else
       # Add some example order data for the example. In a real application
@@ -102,21 +104,6 @@ class OrdersController < ApplicationController
   def payment
     @order = Shoppe::Order.find(current_order.id)
     if request.post?
-      if @order.accept_stripe_token(params[:stripe_token])
-        redirect_to checkout_confirmation_path
-      else
-        flash.now[:notice] = "Could not exchange Stripe token. Please try again."
-      end
-    end
-  end
-  
-  def confirmation
-    unless current_order.confirming?
-      redirect_to checkout_path
-      return
-    end
-    
-    if request.patch?
       begin
         current_order.confirm!
         # This payment method should usually be called in a payment module or elsewhere but for the demo
@@ -124,22 +111,23 @@ class OrdersController < ApplicationController
         current_order.payments.create(:method => "Credit Card", :amount => current_order.total, :reference => rand(10000) + 10000, :refundable => true)
         # Set your secret key: remember to change this to your live secret key in production
         # See your keys here https://dashboard.stripe.com/account
-        # Stripe.api_key = "sk_test_lLqD3ovDSCZQHI8JO4Czposs"
+        Stripe.api_key = Shoppe.settings.stripe_api_key
 
         # # Get the credit card details submitted by the form
         # token = params[:stripeToken]
 
         # # Create a Customer
-        # customer = Stripe::Customer.create(
-        #   :card => current_order.properties.values.first,
-        #   :description => current_order.email_address
-        # )
+        customer = Stripe::Customer.create(
+          :card => params[:stripeToken],
+          :email => current_order.email_address
+        )
 
         # Charge the Customer instead of the card
         Stripe::Charge.create(
             :amount => current_order.total.to_i * 100, # in cents
             :currency => "aud",
-            :customer => current_order.properties.values.first
+            :description => "Order number: " + current_order.id.to_s,
+            :customer => customer.id
         )
 
         # # Save the customer ID in your database so you can use it later
@@ -163,6 +151,61 @@ class OrdersController < ApplicationController
         redirect_to checkout_path
       end
     end
+  end
+  
+  def confirmation
+    unless current_order.confirming?
+      redirect_to checkout_path
+      return
+    end
+    
+    # if request.patch?
+    #   begin
+    #     current_order.confirm!
+    #     # This payment method should usually be called in a payment module or elsewhere but for the demo
+    #     # we are adding a payment to the order straight away.
+    #     current_order.payments.create(:method => "Credit Card", :amount => current_order.total, :reference => rand(10000) + 10000, :refundable => true)
+    #     # Set your secret key: remember to change this to your live secret key in production
+    #     # See your keys here https://dashboard.stripe.com/account
+    #     Stripe.api_key = Shoppe.settings.stripe_api_key
+
+    #     # # Get the credit card details submitted by the form
+    #     # token = params[:stripeToken]
+
+    #     # # Create a Customer
+    #     # customer = Stripe::Customer.create(
+    #     #   :card => current_order.properties.values.first,
+    #     #   :description => current_order.email_address
+    #     # )
+
+    #     # Charge the Customer instead of the card
+    #     Stripe::Charge.create(
+    #         :amount => current_order.total.to_i * 100, # in cents
+    #         :currency => "aud",
+    #         :customer => current_order.properties.values.first
+    #     )
+
+    #     # # Save the customer ID in your database so you can use it later
+    #     # save_stripe_customer_id(user, customer.id)
+
+    #     # # Later...
+    #     # customer_id = get_stripe_customer_id(user)
+
+    #     # Stripe::Charge.create(
+    #     #   :amount   => 1500, # $15.00 this time
+    #     #   :currency => "usd",
+    #     #   :customer => customer_id
+    #     # )
+    #     session[:order_id] = nil
+    #     redirect_to thanks_path, :notice => "Your place in these courses have been booked!"
+    #   rescue Shoppe::Errors::PaymentDeclined => e
+    #     flash[:alert] = "Payment was declined by the bank. #{e.message}"
+    #     redirect_to checkout_path
+    #   rescue Shoppe::Errors::InsufficientStockToFulfil
+    #     flash[:alert] = "We're terribly sorry but while you were checking out we ran out of stock of some of the items in your basket. Your basket has been updated with the maximum we can currently supply. If you wish to continue just use the button below."
+    #     redirect_to checkout_path
+    #   end
+    # end
   end
     
 end
