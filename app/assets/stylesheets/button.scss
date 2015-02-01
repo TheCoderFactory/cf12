@@ -68,6 +68,15 @@
     background: darken($dirty-gold, 25);
   }
 }
+.btn-block-slime {
+  color: $light;
+  background: darken($slime, 5);
+  transition: background 0.25s ease-in;
+  border-bottom: 2px solid darken($slime, 20);
+  &:hover {
+    background: darken($slime, 25);
+  }
+}
 .btn-small {
   padding:5px;
 }

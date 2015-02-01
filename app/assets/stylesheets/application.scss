@@ -140,7 +140,7 @@ label {
   line-height: 1.846;
   background-color: #ffffff;
   border: 1px solid #dddddd;
-  border-radius: 3px;
+  border-radius: 0px;
   -webkit-transition: border 0.2s ease-in-out;
   -o-transition: border 0.2s ease-in-out;
   transition: border 0.2s ease-in-out;
@@ -159,6 +159,26 @@ a.thumbnail.active {
   padding: 9px;
   color: #666666;
 }
+
+
+.callout{padding:20px;margin:20px 0;border:1px solid #eee;border-left-width:5px;border-radius:3px}
+.callout h4{margin-top:0;margin-bottom:5px}
+.callout p:last-child{margin-bottom:0}
+.callout code{border-radius:3px}
+.callout+.callout{margin-top:-5px}
+.callout-danger{border-left-color:$dirty-gold}
+.callout-danger h4{color:$dirty-gold}
+.callout-danger a{color:$dirty-gold;font-weight: bold}
+.callout-warning{border-left-color:$slime}
+.callout-warning h4{color:$slime}
+.callout-warning a{color:$slime;font-weight: bold}
+.callout-info{border-left-color:$calm}
+.callout-info h4{color:$calm}
+.callout-info a{color:$calm;font-weight: bold}
+
+
+
+
 //
 // The inner container for the page
 //
