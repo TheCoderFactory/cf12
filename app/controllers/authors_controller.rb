@@ -10,7 +10,7 @@ class AuthorsController < ApplicationController
   end
 
   def show
-    @posts = @author.posts
+    @posts = @author.posts.published_in_reverse_chron_order.paginate(:page => params[:page], :per_page => 10)
     respond_with(@author)
   end
 

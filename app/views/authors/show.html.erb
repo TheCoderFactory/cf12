@@ -6,7 +6,7 @@
       <div class="panel panel-default"><div class="panel-body">
 <aside class="col-md-4">
     <div class="author" itemscope itemtype="http://data-vocabulary.org/Person">
-      <h2><span itemprop="name"><%= @author.name %></span></h2>
+      <h3><span itemprop="name"><%= @author.name %></span></h3>
       <h4><span itemprop="title"><%= @author.title %></span></h4>
         <% if @author.profile_picture %>
           <span itemprop="photo"><img src="<%= @author.profile_picture %>" class='img-responsive img-thumbnail' alt="<%= @author.name %>" ></span>
@@ -68,7 +68,7 @@
 <div class="col-md-8">
   <% if @posts.count > 0 %>
     
-      <h2 class="white">Recent posts</h2>
+      <h3 class="white">Recent posts</h3>
 
         <% @posts.each do |post| %>
       <div class="col-right">
