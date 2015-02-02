@@ -1,6 +1,6 @@
 class AuthorsController < ApplicationController
   before_action :set_author, only: [:show, :edit, :update, :destroy]
-  
+  skip_before_action :authenticate_user!, only: :show
 
   respond_to :html
 
@@ -10,6 +10,7 @@ class AuthorsController < ApplicationController
   end
 
   def show
+    @posts = @author.posts
     respond_with(@author)
   end
 
@@ -39,7 +40,7 @@ class AuthorsController < ApplicationController
 
   private
     def set_author
-      @author = Author.find(params[:id])
+      @author = Author.friendly.find(params[:id])
     end
 
     def author_params

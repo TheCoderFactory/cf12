@@ -3,16 +3,16 @@
 
   <div class="form-inputs">
     <%= f.input :title %>
+    <%= f.association :author %>
     <%= f.input :lead %>
     <%= f.input :content %>
     <%= f.input :image %>
     <%= f.input :slug %>
     <%= f.input :publish %>
     <%= f.input :published_date %>
-    <%= f.association :author %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: 'btn-block btn-block-dirtygold' %>
   </div>
 <% end %>

@@ -26,6 +26,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @author = @post.author
     respond_with(@post)
   end
 

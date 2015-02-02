@@ -14,13 +14,13 @@
         <h2><a href="<%= post_url %>"><span itemprop="name"><%= @post.title %></span></a></h2>
         <hr>
         <div class="post_info clearfix">
-        <% if @profile %>
+        <% if @author %>
         
           <span class="author vcard">
-            <a rel="author" href="/profiles/<%= @profile.slug %>">
-              <%= image_tag @profile.profile_picture, class: 'img-thumbnail blog-profile', alt: @profile.name, width: '50px' %> 
+            <a rel="author" href="/authors/<%= @author.slug %>">
+              <%= image_tag @author.profile_picture, class: 'img-thumbnail', alt: @author.name, width: '50px' %> 
               <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <%= @profile.name %>
+                <%= @author.name %>
               </span>
             </a>
           </span>
@@ -63,4 +63,6 @@
     </div>
   </div>
 </div>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52ee398713b80ae1" async="async"></script>
 

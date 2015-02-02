@@ -1,54 +1,99 @@
-<p id="notice"><%= notice %></p>
+ <%= content_for :header, 'small-header' %>
+<section class="calm">        
+  <div class="row">
+    <div class="col-xs-12 col-lg-offset-2 col-lg-8">
+      <h2 class="section-heading"><%= @author.name %></h2>
+      <div class="panel panel-default"><div class="panel-body">
+<aside class="col-md-4">
+    <div class="author" itemscope itemtype="http://data-vocabulary.org/Person">
+      <h2><span itemprop="name"><%= @author.name %></span></h2>
+      <h4><span itemprop="title"><%= @author.title %></span></h4>
+        <% if @author.profile_picture %>
+          <span itemprop="photo"><img src="<%= @author.profile_picture %>" class='img-responsive img-thumbnail' alt="<%= @author.name %>" ></span>
+        <% end %>
+      <h3>About me</h3>
+      </p>
+      <p><%= @author.info %></p>
+      <hr>
 
-<p>
-  <strong>Name:</strong>
-  <%= @author.name %>
-</p>
+      <h3>Get in touch</h3>
+      <div class="row">
+      <div class="col-md-6">
+      <ul class="fa-ul">
+        <li class="fa fa-google-plus">
+          <!-- <span class="fa-stack">
+            <i class="fa fa-circle-thin fa-stack-2x"></i>
+            <i class="fa fa-google-plus fa-stack-1x"></i>
+          </span>  -->
+          <%= link_to "Google+", @author.google_plus %>
+        </li>
+        <li class="fa fa-twitter">
+          <!-- <span class="fa-stack">
+            <i class="fa fa-circle-thin fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x"></i>
+          </span>  -->
+          <a href="https://twitter.com/<%= @author.twitter %>">Twitter</a>
+        </li>
+        </ul>
+        </div>
+        <div class="col-md-6 links">
+        <ul class="fa-ul">
 
-<p>
-  <strong>Profile picture:</strong>
-  <%= @author.profile_picture %>
-</p>
+        <li class="fa fa-linkedin">
+         <!--  <span class="fa-stack">
+            <i class="fa fa-circle-thin fa-stack-2x"></i>
+            <i class="fa fa-linkedin fa-stack-1x"></i>
+          </span>  -->
+          <%= link_to "LinkedIn", @author.linkedin %>
+        </li>
+        <li class="fa fa-globe">
+         <!--  <span class="fa-stack">
+            <i class="fa fa-circle-thin fa-stack-2x"></i>
+            <i class="fa fa-globe fa-stack-1x"></i>
+          </span> --> 
+          <span itemprop="name"><%= link_to "Website", @author.website %></span>
+        </li>
+      </ul>
+      </div></div>
 
-<p>
-  <strong>Slug:</strong>
-  <%= @author.slug %>
-</p>
+     
+      <br>
+      <% if user_signed_in? %>
+        
+          <%= link_to 'Edit', edit_author_path(@author), class: 'btn btn-default btn-xs' %>
+        
+      <% end %>
+    </div>
+</aside>
+<div class="col-md-8">
+  <% if @posts.count > 0 %>
+    
+      <h2 class="white">Recent posts</h2>
 
-<p>
-  <strong>Google plus:</strong>
-  <%= @author.google_plus %>
-</p>
+        <% @posts.each do |post| %>
+      <div class="col-right">
+        <div class="post">
+          <div class="blog-img">
+            <% if post.image.blank? %>
+              <a href="<%= post_path(post) %>"><img src="<%= asset_path 'PLAY.png' %>" alt="<%= post.title %>" class="img-responsive"></a>
+            <% else %>
+                <a href="<%= post_path(post) %>"><img src="<%= asset_path post.image %>" alt="<%= post.title %>" class="img-responsive" ></a>
+            <% end %>
+            <h2 class="lead text-center"><a href="<%= post_path(post) %>" title="<%= post.title %>"><%= post.title %></a></h2>
+          </div>
+        </div>
+      </div>
+      <br>
+    <% end %>
+    <% if @posts.all.count > 3 %>
+      <div class="col-right">
+      <div class="apple_pagination">
+        <%= will_paginate @posts %>
+        </div>
+      </div><!-- end col-right-->
+    <% end %>
 
-<p>
-  <strong>Linkedin:</strong>
-  <%= @author.linkedin %>
-</p>
-
-<p>
-  <strong>Twitter:</strong>
-  <%= @author.twitter %>
-</p>
-
-<p>
-  <strong>Github:</strong>
-  <%= @author.github %>
-</p>
-
-<p>
-  <strong>Website:</strong>
-  <%= @author.website %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @author.title %>
-</p>
-
-<p>
-  <strong>Info:</strong>
-  <%= @author.info %>
-</p>
-
-<%= link_to 'Edit', edit_author_path(@author) %> |
-<%= link_to 'Back', authors_path %>
+      </div>
+    <% end %>
+  </div>
+</div></div></div></section>

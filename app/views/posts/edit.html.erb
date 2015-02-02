@@ -1,6 +1,12 @@
-<h1>Editing Post</h1>
+<%= content_for :header, 'small-header' %>
+<section class="calm">        
+  <div class="row">
+    <div class="col-xs-12 col-lg-offset-2 col-lg-8">
+      <h2 class="section-heading">Update Blog Post</h2>
+      <div class="panel panel-default"><div class="panel-body">
 
 <%= render 'form' %>
 
 <%= link_to 'Show', @post %> |
 <%= link_to 'Back', posts_path %>
+</div></div></div></div>
