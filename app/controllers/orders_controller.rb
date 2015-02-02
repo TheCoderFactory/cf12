@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  
+  skip_before_action :authenticate_user!
   before_filter(:except => :status) { redirect_to root_path unless has_order? }
   
   def status

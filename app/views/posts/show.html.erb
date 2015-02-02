@@ -4,6 +4,7 @@
 <%= content_for :tagline, @post.published_date.strftime('%d %B %Y') %>
 <%= content_for :main_heading, @post.title %>
 <% active_nav_item :blog %>
+<%= content_for :header, 'small-header' %>
 <div class="container blog-post">
   <div class="row">
     <div class="col-sm-7 col-sm-offset-1">
@@ -49,14 +50,14 @@
     </div></div>
     </div>
     <div class="col-lg-3 hidden-xs">
-      <div class="panel panel-material-orange promo-box">
+      <div class="panel panel-warning promo-box">
         <div class="panel-heading">
           <h4 class="panel-title"><i class="fa fa-fighter-jet"></i> Fast Track </h4>
         </div>
         <div class="panel-body">
           <p>Six months to your new life in the tech industry. Become a developer at a tech startup or perhaps a digital nomad.</p>
           <p>Applications are open now. Class starts 7th April 2015. Only 15 spaces available.</p>
-          <a href="/" class="btn btn-material-lightblue btn-raised">See the details</a>
+          <a href="/fast-track" class="btn btn-material-lightblue btn-raised">See the details</a>
         </div>
       </div>
     </div>

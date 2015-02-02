@@ -1,6 +1,7 @@
 class CourseRegistrationsController < ApplicationController
   before_action :set_course_registration, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :authenticate_user!, only: [:new, :create]
+  invisible_captcha only: :create
   respond_to :html
 
   def index
@@ -22,8 +23,10 @@ class CourseRegistrationsController < ApplicationController
 
   def create
     @course_registration = CourseRegistration.new(course_registration_params)
-    @course_registration.save
-    respond_with(@course_registration)
+    if @course_registration.save
+      RegistrationMailerJob.new.async.perform(@course_registration.id)
+    end
+    redirect_to thanks_path
   end
 
   def update

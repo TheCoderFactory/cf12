@@ -2,7 +2,8 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-  before_action :capture_promotion_code
+  before_action :authenticate_user!, except: [:current_order, :has_order?]
+  
 
   # Returns the active order for this session
   def current_order

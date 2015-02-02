@@ -1,7 +1,7 @@
 <% unless @hide_basket %>
 <div class="basket">
   <% if has_order? && current_order.has_items? %>
-    <p class="quantity"><b><%= pluralize(current_order.total_items, 'item') %></b> in your shopping bag</p>
+    <p class="quantity"><b><%= pluralize(current_order.total_items, 'item') %></b> in your cart</p>
     <p class="amount"><b>Total: <%= number_to_currency(current_order.total) %></b> </p>
     <% if @promotion %>
       <p>Includes  discount</p>

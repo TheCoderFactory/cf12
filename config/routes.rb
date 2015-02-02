@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :enquiries
+
   mount Shoppe::Engine => "/store"
   get 'thanks', to: 'thanks#index'
 

@@ -53,6 +53,23 @@
   height: 100px;
   background: $darknight;
 }
+.workshop-header {
+  height: 250px;
+  @media screen and (min-width: 550px) {
+    height: 300px;
+  }
+  overflow: hidden;
+  background-size: cover;
+  color: $light;
+  .call-to-action-wrapper {
+  width: 90%;
+  @media screen and (min-width: 600px) {
+    width: 66%;
+  }
+  margin: 4% auto;
+
+}
+}
 
 .call-to-action-wrapper {
   width: 90%;

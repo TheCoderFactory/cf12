@@ -20,7 +20,7 @@
 }
 
 .course-item-content {
-  width: 75%;
+  width: 100%;
   @media screen and (min-width: 700px) {
     width: 66%;
   }
@@ -56,7 +56,33 @@ $course-logo-size: 60px;
     margin: 0 auto;
     text-align: center;
   }
+  h3 {
+    margin:0;
+  }
 }
+.workshop-item {
+  padding: 50px 0;
+  /*flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;*/
+  color: white;
+  a {
+    text-decoration: none;
+  }
+  .btn-block {
+    width: 190px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  h3 {
+    margin:0;
+  }
+}
+.workshop-section {
+  padding-top: 30px;
+}
+
 
 .course-item-headline {
   text-transform: uppercase;

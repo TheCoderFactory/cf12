@@ -1,13 +1,22 @@
-<%# active_nav_item :catalogue %>
+<% active_nav_item :catalogue %>
 <% @page_title = @product.name + " - " + @product.product_category.name %>
-
+<% content_for :header, "small-header" %>
+<section class="workshop-header" style="background-color: #<%= @product.product_attributes.find_by(key: 'color').value if @product.product_attributes.find_by(key: 'color') %>">
+  <div class="call-to-action-wrapper">
+    <h1 class="call-to-action-headline"><%= @product.name %></h1>
+    <p class="lead call-to-action-info"><%= @product.short_description.html_safe %></p>
+  </div>
+</section>
+<section class="workshop-section">
 <div class="row">
   <div class="col-xs-12 col-lg-8 col-lg-offset-2">
   
   
   
   <div class="workshop-description">
-    <%= @product.description.html_safe %>
+    <div class="panel panel-default"><div class="panel-body">
+      <%= @product.description.html_safe %>
+    </div></div>
   </div>
   <div class="product">
   <div style="background-color: #<%= @product.in_the_box %>">
@@ -113,3 +122,4 @@
 </div>
 
 </div></div></div>
+</section>

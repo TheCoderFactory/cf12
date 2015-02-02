@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  
+  skip_before_action :authenticate_user!
   before_filter do
     if params[:category_id]
       @product_category = Shoppe::ProductCategory.where(:permalink => params[:category_id]).first!

@@ -1,6 +1,7 @@
 class FastTrackApplicationsController < ApplicationController
   before_action :set_fast_track_application, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :authenticate_user!, only: [:new, :create]
+  invisible_captcha only: :create
   respond_to :html
 
   def index
@@ -23,7 +24,12 @@ class FastTrackApplicationsController < ApplicationController
   def create
     @fast_track_application = FastTrackApplication.new(fast_track_application_params)
     @fast_track_application.save
-    respond_with(@fast_track_application)
+    if @fast_track_application.save
+      FastTrackApplicationMailerJob.new.async.perform(@fast_track_application.id)
+      redirect_to thanks_path
+    else
+      respond_with(@fast_track_application)
+    end
   end
 
   def update

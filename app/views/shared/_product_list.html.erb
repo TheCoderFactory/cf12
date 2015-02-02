@@ -1,17 +1,21 @@
 <% for product in products.includes(:product_category) %>
       
-        <div class="course-item" style="background-color: #<%= product.in_the_box %>;">
+        <div class="workshop-item" style="background-color: #<%= product.in_the_box %>;">
+        <div class="row">
+          <div class="col-lg-6">
 
+            <% if product.product_attributes.find_by(key: 'image') %>
+              <%= image_tag product.product_attributes.find_by(key: 'image').value, class: 'img-responsive pull-right img-thumbnail' %>
+            <% end %>
+          </div>
+          <div class="col-lg-6">
           <div class="course-item-content">
           
               
             <h3 class="course-item-headline">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-<%= product.product_attributes.find_by(key: 'icon').value if product.product_attributes.find_by(key: 'icon') %> fa-stack-1x" style="color: #<%= product.product_attributes.find_by(key: 'color').value %>"></i>
-              </span>
               <%= link_to product.name, product_path(product.product_category.permalink, product.permalink) %>
             </h3>
+            
             <p class="course-item-info">
               <%= product.short_description.html_safe %>
             </p>
@@ -19,10 +23,10 @@
               <%= number_to_currency(product.price * 1.1) %> (incl. GST)
             </p>
             <br>
-            <%= link_to "Info", product_path(product.product_category.permalink, product.permalink), class: "btn-block btn-block-light btn-small" %>
+            <%= link_to "More info", product_path(product.product_category.permalink, product.permalink), class: "btn-block btn-block-light btn-small" %>
             <% if product.orderable? %>
               <%= link_to "Add", buy_product_path(product.product_category.permalink, product.permalink), :class => 'add', :method => :post %>
             <% end %>
-          </div>
+          </div></div></div>
         </div>
     <% end %>

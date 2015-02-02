@@ -1,7 +1,8 @@
 class PartnersController < ApplicationController
   before_action :set_partner, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :authenticate_user!, only: [:new, :create]
   respond_to :html
+  invisible_captcha only: :create
 
   def index
     @partners = Partner.all
@@ -22,8 +23,10 @@ class PartnersController < ApplicationController
 
   def create
     @partner = Partner.new(partner_params)
-    @partner.save
-    respond_with(@partner)
+    if @partner.save
+      PartnerMailerJob.new.async.perform(@partner.id)
+    end
+    redirect_to :back
   end
 
   def update
