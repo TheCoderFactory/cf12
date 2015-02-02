@@ -22,7 +22,7 @@ gem 'carrierwave'
 gem 'cloudinary'
 gem 'sitemap_generator'
 # gem 'whenever', :require => false
-
+gem "autoprefixer-rails"
 # Delayed jobs
 gem 'sucker_punch', '~> 1.0'
 # gem 'exception_notification'
