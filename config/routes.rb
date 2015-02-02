@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :authors
+
   resources :enquiries
 
   mount Shoppe::Engine => "/store"

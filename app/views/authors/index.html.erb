@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Authors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Profile picture</th>
+      <th>Slug</th>
+      <th>Google plus</th>
+      <th>Linkedin</th>
+      <th>Twitter</th>
+      <th>Github</th>
+      <th>Website</th>
+      <th>Title</th>
+      <th>Info</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @authors.each do |author| %>
+      <tr>
+        <td><%= author.name %></td>
+        <td><%= author.profile_picture %></td>
+        <td><%= author.slug %></td>
+        <td><%= author.google_plus %></td>
+        <td><%= author.linkedin %></td>
+        <td><%= author.twitter %></td>
+        <td><%= author.github %></td>
+        <td><%= author.website %></td>
+        <td><%= author.title %></td>
+        <td><%= author.info %></td>
+        <td><%= link_to 'Show', author %></td>
+        <td><%= link_to 'Edit', edit_author_path(author) %></td>
+        <td><%= link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Author', new_author_path %>

@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150201110808) do
+ActiveRecord::Schema.define(version: 20150202045518) do
+
+  create_table "authors", force: :cascade do |t|
+    t.string   "name"
+    t.string   "profile_picture"
+    t.string   "slug"
+    t.string   "google_plus"
+    t.string   "linkedin"
+    t.string   "twitter"
+    t.string   "github"
+    t.string   "website"
+    t.string   "title"
+    t.text     "info"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "course_registrations", force: :cascade do |t|
     t.integer  "course_id"

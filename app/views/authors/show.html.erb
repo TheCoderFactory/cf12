@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @author.name %>
+</p>
+
+<p>
+  <strong>Profile picture:</strong>
+  <%= @author.profile_picture %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @author.slug %>
+</p>
+
+<p>
+  <strong>Google plus:</strong>
+  <%= @author.google_plus %>
+</p>
+
+<p>
+  <strong>Linkedin:</strong>
+  <%= @author.linkedin %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @author.twitter %>
+</p>
+
+<p>
+  <strong>Github:</strong>
+  <%= @author.github %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @author.website %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @author.title %>
+</p>
+
+<p>
+  <strong>Info:</strong>
+  <%= @author.info %>
+</p>
+
+<%= link_to 'Edit', edit_author_path(@author) %> |
+<%= link_to 'Back', authors_path %>
