@@ -1,4 +1,9 @@
-<h1>Listing posts</h1>
+<%= content_for :header, 'small-header' %>
+<section class="calm">        
+  <div class="row">
+    <div class="col-xs-12 col-lg-offset-2 col-lg-8">
+      <h2 class="section-heading">All Posts</h2>
+      <div class="panel panel-default"><div class="panel-body">
 <%= link_to 'New Post', new_post_path, class: 'btn btn-success' %>
 <table class="table">
   <thead>
@@ -16,7 +21,7 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= link_to post.title, post %></td>
-        <td><%= post.author %></td>
+        <td><%= post.author.name %></td>
         <td><%= '<i class="fa fa-check"></i>'.html_safe if post.publish %></td>
         <td><%= post.published_date.strftime('%d/%b/%y') %></td>
         <td><%= post.impressions_count %></td>
@@ -26,7 +31,7 @@
     <% end %>
   </tbody>
 </table>
-
+</div></div></div></div></section>
 <br>
 <h2>Import posts</h2>
 <%= form_tag import_posts_path, multipart: true do %>
