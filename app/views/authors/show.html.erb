@@ -1,4 +1,8 @@
- <%= content_for :header, 'small-header' %>
+<%= content_for :header, 'small-header' %>
+<%= content_for :title, "Coder Factory's " + @author.name %>
+<%= content_for :description, @author.name + ": " + @author.title + ". " + @author.info %>
+<%= content_for :image, @author.profile_picture %>
+
 <section class="calm">        
   <div class="row">
     <div class="col-xs-12 col-lg-offset-2 col-lg-8">

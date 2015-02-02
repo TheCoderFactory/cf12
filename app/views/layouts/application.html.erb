@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html ng-app="CoderFactory">
   <head>
-    <title>Coder Factory | Build the Future</title>
+    <title><%= content_for?(:title) ? yield(:title) : "Learn to Code @ Coder Factory." %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "See our new improved programmes that help you become a confident coder. Apply for our full time Fast track programme, part time courses and weekend workshops." %>">
     <%= render 'layouts/metatags' %>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular-animate.min.js"></script>

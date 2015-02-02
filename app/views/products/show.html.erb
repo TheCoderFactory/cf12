@@ -1,6 +1,8 @@
 <% active_nav_item :catalogue %>
-<% @page_title = @product.name + " - " + @product.product_category.name %>
 <% content_for :header, "small-header" %>
+<%= content_for :title, "Enrol in Coder Factory&apos;s ".html_safe + @product.name %>
+<%= content_for :description, @product.short_description %>
+
 <section class="workshop-header" style="background-color: #<%= @product.product_attributes.find_by(key: 'color').value if @product.product_attributes.find_by(key: 'color') %>">
   <div class="call-to-action-wrapper">
     <h1 class="call-to-action-headline"><%= @product.name %></h1>
@@ -123,3 +125,5 @@
 
 </div></div></div>
 </section>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52ee398713b80ae1" async="async"></script>

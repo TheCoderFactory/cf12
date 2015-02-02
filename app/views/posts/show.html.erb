@@ -1,10 +1,10 @@
-<%= content_for :title, @post.title + ' @CoderFactory Blog - Sydney, Australia' %>
+<%= content_for :title, @post.title + ' [@CoderFactory Blog]' %>
 <%= content_for :description, @post.title + ': ' + @post.lead %>
-<%= content_for :hero_image, @post.image %>
+<%= content_for :image, @post.image %>
 <%= content_for :tagline, @post.published_date.strftime('%d %B %Y') %>
-<%= content_for :main_heading, @post.title %>
 <% active_nav_item :blog %>
 <%= content_for :header, 'small-header' %>
+
 <div class="container blog-post">
   <div class="row">
     <div class="col-sm-7 col-sm-offset-1">
