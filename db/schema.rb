@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150202045518) do
+ActiveRecord::Schema.define(version: 20150202050009) do
 
   create_table "authors", force: :cascade do |t|
     t.string   "name"
@@ -99,10 +99,10 @@ ActiveRecord::Schema.define(version: 20150202045518) do
     t.string   "slug"
     t.boolean  "publish"
     t.date     "published_date"
-    t.integer  "author_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.integer  "impressions_count"
+    t.integer  "author_id"
   end
 
   add_index "posts", ["author_id"], name: "index_posts_on_author_id"

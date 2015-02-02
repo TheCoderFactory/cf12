@@ -1,20 +1,16 @@
-<p id="notice"><%= notice %></p>
+ <%= content_for :header, 'small-header' %>
+ <p id="notice"><%= notice %></p>
+       
+  <div class="row">
+    <div class="col-xs-12 col-lg-offset-2 col-lg-8">
+      <h2>Listing Authors</h2>
+      <div class="panel panel-default"><div class="panel-body">
 
-<h1>Listing Authors</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
-      <th>Profile picture</th>
-      <th>Slug</th>
-      <th>Google plus</th>
-      <th>Linkedin</th>
-      <th>Twitter</th>
-      <th>Github</th>
-      <th>Website</th>
-      <th>Title</th>
-      <th>Info</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,15 +19,6 @@
     <% @authors.each do |author| %>
       <tr>
         <td><%= author.name %></td>
-        <td><%= author.profile_picture %></td>
-        <td><%= author.slug %></td>
-        <td><%= author.google_plus %></td>
-        <td><%= author.linkedin %></td>
-        <td><%= author.twitter %></td>
-        <td><%= author.github %></td>
-        <td><%= author.website %></td>
-        <td><%= author.title %></td>
-        <td><%= author.info %></td>
         <td><%= link_to 'Show', author %></td>
         <td><%= link_to 'Edit', edit_author_path(author) %></td>
         <td><%= link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -43,3 +30,4 @@
 <br>
 
 <%= link_to 'New Author', new_author_path %>
+</div></div></div></div>

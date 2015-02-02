@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   def export
     @posts = Post.all
     posts_csv = CSV.generate do |csv|
-      csv << ["Title", "Lead", "Content", "Image", "Slug", "Published Date", "Impressions Count"]
+      csv << ["title", "lead", "content", "image", "slug", "published_date", "impressions_count"]
       @posts.each do |post|
         csv << [post.title, post.lead, post.content, post.image, post.slug, post.published_date, post.impressions_count]
       end
