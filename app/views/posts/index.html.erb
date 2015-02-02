@@ -21,7 +21,7 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= link_to post.title, post %></td>
-        <td><%= post.author.name %></td>
+        <td><%= post.author.name if post.author %></td>
         <td><%= '<i class="fa fa-check"></i>'.html_safe if post.publish %></td>
         <td><%= post.published_date.strftime('%d/%b/%y') %></td>
         <td><%= post.impressions_count %></td>
