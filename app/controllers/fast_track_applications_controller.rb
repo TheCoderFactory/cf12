@@ -14,6 +14,9 @@ class FastTrackApplicationsController < ApplicationController
   end
 
   def new
+    if params[:scholarship]
+      @scholarships = Scholarship.available
+    end
     @fast_track_application = FastTrackApplication.new
     respond_with(@fast_track_application)
   end
@@ -48,6 +51,6 @@ class FastTrackApplicationsController < ApplicationController
     end
 
     def fast_track_application_params
-      params.require(:fast_track_application).permit(:first_name, :last_name, :city, :country, :email, :age, :gender, :one_line, :reason, :info, :passion, :experience, :challenge, :special, :links, :referral, :visa, :programme_choice)
+      params.require(:fast_track_application).permit(:first_name, :last_name, :city, :country, :email, :age, :gender, :one_line, :reason, :info, :passion, :experience, :challenge, :special, :links, :referral, :visa, :programme_choice, :scholarship_id)
     end
 end

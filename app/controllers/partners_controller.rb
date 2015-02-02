@@ -26,7 +26,7 @@ class PartnersController < ApplicationController
     if @partner.save
       PartnerMailerJob.new.async.perform(@partner.id)
     end
-    redirect_to :back
+    redirect_to women_in_tech_path
   end
 
   def update
@@ -45,6 +45,6 @@ class PartnersController < ApplicationController
     end
 
     def partner_params
-      params.require(:partner).permit(:name, :company, :email, :phone, :message, :reason)
+      params.require(:partner).permit(:sponsorship, :name, :company, :email, :phone, :message, :reason)
     end
 end

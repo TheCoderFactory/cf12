@@ -1,0 +1,34 @@
+ <%= content_for :header, 'small-header' %>
+  <div class="row">
+    <div class="col-xs-12 col-lg-offset-2 col-lg-8">
+      <h2>Scholarships</h2>
+      <div class="panel panel-default"><div class="panel-body">
+      <p id="notice"><%= notice %></p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Scholarship type</th>
+      <th>Company</th>
+      <th>Available</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scholarships.each do |scholarship| %>
+      <tr>
+        <td><%= scholarship.scholarship_type %></td>
+        <td><%= scholarship.company %></td>
+        <td><%= scholarship.available %></td>
+        <td><%= link_to 'Show', scholarship %></td>
+        <td><%= link_to 'Edit', edit_scholarship_path(scholarship) %></td>
+        <td><%= link_to 'Destroy', scholarship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scholarship', new_scholarship_path %>

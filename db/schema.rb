@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150202050009) do
+ActiveRecord::Schema.define(version: 20150202110559) do
 
   create_table "authors", force: :cascade do |t|
     t.string   "name"
@@ -70,7 +70,10 @@ ActiveRecord::Schema.define(version: 20150202050009) do
     t.string   "programme_choice"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "scholarship_id"
   end
+
+  add_index "fast_track_applications", ["scholarship_id"], name: "index_fast_track_applications_on_scholarship_id"
 
   create_table "nifty_key_value_store", force: :cascade do |t|
     t.integer "parent_id"
@@ -87,8 +90,9 @@ ActiveRecord::Schema.define(version: 20150202050009) do
     t.string   "phone"
     t.text     "message"
     t.string   "reason"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "sponsorship"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -106,6 +110,17 @@ ActiveRecord::Schema.define(version: 20150202050009) do
   end
 
   add_index "posts", ["author_id"], name: "index_posts_on_author_id"
+
+  create_table "scholarships", force: :cascade do |t|
+    t.string   "scholarship_type"
+    t.string   "company"
+    t.string   "logo"
+    t.boolean  "available"
+    t.text     "description"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "website"
+  end
 
   create_table "shoppe_countries", force: :cascade do |t|
     t.string  "name"

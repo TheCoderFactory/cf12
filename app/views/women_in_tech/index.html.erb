@@ -66,7 +66,7 @@
 				$50K</strong></p>
 
 				<p>Your sponsorship will provide two totally free places in the Fast Track programme for your chosen students.</p>
-				<p><a href="/" class="">Be a Change Champion</a></p>
+				<p><a href="/partners/new?sponsorship=champion" class="">Be a Change Champion</a></p>
 				</div>
 
 				<div class="callout callout-warning">
@@ -75,7 +75,7 @@
 					$25K</strong></p>
 
 				<p>Your sponsorship will provide one free place in the Fast Track programme for your chosen student.</p>
-				<p><a href="/" class="">Be a Change Maker</a></p>
+				<p><a href="/partners/new?sponsorship=maker" class="">Be a Change Maker</a></p>
 				</div>
 
 				<div class="callout callout-info">
@@ -84,7 +84,7 @@
 				$15K</strong></p>
 
 				<p>Your sponsorship will provide one half scholarship in the Fast Track programme for your chosen student.</p>
-				<p><a href="/" class="">Be a Change Supporter</a></p>
+				<p><a href="/partners/new?sponsorship=supporter" class="">Be a Change Supporter</a></p>
 				</div>
 
 				<p>Sponsoring organisations will have the option to view the profiles of the top applicants and interview them to determine which student they would like to award the scholarship.</p>
@@ -102,32 +102,35 @@
 			<div class="panel panel-default"><div class="panel-body">
 				<p class="lead">Women! Start your journey into the exciting world of tech by applying for one of the following scholarships.</p>
 				<div class="row">
-					<div class="col-lg-4">
-						<div class="thumbnail">
-				      <img src="<%= asset_path 'FBlogo.png' %>" alt="Coder Factory logo" class="img-responsive">
-				      <div class="caption">
-								<table class="table">
-									<tr>
-										<td>Company</td>
-										<td><a href="/" target="_blank">Coder Factory</a></td>
-									</tr>
-									<tr>
-										<td>Change</td>
-										<td><strong>Maker</strong></td>
-									</tr>
-									<tr>
-										<td>Available?</td>
-										<td>YES</td>
-									</tr>
-									<tr>
-										<td></td>
-										<td><a href="/">Apply now</a></td>
-									</tr>
-								</table>
-								
+					<% @scholarships.each do |scholarship| %>
+						<div class="col-lg-4">
+							<div class="thumbnail">
+					      <img src="<%= scholarship.logo %>" alt="<%= scholarship.company %> logo" class="img-responsive">
+					      <div class="caption">
+									<table class="table">
+										<tr>
+											<td>Company</td>
+											<td><a href="<%= scholarship.website %>" target="_blank"><%= scholarship.company %></a></td>
+										</tr>
+										<tr>
+											<td>Type</td>
+											<td><strong><%= scholarship.scholarship_type %></strong></td>
+										</tr>
+										<tr>
+											<td>Available?</td>
+											<td><%= scholarship.available ? 'YES' : 'AWARDED' %></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td>
+												<%= link_to 'Apply now', new_fast_track_application_path(scholarship: scholarship.id) %></td>
+										</tr>
+									</table>
+									
+								</div>
 							</div>
 						</div>
-					</div>
+					<% end %>
 					<div class="col-lg-4">
 						<div class="thumbnail">
 				      <img src="<%= asset_path 'your-logo2.png' %>" alt="Coder Factory logo" class="img-responsive">

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  scholarship_type: MyString
+  company: MyString
+  logo: MyString
+  available: false
+  description: MyText
+
+two:
+  scholarship_type: MyString
+  company: MyString
+  logo: MyString
+  available: false
+  description: MyText

@@ -141,7 +141,7 @@
         <% end %>
         <% if @ft_appliction %>
           <div class="call-to-action-wrapper">
-          <h1 class="call-to-action-headline">Fast Track Application</h1>
+          <h1 class="call-to-action-headline"><%= params[:scholarship] ? "Scholarship Application" : "Fast Track Application" %></h1>
           </div>
         <% end %>
         <% if @community %>

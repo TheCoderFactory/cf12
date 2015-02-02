@@ -1,5 +1,8 @@
 <%= simple_form_for(@partner) do |f| %>
   <%= f.error_notification %>
+  <% if params[:sponsorship] %>
+    <%= f.input :sponsorship, as: :hidden, input_html: { value: params[:sponsorship]} %>
+  <% end %>
 
   <div class="form-inputs">
     <%= f.input :name %>
@@ -7,10 +10,9 @@
     <%= f.input :email %>
     <%= f.input :phone %>
     <%= f.input :message %>
-    <%= f.input :reason %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.submit "Become a change champion", class: 'btn-block btn-block-dirtygold' %>
   </div>
 <% end %>
