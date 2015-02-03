@@ -57,7 +57,7 @@
       <div class="main-row">
         <!-- Primary navigation -->
         <nav class="main-nav">
-          <ul class="main-nav-list">
+          <ul class="main-nav-list hidden-xs">
             <li class="main-nav-item">
               <%= link_to "Home", root_path, :nav_item => :home %>
             </li>
@@ -146,11 +146,8 @@
         <p class="lead call-to-action-info">Your boarding pass to the exciting world of high tech.</p>
         <br>
         <div class="hidden-xs">
-        <a href="#" class="btn-block btn-block-darknight" data-toggle="modal" data-target="#register">Download Info Pack</a>  <a href="/fast-track-application" class="btn-block btn-block-dirtygold">Apply Now</a>
-        </div>
-        <div class="visible-xs">
-        <a href="#" class="btn-block btn-block-darknight btn-small" data-toggle="modal" data-target="#register">Download Info Pack</a>  <a href="/fast-track-application" class="btn-block btn-block-dirtygold btn-small">Apply Now</a>
-        </div>
+        <a href="#" class="btn-block btn-block-darknight" data-toggle="modal" data-target="#register">Download Info Pack</a></div>  <a href="/fast-track-application" class="btn-block btn-block-dirtygold">Apply Now</a>
+        
         <% end %>
         <% if @ft_appliction %>
           <div class="call-to-action-wrapper">
