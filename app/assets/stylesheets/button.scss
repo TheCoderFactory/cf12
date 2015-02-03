@@ -77,6 +77,15 @@
     background: darken($slime, 25);
   }
 }
+.btn-block-vibrant {
+  color: $light;
+  background: darken($vibrant, 5);
+  transition: background 0.25s ease-in;
+  border-bottom: 2px solid darken($vibrant, 20);
+  &:hover {
+    background: darken($vibrant, 25);
+  }
+}
 .btn-small {
   padding:5px;
 }
