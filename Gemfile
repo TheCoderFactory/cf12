@@ -26,7 +26,7 @@ gem "autoprefixer-rails"
 # Delayed jobs
 gem 'sucker_punch', '~> 1.0'
 # gem 'exception_notification'
-# gem 'newrelic_rpm'
+gem 'newrelic_rpm'
 # gem "html_truncator", "~>0.2"
 gem "browser"
 gem 'jquery-turbolinks'

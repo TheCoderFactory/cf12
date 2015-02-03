@@ -32,6 +32,12 @@
 
     </script>
     <%= render 'layouts/icons' %>
+    <%= render 'layouts/mixpanel' %>
+    <script type="text/javascript">
+    mixpanel.track_links(".main-nav a", "click nav link", {
+        "referrer": document.referrer
+    });
+</script>
   </head>
   <body>
     <div class="top-bar">
