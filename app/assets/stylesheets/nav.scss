@@ -1,0 +1,101 @@
+// Presentational
+//--------------------------------------------
+
+
+.main-nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.main-nav-list {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  width: 66%;
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+}
+
+.main-nav-item {
+  color: $light;
+  display: block;
+  @extend %link-hover;
+  a {
+    text-decoration: none;
+  }
+}
+
+.active {
+  color: $dirty-gold;
+  border-color: $dirty-gold;
+}
+
+.main-nav-nested-list {
+  position: absolute;
+  display: none;
+  margin-top: 0px;
+  display: flex;
+  background: $light;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 150px;
+  width: 100px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: $light;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+.logo:hover {
+  text-decoration: none;
+  color: $light;
+}
+
+.logo-title {
+  font-size: $font-size-large;
+  display: inline-block;
+  font-weight: 300;
+  font-family: $body-font;
+  padding: 0 0 0 0.7em;
+}
+
+
+
+.mob-nav {
+  z-index: 1000;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  @media screen and (min-width: 800px) {
+    display: none;
+  }
+  .btn-block {
+    width: 154px;
+    border-radius: 0%;
+    &:hover {
+      background: $darknight;
+    }
+  }
+  a {
+    text-decoration: none;
+    &:active {
+      color: $dirty-gold;
+    }
+  }
+}
+
+.mob-nav-list {
+  display: flex;
+  height: 210px;
+  flex-direction: column;
+  justify-content: space-around;
+  background: $calm;
+  padding: 15px;
+}

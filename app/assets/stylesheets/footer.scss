@@ -1,0 +1,123 @@
+// Presentational
+//--------------------------------------------
+
+.main-footer {
+  color: $midnight-light;
+  background: $midnight;
+}
+
+.main-footer-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  @media screen and (min-width: 800px) {
+    flex-direction: row;
+  }
+  align-items: center;
+  padding: 75px 30px;
+  @media screen and (min-width: 800px) {
+    max-width: 70%;
+  }
+}
+
+.main-footer-list {
+  flex-grow: 1;
+  line-height: 1.8;
+  position: relative;
+  top: 20px;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media screen and (max-width: 800px) {
+    margin-top: 20px;
+  }
+}
+
+.main-footer-item {
+  @extend %link-hover;
+  a {
+    text-decoration: none;
+  }
+}
+
+.first-item {
+  font-weight: $font-weight-bold;
+  color: $light;
+}
+
+.footer-mission-statement {
+  width: 90%;
+  @media screen and (min-width: 700px) {
+    width: 50%;
+  }
+  line-height: 1.4;
+  .logo {
+    font-size: $font-size-xlarge;
+  }
+  .number {
+    color: $light;
+    font-size: 2.2em;
+    font-weight: bold;
+    margin: 2px 0;
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+  overflow: hidden;
+  a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-indent: -40000px;
+    opacity: 0.3;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    &:hover {
+      opacity: 1;
+      background: $dirty-gold;
+      background-size: 30px;
+    }
+  }
+  .facebook a {
+    background-image: image-url('social/facebook.svg');
+  }
+  .twitter a {
+    background-image: image-url('social/twitter.svg');
+  }
+  .pinterest a {
+    background-image: image-url('social/pinterest.svg');
+  }
+  .linkedin a {
+    background-image: image-url('social/linkedin.svg');
+  }
+  .youtube a {
+    background-image: image-url('social/youtube.svg');
+  }
+  .vimeo a {
+    background-image: image-url('social/vimeo.svg');
+  }
+}
+
+.trademark {
+}
+
+.overlay {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 4000px;
+  background: rgba(0,0,0,0.3);
+}
+
+blockquote {
+  background-color: #ccc;
+  margin-left: 10px;
+  padding: 10px;
+}
