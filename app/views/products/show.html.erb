@@ -41,12 +41,14 @@
         <tr>
           <td>
             <% if variant.in_stock? %>
-              <p class="stock yes"><%= pluralize(variant.stock, 'place') %> left</p>
+              <% if variant.stock <= 5 %>
+                <p class="stock yes"><%= pluralize(variant.stock, 'place') %> left</p>
+              <% end %>
             <% else %>
               <p class="stock no">Class full</p>
             <% end %>
             <h4>
-              <%= variant.location.city %>, <%= variant.location.name %>
+              <span style="text-transform: uppercase;"><%= variant.location.city %></span>, <%= variant.location.name %> [<span style="text-transform: uppercase;"><%= variant.start_date.strftime('%B') %></span>]
             </h4>
             <p class="date">
               <%= variant.start_date.strftime('%d %b') %> - <%= variant.end_date.strftime('%d %b %Y') %>
