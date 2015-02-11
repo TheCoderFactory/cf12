@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/TheCoderFactory/CFShoppe
-  revision: 42aa4da3d2062e40b0713a1d16652028b1ac7480
+  revision: 5ef5c790d0a255ec0d5eee7a876651f051bd44ac
   specs:
-    shoppe (1.0.9)
+    shoppe (1.0.10)
       bcrypt (~> 3.1, >= 3.1.2)
       carrierwave
       cloudinary
@@ -239,7 +239,7 @@ GEM
       rubyzip
       spreadsheet (> 0.6.4)
     ruby-ole (1.2.11.8)
-    rubyzip (1.1.6)
+    rubyzip (1.1.7)
     sass (3.4.9)
     sass-rails (5.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -326,7 +326,7 @@ DEPENDENCIES
   rails_12factor
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
-  shoppe (~> 1.0.9)!
+  shoppe (~> 1.0.10)!
   shoppe-stripe!
   simple_form
   sitemap_generator
