@@ -30,6 +30,13 @@ GIT
       shoppe
       stripe (~> 1.8.7)
 
+GIT
+  remote: https://github.com/tsechingho/ckeditor-rails
+  revision: 1849ec6a52a7d8b7d38b7b6a2399137abc9aa0c1
+  specs:
+    ckeditor_rails (4.4.6)
+      railties (>= 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -307,6 +314,7 @@ DEPENDENCIES
   browser
   byebug
   carrierwave
+  ckeditor_rails!
   cloudinary
   coffee-rails (~> 4.1.0)
   country_select
