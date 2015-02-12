@@ -16,6 +16,8 @@
   <div class="product">
   <div style="background-color: #<%= @product.in_the_box %>">
   <% if @product.has_variants? %>
+  <div class="row">
+      <div class="col-xs-12 col-lg-offset-2 col-lg-8">
   <h3 class="section-heading">Choose your workshop</h3>
 
     <table class="variants">
@@ -51,6 +53,7 @@
         </tr>
       <% end %>
     </table>
+    </div></div>
   <% else %>
     <div class="optionsBox">
       <div class="top">
