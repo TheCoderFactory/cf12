@@ -25,7 +25,7 @@
         <td><%= fast_track_application.country %></td>
         <td><%= fast_track_application.age %></td>
         <td><%= fast_track_application.gender %></td>
-        <td><%= link_to 'Show', fast_track_application %></td>
+        <td><%= link_to 'Show', fast_track_application_path(fast_track_application) %></td>
         <td><%= link_to 'Edit', edit_fast_track_application_path(fast_track_application) %></td>
         <td><%= link_to 'Destroy', fast_track_application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

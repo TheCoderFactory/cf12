@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  root 'home#index'
+  get 'blog', to: 'blog#index'
+  get 'community', to: 'community#index'
+  get 'women-in-tech', to: 'women_in_tech#index'
   resources :scholarships
 
   resources :authors
@@ -21,11 +25,7 @@ Rails.application.routes.draw do
     collection { post :import }
   end
 
-  get 'blog', to: 'blog#index'
-
-  get 'community', to: 'community#index'
-
-  get 'women-in-tech', to: 'women_in_tech#index'
+  
 
   get 'privacy', to: 'privacy#index'
 
