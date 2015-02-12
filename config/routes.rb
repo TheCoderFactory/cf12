@@ -31,6 +31,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  get "/posts/why-their-needs-more-women-in-tech", to: redirect('/posts/why-there-needs-more-women-in-tech')
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
