@@ -53,6 +53,7 @@
 }
 
 .why-cf-info {
+	
 	margin: 5% 0 0;
 	line-height: $line-height-base;
 	color: $darknight;
@@ -78,18 +79,23 @@
 
 .darknight {
 	background-color: $darknight;
+	padding-bottom: 40px;
 }
 .calm {
 	background-color: $calm;
+	padding-bottom: 40px;
 }
 .dirty-gold {
 	background-color: $dirty-gold;
+	padding-bottom: 40px;
 }
 .vibrant {
 	background-color: $vibrant;
+	padding-bottom: 40px;
 }
 .slime {
 	background-color: $slime;
+	padding-bottom: 40px;
 }
 .section-heading {
 	text-align: center;
@@ -165,13 +171,13 @@ a.thumbnail.active {
 
 //Carousel
 
-.carousel-indicators.active  { background: $darknight; } 
-.carousel-content{ margin-top:20px; } 
+.carousel-indicators.active  { background: #31708f; } 
+.carousel-content{ margin-top: 50px; margin-bottom: 50px;} 
 .adjust1{ float:left; width:100%; margin-bottom:0; } 
-.adjust2{ margin:0; } 
+.adjust2{ margin:0; background-color: #fff; } 
 .carousel-indicators li{ border :1px solid #ccc;}
 
-.carousel-control { color: $darknight; width:5%; } 
+.carousel-control { color: #31708f; width:5%; } 
 .carousel-control:hover, 
 .carousel-control:focus{ color:#31708f; }
 
@@ -184,18 +190,23 @@ a.thumbnail.active {
     }
 }
 
+//Location Box
+.location-details{
+margin-top: 50px;
+margin-bottom: 50px;
+}
 
 //Info box
 .box {
     border-radius: 3px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.16), 0 0px 1px 0 rgba(0, 0, 0, 0.12);
     padding: 10px 25px;
     text-align: right;
     display: block;
     margin-top: 60px;
 }
 .box-icon {
-    background-color: $slime;
+    background-color: #fff;
     border-radius: 50%;
     display: table;
     height: 100px;
