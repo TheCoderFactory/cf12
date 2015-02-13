@@ -20,7 +20,7 @@
 
   <tbody>
     <% @fast_track_applications.each do |fast_track_application| %>
-      <tr>
+      <tr style="<%= 'background: #eee;' if fast_track_application.admission %>">
         <td><%= fast_track_application.first_name %> <%= fast_track_application.last_name %></td>
         <td><%= fast_track_application.city %></td>
         <td><%= fast_track_application.country %></td>
