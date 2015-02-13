@@ -13,6 +13,7 @@
       <th>Country</th>
       <th>Age</th>
       <th>Gender</th>
+      <th>Accept?</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -25,7 +26,8 @@
         <td><%= fast_track_application.country %></td>
         <td><%= fast_track_application.age %></td>
         <td><%= fast_track_application.gender %></td>
-        <td><%= link_to 'Show', fast_track_application_path(fast_track_application) %></td>
+        <td><% if fast_track_application.admission %><%= link_to 'See admission', admission_path(fast_track_application.admission) %><% else %><%= link_to "Accept Student", accept_fast_track_application_path(fast_track_application), data: { confirm: 'Are you sure?' }  %><% end %></td>
+        <td><a href="/fast_track_applications/<%= fast_track_application.id %>">Show</a></td>
         <td><%= link_to 'Edit', edit_fast_track_application_path(fast_track_application) %></td>
         <td><%= link_to 'Destroy', fast_track_application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

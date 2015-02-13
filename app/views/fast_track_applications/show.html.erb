@@ -1,4 +1,7 @@
-<p id="notice"><%= notice %></p>
+ <%= content_for :header, 'small-header' %>
+  <div class="row">
+    <div class="col-xs-12 col-lg-offset-2 col-lg-8">
+    <p id="notice"><%= notice %></p>
 
 <p>
   <strong>First name:</strong>
@@ -92,3 +95,4 @@
 
 <%= link_to 'Edit', edit_fast_track_application_path(@fast_track_application) %> |
 <%= link_to 'Back', fast_track_applications_path %>
+</div></div>

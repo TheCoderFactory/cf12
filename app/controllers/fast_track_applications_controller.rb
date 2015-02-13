@@ -1,8 +1,20 @@
 class FastTrackApplicationsController < ApplicationController
-  before_action :set_fast_track_application, only: [:show, :edit, :update, :destroy]
+  before_action :set_fast_track_application, only: [:accept, :show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:new, :create]
   invisible_captcha only: :create
   respond_to :html
+
+  def accept
+    @admission = Admission.create(fast_track_application_id: @fast_track_application.id, name: @fast_track_application.full_name, email: @fast_track_application.email)
+    # if @admission.save(validation: false)
+    # puts @admission.id.to_s
+      AcceptanceMailerJob.new.async.perform(@admission.id)
+    # else
+    #   puts "Admission not saved"
+    # end
+
+    redirect_to fast_track_applications_path
+  end
 
   def index
     @fast_track_applications = FastTrackApplication.all

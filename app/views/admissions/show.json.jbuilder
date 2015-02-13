@@ -1,0 +1,1 @@
+json.extract! @admission, :id, :fast_track_application_id, :name, :email, :phone, :street_address, :city, :postcode, :state, :country, :programme, :scholarship, :laptop, :payment_plan, :accommodation, :agreement, :created_at, :updated_at

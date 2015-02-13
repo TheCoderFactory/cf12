@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fast_track_application_id: 
+  name: MyString
+  email: MyString
+  phone: MyString
+  street_address: MyString
+  city: MyString
+  postcode: MyString
+  state: MyString
+  country: MyString
+  programme: MyString
+  scholarship: false
+  laptop: false
+  payment_plan: MyString
+  accommodation: MyString
+  agreement: MyString
+
+two:
+  fast_track_application_id: 
+  name: MyString
+  email: MyString
+  phone: MyString
+  street_address: MyString
+  city: MyString
+  postcode: MyString
+  state: MyString
+  country: MyString
+  programme: MyString
+  scholarship: false
+  laptop: false
+  payment_plan: MyString
+  accommodation: MyString
+  agreement: MyString

@@ -11,7 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150202110559) do
+ActiveRecord::Schema.define(version: 20150213050625) do
+
+  create_table "admissions", force: :cascade do |t|
+    t.integer  "fast_track_application_id"
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "street_address"
+    t.string   "city"
+    t.string   "postcode"
+    t.string   "state"
+    t.string   "country"
+    t.string   "programme"
+    t.boolean  "scholarship"
+    t.boolean  "laptop"
+    t.string   "payment_plan"
+    t.string   "accommodation"
+    t.string   "agreement"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  add_index "admissions", ["fast_track_application_id"], name: "index_admissions_on_fast_track_application_id"
 
   create_table "authors", force: :cascade do |t|
     t.string   "name"

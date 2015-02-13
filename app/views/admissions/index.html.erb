@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+ <%= content_for :header, 'small-header' %>
+  <div class="row">
+    <div class="col-xs-12 col-lg-offset-2 col-lg-8">
+      <h2>Admissions</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Programme</th>
+      <th>Scholarship</th>
+      <th>Laptop</th>
+      <th>Payment plan</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admissions.each do |admission| %>
+      <tr>
+        <td><%= admission.name %></td>
+        <td><%= admission.programme %></td>
+        <td><%= admission.scholarship %></td>
+        <td><%= admission.laptop %></td>
+        <td><%= admission.payment_plan %></td>
+        <td><%= link_to 'Show', admission %></td>
+        <td><%= link_to 'Destroy', admission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+</div></div>

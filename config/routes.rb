@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :admissions
+
   root 'home#index'
   get 'blog', to: 'blog#index'
   get 'community', to: 'community#index'
@@ -13,7 +15,11 @@ Rails.application.routes.draw do
   get 'thanks', to: 'thanks#index'
 
   get 'fast-track-application', to: 'fast_track_applications#new'
-  resources :fast_track_applications
+  resources :fast_track_applications do
+    member do 
+      get :accept
+    end
+  end
 
   resources :partners
 
