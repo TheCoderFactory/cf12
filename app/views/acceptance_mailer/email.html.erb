@@ -246,7 +246,7 @@
 			<table class="table">
 				<tr>
 					<td style="">
-						<p><center><img src="http://res.cloudinary.com/coder-factory/image/upload/v1407396967/new_logo_d92x2h.png" /></center></p>
+						
 						<h4 style="text-align:center;padding:10px;">Welcome to the Fast Track, <%= @fast_track_application.first_name %> </h4>
 						<!-- A Real Hero (and a real human being) -->
 						<h4>Congratulations! And welcome to Coder Factory!</h4>
@@ -260,15 +260,16 @@
 <hr>
 
 <h4>What happens next?</h4>
-<ol>
-<li>Complete the <a href="http://coderfactory.co/admissions/<%= @admission.id %>/edit" class="btn">admissions form</a> and agree to the terms & conditions.</li>
+<ul>
+<li>Complete the <a href="http://coderfactory.co/admissions/<%= @admission.id %>/edit">admissions form</a> and agree to the terms & conditions.</li>
 <li>You’ll receive an invoice for your deposit.</li>
 <li>Secure your place by paying the deposit.</li>
 <li>You’ll receive a receipt for your deposit.</li>
 <li>Your remaining payment/s will commence when the course starts in April.</li>
-</ol>
+</ul>
+<br>
 <hr>
-
+<br>
 
 <h4>Pre-work</h4>
 
@@ -280,15 +281,18 @@
 <li>You’ll be able to say hello to your fellow students and start to get to know each other.</li>
 </ul>
 
-
+<br>
 <hr>
+<br>
 <h4>Course dates</h4>
 
 <ul>
 <li>First twelve week block (classroom): Tuesday, 7th April --> 26th June.</li>
 <li>Second twelve week block (project work): 29th June -> 18th September.</li>
 </ul>
+<br>
 <hr>
+<br>
 <a href="http://coderfactory.co/admissions/<%= @admission.id %>/edit" class="btn">Complete admissions form</a>
 												
 						<br/>
