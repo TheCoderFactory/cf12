@@ -8,61 +8,80 @@
 <div class="container blog-post">
   <div class="row">
     <div class="col-sm-7 col-sm-offset-1">
-      <div itemscope itemtype="http://schema.org/Article" class="post panel panel-default">
-      <div class="panel-body">
-      <div class="post-img">
-        <h2><a href="<%= post_url %>"><span itemprop="name"><%= @post.title %></span></a></h2>
-        <hr>
-        <div class="post_info clearfix">
-        <% if @author %>
-        
-          <span class="author vcard">
-            <a rel="author" href="/authors/<%= @author.slug %>">
-              <%= image_tag @author.profile_picture, class: 'img-thumbnail', alt: @author.name, width: '50px' %> 
-              <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <%= @author.name %>
+      <div itemscope itemtype="http://schema.org/Article" class="post">
+        <div class="post-img">
+          <h2><a href="<%= post_url %>"><span itemprop="name"><%= @post.title %></span></a></h2>
+          <hr>
+          <div class="post_info clearfix">
+            <% if @author %>
+            
+              <span class="author vcard">
+                <a rel="author" href="/authors/<%= @author.slug %>">
+                  <%= image_tag @author.profile_picture, class: 'img-thumbnail', alt: @author.name, width: '50px' %> 
+                  <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <%= @author.name %>
+                  </span>
+                </a>
               </span>
-            </a>
-          </span>
-        <% end %>
-        &nbsp; 
-        <small>Published: <i class="fa fa-calendar"></i> 
-        <abbr class="published" itemprop="datePublished" content="<%= @post.published_date.strftime('%Y-%m-%d') %>" title="Published on <%= @post.published_date.strftime('%A, %e %B %Y, %l:%M%P') %>"><%= @post.published_date.strftime('%A, %e %B %Y') %></abbr></small>
-      </div>
-      <hr>
-        <img itemprop="image" src="<%= asset_path @post.image %>" alt="<%= @post.title %>" class="img-responsive img-thumbnail">
-        <!-- Go to www.addthis.com/dashboard to customize your tools -->
-<div class="addthis_sharing_toolbox"></div>
-        <hr>
-      </div>
+            <% end %>
+            &nbsp; 
+            <small>Published: <i class="fa fa-calendar"></i> 
+            <abbr class="published" itemprop="datePublished" content="<%= @post.published_date.strftime('%Y-%m-%d') %>" title="Published on <%= @post.published_date.strftime('%A, %e %B %Y, %l:%M%P') %>"><%= @post.published_date.strftime('%A, %e %B %Y') %></abbr></small>
+          </div>
+          <hr>
+          <img itemprop="image" src="<%= asset_path @post.image %>" alt="<%= @post.title %>" class="img-responsive img-thumbnail">
+          <!-- Go to www.addthis.com/dashboard to customize your tools -->
+          <div class="addthis_sharing_toolbox"></div>
+            <hr>
+          </div>
       
-      <p class="lead">
-        <%= @post.lead.html_safe %>
-      </p>
-      <hr>
-      <div id="content">
-      <%= @post.content.html_safe %>
-      </div>
-      <!-- Go to www.addthis.com/dashboard to customize your tools -->
-<div class="addthis_sharing_toolbox"></div>
+          <p class="lead">
+            <%= @post.lead.html_safe %>
+          </p>
+          <hr>
+          <div id="content">
+            <%= @post.content.html_safe %>
+          </div>
+          <!-- Go to www.addthis.com/dashboard to customize your tools -->
+          <div class="addthis_sharing_toolbox"></div>
       
-      <hr>
-    </div></div>
-    </div>
-    <div class="col-lg-3 hidden-xs hidden-sm">
-      <div class="panel panel-warning promo-box">
-        <div class="panel-heading">
-          <h4 class="panel-title"><i class="fa fa-fighter-jet"></i> Fast Track </h4>
+            <hr>
+          </div>
         </div>
-        <div class="panel-body">
-          <p>Six months to your new life in the tech industry. Become a developer at a tech startup or perhaps a digital nomad.</p>
-          <p>Applications are open now. Class starts 7th April 2015. Only 15 spaces available.</p>
-          <a href="/fast-track" class="btn btn-material-lightblue btn-raised">See the details</a>
+        <div class="col-lg-3">
+          <div class="panel panel-success promo-box">
+            <div class="panel-heading">
+              <h4 class="panel-title"><i class="fa fa-child"></i> Weekend workshops </h4>
+            </div>
+            <div class="panel-body">
+              <p>Have fun at a Coder Factory workshop.</p>
+              <p>You can learn web design, how to code with Ruby on Rails, Wordpress and more.</p>
+              <a href="/courses/workshops" class="btn btn-material-lightblue btn-raised">Enrol now</a>
+            </div>
+          </div>
+          <div class="panel panel-info promo-box">
+            <div class="panel-heading">
+              <h4 class="panel-title"><i class="fa fa-female"></i> Women in Tech </h4>
+            </div>
+            <div class="panel-body">
+              <p>Does your organisation need to improve the gender diversity of your tech teams?</p>
+              <p>Support the Champions for Change initiative</p>
+              <a href="/fast-track" class="btn btn-material-lightblue btn-raised">Show your support</a>
+            </div>
+          </div>
+          <div class="panel panel-warning promo-box">
+            <div class="panel-heading">
+              <h4 class="panel-title"><i class="fa fa-fighter-jet"></i> Fast Track </h4>
+            </div>
+            <div class="panel-body">
+              <p>Six months to your new life in the tech industry. Become a developer at a tech startup or perhaps a digital nomad.</p>
+              <p>Applications are open now. Class starts 7th April 2015. Only 15 spaces available.</p>
+              <a href="/fast-track" class="btn btn-material-lightblue btn-raised">See the details</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52ee398713b80ae1" async="async"></script>
 
