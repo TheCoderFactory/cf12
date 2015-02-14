@@ -121,6 +121,14 @@
 											<td><%= scholarship.available ? 'YES' : 'AWARDED' %></td>
 										</tr>
 										<tr>
+											<td>Closing date</td>
+											<td><%= scholarship.close_date ? scholarship.close_date.strftime('%e %B %y') : 'Closed' %></td>
+										</tr>
+										<tr>
+											<td>Announced</td>
+											<td><%= scholarship.announce_date.strftime('%e %B %y') if scholarship.announce_date %></td>
+										</tr>
+										<tr>
 											<td></td>
 											<td>
 												<%= link_to 'Apply now', new_fast_track_application_path(scholarship: scholarship.id) %></td>
@@ -133,7 +141,7 @@
 					<% end %>
 					<div class="col-lg-4">
 						<div class="thumbnail">
-				      <img src="<%= asset_path 'your-logo2.png' %>" alt="Coder Factory logo" class="img-responsive">
+				      <a href="http://localhost:3000/partners/new?sponsorship=maker" target="_blank"><img src="<%= asset_path 'your-logo2.png' %>" alt="Coder Factory logo" class="img-responsive"></a>
 				      <div class="caption">
 								
 								
@@ -142,7 +150,7 @@
 					</div>
 					<div class="col-lg-4">
 						<div class="thumbnail">
-				      <img src="<%= asset_path 'your-logo2.png' %>" alt="Coder Factory logo" class="img-responsive">
+				      <a href="http://localhost:3000/partners/new?sponsorship=maker" target="_blank"><img src="<%= asset_path 'your-logo2.png' %>" alt="Coder Factory logo" class="img-responsive"></a>
 				      <div class="caption">
 								
 								

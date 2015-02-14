@@ -42,6 +42,6 @@ class ScholarshipsController < ApplicationController
     end
 
     def scholarship_params
-      params.require(:scholarship).permit(:website, :scholarship_type, :company, :logo, :available, :description)
+      params.require(:scholarship).permit(:close_date, :announce_date,:website, :scholarship_type, :company, :logo, :available, :description)
     end
 end
