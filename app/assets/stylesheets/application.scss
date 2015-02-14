@@ -112,6 +112,37 @@
 	text-align: center;
 }
 
+.panel {
+margin-bottom: 20px;
+background-color: #fff;
+border: 1px solid transparent;
+border-radius: 4px;
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.panel-slime > .panel-heading {
+color: $light;
+background-color: $slime;
+border-color: #d6e9c6;
+}
+.panel-calm > .panel-heading {
+color: $light;
+background-color: $calm;
+border-color: #d6e9c6;
+}
+.panel-dirtygold > .panel-heading {
+color: $light;
+background-color: $dirty-gold;
+border-color: #d6e9c6;
+}
+
+
+.panel-heading {
+padding: 10px 15px;
+border-bottom: 1px solid transparent;
+border-top-right-radius: 0px;
+border-top-left-radius: 0px;
+}
 /*.course-content {
 	color: white;
 }*/
