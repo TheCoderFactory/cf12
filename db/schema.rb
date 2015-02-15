@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150214030301) do
+ActiveRecord::Schema.define(version: 20150215004037) do
 
   create_table "admissions", force: :cascade do |t|
     t.integer  "fast_track_application_id"
@@ -132,6 +132,19 @@ ActiveRecord::Schema.define(version: 20150214030301) do
   end
 
   add_index "posts", ["author_id"], name: "index_posts_on_author_id"
+
+  create_table "pre_questionnaires", force: :cascade do |t|
+    t.string   "name"
+    t.string   "gender"
+    t.string   "age"
+    t.text     "reason"
+    t.text     "background"
+    t.text     "experience"
+    t.text     "hobbies"
+    t.integer  "order_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "scholarships", force: :cascade do |t|
     t.string   "scholarship_type"

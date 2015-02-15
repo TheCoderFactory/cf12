@@ -143,7 +143,7 @@ class OrdersController < ApplicationController
         # )
         session[:order_id] = nil
         EnrolmentMailer.received.deliver
-        redirect_to thanks_path, :notice => "Your place in these courses have been booked!"
+        redirect_to new_pre_questionnaire_path(order: @order.id), :notice => "Your place in these courses have been booked!"
       rescue Shoppe::Errors::PaymentDeclined => e
         flash[:alert] = "Payment was declined by the bank. #{e.message}"
         redirect_to checkout_path

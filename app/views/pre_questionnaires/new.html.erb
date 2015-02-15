@@ -1,0 +1,23 @@
+<%= content_for :header, 'small-header' %>
+  <section class="darknight">
+  <div class="row">
+    <div class="col-xs-12 col-lg-offset-2 col-lg-8">
+    <div style="color:white;">
+      <h1>Thanks!!</h1>
+      <p class="lead">Help us get to know you in preparation for your upcoming course.</p>
+    </div>
+    <% if params[:order] %>
+	    <div class="panel panel-default"><div class="panel-body">
+	    	<p>You have enrolled in the following course/s.</p>
+	    	<div class="content">
+		    	<ul>
+		    		<% @order.order_items.each do |order_item| %>
+		    	  	<li><%= Shoppe::Product.find(order_item.ordered_item_id).parent.name %>: <%= Shoppe::Product.find(order_item.ordered_item_id).name %></li>
+		    		<% end %>
+		    	</ul>
+	    	</div>
+	    </div></div>
+	  <% end %>
+<div class="panel panel-default"><div class="panel-body">
+	<%= render 'form' %>
+</div></div></div></div></div></section>

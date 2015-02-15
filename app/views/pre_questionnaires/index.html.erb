@@ -1,0 +1,34 @@
+ <%= content_for :header, 'small-header' %>
+  <div class="row">
+    <div class="col-xs-12 col-lg-offset-2 col-lg-8">
+      <h2>Pre-questionnaires</h2>
+      <div class="panel panel-default"><div class="panel-body">
+      <p id="notice"><%= notice %></p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Age</th>
+      <th>Order</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pre_questionnaires.each do |pre_questionnaire| %>
+      <tr>
+        <td><%= pre_questionnaire.name %></td>
+        <td><%= pre_questionnaire.gender %></td>
+        <td><%= pre_questionnaire.age %></td>
+        <td><a href="/store/orders/<%= pre_questionnaire.order_id %>">See order</a></td>
+        <td><%= link_to 'Show', pre_questionnaire %></td>
+        <td><%= link_to 'Delete', pre_questionnaire, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+</div></div></div></div>

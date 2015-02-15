@@ -1,4 +1,4 @@
-<% for product in products.includes(:product_category) %>
+<% products.each do |product| %>
       
         <div class="workshop-item" style="background-color: #<%= product.in_the_box %>;">
         <div class="row">

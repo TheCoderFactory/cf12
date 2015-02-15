@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  resources :pre_questionnaires
+
   resources :admissions
 
   root 'home#index'
@@ -13,6 +16,7 @@ Rails.application.routes.draw do
 
   mount Shoppe::Engine => "/store"
   get 'thanks', to: 'thanks#index'
+  get 'admin', to: 'admin#index'
 
   get 'fast-track-application', to: 'fast_track_applications#new'
   resources :fast_track_applications do
@@ -35,7 +39,7 @@ Rails.application.routes.draw do
 
   get 'privacy', to: 'privacy#index'
 
-  devise_for :users
+  devise_for :users, :skip => :registrations
 
   # get "/posts/why-their-needs-more-women-in-tech", to: redirect('/posts/why-there-needs-more-women-in-tech')
   # get "/popular_programmes/rails-foundations-for-beginners", to: redirect('/courses/learn-to-code-weekend-workshop')

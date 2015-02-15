@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+<%= content_for :header, 'small-header' %>
+<div class="row">
+  <div class="col-xs-12 col-lg-offset-2 col-lg-8">
+    <h2>Admin</h2>
+    <%= link_to "Admissions", admissions_path %> (<%= Admission.all.count %>)<br>
+    <%= link_to "Authors", authors_path %> (<%= Author.all.count %>)<br>
+    <%= link_to "Course Registrations", course_registrations_path %> (<%= CourseRegistration.all.count %>)<br>
+    <%= link_to "Enquiries", enquiries_path %> (<%= Enquiry.all.count %>)<br>
+    <%= link_to "Fast Track Applications", fast_track_applications_path %> (<%= FastTrackApplication.all.count %>)<br>
+    <%= link_to "Partners", partners_path %> (<%= Partner.all.count %>)<br>
+    <%= link_to "Posts", posts_path %> (<%= Post.all.count %>)<br>
+    <%= link_to "Prequestionnaires", pre_questionnaires_path %> (<%= PreQuestionnaire.all.count %>)<br>
+  </div>
+</div>

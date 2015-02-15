@@ -1,0 +1,35 @@
+<%= simple_form_for(@pre_questionnaire) do |f| %>
+  <%= f.error_notification %>
+
+
+  <div class="form-inputs">
+    <div class="row">
+      <div class="col-md-4">
+        <% if @order %>
+          <%= f.input :name, input_html: { value: @order.full_name } %>
+        <% else %>
+          <%= f.input :name %>
+        <% end %>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :gender, collection: ['Female', 'Male', 'Other'] %>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :age %>
+      </div>
+    </div>
+    <%= f.input :reason, label: 'Please tell us why you enrolled in the course', input_html: { class: 'form-control', rows: 3 } %>
+    <%= f.input :background, label: 'What is your background? Career, study, interests?', input_html: { class: 'form-control', rows: 3 } %>
+    <%= f.input :experience, label: 'Please describe what technology you have experience with, if any.', input_html: { class: 'form-control', rows: 3 } %>
+    <%= f.input :hobbies, label: 'What is your main passion in life?', input_html: { class: 'form-control', rows: 3 }  %>
+        <% if @order %>
+          <%= f.input :order_id, as: :hidden, input_html: { value: @order.id} %>
+        <% else %>
+          <%= f.input :order_id, as: :hidden %>
+        <% end %>
+  </div>
+  <p>Thanks!!</p>
+  <div class="form-actions">
+    <%= f.submit "Complete enrolment", class: 'btn-block btn-block-slime' %>
+  </div>
+<% end %>

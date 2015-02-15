@@ -1,0 +1,49 @@
+ <%= content_for :header, 'small-header' %>
+  <div class="row">
+    <div class="col-xs-12 col-lg-offset-2 col-lg-8">
+      <h2>Pre-questionnaire</h2>
+      <div class="panel panel-default"><div class="panel-body">
+      <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pre_questionnaire.name %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @pre_questionnaire.gender %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @pre_questionnaire.age %>
+</p>
+
+<p>
+  <strong>Reason:</strong>
+  <%= @pre_questionnaire.reason %>
+</p>
+
+<p>
+  <strong>Background:</strong>
+  <%= @pre_questionnaire.background %>
+</p>
+
+<p>
+  <strong>Experience:</strong>
+  <%= @pre_questionnaire.experience %>
+</p>
+
+<p>
+  <strong>Hobbies:</strong>
+  <%= @pre_questionnaire.hobbies %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @pre_questionnaire.order_id %>
+</p>
+
+<%= link_to 'Back', pre_questionnaires_path %>
+</div></div></div></div>
