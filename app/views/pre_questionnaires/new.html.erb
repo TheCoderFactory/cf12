@@ -12,7 +12,7 @@
 	    	<div class="content">
 		    	<ul>
 		    		<% @order.order_items.each do |order_item| %>
-		    	  	<li><%= Shoppe::Product.find(order_item.ordered_item_id).parent.name %>: <%= Shoppe::Product.find(order_item.ordered_item_id).name %></li>
+		    	  	<li><%= Shoppe::Product.find(order_item.ordered_item_id).parent.name + ": " if Shoppe::Product.find(order_item.ordered_item_id).parent %> <%= Shoppe::Product.find(order_item.ordered_item_id).name %></li>
 		    		<% end %>
 		    	</ul>
 	    	</div>
