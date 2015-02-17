@@ -1,7 +1,7 @@
 <% active_nav_item :catalogue %>
 <% content_for :header, "small-header" %>
 <%= content_for :title, "Enrol in Coder Factory&apos;s ".html_safe + @product.name %>
-<%= content_for :description, @product.short_description %>
+<%= content_for :description, @product.short_description.html_safe %>
 
 <section class="workshop-header" style="background-color: #<%= @product.product_attributes.find_by(key: 'color').value if @product.product_attributes.find_by(key: 'color') %>">
   <div class="call-to-action-wrapper">
