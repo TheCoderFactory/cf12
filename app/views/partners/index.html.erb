@@ -1,16 +1,15 @@
-<p id="notice"><%= notice %></p>
+<%= content_for :header, 'small-header' %>
+<section class="calm">        
+  <div class="row">
+    <div class="col-xs-12 col-lg-offset-2 col-lg-8">
+      <h2 class="section-heading">Partnership Requests</h2>
+      <div class="panel panel-default"><div class="panel-body">
 
-<h1>Listing Partners</h1>
-
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
       <th>Company</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Message</th>
-      <th>Reason</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,10 +19,6 @@
       <tr>
         <td><%= partner.name %></td>
         <td><%= partner.company %></td>
-        <td><%= partner.email %></td>
-        <td><%= partner.phone %></td>
-        <td><%= partner.message %></td>
-        <td><%= partner.reason %></td>
         <td><%= link_to 'Show', partner %></td>
         <td><%= link_to 'Edit', edit_partner_path(partner) %></td>
         <td><%= link_to 'Destroy', partner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -35,3 +30,4 @@
 <br>
 
 <%= link_to 'New Partner', new_partner_path %>
+</div></div></div></div></section>

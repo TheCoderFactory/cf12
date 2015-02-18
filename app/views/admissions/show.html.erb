@@ -1,8 +1,14 @@
 <p id="notice"><%= notice %></p>
+ <%= content_for :header, 'small-header' %>
+  <div class="row">
+    <div class="col-xs-12 col-lg-offset-2 col-lg-8">
+      <h2>Admission for <%= @admission.name %></h2>
+      <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Fast track application:</strong>
-  <%= @admission.fast_track_application %>
+  <a href="/fast_track_applications/<%= @admission.fast_track_application.id %>">Application</a>
+  
 </p>
 
 <p>
