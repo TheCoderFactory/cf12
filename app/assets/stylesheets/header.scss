@@ -106,3 +106,10 @@
     display: none;
   }
 }
+
+.women-in-tech-hero {
+  text-align: right;
+  @media screen and (max-width: 1200px) {
+    padding-top: 300px;
+  }
+}
