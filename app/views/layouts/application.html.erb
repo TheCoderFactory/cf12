@@ -128,25 +128,30 @@
 
         <% if @course_header %>
         <div class="course-select-wrapper">
-          <h1 class="course-select-headline">I am a
-            <label for="ability" class="custom-select-arrow">
-              <select id="ability" class="input-select-feature">
-                <option selected>beginner</option>
-                <option>intermediate</option>
-                <option>advanced</option>
+          <h1 class="course-select-headline">I live in
+            <label for="location" class="custom-select-arrow">
+              <select class="input-select-feature" ng-model="courseList.usersLocation" ng-change="courseList.locationChanged(courseList.usersLocation)">
+                <option selected>Sydney</option>
+                <option>Melbourne</option>
+                <option>Brisbane</option>
+                <option>Perth</option>
+                <option>Adelaide</option>
               </select>
             </label><br>
-            who wants to learn<br>
+            and want to learn<br>
             <span class="custom-select-arrow">
-              <select class="input-select-feature">
-                <option>ruby on rails</option>
-                <option selected>web design</option>
+              <select class="input-select-feature" ng-model="courseList.usersInterest" ng-change="courseList.interestChanged(courseList.usersInterest)">
+                <option selected>how to code</option>
+                <option>web design</option>
                 <option>wordpress</option>
+                <option>technology</option>
+                <option>ruby on rails</option>
               </select>
             </span><br>
           </h1>
         </div>
         <% end %>
+        
         <% if @fast_track_header %>
           <div class="call-to-action-wrapper">
           <h1 class="call-to-action-headline">Fast Track</h1>

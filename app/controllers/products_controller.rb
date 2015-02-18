@@ -8,7 +8,8 @@ class ProductsController < ApplicationController
       @product = @product_category.products.where(:permalink => params[:product_id]).active.first!      
     end
   end
-  
+  respond_to :html, :json
+
   def index
     @products = @product_category.products.includes(:product_category, :variants).root.active
   end
@@ -18,7 +19,9 @@ class ProductsController < ApplicationController
   end
   
   def categories
-    @product_categories = Shoppe::ProductCategory.ordered
+    # @product_categories = Shoppe::ProductCategory.ordered
+    @products = Shoppe::Product.where(parent_id: nil)
+    respond_with :html, :json
   end
   
   def show

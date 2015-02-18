@@ -1,32 +1,52 @@
-<% products.each do |product| %>
-      
-        <div class="workshop-item" style="background-color: #<%= product.in_the_box %>;">
-        <div class="row">
-          <div class="col-lg-6">
-
-            <% if product.product_attributes.find_by(key: 'image') %>
-              <%= image_tag product.product_attributes.find_by(key: 'image').value, class: 'img-responsive pull-right img-thumbnail' %>
-            <% end %>
-          </div>
-          <div class="col-lg-6">
-          <div class="course-item-content">
-          
-              
-            <h3 class="course-item-headline">
-              <%= link_to product.name, product_path(product.product_category.permalink, product.permalink) %>
-            </h3>
-            
-            <p class="course-item-info">
-              <%= product.short_description.html_safe %>
-            </p>
-            <p class="price">
-              <%= number_to_currency(product.price * 1.1) %> (incl. GST)
-            </p>
-            <br>
-            <%= link_to "More info", product_path(product.product_category.permalink, product.permalink), class: "btn-block btn-block-light btn-small" %>
-            <% if product.orderable? %>
-              <%= link_to "Add", buy_product_path(product.product_category.permalink, product.permalink), :class => 'add', :method => :post %>
-            <% end %>
-          </div></div></div>
+<ul class="all-courses-list" ng-controller="CourseList as courseList">
+  <% for product in products.includes(:product_category) %>
+    <li class="all-courses-item">
+      <header class="all-courses-header workshop-header-bg">
+        <div class="main-row">
+          <img src="<%= asset_path 'html-code-slime.svg' %>" class="all-courses-icon" />
+          <h1 class="all-courses-headline">
+            <%= link_to product.name, product_path(product.product_category.permalink, product.permalink) %> 
+          </h1><br>
+          <time class="all-courses-time" ng-click="courseList.showFollowingWeek = true" ng-hide="courseList.showFollowingWeek">Next Class: <%= product.variants.first.start_date.strftime('%d') %>-<%= product.variants.first.end_date.strftime('%d %b') %> (<%= product.variants.first.location.city %>)</time>
+          <!-- <time class="all-courses-time" ng-click="courseList.showFollowingWeek = false" ng-show="courseList.showFollowingWeek">Class After That: 12-13th March (Weekend)</time> -->
+          <h3 class="all-courses-level workshop-level"><%= product.product_attributes.find_by(key: 'level').value %></h3>
         </div>
-    <% end %>
+      </header>
+      <div class="main-row">
+        <img src="<%= asset_path 'html-code-slime.svg' %>" class="all-courses-icon" />
+        <h1 class="all-courses-headline">
+          Web Design
+        </h1><br>
+        <time class="all-courses-time" ng-click="courseList.showFollowingWeek = true" ng-hide="courseList.showFollowingWeek">Next Class: 17-18th Feb (Weekend)</time>
+        <time class="all-courses-time" ng-click="courseList.showFollowingWeek = false" ng-show="courseList.showFollowingWeek">Class After That: 12-13th March (Weekend)</time>
+        <h3 class="all-courses-level workshop-level">Beginner</h3>
+      </div>
+    </header>
+    <div class="main-row">
+      <p class="all-courses-summary">
+        Get creative with web design. Learn how to make beautiful websites. This short course form gives you a fast paced but enjoyable taste of web design. You'll learn the words the kids are using like UX, UI, Development. Anyone can do it!
+      </p>
+      <div class="all-courses-skills">
+        <div class="all-courses-skill">
+          <img src="<%= asset_path 'icon-brush.svg' %>"/>
+          <p>Visual Design</p>
+        </div>
+        <div class="all-courses-skill">
+          <img src="<%= asset_path 'icon-type.svg' %>"/>
+          <p>Design Fundamentals</p>
+        </div>
+        <div class="all-courses-skill">
+          <img src="<%= asset_path 'icon-flow-chart.svg' %>"/>
+          <p>User Experience</p>
+        </div>
+        <div class="all-courses-skill">
+          <img src="<%= asset_path 'icon-html-code.svg' %>"/>
+          <p>Front End Design</p>
+        </div>
+      </div>
+      <a class="btn-block btn-block-slime">
+        More Info
+      </a>
+  </div>
+  </li>
+</ul>
