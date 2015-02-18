@@ -14,11 +14,13 @@ class TestimonialsController < ApplicationController
   end
 
   def new
+    @products = Shoppe::Product.where(parent_id: nil)
     @testimonial = Testimonial.new
     respond_with(@testimonial)
   end
 
   def edit
+    @products = Shoppe::Product.where(parent_id: nil)
   end
 
   def create

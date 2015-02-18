@@ -23,7 +23,7 @@
       <tr>
         <td><%= Shoppe::Product.find(testimonial.product_id).name %></td>
         <td><%= testimonial.name %></td>
-        <td><%= testimonial.image %></td>
+        <td><%= 'Yes' if testimonial.image %></td>
         <td><%= testimonial.publish %></td>
         <td><%= testimonial.gender %></td>
         <td><%= link_to 'Show', testimonial %></td>
