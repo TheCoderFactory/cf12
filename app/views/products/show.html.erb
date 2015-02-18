@@ -11,7 +11,9 @@
 </section>
 
 <section class="breadcrumbs hidden-xs hidden-sm">
-    <ol class="breadcrumb text-center">
+<div class="row">
+    <div class="col-xs-12 col-lg-offset-2 col-lg-8">
+    <ol class="breadcrumb">
       <li><a href="/">Home</a></li>
       <li><a href="/courses">Our Courses</a></li>
       <% if @product.product_category.permalink == 'workshops' %>
@@ -19,6 +21,7 @@
       <% end %>
       <li class="active"><%= @product.name %></li>
     </ol>
+    </div></div>
 </section>
 <section class="">
 
