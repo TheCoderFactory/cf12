@@ -13,7 +13,7 @@
 
       <%= @product.description.html_safe %>
       
-  <div class="container product">
+  <div class=" product">
   <div style="background-color: #<%= @product.in_the_box %>">
   <% if @product.has_variants? %>
   <div class="row">
@@ -32,10 +32,10 @@
               <p class="stock no">Class full</p>
             <% end %>
             <h4>
-              <span style="text-transform: uppercase;"><%= variant.location.city %></span>, <%= variant.location.name %> [<span style="text-transform: uppercase;"><%= variant.start_date.strftime('%B') %></span>]
+              <span style="text-transform: uppercase;"><%= variant.location.city if variant.location %></span>, <%= variant.location.name if variant.location %> [<span style="text-transform: uppercase;"><%= variant.start_date.strftime('%B') if variant.start_date %></span>]
             </h4>
             <p class="date">
-              <%= variant.start_date.strftime('%d %b') %> - <%= variant.end_date.strftime('%d %b %Y') %>
+              <%= variant.start_date.strftime('%d %b') if variant.start_date %> - <%= variant.end_date.strftime('%d %b %Y') if variant.start_date %>
             </p>
             <p class="price">
               <%= number_to_currency(variant.price * 1.1) %> (incl. GST)
