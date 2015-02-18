@@ -9,11 +9,22 @@
     <p class="lead call-to-action-info"><%= @product.short_description.html_safe %></p>
   </div>
 </section>
+
+<section class="breadcrumbs hidden-xs hidden-sm">
+    <ol class="breadcrumb text-center">
+      <li><a href="/">Home</a></li>
+      <li><a href="/courses">Our Courses</a></li>
+      <% if @product.product_category.permalink == 'workshops' %>
+      <li><a href="/courses/workshops">Workshops</a></li>
+      <% end %>
+      <li class="active"><%= @product.name %></li>
+    </ol>
+</section>
 <section class="">
 
       <%= @product.description.html_safe %>
       
-  <div class=" product">
+  <div class="product">
   <div style="background-color: #<%= @product.in_the_box %>">
   <% if @product.has_variants? %>
   <div class="row">

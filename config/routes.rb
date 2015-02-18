@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :testimonials
+
   resources :pre_questionnaires
 
   resources :admissions

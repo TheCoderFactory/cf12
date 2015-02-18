@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_id: 1
+  name: MyString
+  one_line: MyString
+  content: MyText
+  image: MyString
+  publish: false
+  gender: MyString
+
+two:
+  product_id: 1
+  name: MyString
+  one_line: MyString
+  content: MyText
+  image: MyString
+  publish: false
+  gender: MyString

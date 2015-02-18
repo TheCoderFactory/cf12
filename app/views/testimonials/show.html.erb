@@ -1,0 +1,44 @@
+ <%= content_for :header, 'small-header' %>
+  <div class="row">
+    <div class="col-xs-12 col-lg-offset-2 col-lg-8">
+      <h2>Testimonial</h2>
+      <div class="panel panel-default"><div class="panel-body">
+      <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @testimonial.name %>
+</p>
+
+<p>
+  <strong>One line:</strong>
+  <%= @testimonial.one_line %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @testimonial.content %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @testimonial.image %>
+</p>
+
+<p>
+  <strong>Publish:</strong>
+  <%= @testimonial.publish %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @testimonial.gender %>
+</p>
+
+<%= link_to 'Edit', edit_testimonial_path(@testimonial) %> |
+<%= link_to 'Back', testimonials_path %>

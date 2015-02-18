@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150215004037) do
+ActiveRecord::Schema.define(version: 20150218222517) do
 
   create_table "admissions", force: :cascade do |t|
     t.integer  "fast_track_application_id"
@@ -410,6 +410,18 @@ ActiveRecord::Schema.define(version: 20150215004037) do
   end
 
   add_index "shoppe_users", ["email_address"], name: "index_shoppe_users_on_email_address"
+
+  create_table "testimonials", force: :cascade do |t|
+    t.integer  "product_id"
+    t.string   "name"
+    t.string   "one_line"
+    t.text     "content"
+    t.string   "image"
+    t.boolean  "publish"
+    t.string   "gender"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
