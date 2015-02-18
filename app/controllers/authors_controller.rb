@@ -2,7 +2,7 @@ class AuthorsController < ApplicationController
   before_action :set_author, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: :show
 
-  respond_to :html
+  respond_to :html, :json
 
   def index
     @authors = Author.all

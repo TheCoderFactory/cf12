@@ -11,7 +11,6 @@
   color: $light;
 }
 
-
 .header-bg-home {
   background: linear-gradient(
   to bottom,
@@ -31,68 +30,27 @@
   background: $darknight;
 }
 
-.home-header {
-  background: linear-gradient(
- to bottom,
- rgba(150, 150, 150, 0.1), rgba(200, 200, 200, 0.5),
- rgba(44, 62, 80, 0.1)
- ), image-url('cube.jpg') #2C3E50 no-repeat top center;
-}
-/*.home-header {
-  background: image-url('cube.jpg') #2C3E50 no-repeat top center;
-}*/
-.fast-track-header {
-  background: image-url('http://res.cloudinary.com/coder-factory/image/upload/v1418032899/ontrain2_u37tnf.jpg') $darknight no-repeat top center;
-}
-.ft-application-header {
-  background: image-url('http://res.cloudinary.com/coder-factory/image/upload/v1418033799/background_jetg2c.jpg') $darknight no-repeat top center;
-}
-.community-header {
-  background: image-url('http://res.cloudinary.com/coder-factory/image/upload/v1418034058/heart_fivwmy.jpg') $darknight no-repeat top center;
-}
-.workshops-header {
-  background: image-url('desk.jpg') $darknight no-repeat top center;
-}
-.women-header {
-  background: image-url('julia.jpg') $darknight no-repeat top center;
-}
-.small-header {
-  height: 100px;
-  background: $darknight;
-}
-.workshop-header {
-  height: 250px;
-  @media screen and (min-width: 550px) {
-    height: 300px;
-  }
-  overflow: hidden;
-  background-size: cover;
-  color: $light;
-  .call-to-action-wrapper {
-  width: 90%;
-  @media screen and (min-width: 600px) {
-    width: 66%;
-  }
-  margin: 4% auto;
-
-}
+.header-bg-workshops {
+  background: url(/assets/desk-920a310172ac794eb8f582bfcc7051d8.jpg) #2C3E50 no-repeat top center;
 }
 
 .call-to-action-wrapper {
   width: 90%;
-  @media screen and (min-width: 600px) {
-    width: 66%;
+  height: 100%;
+  margin: 20% auto;
+
+  @media screen and (min-width: 750px) {
+    margin: 9% auto;
+
   }
-  margin: 9% auto;
 
 }
 
-
 .call-to-action-headline {
   text-transform: uppercase;
-  font-size: 10vw;
-  @media screen and (min-width: 550px) {
-    font-size: 70px;
+  font-size: 9vw;
+  @media screen and (min-width: 950px) {
+    font-size: 90px;
   }
   margin: 0;
   line-height: $line-height-tight;
@@ -101,15 +59,9 @@
 .call-to-action-info {
   font-weight: $font-weight-light;
   line-height: $line-height-base;
-  margin: 2% auto;
+  margin: 2% 0 0;
+  width: 66%;
   @media screen and (max-width: 550px) {
     display: none;
-  }
-}
-
-.women-in-tech-hero {
-  text-align: right;
-  @media screen and (max-width: 1200px) {
-    padding-top: 300px;
   }
 }

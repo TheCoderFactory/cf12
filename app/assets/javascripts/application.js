@@ -12,6 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require ckeditor-jquery
 //= require shoppe/stripe/form_handler
 //= require_tree .

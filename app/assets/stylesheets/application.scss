@@ -26,8 +26,10 @@
 "signups.scss",
 
 // Modules
-"courses";
+"courses",
 
+// Pete's additional styles
+"style";
 
 
 // Why Coder Factory?
@@ -53,7 +55,6 @@
 }
 
 .why-cf-info {
-	
 	margin: 5% 0 0;
 	line-height: $line-height-base;
 	color: $darknight;
@@ -77,229 +78,19 @@
 }
 
 
-.darknight {
-	background-color: $darknight;
-	padding-bottom: 40px;
-}
-.calm {
-	background-color: $calm;
-	padding-bottom: 40px;
-}
-.dirty-gold {
-	background-color: $dirty-gold;
-	padding-bottom: 40px;
-}
-.vibrant {
-	background-color: $vibrant;
-	padding-bottom: 40px;
-}
-.slime {
-	background-color: $slime;
-	padding-bottom: 40px;
-}
-.section-heading {
-	text-align: center;
-	text-transform: uppercase;
-	padding-top: 20px;
-	color: white;
-}
-.dark {
-	color: $darknight;
-}
 
-.section-buttons {
-	margin: 30px 10px;
-	text-align: center;
-}
 
-.panel {
-margin-bottom: 20px;
-background-color: #fff;
-border: 1px solid transparent;
-border-radius: 4px;
-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-}
 
-.panel-slime > .panel-heading {
-color: $light;
-background-color: $slime;
-border-color: #d6e9c6;
-}
-.panel-calm > .panel-heading {
-color: $light;
-background-color: $calm;
-border-color: #d6e9c6;
-}
-.panel-dirtygold > .panel-heading {
-color: $light;
-background-color: $dirty-gold;
-border-color: #d6e9c6;
-}
-.panel-vibrant > .panel-heading {
-color: $light;
-background-color: $vibrant;
-border-color: #d6e9c6;
-}
-.panel-title {
-margin-top: 0;
-margin-bottom: 0;
-font-size: 1.3em;
-color: inherit;
-}
 
-.panel-heading {
-padding: 10px 15px;
-border-bottom: 1px solid transparent;
-border-top-right-radius: 0px;
-border-top-left-radius: 0px;
-}
-/*.course-content {
-	color: white;
-}*/
 
-#dropdown 
-{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
 
-.panel, .panel-body {
-	border-radius: 0;
-}
 
-label {
-	font-weight: normal;
-}
-.pink {
-	color: $vibrant;
-}
-.highlight {
-	background-color: $subtle;
-	padding: 10px 30px;
-	margin: 20px -15px -15px;
-}
-.highlight ol li {
-	line-height: 1.5em;
-	margin-left: 20px;
-}
-.thumbnail {
-  display: block;
-  padding: 4px;
-  margin-bottom: 23px;
-  line-height: 1.846;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 0px;
-  -webkit-transition: border 0.2s ease-in-out;
-  -o-transition: border 0.2s ease-in-out;
-  transition: border 0.2s ease-in-out;
-}
-.thumbnail > img,
-.thumbnail a > img {
-  margin-left: auto;
-  margin-right: auto;
-}
-a.thumbnail:hover,
-a.thumbnail:focus,
-a.thumbnail.active {
-  border-color: #2196f3;
-}
-.thumbnail .caption {
-  padding: 9px;
-  color: #666666;
-}
 
-//Carousel
 
-.carousel-indicators.active  { background: #31708f; } 
-.carousel-content{ margin-top: 50px; margin-bottom: 50px;} 
-.adjust1{ float:left; width:100%; margin-bottom:0; } 
-.adjust2{ margin:0; background-color: #fff; } 
-.carousel-indicators li{ border :1px solid #ccc;}
 
-.carousel-control { color: #31708f; width:5%; } 
-.carousel-control:hover, 
-.carousel-control:focus{ color:#31708f; }
 
-.carousel-control.left, .carousel-control.right { background-image: none; }
 
-.media-object { margin: auto;margin-top: 15% ; }
 
-@media screen and(max-width: 768px) {.media-object {
-        margin-top: 0;
-    }
-}
-
-//Location Box
-.location-details{
-margin-top: 50px;
-margin-bottom: 50px;
-}
-
-//Info box
-.box {
-    border-radius: 3px;
-    box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.16), 0 0px 1px 0 rgba(0, 0, 0, 0.12);
-    padding: 10px 25px;
-    text-align: right;
-    display: block;
-    margin-top: 60px;
-    list-style:none;
-}
-.box-icon {
-    background-color: #fff;
-    border-radius: 50%;
-    display: table;
-    height: 100px;
-    margin: 0 auto;
-    width: 100px;
-    margin-top: -61px;
-}
-.box-icon span {
-    color: #fff;
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-}
-.info h3 {
-    font-size: 26px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-.info > p {
-    color: #717171;
-    font-size: 16px;
-    padding-top: 10px;
-    text-align: justify;
-}
-.info > a {
-    background-color: $slime;
-    border-radius: 2px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    color: #fff;
-    transition: all 0.5s ease 0s;
-}
-.info > a:hover {
-    background-color: $slime;
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
-    color: #fff;
-    transition: all 0.5s ease 0s;
-}
-.callout{padding:20px;margin:20px 0;border:1px solid #eee;border-left-width:5px;border-radius:3px}
-.callout h4{margin-top:0;margin-bottom:5px}
-.callout p:last-child{margin-bottom:0}
-.callout code{border-radius:3px}
-.callout+.callout{margin-top:-5px}
-.callout-danger{border-left-color:$dirty-gold}
-.callout-danger h4{color:$dirty-gold}
-.callout-danger a{color:$dirty-gold;font-weight: bold}
-.callout-warning{border-left-color:$slime}
-.callout-warning h4{color:$slime}
-.callout-warning a{color:$slime;font-weight: bold}
-.callout-info{border-left-color:$calm}
-.callout-info h4{color:$calm}
-.callout-info a{color:$calm;font-weight: bold}
 
 
 
@@ -385,17 +176,6 @@ section.content {
 
 		//
 
-
-		//
-		// category page
-		//
-		div.category {
-			h2 { font-size:2.0em;color:#216d74;  }
-			p.intro { margin-top:5px; line-height:1.8; font-size:0.9em;}
-			ul.products { margin-top:45px;}
-			p.noProducts { margin-top:130px; text-align:center; color:#999;}
-		}
-
 		//
 		// order status page
 		//
@@ -476,9 +256,9 @@ section.content {
 		// checkout page
 		//
 		div.checkout {
-			p.secure {float:right; margin-top:10px;color:$slime;}
+			p.secure {float:right; margin-top:10px;color:#ee9200; background:image-url('secure.svg') no-repeat 0 1px; background-size:12px; padding-left:18px; font-size:0.8em;}
 
-			h2 {}
+			h2 { font-size:2.0em;color:#216d74;}
 			p.intro { margin:15px 0; line-height:1.5; margin-bottom:25px; }
 			table.orderItems { margin-top:0;}
 			h3 { font-size:1.3em; font-weight:normal; color:#333; margin-bottom:25px;}
@@ -492,11 +272,11 @@ section.content {
 		  }
 
 
-			/*p.submit {
+			p.submit {
 				text-align:right;
 				margin-top:30px;
 				input {
-					background:image-url('card.svg') $slime no-repeat 22px 9px;
+					background:image-url('card.svg') #226E75 no-repeat 22px 9px;
 					background-size:20px;
 					border:0;
 					padding:8px 22px 8px 54px;
@@ -509,17 +289,17 @@ section.content {
 					&.order { background-image:image-url('send.svg')}
 					&.disabled { background:image-url('button-spinner.gif') #ccc no-repeat; background-size:16px; background-position:center; color:transparent;}
 				}
-			}*/
+			}
 
 			div.customer {
-				/*font-size:0.8em;*/
+				font-size:0.8em;
 				overflow:hidden;
 				fieldset {
 					width:50%;
 					float:left;
 					legend { font-size:1.2em; font-weight:bold;}
 					dl.delivery { display:none;}
-					dt { color:$darknight; margin-top:0px;}
+					dt { color:#888; margin-top:0px;}
 					dt label.req:after { content:'*'; color:red; margin-left:5px;}
 					dd {
 						margin:10px 0;
@@ -593,7 +373,7 @@ section.content {
 		//
 		table.orderItems {
 			width:100%;
-			/*font-size:0.8em;*/
+			font-size:0.8em;
 			margin:25px 0;
 			thead td { border:0; color:#999; padding:0 10px; padding-bottom:6px;}
 			th, td { border:1px solid #ccc; padding:10px;}
@@ -611,10 +391,8 @@ section.content {
 			}
 			tfoot td {
 				text-align:right;
-				font-weight:normal;
-				border:0;
+				font-weight:bold;
 			}
-			tfoot td.money { border: 1px solid #ccc;}
 		}
 
 		//
@@ -632,14 +410,14 @@ section.content {
 				margin:25px 0;
 				font-size:0.8em;
 				td { border:1px solid #C4DDDE; background:#f4f9f9; line-height:1.5; padding:10px; vertical-align:middle;}
-				td.buy { width:30%; background:$light;}
+				td.buy { width:150px; background:$light;}
 				td h4 { font-size:1.2em; color:#216D74;}
 				td p.stock { float:right; margin-top:10px;}
 				td p.stock.yes { color:#5DBCC4; font-size:1em; background:image-url('tick.svg') no-repeat 0 3px; background-size:13px; padding-left:18px; font-weight:600}
 				td p.stock.no { color:#c04a4a; font-size:1em; background:image-url('unhappy.svg') no-repeat 0 3px; background-size:13px; padding-left:18px; font-weight:600;}
 
 				td form {
-					input { float:right; background:$dirty-gold; border:0; font-family:$body-font; height:24px; padding:4px 12px; color:$light; border-radius:4px; font-weight:bold; font-size:0.9em; margin-left:4px;}
+					input { float:right; background:#256D73; border:0; font-family:$body-font; height:24px; padding:4px 12px; color:$light; border-radius:4px; font-weight:bold; font-size:0.9em; margin-left:4px;}
 					select {
 						-webkit-appearance: none;
 						background:image-url('down-arrow.svg') #DEE9EB no-repeat 24px 11px;
@@ -755,33 +533,18 @@ section.content {
 	//
 	section.sidebar {
 		float:right;
-		width:20%;
-		div.newsletter-2 {
-			background-color: $light;
-			padding:15px;
-			padding-left:20px;
-			position: fixed;
-			right: 0;
-			top: 200px;
-			z-index:5000;
-			font-size:0.8em;
-
-		}
+		width:25%;
 		div.basket {
 			background:image-url('bag.svg') #DFF0F1 no-repeat 18px 18px;
 			background-size:14px;
 			color:#216D74;
 			font-size:0.8em;
 			line-height:1.6;
-			border-bottom-left-radius:0;
-			border-bottom-right-radius:0;
+			border-bottom-left-radius:8px;
+			border-bottom-right-radius:8px;
 			margin-bottom:25px;
 			padding:15px;
 			padding-left:50px;
-			position: fixed;
-			right: 0;
-			top: 0;
-			z-index:5000;
 			p.buttons {
 				margin-top:15px;
 				a {
@@ -821,9 +584,9 @@ section.content {
 			padding:15px 25px;
 			border-bottom-left-radius:10px;
 			border-bottom-right-radius:10px;
-			h2 { }
+			h2 { font-size:1.4em; color:#216D74;margin-top:25px;}
 			dl {
-				/*font-size:0.8em;*/
+				font-size:0.8em;
 				margin:30px 0;
 				line-height:1.5;
 				dt { font-weight:bold; margin:10px 0;}
