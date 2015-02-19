@@ -1,0 +1,24 @@
+<nav class="mob-nav" ng-controller="NavCtrl as nav">
+          <ul class="mob-nav-list bounce-in-right" ng-if="nav.showMenu">
+            <li class="mob-nav-item">
+              <%= link_to "Home", root_path, :nav_item => :home %>
+            </li>
+
+            <li class="mob-nav-item">
+              <%= link_to "Our Courses", catalogue_path, :nav_item => :catalogue, :class => 'noborder' %>
+            </li>
+
+            <li class="mob-nav-item">
+              <%= link_to "Community", community_path, :nav_item => :community %>
+            </li>
+
+            <li class="mob-nav-item">
+              <%= link_to "Women in Tech", women_in_tech_path, :nav_item => :women_in_tech %>
+            </li>
+
+            <li class="mob-nav-item">
+              <%= link_to "Blog", blog_path, :nav_item => :blog, class: 'test' %>
+            </li>
+          </ul>
+          <button ng-click="nav.toggleMenu()" class="btn-block btn-block-darknight">{{ nav.menu }}</button>
+        </nav>
