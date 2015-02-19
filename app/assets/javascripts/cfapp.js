@@ -1,38 +1,38 @@
 angular.module('CoderFactory', ['ngAnimate'])
 
-.run(function(LocationService) {
+// .run(function(LocationService) {
 
-  var lng,
-      lat,
-      cities = [
-  ["Sydney",    -33.867487,  151.206990],
-  ["Melbourne", -28.083627,  -80.608109],
-  ["Brisbane",  -27.471011,  153.023449],
-  ["Adelaide",  -34.928621,  138.599959],
-  ["Perth",     -31.953513,  115.857047]
-  ];
+//   var lng,
+//       lat,
+//       cities = [
+//   ["Sydney",    -33.867487,  151.206990],
+//   ["Melbourne", -28.083627,  -80.608109],
+//   ["Brisbane",  -27.471011,  153.023449],
+//   ["Adelaide",  -34.928621,  138.599959],
+//   ["Perth",     -31.953513,  115.857047]
+//   ];
 
-  // HTML5/W3C Geolocation
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      lng = position.coords.latitude;
-      lat = position.coords.longitude;
+//   // HTML5/W3C Geolocation
+//   if (navigator.geolocation) {
+//     navigator.geolocation.getCurrentPosition(function(position) {
+//       lng = position.coords.latitude;
+//       lat = position.coords.longitude;
 
-      var usersCity = LocationService.nearestLocation(lng, lat, cities);
+//       var usersCity = LocationService.nearestLocation(lng, lat, cities);
 
-      window.localStorage.usersLocation = usersCity[0];
+//       window.localStorage.usersLocation = usersCity[0];
 
-    }, function(error) {
-      console.log(error);
-    });
-  }
-  // Default to Sydney, NSW
-  else {
-    lng = -33.867487;
-    lat = 151.206990;
-  }
+//     }, function(error) {
+//       console.log(error);
+//     });
+//   }
+//   // Default to Sydney, NSW
+//   else {
+//     lng = -33.867487;
+//     lat = 151.206990;
+//   }
 
-})
+// })
 
 .controller('NavCtrl', function() {
   var nav = this;
