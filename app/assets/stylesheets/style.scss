@@ -46,21 +46,33 @@ color: $light;
 background-color: $slime;
 border-color: #d6e9c6;
 }
+/*.panel-slime > .panel-body {
+  background-color: rgba(72,168,90,0.1)
+}*/
 .panel-calm > .panel-heading {
 color: $light;
 background-color: $calm;
 border-color: #d6e9c6;
 }
+/*.panel-calm > .panel-body {
+  background-color: rgba(52,152,219,0.1)
+}*/
 .panel-dirtygold > .panel-heading {
 color: $light;
 background-color: $dirty-gold;
 border-color: #d6e9c6;
 }
+/*.panel-dirtygold > .panel-body {
+  background-color: rgba(219,192,52,0.1)
+}*/
 .panel-vibrant > .panel-heading {
 color: $light;
 background-color: $vibrant;
 border-color: #d6e9c6;
 }
+/*.panel-vibrant > .panel-body {
+  background-color: rgba(212,79,153,0.1);
+}*/
 .panel-title {
 margin-top: 0;
 margin-bottom: 0;
@@ -76,6 +88,10 @@ border-top-left-radius: 0px;
 }
 /*.course-content {
 	color: white;
+}*/
+
+/*.panel-body p {
+  font-family: $heading-font;
 }*/
 
 #dropdown 
