@@ -1,0 +1,28 @@
+<nav class="main-nav">
+          <ul class="main-nav-list hidden-xs">
+            <li class="main-nav-item">
+              <%= link_to "Home", root_path, :nav_item => :home %>
+            </li>
+
+            <li class="main-nav-item">
+              <%= link_to "Our Courses", catalogue_path, :nav_item => :catalogue, :class => 'noborder' %>
+            </li>
+
+            <li class="main-nav-item">
+              <%= link_to "Community", community_path, :nav_item => :community %>
+            </li>
+
+            <li class="main-nav-item">
+              <%= link_to "Women in Tech", women_in_tech_path, :nav_item => :women_in_tech %>
+            </li>
+
+            <li class="main-nav-item">
+              <%= link_to "Blog", blog_path, :nav_item => :blog, class: 'test' %>
+            </li>
+          </ul>
+
+          <a class="logo" href="/">
+            <img src="<%= asset_path 'cf-logo.svg' %>" />
+            <h1 class="logo-title">coderfactory</h1>
+          </a>
+        </nav>

@@ -3,6 +3,7 @@
   <head>
     <title><%= content_for?(:title) ? yield(:title) : "Learn to Code @ Coder Factory." %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "See our new improved programmes that help you become a confident coder. Apply for our full time Fast track programme, part time courses and weekend workshops." %>">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= render 'layouts/metatags' %>
@@ -21,345 +22,32 @@
     <script src="//use.typekit.net/dsk1ewq.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-43181031-3', 'auto');
-      ga('send', 'pageview');
-
-    </script>
-    <%= render 'layouts/icons' %>
-    <%= render 'layouts/mixpanel' %>
-    <script type="text/javascript">
-    mixpanel.track_links(".main-nav a", "click nav link", {
-        "referrer": document.referrer
-    });
-</script>
+<%= render 'layouts/google_analytics' %>
 <%= render 'layouts/facebook_pixel' %>
-  </head>
-  <body>
-    <div class="top-bar">
-      <div class="main-row">
-        <ul>
-          <li>
-            <%# link_to "Play with Shoppe Admin", "/shoppe" %>
-          </li>
-          <li>
-            <%# link_to "Browse the code", "http://github.com/tryshoppe/core" %>
-          </li>
-        </ul>
-        <p class="text">Fast Track course is filling up quick. Apply now here!</p>
-      </div>
+</head>
+<body>
+  <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+  <%= render 'layouts/topbar' %>
+  <%= display_flash %>
+
+  <header class="main-header <%= content_for?(:header) ? yield(:header) : "home-header" %>">
+    <div class="main-row">
+      <%= render 'layouts/main_nav' %>
+      <%= render 'layouts/mobile_nav' %>
+      <%= render 'layouts/headers' %>
     </div>
-    <%= display_flash %>
-    <!-- The main header displayed on all pages
-    -->
-    <!-- Sometimes will be shorted as the page content dictates.
-    -->
-    <header class="main-header <%= content_for?(:header) ? yield(:header) : "home-header" %>">
+  </header>
 
-      <div class="main-row">
-        <!-- Primary navigation -->
-        <nav class="main-nav">
-          <ul class="main-nav-list hidden-xs">
-            <li class="main-nav-item">
-              <%= link_to "Home", root_path, :nav_item => :home %>
-            </li>
+  <%= render 'layouts/content' %>
+  <% unless @hide_newsletter_registration %>
+    <%= render 'layouts/newsletter_registration' %>
+  <% end %>
+  <%= render 'layouts/footer' %>
 
-            <li class="main-nav-item">
-              <%= link_to "Our Courses", catalogue_path, :nav_item => :catalogue, :class => 'noborder' %>
-            </li>
-
-            <li class="main-nav-item">
-              <%= link_to "Community", community_path, :nav_item => :community %>
-            </li>
-
-            <li class="main-nav-item">
-              <%= link_to "Women in Tech", women_in_tech_path, :nav_item => :women_in_tech %>
-            </li>
-
-            <li class="main-nav-item">
-              <%= link_to "Blog", blog_path, :nav_item => :blog, class: 'test' %>
-            </li>
-          </ul>
-
-          <a class="logo" href="/">
-            <img src="<%= asset_path 'cf-logo.svg' %>" />
-            <h1 class="logo-title">coderfactory</h1>
-          </a>
-        </nav>
-
-
-        <%= render 'layouts/mobile_nav' %>
-
-
-        <% if @full_header %>
-        <div class="call-to-action-wrapper">
-          <h2 class="call-to-action-headline" style="color:#1f2b3a;">Technology is your future</h2>
-          <p class="lead call-to-action-info" style="color:#1f2b3a;">Improve your career and business opportunities, <br>learn to code. Start your journey today!</p>
-        </div>
-        <% end %>
-
-        <% if @course_header %>
-        <div class="course-select-wrapper">
-          <h1 class="course-select-headline">I live in
-            <label for="location" class="custom-select-arrow">
-              <select class="input-select-feature" ng-model="courseList.usersLocation" ng-change="courseList.locationChanged(courseList.usersLocation)">
-                <option selected>Sydney</option>
-                <option>Melbourne</option>
-                <option>Brisbane</option>
-                <option>Perth</option>
-                <option>Adelaide</option>
-              </select>
-            </label><br>
-            and want to learn<br>
-            <span class="custom-select-arrow">
-              <select class="input-select-feature" ng-model="courseList.usersInterest" ng-change="courseList.interestChanged(courseList.usersInterest)">
-                <option selected>how to code</option>
-                <option>web design</option>
-                <option>wordpress</option>
-                <option>technology</option>
-                <option>ruby on rails</option>
-              </select>
-            </span><br>
-          </h1>
-        </div>
-        <% end %>
-        
-        <% if @fast_track_header %>
-          <div class="call-to-action-wrapper">
-          <h1 class="call-to-action-headline">Fast Track</h1>
-        <p class="lead call-to-action-info">Your boarding pass to the exciting world of high tech.</p>
-        <br>
-        
-        
-        <a href="/fast-track-application" class="btn-block btn-block-dirtygold">Apply Now</a>
-        
-        <% end %>
-        <% if @ft_appliction %>
-          <div class="call-to-action-wrapper">
-          <h1 class="call-to-action-headline"><%= params[:scholarship] ? "Scholarship Application" : "Fast Track Application" %></h1>
-          </div>
-        <% end %>
-        <% if @community %>
-          <div class="call-to-action-wrapper">
-          <h1 class="call-to-action-headline">We <span class="pink"><i class="fa fa-heart"></i></span> community</h1>
-        <p class="lead call-to-action-info">Be a part of a vibrant and welcoming<br> community of coders and technology fans.</p></div>
-        <% end %>
-        <% if @workshops %>
-          <div class="call-to-action-wrapper">
-          <h1 class="call-to-action-headline"><%= @product_category.name %></h1>
-        <p class="lead call-to-action-info">Anyone can do it! And it's fun.</p></div>
-        <% end %>
-        <% if @product %>
-          <div class="call-to-action-wrapper">
-            <h1 class="call-to-action-headline"><%= @product.name %></h1>
-            <p class="lead call-to-action-info"><%= @product.short_description.html_safe %></p></div>
-
-        <% end %>
-        <% if @thanks %>
-          <div class="call-to-action-wrapper">
-            <h1 class="call-to-action-headline" style="color:#1f2b3a;">Thanks!</h1>
-            <p class="lead call-to-action-info" style="color:#1f2b3a;">Your journey into the future has begun.</p>
-            <br>
-            <p class="lead call-to-action-info"><a href="/community" style="color:#1f2b3a;" class="btn-block btn-block-slime">Join our community</a></p>
-          </div>
-        <% end %>
-        <% if @women_in_tech %>
-        <div class="row"><div class="col-lg-6 col-lg-offset-6">
-          <div class="right-wrapper women-in-tech-hero">
-            
-            <p class="lead call-to-action-info">Julia Clavien, Coder Factory</p>
-            <h1 class="call-to-action-headline">Women in tech!</h1>
-          </div>
-          </div></div>
-        <% end %>
-      </div>
-      <!-- <div class="bar">
-          <div class="inner">
-            <p class="call">Call us today on <b>01202 901 101</b> if you have any questions.</p>
-            <p class="offer"><b>This week only!</b> FREE next day shipping on all orders over &pound;30.</p>
-          </div>
-        </div> -->
-
-    </header>
-
-
-
-
-    <section class="content">
-
-        <!-- Sidebar Module -->
-        <section class="sidebar">
-          <!-- <div class="newsletter-2">
-          <p><strong>Free coding tutorials</strong></p>
-          <input type="text" placeholder="your email" /><input type="submit" value="Register">
-          </div> -->
-          <% if content_for?(:sidebar) %>
-            <%= yield :sidebar %>
-          <% else %>
-            <% if has_order? %>
-              <%= render 'shared/basket' %>
-            <% end %>
-          <% end %>
-        </section>
-        <!-- Primary section
-        -->
-        <section class="primary">
-          <%= yield %>
-        </section>
-    </section>
-
-    <% unless @hide_newsletter_registration %>
-    <section class="register-newsletter">
-      <div class="register-newsletter-wrapper">
-        <p class="register-newsletter-tagline">So much is happening at CoderFactory...</p>
-        <form action="//coderfactory.us7.list-manage.com/subscribe/post?u=1c644187b6d7e06d32bcae158&amp;id=2afdc8b0c3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <input type="email" value="" name="EMAIL" id="mce-EMAIL" class="input-text" placeholder="Enter Email Address" />
-          <div id="mce-responses" class="clear">
-            <div class="response" id="mce-error-response" style="display:none"></div>
-            <div class="response" id="mce-success-response" style="display:none"></div>
-          </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;"><input type="text" name="b_1c644187b6d7e06d32bcae158_2afdc8b0c3" tabindex="-1" value=""></div>
-            <br>
-        <input type="submit" class="btn-block btn-block-dirtygold" value="Receive Updates!" name="subscribe" id="mc-embedded-subscribe" >
-        </form>
-      </div>
-    </section>
-    <% end %>
-
-
-    <footer class="main-footer">
-      <div class="main-footer-wrapper">
-        <!-- Useful footer links (policies etc...)
-        -->
-        <ul class="main-footer-list">
-          <li class="main-footer-item">
-            <a href="#" data-toggle="modal" data-target="#contact-modal" class="first-item">
-            Contact Coder Factory</a>
-          </li>
-          <% if user_signed_in? %>
-            <li class="main-footer-item"><%= link_to "Admin", admin_path %></li>
-          <% end %>
-          <li class="main-footer-item">
-            <%= link_to "Privacy policy", privacy_path %>
-          </li>
-        </ul>
-        <div class="footer-mission-statement">
-          <div class="logo">
-            <img src="<%= asset_path 'cf-logo.svg' %>" />
-            <h1 class="logo-title">coderfactory</h1>
-          </div>
-          <p class="mission-statement-info">
-            People say coding is like riding a bike, once you've ridden around the park a few times you probably know how to do a function or two. Coder Factory will provide every student a free bike for the duration of the course, because sometimes you might just want to ride a bike.
-          <!-- Links to social media -->
-          <ul class="social">
-            <li class="twitter">
-              <%= link_to "Twitter", 'http://twitter.com/coderfactory', target: '_blank' %>
-            </li>
-            <li class="facebook">
-              <%= link_to "Facebook", "http://facebook.com/thecoderfactory", target: '_blank' %>
-            </li>
-            <li class="linkedin">
-              <%= link_to "Linked In", "https://www.linkedin.com/company/the-coder-factory", target: '_blank' %>
-            </li>
-            <li class="youtube">
-              <%= link_to "Youtube", "https://www.youtube.com/user/CoderFactory/videos", target: '_blank' %>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-<% if @show_forms %>
-  <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="registerLabel" aria-hidden="true">
-    <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h3 class="modal-title" id="registerLabel"><i class="fa fa-info-circle"></i> Register for information</h3>
-        <br>
-      </div>
-      <div class="modal-body blue-font">
-        
-        <div class='row'>
-          <div class="col-md-6">
-            <%= image_tag 'FrontPageThumb.jpg', class: 'img-responsive img-thumbnail' %>
-          </div>
-          <div class="col-md-6">
-          <p class="lead blue-font">Register your details to receive the 13 page information pack plus a link to the application form.</p>
-        
-            
-          </div>
-        </div>
-        <hr>
-        <%= simple_form_for CourseRegistration.new do |f| %>
-        <%= invisible_captcha %>
-        <div class="form-group">
-          <%= f.input :first_name, input_html: { class: 'form-control' } %>
-        </div>
-        <div class="form-group">
-          <%= f.input :email, input_html: { class: 'form-control' } %>
-        </div>
-        <div class="form-group">
-          <%= f.input :country, priority: ['Australia', 'Belgium', 'Canada', 'Cyprus', 'Denmark', 'Estonia', 'Finland', 'France', 'Germany', 'Hong Kong', 'Ireland', 'Italy', 'Japan', 'Malta', 'Netherlands', 'New Zealand', 'Norway', 'Sweden', 'United States', 'United Kingdom', ], input_html: { class: 'form-control' } %>
-        </div>
-
-        <%= f.submit "Receive Info Pack", class: 'btn-block btn-block-slime' %>
-        
-      <% end %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Cancel</button>
-      </div>
-    </div>
-  </div>
-
-</div>
-<% end %>
-    <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Contact Coder Factory</h4>
-          </div>
-          <div class="modal-body">
-            <p class="lead">Feel free to contact us any time. We're happy to help.</p>
-            <p>Level 1, 91 Campbell Street, Surry Hills NSW 2008. AUSTRALIA</p>
-            <p>Phone: 1300 884 095</p>
-            <p>Email: info@thecoderfactory.com</p>
-            <hr>
-            <h3>Send us a message:</h3>
-                <%= simple_form_for Enquiry.new do |f| %>
-                <%= f.invisible_captcha :subtitle %>
-                <div class="enq">
-                <%= f.input :name, input_html: { class: 'form-horizontal form-control' } %>
-                </div>
-                <div class="enq">
-                <%= f.input :email, input_html: { class: ' form-control' } %>
-                </div>
-                <div class="enq">
-                <%= f.input :content, label: "Message (include your phone number if you'd like to be called)", input_html: { class: ' form-control' } %>
-                </div>
-
-                <div class="form-group no-border">
-                    <div class="col-xs-12">
-                        <p><%= f.submit 'Send enquiry', class: 'btn-block btn-block-calm btn-small' %></p>
-                        
-                    </div>
-                </div>
-              <% end %>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            
-          </div>
-        </div>
-      </div>
-    </div>
+  <% if @show_forms %>
+    <%= render 'layouts/registration_modal' %>
+  <% end %>
+  <%= render 'layouts/contact_modal' %>
 
   </body>
 </html>

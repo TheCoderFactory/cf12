@@ -1,0 +1,22 @@
+<section class="content" id="content">
+
+        <!-- Sidebar Module -->
+        <section class="sidebar">
+          <!-- <div class="newsletter-2">
+          <p><strong>Free coding tutorials</strong></p>
+          <input type="text" placeholder="your email" /><input type="submit" value="Register">
+          </div> -->
+          <% if content_for?(:sidebar) %>
+            <%= yield :sidebar %>
+          <% else %>
+            <% if has_order? %>
+              <%= render 'shared/basket' %>
+            <% end %>
+          <% end %>
+        </section>
+        <!-- Primary section
+        -->
+        <section class="primary">
+          <%= yield %>
+        </section>
+    </section>

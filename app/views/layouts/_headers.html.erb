@@ -1,0 +1,88 @@
+<% if @full_header %>
+        <div class="call-to-action-wrapper">
+          <h2 class="call-to-action-headline" style="color:#1f2b3a;">Technology is your future</h2>
+          <p class="lead call-to-action-info" style="color:#1f2b3a;">Improve your career and business opportunities, <br>learn to code. Start your journey today!</p>
+        </div>
+        <% end %>
+
+        <% if @course_header %>
+        <div class="course-select-wrapper">
+          <h1 class="course-select-headline">I live in
+            <label for="location" class="custom-select-arrow">
+              <select class="input-select-feature" ng-model="courseList.usersLocation" ng-change="courseList.locationChanged(courseList.usersLocation)">
+                <option selected>Sydney</option>
+                <option>Melbourne</option>
+                <option>Brisbane</option>
+                <option>Perth</option>
+                <option>Adelaide</option>
+              </select>
+            </label><br>
+            and want to learn<br>
+            <span class="custom-select-arrow">
+              <select class="input-select-feature" ng-model="courseList.usersInterest" ng-change="courseList.interestChanged(courseList.usersInterest)">
+                <option selected>how to code</option>
+                <option>web design</option>
+                <option>wordpress</option>
+                <option>technology</option>
+                <option>ruby on rails</option>
+              </select>
+            </span><br>
+          </h1>
+        </div>
+        <% end %>
+        
+        <% if @fast_track_header %>
+          <div class="call-to-action-wrapper">
+          <h1 class="call-to-action-headline">Fast Track</h1>
+        <p class="lead call-to-action-info">Your boarding pass to the exciting world of high tech.</p>
+        <br>
+        
+        
+        <a href="/fast-track-application" class="btn-block btn-block-dirtygold">Apply Now</a>
+        
+        <% end %>
+        <% if @ft_appliction %>
+          <div class="call-to-action-wrapper">
+          <h1 class="call-to-action-headline"><%= params[:scholarship] ? "Scholarship Application" : "Fast Track Application" %></h1>
+          </div>
+        <% end %>
+        <% if @community %>
+          <div class="call-to-action-wrapper">
+          <h1 class="call-to-action-headline">We <span class="pink"><i class="fa fa-heart"></i></span> community</h1>
+        <p class="lead call-to-action-info">Be a part of a vibrant and welcoming<br> community of coders and technology fans.</p></div>
+        <% end %>
+        <% if @workshops %>
+          <div class="call-to-action-wrapper">
+          <h1 class="call-to-action-headline"><%= @product_category.name %></h1>
+        <p class="lead call-to-action-info">Anyone can do it! And it's fun.</p></div>
+        <% end %>
+        <% if @product %>
+          <div class="call-to-action-wrapper">
+            <h1 class="call-to-action-headline"><%= @product.name %></h1>
+            <p class="lead call-to-action-info"><%= @product.short_description.html_safe %></p></div>
+
+        <% end %>
+        <% if @thanks %>
+          <div class="call-to-action-wrapper">
+            <h1 class="call-to-action-headline" style="color:#1f2b3a;">Thanks!</h1>
+            <p class="lead call-to-action-info" style="color:#1f2b3a;">Your journey into the future has begun.</p>
+            <br>
+            <p class="lead call-to-action-info"><a href="/community" style="color:#1f2b3a;" class="btn-block btn-block-slime">Join our community</a></p>
+          </div>
+        <% end %>
+        <% if @women_in_tech %>
+        <div class="row"><div class="col-lg-6 col-lg-offset-6">
+          <div class="right-wrapper women-in-tech-hero">
+            
+            <p class="lead call-to-action-info">Julia Clavien, Coder Factory</p>
+            <h1 class="call-to-action-headline">Women in tech!</h1>
+          </div>
+          </div></div>
+        <% end %>
+      </div>
+      <!-- <div class="bar">
+          <div class="inner">
+            <p class="call">Call us today on <b>01202 901 101</b> if you have any questions.</p>
+            <p class="offer"><b>This week only!</b> FREE next day shipping on all orders over &pound;30.</p>
+          </div>
+        </div> -->

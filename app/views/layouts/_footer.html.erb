@@ -1,0 +1,41 @@
+<footer class="main-footer">
+      <div class="main-footer-wrapper">
+        <!-- Useful footer links (policies etc...)
+        -->
+        <ul class="main-footer-list">
+          <li class="main-footer-item">
+            <a href="#" data-toggle="modal" data-target="#contact-modal" class="first-item">
+            Contact Coder Factory</a>
+          </li>
+          <% if user_signed_in? %>
+            <li class="main-footer-item"><%= link_to "Admin", admin_path %></li>
+          <% end %>
+          <li class="main-footer-item">
+            <%= link_to "Privacy policy", privacy_path %>
+          </li>
+        </ul>
+        <div class="footer-mission-statement">
+          <div class="logo">
+            <img src="<%= asset_path 'cf-logo.svg' %>" />
+            <h1 class="logo-title">coderfactory</h1>
+          </div>
+          <p class="mission-statement-info">
+            Once you know how to code, you can build any application you like - a world of possibilities opens up to you. And I'm here to tell you, that anyone can do it, you don't need to be a maths wizz or computer nerd to be a coder. And it's fun!<br> -- Pete Argent, Director, Coder Factory</p>
+          <!-- Links to social media -->
+          <ul class="social">
+            <li class="twitter">
+              <%= link_to "Twitter", 'http://twitter.com/coderfactory', target: '_blank' %>
+            </li>
+            <li class="facebook">
+              <%= link_to "Facebook", "http://facebook.com/thecoderfactory", target: '_blank' %>
+            </li>
+            <li class="linkedin">
+              <%= link_to "Linked In", "https://www.linkedin.com/company/the-coder-factory", target: '_blank' %>
+            </li>
+            <li class="youtube">
+              <%= link_to "Youtube", "https://www.youtube.com/user/CoderFactory/videos", target: '_blank' %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>

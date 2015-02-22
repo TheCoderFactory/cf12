@@ -1,0 +1,44 @@
+<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="registerLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h3 class="modal-title" id="registerLabel"><i class="fa fa-info-circle"></i> Register for information</h3>
+        <br>
+      </div>
+      <div class="modal-body blue-font">
+        
+        <div class='row'>
+          <div class="col-md-6">
+            <%= image_tag 'FrontPageThumb.jpg', class: 'img-responsive img-thumbnail' %>
+          </div>
+          <div class="col-md-6">
+          <p class="lead blue-font">Register your details to receive the 13 page information pack plus a link to the application form.</p>
+        
+            
+          </div>
+        </div>
+        <hr>
+        <%= simple_form_for CourseRegistration.new do |f| %>
+        <%= invisible_captcha %>
+        <div class="form-group">
+          <%= f.input :first_name, input_html: { class: 'form-control' } %>
+        </div>
+        <div class="form-group">
+          <%= f.input :email, input_html: { class: 'form-control' } %>
+        </div>
+        <div class="form-group">
+          <%= f.input :country, priority: ['Australia', 'Belgium', 'Canada', 'Cyprus', 'Denmark', 'Estonia', 'Finland', 'France', 'Germany', 'Hong Kong', 'Ireland', 'Italy', 'Japan', 'Malta', 'Netherlands', 'New Zealand', 'Norway', 'Sweden', 'United States', 'United Kingdom', ], input_html: { class: 'form-control' } %>
+        </div>
+
+        <%= f.submit "Receive Info Pack", class: 'btn-block btn-block-slime' %>
+        
+      <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+</div>
