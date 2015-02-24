@@ -1,0 +1,2 @@
+module CourseEnrolmentsHelper
+end

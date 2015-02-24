@@ -31,9 +31,10 @@
   color: $light;
   font-size: $font-size-medium;
   font-weight: $font-weight-light;
-  height: 45px;
-  display: none;
+  height: 30px;
+  display: block;
   align-items: center;
+  p { font-family: $heading-font;font-weight: $font-weight-light;font-size: $font-size-medium;}
 }
 
 .top-bar-content {

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'course_enrolments/index'
+
   resources :testimonials
 
   resources :pre_questionnaires

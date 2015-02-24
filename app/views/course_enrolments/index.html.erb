@@ -1,0 +1,36 @@
+ <%= content_for :header, 'small-header' %>
+ <p id="notice"><%= notice %></p>
+       
+  <div class="row">
+    <div class="col-xs-12 col-lg-offset-2 col-lg-8">
+      <h2>Course enrolments <small><span class="label label-default"><%= @enrolments.count %></span></small></h2>
+      <div class="panel panel-default"><div class="panel-body">
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Country</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @enrolments.each do |@enrolment| %>
+      <tr>
+        <td><%= @enrolment.first_name %></td>
+        <td><%= @enrolment.country %></td>
+        <td><%= @enrolment.email %></td>
+        <td><%= link_to 'Show', @enrolment %></td>
+        <td><%= link_to 'Edit', edit_@enrolment_path(@enrolment) %></td>
+        <td><%= link_to 'Destroy', @enrolment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+</div></div></div></div>
+
