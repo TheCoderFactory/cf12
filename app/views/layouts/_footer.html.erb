@@ -7,6 +7,21 @@
             <a href="#" data-toggle="modal" data-target="#contact-modal" class="first-item">
             Contact Coder Factory</a>
           </li>
+          <li class="main-footer-item">
+              <%= link_to "Our Courses", catalogue_path, :nav_item => :catalogue, :class => 'noborder' %>
+            </li>
+
+            <li class="main-footer-item">
+              <%= link_to "Community", community_path, :nav_item => :community %>
+            </li>
+
+            <li class="main-footer-item">
+              <%= link_to "Women in Tech", women_in_tech_path, :nav_item => :women_in_tech %>
+            </li>
+
+            <li class="main-footer-item">
+              <%= link_to "Blog", blog_path, :nav_item => :blog, class: 'test' %>
+            </li>
           <% if user_signed_in? %>
             <li class="main-footer-item"><%= link_to "Admin", admin_path %></li>
           <% end %>
