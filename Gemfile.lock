@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/TheCoderFactory/CFShoppe
-  revision: 5ef5c790d0a255ec0d5eee7a876651f051bd44ac
+  revision: 6193c8b13a0aaf77f1622bfd33dcc68a51b8991c
   specs:
-    shoppe (1.0.10)
+    shoppe (1.0.11)
       bcrypt (~> 3.1, >= 3.1.2)
       carrierwave
       cloudinary
@@ -179,7 +179,7 @@ GEM
     newrelic_rpm (3.9.9.275)
     nifty-dialog (1.1.1)
     nifty-key-value-store (1.0.2)
-    nifty-utils (1.0.8)
+    nifty-utils (1.1.2)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
@@ -334,7 +334,7 @@ DEPENDENCIES
   rails_12factor
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
-  shoppe (~> 1.0.10)!
+  shoppe (~> 1.0.11)!
   shoppe-stripe!
   simple_form
   sitemap_generator

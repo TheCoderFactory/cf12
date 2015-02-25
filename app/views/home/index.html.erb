@@ -1,7 +1,6 @@
 <% active_nav_item :home %>
 <% @full_header = true %>
 <%= content_for :header, 'home-header' %>
-
 <!-- Why Coderfactory Module -->
     <section class="why-cf">
       <div class="main-row why-cf-wrapper">
@@ -54,10 +53,36 @@
         <p class="why-cf-info text-right"><a href="/courses" title="Choose your course" class="btn-block btn-block-vibrant">Reserve your space in a course</a></p> 
       </div>
     </section>
-<ul class="course-list">
-
-    <li class="course-item" style="background: #2C3E50;">
-      <div class="course-item-content">
+    <section class="course-list">
+      <div class="row">
+        <div class="col-md-4 slime">
+          <div class="course-item-content">
+            <h4 class="course-logo-ft" style="color: #48A85A;">w</h4>
+            <h2 class="course-item-headline">
+              Weekend Workshops
+            </h2>
+            <p class="course-item-info lead">
+              Have fun, meet amazing people, learn a powerful new skill.
+            </p>
+            <a href="/courses/workshops" class="btn-block btn-block-light">Workshops</a>
+            
+          </div>
+        </div>
+        <div class="col-md-4 burntsea">
+          <div class="course-item-content">
+                  <h4 class="course-logo-ft" style="color: #487AA8;">p</h4>
+                  <h2 class="course-item-headline">
+                    Part Time Courses
+                  </h2>
+                  <p class="course-item-info lead">
+                    Learn to build web applications while you keep you day job.
+                  </p>
+                  <a href="/courses/part-time-courses/web-app-developer-pt" class="btn-block btn-block-light btn-center">PT Courses</a>
+                  
+                </div>
+        </div>
+        <div class="col-md-4 darknight">
+          <div class="course-item-content">
         <h4 class="course-logo-ft" style="color: #2C3E50;">f</h4>
         <h2 class="course-item-headline">
           Full Time Courses
@@ -68,31 +93,7 @@
         <a href="/fast-track" class="btn-block btn-block-light">Fast Track</a>
         
       </div>
-    </li>
-    <li class="course-item" style="background: #48A85A;">
-      <div class="course-item-content">
-        <h4 class="course-logo-ft" style="color: #48A85A;">w</h4>
-        <h2 class="course-item-headline">
-          Weekend Workshops
-        </h2>
-        <p class="course-item-info lead">
-          Have fun, meet amazing people, learn a powerful new skill. New workshops available.
-        </p>
-        <a href="/courses/workshops" class="btn-block btn-block-light">Workshops</a>
-        
+        </div>
       </div>
-    </li>
-    <li class="course-item" style="background: #487AA8;">
-      <div class="course-item-content">
-        <h4 class="course-logo-ft" style="color: #487AA8;">p</h4>
-        <h2 class="course-item-headline">
-          Part Time Courses
-        </h2>
-        <p class="course-item-info lead">
-          Learn to build web applications while you keep you day job.
-        </p>
-        <a href="/courses/part-time-courses/web-app-developer-pt" class="btn-block btn-block-light btn-center">PT Courses</a>
-        
-      </div>
-    </li>
-</ul>
+    </section>
+

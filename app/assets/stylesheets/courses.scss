@@ -22,17 +22,19 @@
 }
 
 .course-item-content {
-  width: 75%;
+  width: 90%;
   @media screen and (min-width: 700px) {
-    width: 66%;
+    width: 90%;
   }
+  color: white;
+  padding-top: 5%;
 
 }
 
 $course-logo-size: 60px;
 
 .course-logo-ft {
-  margin: 0 auto;
+  margin: 0;
   text-transform: uppercase;
   font-size: $font-size-xlarge;
   text-align: center;

@@ -18,6 +18,10 @@
 	background-color: $slime;
 	padding-bottom: 40px;
 }
+.burntsea {
+  background-color: $burntsea;
+  padding-bottom: 40px;
+}
 .section-heading {
 	text-align: center;
 	text-transform: uppercase;
@@ -328,7 +332,9 @@ margin-bottom: 50px;
     padding-top: 300px;
   }
 }
-
+.course-header {
+  background: image-url('cf-learn-header-compressor.jpg') $darknight no-repeat top center;
+}
 .home-header {
   background: image-url('cube.jpg') $darknight no-repeat top center;
 }
@@ -435,3 +441,16 @@ p {
     line-height: 1.5;
     -moz-border-radius: 1em;
     -webkit-border-radius: 1em; }
+.upcoming-course-calendar {
+  color: white;
+  font-size: $font-size-large;
+  font-family: roboto;
+  font-weight: $font-weight-light;
+  .course-row {
+    padding: 20px 0;
+    border-top: 1px white solid;
+  }
+}
+.location {
+  text-transform: uppercase;
+}
