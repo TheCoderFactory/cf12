@@ -1,0 +1,28 @@
+<%= content_for :header, 'small-header' %>
+ <div class="row">
+  <div class="col-xs-12 col-lg-offset-2 col-lg-8">
+    <h2>Enrolments</h2>
+    <div class="panel panel-default">
+      <div class="panel-body">
+      <table class="table">
+      	<tr>
+      		<td>Course name</td>
+      		<td>Date</td>
+      		<td>City</td>
+      		<td>Number of enrolments</td>
+      	</tr>
+				<% @future_courses.each do |future_course| %>
+					<% if future_course.variant? %>
+						<tr>
+							<td><%= future_course.parent.name %></td>
+							<td><%= future_course.start_date.strftime('%d/%m/%y') if future_course.start_date %></td>
+							<td><%= future_course.location.city if future_course.location %></td>
+							<td><%= Shoppe::OrderItem.where(ordered_item_id: future_course.id).count %></td>
+						</tr>
+					<% end %>
+				<% end %>
+			</table>
+		</div>
+	</div>
+</div>
+

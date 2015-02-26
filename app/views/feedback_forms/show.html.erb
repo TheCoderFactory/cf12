@@ -1,0 +1,55 @@
+<%= content_for :header, 'small-header' %>
+ <div class="row">
+  <div class="col-xs-12 col-lg-offset-2 col-lg-8">
+    <h2>Anonymous Feedback</h2>
+    <div class="panel panel-default">
+      <div class="panel-body">
+      <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @feedback_form.course_id %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @feedback_form.location_id %>
+</p>
+
+<p>
+  <strong>Satisfaction:</strong>
+  <%= @feedback_form.satisfaction %>
+</p>
+
+<p>
+  <strong>Recommend:</strong>
+  <%= @feedback_form.recommend %>
+</p>
+
+<p>
+  <strong>Another:</strong>
+  <%= @feedback_form.another %>
+</p>
+
+<p>
+  <strong>Achieve:</strong>
+  <%= @feedback_form.achieve %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @feedback_form.value %>
+</p>
+
+<p>
+  <strong>Best part:</strong>
+  <%= @feedback_form.best_part %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @feedback_form.comments %>
+</p>
+
+<%= link_to 'Back', feedback_forms_path %>
+</div></div></div></div>

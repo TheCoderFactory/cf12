@@ -1,0 +1,16 @@
+ <%= content_for :header, 'small-header' %>
+ <div class="row">
+  <div class="col-xs-12 col-lg-offset-2 col-lg-8">
+    <h2>Anonymous Feedback</h2>
+    <div class="panel panel-default">
+    	<div class="panel-body">
+    		<p>Thanks for being a part of a Coder Factory course.</p>
+    		<%= simple_form_for(@feedback_form) do |f| %>
+    			<%= f.input :course_id, collection: @courses, prompt: "Choose your current course" %>
+    			<%= f.input :location_id, collection: @locations, prompt: "Choose a location" %>
+    			<%= f.submit 'Next', class: 'btn-block btn-block-vibrant' %>
+    		<% end %>
+    	</div>
+    </div>
+  </div>
+</div>

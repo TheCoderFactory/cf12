@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  course_id: 1
+  location_id: 1
+  satisfaction: 1
+  recommend: 1
+  another: 1
+  achieve: 1
+  value: 1
+  best_part: MyText
+  comments: MyText
+
+two:
+  course_id: 1
+  location_id: 1
+  satisfaction: 1
+  recommend: 1
+  another: 1
+  achieve: 1
+  value: 1
+  best_part: MyText
+  comments: MyText

@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
   
+  get 'enrolments', to: "enrolments#index"
+
+  resources :feedback_forms do
+    member do
+      get :satisfaction
+      get :achieve
+      get :recommend
+      get :another
+      get :value
+    end
+  end
+
   get 'course_enrolments/index'
 
   resources :testimonials

@@ -1,0 +1,110 @@
+ <%= content_for :header, 'small-header' %>
+ <% @score = [1,2,3,4,5,6,7,8,9,10] %>
+ <div class="row">
+  <div class="col-xs-12 col-lg-offset-2 col-lg-8">
+    <h2>Anonymous Feedback</h2>
+    <div class="panel panel-default">
+    	<div class="panel-body">
+        <% if @feedback_form.satisfaction.nil? %>
+    		  <p>Satisfaction</p>
+          <div class="row">
+            <% @score.each do |score| %>
+              <div class="col-sm-1">
+                <div class="thumbnail">
+                  <%= link_to satisfaction_feedback_form_path(score: score) do %>
+                    <img src="<%= asset_path 'grin.png' %>" alt="Choose <%= score.to_s %>">
+                  <% end %>
+                  <div class="caption">
+                    <h3><%= score %></h3>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% elsif @feedback_form.recommend.nil? %>
+    		  <p>Recommend</p>
+          <div class="row">
+            <% @score.each do |score| %>
+              <div class="col-sm-1">
+                <div class="thumbnail">
+                  <%= link_to recommend_feedback_form_path(score: score) do %>
+                    <img src="<%= asset_path 'grin.png' %>" alt="Choose <%= score.to_s %>">
+                  <% end %>
+                  <div class="caption">
+                    <h3><%= score %></h3>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% elsif @feedback_form.another.nil? %>
+    		  <p>Another</p>
+          <div class="row">
+            <% @score.each do |score| %>
+              <div class="col-sm-1">
+                <div class="thumbnail">
+                  <%= link_to another_feedback_form_path(score: score) do %>
+                    <img src="<%= asset_path 'grin.png' %>" alt="Choose <%= score.to_s %>">
+                  <% end %>
+                  <div class="caption">
+                    <h3><%= score %></h3>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% elsif @feedback_form.achieve.nil? %>
+    		  <p>Achieve</p>
+          <div class="row">
+            <% @score.each do |score| %>
+              <div class="col-sm-1">
+                <div class="thumbnail">
+                  <%= link_to achieve_feedback_form_path(score: score) do %>
+                    <img src="<%= asset_path 'grin.png' %>" alt="Choose <%= score.to_s %>">
+                  <% end %>
+                  <div class="caption">
+                    <h3><%= score %></h3>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% elsif @feedback_form.value.nil? %>
+    		  <p>Value</p>
+          <div class="row">
+            <% @score.each do |score| %>
+              <div class="col-sm-1">
+                <div class="thumbnail">
+                  <%= link_to value_feedback_form_path(score: score) do %>
+                    <img src="<%= asset_path 'grin.png' %>" alt="Choose <%= score.to_s %>">
+                  <% end %>
+                  <div class="caption">
+                    <h3><%= score %></h3>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% elsif @feedback_form.best_part.nil? %>
+    		  <p>Best Part of the course</p>
+          <div class="row">
+            <%= simple_form_for @feedback_form do |f| %>
+            	<%= f.input :best_part, input_html: { class: 'form-control', rows: 5} %>
+            	<%= f.submit "Next" %>
+            <% end %>
+          </div>
+        <% elsif @feedback_form.comments.nil? %>
+    		  <p>Comments</p>
+          <div class="row">
+            <%= simple_form_for @feedback_form do |f| %>
+            	<%= f.input :comments, input_html: { class: 'form-control', rows: 5} %>
+            	<%= f.submit "Finish" %>
+            <% end %>
+          </div>
+        <% else %>
+    		  <p>Thanks!!</p>
+        <% end %>
+    	</div>
+    </div>
+  </div>
+</div>

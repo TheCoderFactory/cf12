@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150218222517) do
+ActiveRecord::Schema.define(version: 20150226085028) do
 
   create_table "admissions", force: :cascade do |t|
     t.integer  "fast_track_application_id"
@@ -96,6 +96,20 @@ ActiveRecord::Schema.define(version: 20150218222517) do
   end
 
   add_index "fast_track_applications", ["scholarship_id"], name: "index_fast_track_applications_on_scholarship_id"
+
+  create_table "feedback_forms", force: :cascade do |t|
+    t.integer  "course_id"
+    t.integer  "location_id"
+    t.integer  "satisfaction"
+    t.integer  "recommend"
+    t.integer  "another"
+    t.integer  "achieve"
+    t.integer  "value"
+    t.text     "best_part"
+    t.text     "comments"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "nifty_key_value_store", force: :cascade do |t|
     t.integer "parent_id"
