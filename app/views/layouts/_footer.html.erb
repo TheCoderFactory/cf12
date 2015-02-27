@@ -1,56 +1,23 @@
-<footer class="main-footer">
-      <div class="main-footer-wrapper">
-        <!-- Useful footer links (policies etc...)
-        -->
-        <ul class="main-footer-list">
-          <li class="main-footer-item">
-            <a href="#" data-toggle="modal" data-target="#contact-modal" class="first-item">
-            Contact Coder Factory</a>
-          </li>
-          <li class="main-footer-item">
-              <%= link_to "Our Courses", catalogue_path, :nav_item => :catalogue, :class => 'noborder' %>
-            </li>
+<footer>
+    <div class="ct-mediaSection-inner">
+        <div class="container">
 
-            <li class="main-footer-item">
-              <%= link_to "Community", community_path, :nav_item => :community %>
-            </li>
+            <div class="row ct-u-bgWhite">
 
-            <li class="main-footer-item">
-              <%= link_to "Women in Tech", women_in_tech_path, :nav_item => :women_in_tech %>
-            </li>
+                <div class="col-sm-6 ct-copyright ct-copyright--sameauth ct-copyright--greytext">
+                    <p class="ct-copyright-name pull-left text-uppercase">Actly Inc. © 2014 All rights reserved.</p>
+                </div>
 
-            <li class="main-footer-item">
-              <%= link_to "Blog", blog_path, :nav_item => :blog, class: 'test' %>
-            </li>
-          <% if user_signed_in? %>
-            <li class="main-footer-item"><%= link_to "Admin", admin_path %></li>
-          <% end %>
-          <li class="main-footer-item">
-            <%= link_to "Privacy policy", privacy_path %>
-          </li>
-        </ul>
-        <div class="footer-mission-statement">
-          <div class="logo">
-            <img src="<%= asset_path 'cf-logo.svg' %>" />
-            <h1 class="logo-title">coderfactory</h1>
-          </div>
-          <p class="mission-statement-info">
-            Once you know how to code, you can build any application you like - a world of possibilities opens up to you. And I'm here to tell you, that anyone can do it, you don't need to be a maths wizz or computer nerd to be a coder. And it's fun!<br> -- Pete Argent, Director, Coder Factory</p>
-          <!-- Links to social media -->
-          <ul class="social">
-            <li class="twitter">
-              <%= link_to "Twitter", 'http://twitter.com/coderfactory', target: '_blank' %>
-            </li>
-            <li class="facebook">
-              <%= link_to "Facebook", "http://facebook.com/thecoderfactory", target: '_blank' %>
-            </li>
-            <li class="linkedin">
-              <%= link_to "Linked In", "https://www.linkedin.com/company/the-coder-factory", target: '_blank' %>
-            </li>
-            <li class="youtube">
-              <%= link_to "Youtube", "https://www.youtube.com/user/CoderFactory/videos", target: '_blank' %>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+                <div class="col-sm-6">
+                    <ul class="ct-socialIcons ct-socialIcons--fgrey ct-socialIcons--fgreySm pull-right list-inline list-unstyled ct-u-paddingBoth20">
+                        <li><a href="https://twitter.com/createitpl" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/createITpl" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+            </div><!-- /row -->
+
+        </div><!-- /container -->
+    </div>
+
+</footer><!-- /footer -->

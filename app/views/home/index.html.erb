@@ -1,99 +1,377 @@
-<% active_nav_item :home %>
-<% @full_header = true %>
-<%= content_for :header, 'home-header' %>
-<!-- Why Coderfactory Module -->
-    <section class="why-cf">
-      <div class="main-row why-cf-wrapper">
-        <div class="why-cf-icons">
-          <img src="<%= asset_path 'icon-code.svg' %>" />
-          <img src="<%= asset_path 'icon-acyhat.svg' %>" />
-          <img src="<%= asset_path 'icon-cf-logo.svg' %>" />
-        </div>
-      
-        <p class="why-cf-info lead text-center">At Coder Factory, you <em>can</em> learn to code.</p>
-        <br>
-        <div class='row'>
-          <div class="col-md-6">
-            <div class="panel panel-slime">
-              <div class="panel-heading">
-                <p class="panel-title">Faster, easier and way more fun</p>
-              </div>
-              <div class="panel-body">
-                <p>Tried learning to code online? Found it boring or tedious? Our students have tried online too and realised that face-to-face learning is <strong>faster, easier and way more fun!</strong></p>
-              </div>
-            </div>
-            <div class="panel panel-dirtygold">
-              <div class="panel-heading">
-                <p class="panel-title">Change the world</p>
-              </div>
-              <div class="panel-body">
-                <p>Whether you want a career change, to build a tech startup, or create an app that improves the world around you, taking a Coder Factory course will help you achieve your goal.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="panel panel-vibrant">
-              <div class="panel-heading">
-                <p class="panel-title">Become a part of our community</p>
-              </div>
-              <div class="panel-body">
-                <p>Coder Factory is different than other coding schools. You don't just sit in a classroom, you become a part of a thriving and welcoming <a href="/community">community</a> of coders.</p>
-              </div>
-            </div>
-            <div class="panel panel-calm">
-              <div class="panel-heading">
-                <p class="panel-title">Be inspired</p>
-              </div>
-              <div class="panel-body">
-                <p>Our students tell us the best part of coming to Coder Factory, is meeting and being inspired by the other participants. Who will you meet at Coder Factory?</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <p class="why-cf-info text-right"><a href="/courses" title="Choose your course" class="btn-block btn-block-vibrant">Reserve your space in a course</a></p> 
-      </div>
-    </section>
-    <section class="course-list">
-      <div class="row">
-        <div class="col-md-4 slime">
-          <div class="course-item-content">
-            <h4 class="course-logo-ft" style="color: #48A85A;">w</h4>
-            <h2 class="course-item-headline">
-              Weekend Workshops
-            </h2>
-            <p class="course-item-info lead">
-              Have fun, meet amazing people, learn a powerful new skill.
-            </p>
-            <a href="/courses/workshops" class="btn-block btn-block-light">Workshops</a>
-            
-          </div>
-        </div>
-        <div class="col-md-4 burntsea">
-          <div class="course-item-content">
-                  <h4 class="course-logo-ft" style="color: #487AA8;">p</h4>
-                  <h2 class="course-item-headline">
-                    Part Time Courses
-                  </h2>
-                  <p class="course-item-info lead">
-                    Learn to build web applications while you keep you day job.
-                  </p>
-                  <a href="/courses/part-time-courses/web-app-developer-pt" class="btn-block btn-block-light btn-center">PT Courses</a>
-                  
-                </div>
-        </div>
-        <div class="col-md-4 darknight">
-          <div class="course-item-content">
-        <h4 class="course-logo-ft" style="color: #2C3E50;">f</h4>
-        <h2 class="course-item-headline">
-          Full Time Courses
-        </h2>
-        <p class="course-item-info lead">
-          Make a career change with our 24 week intensive full time courses.
-        </p>
-        <a href="/fast-track" class="btn-block btn-block-light">Fast Track</a>
-        
-      </div>
-        </div>
-      </div>
-    </section>
+<div class="ct-u-bgLightGrey ct-u-paddingBoth100">
+<div class="container">
 
+
+<div class="ct-tabs ct-tabs--courseList">
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <ul class="nav nav-tabs nav-justified ct-mytab-js text-center" role="tablist">
+            <li class="active"><a href="#mostpopular" role="tab" data-toggle="tab" class="btn btn-primary btn-block">Most&nbsp;popular</a></li>
+            <li><a href="#newest" role="tab" data-toggle="tab" class="btn btn-default btn-block">Newest</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="tab-content">
+    <div class="tab-pane active" id="mostpopular">
+
+        <div class="row ct-u-paddingTop70">
+
+            <div class="col-md-4 col-sm-6">
+                <div class="ct-coursesList ct-u-bgWhite">
+                    <div class="entry-meta">
+                        <span class="cat-links"><i class="fa fa-calendar"></i><a href="07-actly-courses-masonry.html"> Web design</a></span>
+                    </div>
+                    <div class="ct-coursesList-cont">
+                        <h2 class="text-uppercase"><a href="05-actly-courses-details.html">Succession of day and night, which was usually  </a></h2>
+                        <p>I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker; then—though I was still travelling with prodigious</p>
+                    </div>
+                    <a href="18-actly-member-page.html" class="by-author clearfix">
+                        <img src="assets/images/content/author.jpg" alt="author img" class="pull-left"/>
+                        <span class="by-autor-name">Frank Wright</span>, <span class="by-autor-prof">Teacher</span>
+                    </a>
+                    <div class="entry-meta clearfix ct-u-borderTop">
+                        <div class="pull-left">
+                              <span class="ct-stars-container pull-left">
+                                  <i class="fa fa-star active"></i>
+                                  <i class="fa fa-star active"></i>
+                                  <i class="fa fa-star active"></i>
+                                  <i class="fa fa-star active"></i>
+                                  <i class="fa fa-star"></i>
+                                </span>
+                            <a href="05-actly-courses-details.html" class="ct-readrevievsLink pull-left">Read reviews</a>
+                        </div>
+                        <a href="05-actly-courses-details.html" class="btn btn-primary btn-sm pull-right">Sign up</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="ct-coursesList ct-u-bgWhite">
+                    <div class="entry-meta">
+                        <span class="cat-links"><i class="fa fa-calendar"></i><a href="07-actly-courses-masonry.html"> Web design</a></span>
+                    </div>
+                    <div class="ct-coursesList-cont">
+                        <h2 class="text-uppercase"><a href="05-actly-courses-details.html">Succession of day and night, which was usually  </a></h2>
+                        <p>I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker; then—though I was still travelling with prodigious</p>
+                    </div>
+                    <a href="18-actly-member-page.html" class="by-author clearfix">
+                        <img src="assets/images/content/author.jpg" alt="author img" class="pull-left"/>
+                        <span class="by-autor-name">Frank Wright</span>, <span class="by-autor-prof">Teacher</span>
+                    </a>
+                    <div class="entry-meta clearfix ct-u-borderTop">
+                        <div class="pull-left">
+                              <span class="ct-stars-container pull-left">
+                                  <i class="fa fa-star active"></i>
+                                  <i class="fa fa-star active"></i>
+                                  <i class="fa fa-star active"></i>
+                                  <i class="fa fa-star active"></i>
+                                  <i class="fa fa-star"></i>
+                                </span>
+                            <a href="05-actly-courses-details.html" class="ct-readrevievsLink pull-left">Read reviews</a>
+                        </div>
+                        <a href="05-actly-courses-details.html" class="btn btn-primary btn-sm pull-right">Sign up</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0">
+                <div class="ct-coursesList ct-u-bgWhite">
+                    <div class="entry-meta">
+                        <span class="cat-links"><i class="fa fa-calendar"></i><a href="07-actly-courses-masonry.html"> Web design</a></span>
+                    </div>
+                    <div class="ct-coursesList-cont">
+                        <h2 class="text-uppercase"><a href="05-actly-courses-details.html">Succession of day and night, which was usually  </a></h2>
+                        <p>I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker; then—though I was still travelling with prodigious</p>
+                    </div>
+                    <a href="18-actly-member-page.html" class="by-author clearfix">
+                        <img src="assets/images/content/author.jpg" alt="author img" class="pull-left"/>
+                        <span class="by-autor-name">Frank Wright</span>, <span class="by-autor-prof">Teacher</span>
+                    </a>
+                    <div class="entry-meta clearfix ct-u-borderTop">
+                        <div class="pull-left">
+                            <span class="ct-stars-container pull-left">
+                                <i class="fa fa-star active"></i>
+                                <i class="fa fa-star active"></i>
+                                <i class="fa fa-star active"></i>
+                                <i class="fa fa-star active"></i>
+                                <i class="fa fa-star"></i>
+                              </span>
+                            <a href="05-actly-courses-details.html" class="ct-readrevievsLink pull-left">Read reviews</a>
+                        </div>
+                        <a href="05-actly-courses-details.html" class="btn btn-primary btn-sm pull-right">Sign up</a>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /row -->
+    </div><!-- /tab-pane -->
+
+    <div class="tab-pane" id="newest">
+
+        <div class="row ct-u-paddingTop70">
+
+            <div class="col-md-4 col-sm-6">
+                <div class="ct-coursesList ct-u-bgWhite">
+                    <div class="entry-meta">
+                        <span class="cat-links"><i class="fa fa-calendar"></i><a href="07-actly-courses-masonry.html"> Newest</a></span>
+                    </div>
+                    <div class="ct-coursesList-cont">
+                        <h2 class="text-uppercase"><a href="05-actly-courses-details.html">Succession of day and night, which was usually  </a></h2>
+                        <p>I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker; then—though I was still travelling with prodigious</p>
+                    </div>
+                    <a href="18-actly-member-page.html" class="by-author clearfix">
+                        <img src="assets/images/content/author.jpg" alt="author img" class="pull-left"/>
+                        <span class="by-autor-name">Frank Wright</span>, <span class="by-autor-prof">Teacher</span>
+                    </a>
+                    <div class="entry-meta clearfix ct-u-borderTop">
+                        <div class="pull-left">
+                            <span class="ct-stars-container pull-left">
+                                <i class="fa fa-star active"></i>
+                                <i class="fa fa-star active"></i>
+                                <i class="fa fa-star active"></i>
+                                <i class="fa fa-star active"></i>
+                                <i class="fa fa-star"></i>
+                              </span>
+                            <a href="05-actly-courses-details.html" class="ct-readrevievsLink pull-left">Read reviews</a>
+                        </div>
+                        <a href="05-actly-courses-details.html" class="btn btn-primary btn-sm pull-right">Sign up</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="ct-coursesList ct-u-bgWhite">
+                    <div class="entry-meta">
+                        <span class="cat-links"><i class="fa fa-calendar"></i><a href="07-actly-courses-masonry.html"> Newest</a></span>
+                    </div>
+                    <div class="ct-coursesList-cont">
+                        <h2 class="text-uppercase"><a href="05-actly-courses-details.html">Succession of day and night, which was usually  </a></h2>
+                        <p>I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker; then—though I was still travelling with prodigious</p>
+                    </div>
+                    <a href="18-actly-member-page.html" class="by-author clearfix">
+                        <img src="assets/images/content/author.jpg" alt="author img" class="pull-left"/>
+                        <span class="by-autor-name">Frank Wright</span>, <span class="by-autor-prof">Teacher</span>
+                    </a>
+                    <div class="entry-meta clearfix ct-u-borderTop">
+                        <div class="pull-left">
+                            <span class="ct-stars-container pull-left">
+                                <i class="fa fa-star active"></i>
+                                <i class="fa fa-star active"></i>
+                                <i class="fa fa-star active"></i>
+                                <i class="fa fa-star active"></i>
+                                <i class="fa fa-star"></i>
+                              </span>
+                            <a href="05-actly-courses-details.html" class="ct-readrevievsLink pull-left">Read reviews</a>
+                        </div>
+                        <a href="05-actly-courses-details.html" class="btn btn-primary btn-sm pull-right">Sign up</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0">
+                <div class="ct-coursesList ct-u-bgWhite">
+                    <div class="entry-meta">
+                        <span class="cat-links"><i class="fa fa-calendar"></i><a href="07-actly-courses-masonry.html"> Newest</a></span>
+                    </div>
+                    <div class="ct-coursesList-cont">
+                        <h2 class="text-uppercase"><a href="05-actly-courses-details.html">Succession of day and night, which was usually  </a></h2>
+                        <p>I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker; then—though I was still travelling with prodigious</p>
+                    </div>
+                    <a href="18-actly-member-page.html" class="by-author clearfix">
+                        <img src="assets/images/content/author.jpg" alt="author img" class="pull-left"/>
+                        <span class="by-autor-name">Frank Wright</span>, <span class="by-autor-prof">Teacher</span>
+                    </a>
+                    <div class="entry-meta clearfix ct-u-borderTop">
+                        <div class="pull-left">
+                            <span class="ct-stars-container pull-left">
+                                <i class="fa fa-star active"></i>
+                                <i class="fa fa-star active"></i>
+                                <i class="fa fa-star active"></i>
+                                <i class="fa fa-star active"></i>
+                                <i class="fa fa-star"></i>
+                              </span>
+                            <a href="05-actly-courses-details.html" class="ct-readrevievsLink pull-left">Read reviews</a>
+                        </div>
+                        <a href="05-actly-courses-details.html" class="btn btn-primary btn-sm pull-right">Sign up</a>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /row -->
+
+    </div><!-- /tab-pane -->
+</div><!-- /tab-content -->
+
+</div><!-- /ct-tabs -->
+
+<div class="text-center">
+    <a href="07-actly-courses-masonry.html" class="btn btn-primary   animated" data-fx="fadeInUp">Complete course list</a>
+</div>
+
+</div><!-- /container -->
+</div>
+
+
+<div class="ct-mediaSection ct-u-bgBlack ct-u-bgdark-lightfont"  data-stellar-background-ratio="0.2" data-height="350" data-type="parallax" data-bg-image="assets/images/content/testimonial-bg.jpg" data-bg-image-mobile="assets/images/content/testimonial-bg.jpg">
+    <div class="ct-mediaSection-inner">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-11 col-sm-offset-1 col-xs-12">
+                    <div class="ct-js-flexslider ct-testimonialslider">
+                        <ul class="slides">
+                            <li>
+                                <blockquote class="ct-blockquotetestimonial ct-blockquotetestimonial--left">
+
+                                    <div class="ct-blockquotetestimonial-pic">
+                                        <img src="assets/images/content/testimonial-people_01.jpg" alt=" " />
+                                    </div>
+                                    <div class="ct-blockquotetestimonial-content">
+                                      <span class="ct-blockquotetestimonial-text h4 ct-fs-i ct-fw-300 ct-u-arapey">
+                                         This puzzled me very much at first. The alternations of night and day grew slower and slower, and so did the passage of the sun across the sky, until they seemed to stretch through centuries. At last a steady twilight brooded over the earth, a twilight only broken now and then when a comet glared across the darkling sky
+                                       </span>
+                                        <span class="ct-blockquotetestimonial-author">Jennifer Mckenna</span>
+                                    </div>
+
+                                </blockquote>
+                            </li>
+                            <li>
+                                <blockquote class="ct-blockquotetestimonial ct-blockquotetestimonial--left">
+
+                                    <div class="ct-blockquotetestimonial-pic">
+                                        <img src="assets/images/content/testimonial-people_01.jpg" alt=" " />
+                                    </div>
+                                    <div class="ct-blockquotetestimonial-content">
+                                    <span class="ct-blockquotetestimonial-text h4 ct-fs-i ct-fw-300 ct-u-arapey">
+                                       This puzzled me very much at first. The alternations of night and day grew slower and slower, and so did the passage of the sun across the sky, until they seemed to stretch through centuries.
+                                     </span>
+                                        <span class="ct-blockquotetestimonial-author">Monika Zyxel</span>
+                                    </div>
+
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /container -->
+    </div><!-- /ct-mediaSection-inner -->
+</div>
+
+
+<div class="ct-u-bgLightGrey ct-u-paddingTop100 ct-u-paddingBottom30">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-4 col-md-4">
+                <div class="ct-iconBox ct-iconBox--default text-center">
+                    <div class="ct-iconBox-icon ct-iconBox-icon--default">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAiEgAAIhIBv2R/3AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAARmSURBVHic7ZpPbBVVFMZ/hxZpSF+rJVoNkCAS09YEUGFLjAuDMcG9mliVABoX4ErXbtyQsARMpDEpW2OMK5KaLlw0giSSkkJYKGIebQxpsSVSS4+Lex9M5915c2c6791peV9y8vo699z5vjNz7p9zn6gqjzM2hCYQGu0AhCYQGu0AhCYQGu0AhCYQGu0AhCYQGu0AhCYQGu0AhCYQGu0AhCYQGo99ADpX4ywiG4ABYBetD+YycAOYUtXlvJ1I1oqQiLwOvAXsA14BuvPevCDMA78CF4EfVXUsk7eqehnQC5wDtOR2Duj11uUp/iBwqwTifO0WcLCQAADDJRCU14ZXFQBgOzBXAiF5bQ7Y3khj2sj9NdCT0qbM6MFoSEaDp3+Y8E+wKDucOQWASyUgXpRdStLpXAeIyCbgH2Bj3cW1if+Aiqrej19IGgN2s37Eg9Gy23UhKQD7m8clGJyakvYCVeAUMAgMYabDtYibwCQwhdFUjwwrwbU0KP4MvFnYUtgGQYAvSiAuzT731VQ3C4hIB/AyZpf3FHAVGFPVhUibz4CTrrepBPhYVU/XvojIZuANzJb9DmbXeFlVHzz0iDzhAWCC+ojeBj6MvQ3nHe1C23eOhdyMo90EMLAiBaz4eyk3+DTS+YvAUglE1+w+8EKE34mU9vdqQQDoSHjycVsksrEAvi2B8JqdifB63gYkzWcC6BBMZecX/HBKVU8AiMhe4LKHzzJwN2Jzsc8loILZuMStAmxO6V+BIVWdsry+AT7w1LNfgCPAGU+HecxbMGtv9hPwGrCAmWsnrV21NgMsqGu97QkR6QS2YNJ0CHjJfg4B/cAPqnrItu0H/gA2eXZ/tBPoy8CnGzgGfGW/v49Jod9XI7IRVHUJmLY2Hr0mIlsw03MNn+AvHqBPgEPA9xmcqsAOVV30dRCRHkyge4EnY58bMekwa+3h36r6d4Z7dGFWfk/7+gBvdwJjmFf1GU+n54B3gBEHiX5gD2YJPYh5bQcz9B3vbx64hkmvml1R1WuO5u+RTfwMMJa37nfF+m0D3gXOWqKtGvWrwCjwEbADkwaTGfsYXrEUxuT2YoYOylQl/itD20XgmHMvYJ/oaAkENctGgW0NN0PAgRIQbZYd8KkK/+n433pBnba6mqCIPAH8y8r5dT1Aga749F33BtgG061i1UJMu9YuSTXBm00mEwJOTUkBWI/jgFNTOwBZGq9xZArAjSYSCQW3pgYV4HHCL1yKsnHslJ/lcHQnpmITmvxq7S6wM9e5ALAVc75epgKory1Z7lu9zwWSICLPAq9iDhh3YapAZcQDTK7/hjkSv53m0DAAItKtqvPF8Ws90jSkBeAsZkC8iClyTqrqncJZFggR6eNR4XQfoKp6JNEhZQwYwT2ozAIXspzBNdOAC5aTa9AeaeSb56eyldhnGVDBFFgzI+1XYo3yv0xjQ26eaQE4n/Naq5Gfp0d+HQeu8yinqsCXmOJC8Py3HLssp2qE53XgeJrv/2wfCJw+n8G7AAAAAElFTkSuQmCCed3de863ff243169bb3f7bca2b8f8001"   class="sofa-icon" alt="Icon Box Icon sofa" />
+                    </div>
+                    <div class="ct-iconBox-content ct-iconBox-content--default">
+                        <h4 class="ct-iconBox-title">
+                            Learn from anywhere
+                        </h4>
+                        <p>
+                            I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker
+                        </p>
+                        <a href="18-actly-member-page.html" class="btn btn-primary btn-sm   animated" data-fx="fadeInUp" data-time="0">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <div class="ct-iconBox ct-iconBox--default text-center">
+                    <div class="ct-iconBox-icon ct-iconBox-icon--default">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAEbgAABG4B0KOyaAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGKSURBVFiF1dcviBVRFMfxz0+f6GKSXRAsLsY1WAQxiWD3LwarBtNat6lNFgyKYrBpNthEi1GQRQy7ym5QMDxcLYJBVDiWeVbfm519gz+4MIc7Z37fuedyLydVpU8NIMkAc1P2/lpVv+EChqgpj2Hjbb3jD3/CWdxv4oc4jQ/YbEyXm7l12/Bnd5t9NdvEB5p4GY+a5z34iRr8o05tdDHJG5xs4ttJnuES9ia5gqPYBWkoe9NoBT5jfsreH7H/bwmq6sc03ZOAHWO+vHu7QMYCwPEkL5Mc6QsATmAlyYMks30AwE5cxUaSxeYInyrASPtwB2+TnOoDYKQFvEjyJMl8HwAjncNakhtJZvoAgBlcx7sk5/sAGOkgbiVZ6APgO5ZwuKrWxkno6jYsPMZSVQ0nSewC4DUWq+pVm+StlGATl3GsrTntVuAX7uFmVX1ra9wW4DmuVdX7rRpPCvAFZ6rqaVfGEwFU1SpWuzZnew6i/wtggA0cStLZxhpTc413v61ZqqrX5jR9t+d/ABiL0dD3MIOdAAAAAElFTkSuQmCC512a296c512fc8740b281c26c72529c1" class="video-icon" alt="Icon Box Icon video" />
+                    </div>
+                    <div class="ct-iconBox-content ct-iconBox-content--default">
+                        <h4 class="ct-iconBox-title">
+                            Excellent Video Courses
+                        </h4>
+                        <p>
+                            I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker
+                        </p>
+                        <a href="18-actly-member-page.html" class="btn btn-primary btn-sm   animated" data-fx="fadeInUp" data-time="200">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <div class="ct-iconBox ct-iconBox--default text-center">
+                    <div class="ct-iconBox-icon ct-iconBox-icon--default">
+                        <img src="assets/images/teacher.png" class="teacher-icon" alt="Icon Box Icon teacher"/>
+                    </div>
+                    <div class="ct-iconBox-content ct-iconBox-content--default">
+                        <h4 class="ct-iconBox-title">
+                            Expert Teachers
+                        </h4>
+                        <p>
+                            I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker
+                        </p>
+                        <a href="18-actly-member-page.html" class="btn btn-primary btn-sm   animated" data-fx="fadeInUp" data-time="400">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- /container -->
+</div>
+
+
+<div class="ct-u-paddingBottom70">
+    <div class="container">
+
+        <header class="ct-sec-header text-center ct-u-paddingBoth50">
+            <h2 class="ct-sec-header-title">We have courses in the following categories</h2>
+        </header>
+
+
+        <div class="ct-tabs ct-tabs--witharrow">
+            <ul class="nav nav-tabs nav-justified ct-mytab-js" role="tablist">
+                <li><a href="#webdesign" role="tab" data-toggle="tab">Web&nbsp;design</a></li>
+                <li><a href="#webdevelopment" role="tab" data-toggle="tab">Web&nbsp;developement</a></li>
+                <li class="active"><a href="#photography" role="tab" data-toggle="tab">Photography</a></li>
+                <li><a href="#business" role="tab" data-toggle="tab">Business</a></li>
+                <li><a href="#music" role="tab" data-toggle="tab">Music</a></li>
+                <li><a href="#animation" role="tab" data-toggle="tab">Animation</a></li>
+                <li><a href="#drawing" role="tab" data-toggle="tab">Drawing</a></li>
+            </ul>
+
+
+            <div class="tab-content text-center">
+                <div class="tab-pane" id="webdesign">I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker; then—though I was still travelling with prodigious velocity—the blinking suc- cession of day and night, which was usually indicative of a slower pace, returned, and grew more and more marked. This puzzled me very much at first. The alternations of night and day grew slower
+                </div>
+                <div class="tab-pane" id="webdevelopment">I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker; then—though I was still travelling with prodigious velocity—the blinking suc- cession of day and night, which was usually
+                </div>
+                <div class="tab-pane active" id="photography">I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker; then—though I was still travelling with prodigious velocity—the blinking suc- cession of day and night, which was usually indicative of a slower pace, returned, and grew more and more marked. This puzzled me very much at first. The alternations of night and day grew slower and slower, and so
+                </div>
+                <div class="tab-pane" id="business">I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker; then—though I was still travelling with prodigious velocity—the blinking suc- cession of day and night, which was usually indicative of a slower pace, returned, and grew more and more marked. This puzzled me very much at first. The alternations of night and day grew slower
+                </div>
+                <div class="tab-pane" id="music">I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker; then—though I was still travelling with prodigious velocity—the blinking suc- cession of day and night, which was usually
+                </div>
+                <div class="tab-pane" id="animation">I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker; then—though I was still travelling with prodigious velocity—the blinking suc- cession of day and night, which was usually
+                </div>
+                <div class="tab-pane" id="drawing">I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker; then—though I was still travelling with prodigious velocity—the blinking suc- cession of day and night, which was usually indicative of a slower pace, returned, and grew more and more marked. This puzzled me very much at first. The alternations of night and day grew slower and slower, and so
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center">
+            <a href="18-actly-member-page.html" class="btn btn-primary btn-sm   animated" data-fx="fadeInUp">Learn more</a>
+        </div>
+
+    </div><!-- /container -->
+</div>
+
+
+<div class="ct-u-bgDarkgrey ct-u-paddingBoth100">
+    <div class="container">
+        <div class="ct-cta text-center">
+            <p class="text-uppercase">Ready to Learn with us?</p>
+            <a href="04-actly-courses-list.html" class="btn btn-primary   animated" data-fx="fadeInUp">Complete course list</a>
+        </div>
+    </div><!-- /container -->
+</div>

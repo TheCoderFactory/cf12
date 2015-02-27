@@ -1,6 +1,10 @@
 <!DOCTYPE html>
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <html ng-app="CoderFactory">
   <head>
+
     <title><%= content_for?(:title) ? yield(:title) : "Learn to Code @ Coder Factory." %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "See our new improved programmes that help you become a confident coder. Apply for our full time Fast track programme, part time courses and weekend workshops." %>">
     <meta charset="utf-8">
@@ -25,29 +29,16 @@
 <%= render 'layouts/google_analytics' %>
 <%= render 'layouts/facebook_pixel' %>
 </head>
-<body>
+<body class="cssAnimate ct-headroom--fixedMenu ct-headroom--scrollUpMenu">
   <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
   <%= render 'layouts/topbar' %>
   <%= display_flash %>
 
-  <header class="main-header <%= content_for?(:header) ? yield(:header) : "home-header" %>">
-    <div class="main-row">
-      <%= render 'layouts/main_nav' %>
-      <%= render 'layouts/mobile_nav' %>
-      <%= render 'layouts/headers' %>
+      <%= render 'layouts/nav' %>
+      <%= render 'layouts/parallax' %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
     </div>
-  </header>
-
-  <%= render 'layouts/content' %>
-  <% unless @hide_newsletter_registration %>
-    <%= render 'layouts/newsletter_registration' %>
-  <% end %>
-  <%= render 'layouts/footer' %>
-
-  <% if @show_forms %>
-    <%= render 'layouts/registration_modal' %>
-  <% end %>
-  <%= render 'layouts/contact_modal' %>
 
   </body>
 </html>
