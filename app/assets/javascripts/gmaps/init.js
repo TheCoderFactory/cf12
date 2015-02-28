@@ -67,7 +67,7 @@
                                         "elementType": "geometry",
                                         "stylers": [
                                             {
-                                                "color": "#3eaefa"
+                                                "color": "$calm"
                                             },
                                             {
                                                 "lightness": -37

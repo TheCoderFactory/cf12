@@ -1,36 +1,270 @@
-<% active_nav_item :blog %>
-<%= content_for :header, 'small-header' %>
-<%= content_for :title, "Read articles on the latest tech on Coder Factory's blog" %>
-<%= content_for :description, "Catch up on a range of coding and technology issues and news on the Coder Factory blog. Our team of bloggers are passionate about all things tech and love to bring you the latest. " %>
-
-<div class="container">
-	<div class="row">
-		<div class="col-md-7 col-md-offset-1">
-			<h2 class="page-title">Coder Factory Blog</h2>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-7 col-md-offset-1">
-			<% @posts.each_with_index do |post, index| %>
-				<div class="thumbnail choose-course">
-				  <a href="/posts/<%= post.slug %>"><img src="<%= post.image %>" alt="<%= post.title %>" ></a>
-				  <div class="caption">
-				    <h3><a href="/posts/<%= post.slug %>"><%= post.title %> </a></h3>
-				    <p><span class="phone-inverse"><%= post.lead %></span></p>
-		       	<div class="row">
-		       		<div class="col-xs-3">
-		        		<p><a href="/posts/<%= post.slug %>" class="btn btn-info btn-block">Read <i class="fa fa-arrow-right"></i> </span></a></p>
-		        	</div>
-				    </div>
-		      </div>
-		    </div>
-			<% end %>
-			<div class="apple_pagination">
-				<%= will_paginate @posts %>
-			</div>
-		</div>
-		<div class="col-md-3 promo-boxes">
-      <%= render 'layouts/sideboxes' %>
-    </div>
-	</div>
+<div class="ct-mediaSection ct-u-bgBlack ct-u-bgdark-lightfont overflowHidden" data-stellar-background-ratio="0.2" data-height="230" data-type="parallax" data-bg-image="assets/images/content/slider4.jpg" data-bg-image-mobile="assets/images/content/slider4.jpg">
+    <div class="ct-mediaSection-inner">
+        <div class="container">
+            <h3 class="ct-breadcrumbHeader text-uppercase pull-left">Blog</h3>
+        </div><!-- /container -->
+    </div><!-- /ct-mediaSection-inner -->
 </div>
+
+    <div class="ct-u-bgLightGrey">
+           <div class="container">
+               <div class="row">
+
+                <div class="col-md-9 ct-colContent ct-u-paddingBoth60">
+
+                <div class="row">
+
+                  <div class="col-sm-12">
+                     <div class="ct-blog ct-blog--imageTop ct-blog--text">
+                       <div class="ct-blog-content">
+                         <div class="entry-meta clearfix">
+                             <span class="cat-links pull-left"><i class="fa fa-calendar"></i><a href="11-actly-blog-single.html">Travel</a></span>
+                             <span class="entry-date pull-right">July 3, 2014</span>
+                         </div>
+                         <div class="ct-blog-text">
+                               <h2 class="text-uppercase"><a href="11-actly-blog-single.html">succession of day and night, which was usually indicative of a slower pace</a></h2>
+                               <p>I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker then—though I was still travelling with prodigious velocity—the blinking suc- cession of day and night. which was usually indicative of a slower pace, returned, and grew more and more marked.</p>
+                           </div>
+                           <div class="entry-meta ct-KindOfPostContainer clearfix">
+                             <a href="18-actly-member-page.html" class="by-author clearfix">
+                               <img src="assets/images/content/author.jpg" alt="author img" class="pull-left"/>
+                               <span class="by-autor-name">Frank Wright</span>, <span class="by-autor-prof">Teacher</span>
+                             </a>
+                             <span class="ct-borderBlock"></span>
+                             <span class="ct-kindOfPost-icon pull-right"><i class="fa fa-pencil"></i></span>
+                           </div>
+                         </div>
+                     </div>
+                   </div><!-- /col-sm-12 -->
+
+                  <div class="col-sm-12">
+                    <div class="ct-blog ct-blog--imageTop ct-blog--imageTop">
+                      <div class="ct-blog-content">
+                        <div class="entry-meta clearfix">
+                            <span class="cat-links pull-left"><i class="fa fa-calendar"></i><a href="11-actly-blog-single.html">Travel</a></span>
+                            <span class="entry-date pull-right">July 3, 2014</span>
+                        </div>
+                        <a  href="11-actly-blog-single.html" class="ct-blog-imageContainer">
+                          <img src="assets/images/content/img-blogpost.jpg" alt="author img" />
+                        </a>
+                        <div class="ct-blog-text">
+                            <h2 class="text-uppercase"><a href="11-actly-blog-single.html">succession of day and night, which was usually indicative of a slower pace</a></h2>
+                            <p>I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker then—though I was still travelling with prodigious velocity—the blinking suc- cession of day and night. which was usually indicative of a slower pace, returned, and grew more and more marked.</p>
+                          </div>
+                          <div class="entry-meta ct-KindOfPostContainer clearfix">
+                            <a href="18-actly-member-page.html" class="by-author clearfix">
+                              <img src="assets/images/content/author.jpg" alt="author img" class="pull-left"/>
+                              <span class="by-autor-name">Frank Wright</span>, <span class="by-autor-prof">Teacher</span>
+                            </a>
+                            <span class="ct-borderBlock"></span>
+                            <span class="ct-kindOfPost-icon pull-right"><i class="fa fa-camera"></i></span>
+                          </div>
+                        </div>
+                    </div>
+                  </div><!-- /col-sm-12 -->
+
+                  <div class="col-sm-12">
+                     <div class="ct-blog ct-blog--imageTop ct-blog--bloquote">
+                       <div class="ct-blog-content">
+                         <div class="entry-meta clearfix">
+                             <span class="cat-links pull-left"><i class="fa fa-calendar"></i><a href="11-actly-blog-single.html">Travel</a></span>
+                             <span class="entry-date pull-right">July 3, 2014</span>
+                         </div>
+                         <div class="ct-blog-text">
+                             <a href="11-actly-blog-single.html">
+                               <blockquote class="ct-blockquote ct-blockquote--bgblue ct-blockquote--blog text-uppercase ct-blockquote--withArrow">“Succession of day and night, which was usually indicative of a slower pace, returned, and grew more and more marked. This puzzled me very much at first. The alternations of night and day grew slower and slower, and so did the passage”
+                                 <footer>Albert Ainstein</footer>
+                               </blockquote>
+                             </a>
+                           </div>
+                         </div>
+                     </div>
+                   </div><!-- /col-sm-12 -->
+
+                    <div class="col-sm-12">
+                      <div class="ct-blog ct-blog--imageTop ct-blog--video">
+                        <div class="ct-blog-content">
+                          <div class="entry-meta clearfix">
+                              <span class="cat-links pull-left"><i class="fa fa-calendar"></i><a href="11-actly-blog-single.html">Travel</a></span>
+                              <span class="entry-date pull-right">July 3, 2014</span>
+                          </div>
+                          <div class="ct-blog-imageContainer">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="obj-video" src="//player.vimeo.com/video/27261510?title=0&amp;byline=0&amp;portrait=0&amp;color=c9ff23" height="300" allowfullscreen ></iframe>
+                            </div>
+                          </div>
+                          <div class="ct-blog-text">
+                              <h2 class="text-uppercase"><a href="11-actly-blog-single.html">succession of day and night, which was usually indicative of a slower pace</a></h2>
+                              <p>I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker then—though I was still travelling with prodigious velocity—the blinking suc- cession of day and night. which was usually indicative of a slower pace, returned, and grew more and more marked.</p>
+                            </div>
+                            <div class="entry-meta ct-KindOfPostContainer clearfix">
+                              <a href="18-actly-member-page.html" class="by-author clearfix">
+                                <img src="assets/images/content/author.jpg" alt="author img" class="pull-left"/>
+                                <span class="by-autor-name">Frank Wright</span>, <span class="by-autor-prof">Teacher</span>
+                              </a>
+                              <span class="ct-borderBlock"></span>
+                              <span class="ct-kindOfPost-icon pull-right"><i class="fa fa-video-camera"></i></span>
+                            </div>
+                          </div>
+                      </div>
+                    </div><!-- /col-sm-12 -->
+
+                    <div class="col-sm-12">
+                      <div class="ct-blog ct-blog--imageTop ct-blog--audio">
+                        <div class="ct-blog-content">
+                          <div class="entry-meta clearfix">
+                              <span class="cat-links pull-left"><i class="fa fa-calendar"></i><a href="11-actly-blog-single.html">Travel</a></span>
+                              <span class="entry-date pull-right">July 3, 2014</span>
+                          </div>
+                          <div class="ct-blog--audio-container">
+                            <iframe height="150" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/117927267&amp;auto_play=false&amp;hide_related=false&amp;visual=true"></iframe>
+                          </div>
+                          <div class="ct-blog-text">
+                              <h2 class="text-uppercase"><a href="11-actly-blog-single.html">succession of day and night, which was usually indicative of a slower pace</a></h2>
+                              <p>I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker then—though I was still travelling with prodigious velocity—the blinking suc- cession of day and night. which was usually indicative of a slower pace, returned, and grew more and more marked.</p>
+                            </div>
+                            <div class="entry-meta ct-KindOfPostContainer clearfix">
+                              <a href="18-actly-member-page.html" class="by-author clearfix">
+                                <img src="assets/images/content/author.jpg" alt="author img" class="pull-left"/>
+                                <span class="by-autor-name">Frank Wright</span>, <span class="by-autor-prof">Teacher</span>
+                              </a>
+                              <span class="ct-borderBlock"></span>
+                              <span class="ct-kindOfPost-icon pull-right"><i class="fa fa-music"></i></span>
+                            </div>
+                          </div>
+                      </div>
+                    </div><!-- /col-sm-12 -->
+
+                  </div><!-- /row -->
+
+                  <ul class="pagination">
+                    <li class="disabled"><span><i class="fa fa-angle-left"></i></span></li>
+                    <li class="active"><a href="#">1 </a></li>
+                    <li><a href="#">2 </a></li>
+                    <li><a href="#">3 </a></li>
+                    <li><a href="#">4 </a></li>
+                    <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                  </ul>
+
+                </div><!-- /col-md-9 -->
+
+
+                <div class="col-md-3 ct-colSidebar ct-u-paddingBoth60">
+
+                   <div class="ct-colSidebar-container">
+
+                     <aside class="ct-widget ct-widget-sidebar">
+                       <form class="ct-widget-search" role="search">
+                          <div class="form-group">
+                              <input type="text" class="form-control search-input" placeholder="Search for...">
+                          </div>
+                           <button type="submit" class="btn btn-search"><i class="fa fa-search"></i> </button>
+                      </form>
+                     </aside>
+
+                     <aside class="ct-widget ct-widget-sidebar">
+                       <h4 class="ct-widget-title">Popular post</h4>
+                       <article class="blog-item ct-blogItem--sidebar">
+                             <div class="media stdbox">
+                                 <a class="pull-left blog-item-cont" href="11-actly-blog-single.html">
+                                     <img class="media-object" src="assets/images/content/popularpostwid01.jpg" alt=" ">
+                                 </a>
+                                 <div class="media-body">
+                                   <p class="entry-text"><a href="11-actly-blog-single.html">Succession of day and night, which was usually</a></p>
+                                   <div class="entry-meta">
+                                      <span class="entry-date">July 3, 2014</span>
+                                   </div>
+                                 </div>
+                             </div><!-- /media stdbox -->
+                         </article>
+
+                         <article class="blog-item ct-blogItem--sidebar">
+                             <div class="media stdbox">
+                                 <a class="pull-left blog-item-cont" href="11-actly-blog-single.html">
+                                     <img class="media-object" src="assets/images/content/popularpostwid02.jpg" alt=" ">
+                                 </a>
+                                 <div class="media-body">
+                                   <p class="entry-text"><a href="11-actly-blog-single.html">Succession of day and night, which was usually</a></p>
+                                   <div class="entry-meta">
+                                      <span class="entry-date">July 3, 2014</span>
+                                   </div>
+                                 </div>
+                             </div><!-- /media stdbox -->
+                         </article>
+
+                          <article class="blog-item ct-blogItem--sidebar">
+                              <div class="media stdbox">
+                                  <a class="pull-left blog-item-cont" href="11-actly-blog-single.html">
+                                      <img class="media-object" src="assets/images/content/popularpostwid03.jpg" alt=" ">
+                                  </a>
+                                  <div class="media-body">
+                                      <p class="entry-text"><a href="11-actly-blog-single.html">Succession of day and night, which was usually</a></p>
+                                      <div class="entry-meta">
+                                         <span class="entry-date">July 3, 2014</span>
+                                      </div>
+                                  </div>
+                              </div><!-- /media stdbox -->
+                          </article>
+
+                     </aside>
+
+
+                     <aside class="ct-widget ct-widget-sidebar">
+                       <h4 class="ct-widget-title">Categories</h4>
+                       <ul>
+                           <li><a href="#">Travel</a></li>
+                           <li><a href="#">Food</a></li>
+                           <li><a href="#">People</a></li>
+                           <li><a href="#">City</a></li>
+                           <li><a href="#">Photos</a></li>
+                       </ul>
+                     </aside>
+
+                     <aside class="ct-widget ct-widget-sidebar">
+                        <h4 class="ct-widget-title">Tags</h4>
+                        <ul>
+                            <li><a href="#">Dog <span class="badge pull-right">9</span></a></li>
+                            <li><a href="#">Cat <span class="badge pull-right">7</span></a></li>
+                            <li><a href="#">Eagle <span class="badge pull-right">3</span></a></li>
+                        </ul>
+                      </aside>
+
+                   </div>
+
+                 </div><!-- /col-md-3 -->
+
+               </div><!-- /row -->
+           </div><!-- /container -->
+     </div>
+
+
+    <div class="ct-mediaSection ct-u-bgDarkgrey" data-stellar-background-ratio="0.2" data-height="420" data-type="parallax" data-bg-image="assets/images/content/newsletter-bg.jpg" data-bg-image-mobile="assets/images/content/newsletter-bg.jpg">
+       <div class="ct-mediaSection-inner">
+         <div class="container">
+
+           <div class="row">
+             <div class="col-sm-6 col-sm-offset-3">
+               <div class="ct-newsletter ct-u-bgdark-lightfont text-center">
+                 <h2 class="text-uppercase">Newsletter subscribe</h2>
+                   <div class="successMessage alert alert-success" style="display: none">
+                       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                       Thank You!
+                   </div>
+                   <div class="errorMessage alert alert-danger" style="display: none">
+                       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                       Ups! An error occured. Please try again later.
+                   </div>
+                   <form role="form" class="ct-form--newsletter validateIt" action="assets/form/send.php" method="post" data-email-subject="Newsletter Form" data-show-errors="true" data-hide-form="true">
+
+                   <div class="form-group animated" data-fx="fadeInUp" data-time="0">
+                    <input type="email" class="form-control" id="exampleInputEmail1"   name="field[]" required placeholder="Your Email Address">
+                  </div>
+                  <button type="submit" class="btn btn-primary   animated" data-fx="fadeInUp" data-time="400">Subscribe</button>
+                </form>
+
+               </div>
+             </div>
+           </div><!-- /row -->
+         </div><!-- /container -->
+       </div><!-- /ct-mediaSection-inner -->
+     </div>

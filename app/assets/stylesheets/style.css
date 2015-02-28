@@ -1765,7 +1765,7 @@
   -moz-background-clip: padding-box;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  border: 2px solid #3eaefa;
+  border: 2px solid $calm;
 }
 .bootstrap-datetimepicker-widget.timepicker-sbs {
   width: 600px;
@@ -1898,7 +1898,7 @@
   content: '';
   display: inline-block;
   border-left: 7px solid transparent;
-  border-bottom: 7px solid #3eaefa;
+  border-bottom: 7px solid $calm;
   border-top-color: rgba(0, 0, 0, 0.2);
   position: absolute;
   bottom: 4px;
@@ -1906,7 +1906,7 @@
 }
 .bootstrap-datetimepicker-widget td.active,
 .bootstrap-datetimepicker-widget td.active:hover {
-  background-color: #3eaefa;
+  background-color: $calm;
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
@@ -1932,7 +1932,7 @@
   background: #eeeeee;
 }
 .bootstrap-datetimepicker-widget td span.active {
-  background-color: #3eaefa;
+  background-color: $calm;
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
@@ -1973,7 +1973,7 @@
   margin-bottom: 15px;
 }
 .input-group.date input {
-  border: 2px solid #3eaefa !important;
+  border: 2px solid $calm !important;
 }
 .input-group.date .input-group-addon span,
 .input-group.date .input-group-addon i {
@@ -1981,7 +1981,7 @@
   cursor: pointer;
   width: 16px;
   height: 16px;
-  color: #3eaefa;
+  color: $calm;
 }
 .bootstrap-datetimepicker-widget.left-oriented:before {
   left: auto;
@@ -2001,7 +2001,7 @@
 }
 .input-group.date .input-group-addon {
   background-color: transparent;
-  border: 2px solid #3eaefa;
+  border: 2px solid $calm;
   border-left: none;
   padding: 6px 20px;
 }
@@ -2022,7 +2022,7 @@
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   background-color: transparent;
-  border: 2px solid #3eaefa;
+  border: 2px solid $calm;
   color: #ffffff;
   line-height: 59px;
   height: 59px;
@@ -2066,7 +2066,7 @@
   src: url(../../assets/fonts/ct/BrandonGrotesque/Brandon_med.it.otf);
 }
 @font-face {
-  font-family: 'BrandomGrotesque-reg';
+  font-family: 'futura pt';
   src: url(../../assets/fonts/ct/BrandonGrotesque/Brandon_reg.otf);
 }
 @font-face {
@@ -2193,14 +2193,14 @@ footer {
   color: #fff;
   font-size: 12px;
   background: transparent;
-  font-family: 'BrandomGrotesque-reg', sans-serif;
+  font-family: 'futura pt', sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 .navbar .navbar-nav li a:hover,
 .navbar .navbar-nav li a:active,
 .navbar .navbar-nav li a:focus {
-  color: #3eaefa;
+  color: $calm;
 }
 .navbar-brand {
   line-height: 1;
@@ -2234,7 +2234,7 @@ footer {
 }
 .navbar-nav .dropdown-menu > li a {
   padding: 10px 0px;
-  font-size: 13px;
+  font-size: $font-size-medium;
   letter-spacing: 1px;
   color: #000;
   font-family: 'futura pt', sans-serif;
@@ -2245,7 +2245,7 @@ footer {
 .navbar-nav .dropdown-menu > li:hover > a,
 .navbar-nav .dropdown-menu > li:active > a,
 .navbar-nav .dropdown-menu > li:focus > a {
-  color: #3eaefa;
+  color: $calm;
   background: transparent;
 }
 .navbar-collapse {
@@ -2273,23 +2273,23 @@ footer {
 .navbar-nav li a:focus,
 .navbar-nav li a:active {
   background-color: transparent;
-  color: #3eaefa;
+  color: $calm;
 }
 .navbar-nav .active > a {
-  color: #3eaefa;
+  color: $calm;
 }
 .navbar-nav .active > a:hover,
 .navbar-nav .active > a:focus {
   background-color: #ffffff;
-  color: #3eaefa;
+  color: $calm;
 }
 .navbar-nav .active.onepage > a:hover,
 .navbar-nav .active.onepage > a:focus {
-  background-color: #3eaefa;
+  background-color: $calm;
   color: #ffffff;
 }
 .navbar-nav li.active a {
-  background-color: #3eaefa;
+  background-color: $calm;
 }
 .navbar-nav li.active:hover a,
 .navbar-nav li.active:active a,
@@ -2298,7 +2298,7 @@ footer {
 }
 .navbar-nav li.dropdown:hover > a {
   background-color: #ffffff;
-  color: #3eaefa;
+  color: $calm;
   -webkit-border-top-right-radius: 2px;
   -webkit-border-bottom-right-radius: 0;
   -webkit-border-bottom-left-radius: 0;
@@ -2316,13 +2316,13 @@ footer {
   background-clip: padding-box;
 }
 .navbar-nav .dropdown-menu .active > a {
-  color: #3eaefa;
+  color: $calm;
 }
 .nav .dropdown .dropdown-menu h5 {
-  color: #3eaefa;
+  color: $calm;
 }
 .nav .dropdown .dropdown-menu h5 small {
-  color: #3eaefa;
+  color: $calm;
 }
 .dropdown-menu {
   z-index: 9000;
@@ -2606,11 +2606,11 @@ footer {
   .navbar-nav > li > a:active,
   .navbar-nav > li > a:focus {
     color: #fff !important;
-    background-color: #3eaefa !important;
+    background-color: $calm !important;
   }
   .navbar-nav > li.active > a {
     color: #ffffff !important;
-    background-color: #3eaefa !important;
+    background-color: $calm !important;
   }
   .navbar-nav > li.active a {
     background-color: transparent;
@@ -5794,7 +5794,7 @@ Copyright (c) 2014 Daniel Eden
   color: #1e2223;
 }
 .ct-u-colorMotive {
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-u-bgDarkgrey {
   background-color: #1e2223;
@@ -5871,14 +5871,14 @@ Copyright (c) 2014 Daniel Eden
   left: 0;
 }
 .ct-u-borderMotiveBoth {
-  border-top: 10px solid #3eaefa;
-  border-bottom: 10px solid #3eaefa;
+  border-top: 10px solid $calm;
+  border-bottom: 10px solid $calm;
 }
 .ct-u-borderMotiveTop {
-  border-top: 10px solid #3eaefa;
+  border-top: 10px solid $calm;
 }
 .ct-u-borderMotiveBottom {
-  border-bottom: 10px solid #3eaefa;
+  border-bottom: 10px solid $calm;
 }
 .ct-u-textDecoration {
   text-decoration: underline;
@@ -5925,13 +5925,13 @@ Copyright (c) 2014 Daniel Eden
   color: #ffffff;
 }
 .ct-u-bgMotive {
-  background-color: #3eaefa;
+  background-color: $calm;
 }
 .ct-u-bgGrey {
   background-color: #ebeff0;
 }
 .ct-u-bgMotive {
-  background-color: #3eaefa;
+  background-color: $calm;
 }
 .ct-u-bgMotive a {
   color: #ffffff;
@@ -5955,10 +5955,10 @@ Copyright (c) 2014 Daniel Eden
   font-size: 12px;
 }
 .ct-u-fs13 {
-  font-size: 13px;
+  font-size: $font-size-medium;
 }
 .ct-u-fs14 {
-  font-size: 14px;
+  font-size: $font-size-medium;
 }
 .ct-u-fs15 {
   font-size: 15px;
@@ -6076,25 +6076,25 @@ Copyright (c) 2014 Daniel Eden
   left: 0;
   bottom: -30px;
   border-width: 0 30px 30px 0;
-  border-color: transparent #3eaefa transparent transparent;
+  border-color: transparent $calm transparent transparent;
 }
 .ct-u-triangleBottomRight:after {
   right: 0;
   bottom: -30px;
   border-width: 30px 30px 0 0;
-  border-color: #3eaefa transparent transparent transparent;
+  border-color: $calm transparent transparent transparent;
 }
 .ct-u-triangleTopLeft:before {
   left: 0;
   top: -30px;
   border-width: 0 0 30px 30px;
-  border-color: transparent transparent #3eaefa transparent;
+  border-color: transparent transparent $calm transparent;
 }
 .ct-u-triangleTopRight:before {
   right: 0;
   top: -30px;
   border-width: 30px 0 0 30px;
-  border-color: transparent transparent transparent #3eaefa;
+  border-color: transparent transparent transparent $calm;
 }
 .element-center {
   display: table;
@@ -6185,8 +6185,8 @@ Copyright (c) 2014 Daniel Eden
   }
 }
 .ct-u-underline:hover {
-  color: #3eaefa;
-  border-bottom: 4px solid #3eaefa;
+  color: $calm;
+  border-bottom: 4px solid $calm;
 }
 body {
   font-family: 'clavo', sans-serif;
@@ -6202,7 +6202,7 @@ input {
   transition: all 0.2s ease;
 }
 a {
-  color: #3eaefa;
+  color: $calm;
 }
 a:hover,
 a:focus {
@@ -6223,7 +6223,7 @@ h3,
 }
 h3 small,
 .h3 small {
-  font-size: 14px;
+  font-size: $font-size-medium;
   line-height: 1.8;
 }
 h4,
@@ -6231,7 +6231,7 @@ h4,
   font-size: 30px;
 }
 p {
-  font-size: 13px;
+  font-size: $font-size-medium;
   line-height: 1.9;
   margin: 0 0 24px;
 }
@@ -6241,7 +6241,7 @@ h5,
 }
 h6,
 .h6 {
-  font-size: 14px;
+  font-size: $font-size-medium;
 }
 h1,
 .h1,
@@ -6517,7 +6517,7 @@ h6,
   border-width: 2px !important;
   white-space: normal;
   margin-bottom: 10px !important;
-  font-size: 14px;
+  font-size: $font-size-medium;
 }
 .btn + .btn {
   margin-left: 15px;
@@ -6531,8 +6531,8 @@ h6,
   padding: 0 80px;
 }
 .btn-primary {
-  background-color: #3eaefa;
-  border: solid 2px #3eaefa;
+  background-color: $calm;
+  border: solid 2px $calm;
   color: #ffffff;
 }
 .btn-primary i {
@@ -6551,33 +6551,33 @@ h6,
   color: #FFF;
 }
 .btn-link {
-  color: #3eaefa;
+  color: $calm;
   font-size: 12px;
   line-height: 1;
 }
 .btn-link:hover,
 .btn-link:active,
 .btn-link:focus {
-  color: #3eaefa;
+  color: $calm;
 }
 .btn-link i {
   padding-left: 4px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: $font-size-medium;
 }
 .btn-default {
-  border: solid 2px #3eaefa;
-  color: #3eaefa;
+  border: solid 2px $calm;
+  color: $calm;
   background: transparent;
 }
 .btn-default i {
-  color: #3eaefa;
+  color: $calm;
 }
 .btn-default:hover,
 .btn-default:active,
 .btn-default:focus {
-  border: solid 2px #3eaefa;
-  background-color: #3eaefa;
+  border: solid 2px $calm;
+  background-color: $calm;
   color: #fff;
 }
 .btn-default:hover i,
@@ -6630,7 +6630,7 @@ h6,
 .ct-btn-default--white:focus {
   background-color: #ffffff;
   border-color: #ffffff;
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-btn-default--white2 {
   border-color: #ffffff;
@@ -6639,13 +6639,13 @@ h6,
 .ct-btn-default--white2:hover,
 .ct-btn-default--white2:focus {
   background-color: transparent;
-  border-color: #3eaefa;
-  color: #3eaefa;
+  border-color: $calm;
+  color: $calm;
 }
 .ct-btn-primary--white {
   border-color: #ffffff;
   background-color: #ffffff;
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-btn-primary--white:hover,
 .ct-btn-primary--white:focus {
@@ -6660,7 +6660,7 @@ h6,
 .ct-btn-whiteBg:hover,
 .ct-btn-whiteBg:focus,
 .ct-btn-whiteBg:active {
-  border-color: #3eaefa;
+  border-color: $calm;
 }
 .btn.btn-link.ct-u-textDecoration:hover,
 .btn.btn-link.ct-u-textDecoration:focus,
@@ -6674,14 +6674,14 @@ h6,
 }
 .ct-btn-default--grey:hover,
 .ct-btn-default--grey:focus {
-  border-color: #3eaefa;
-  color: #3eaefa;
+  border-color: $calm;
+  color: $calm;
   background-color: transparent;
 }
 .ct-btn-text--motive,
 .ct-btn-text--motive:hover,
 .ct-btn-text--motive.active {
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-btn-text--success,
 .ct-btn-text--success:hover,
@@ -6710,13 +6710,13 @@ h6,
 }
 .ct-btn-motive {
   color: #FFF;
-  background-color: #3eaefa;
-  border-color: #3eaefa;
+  background-color: $calm;
+  border-color: $calm;
 }
 .ct-btn-motive:hover,
 .ct-btn-motive.active {
   background-color: #0c99f9;
-  border-color: #3eaefa;
+  border-color: $calm;
 }
 .ct-btn-success {
   color: #FFF;
@@ -6769,18 +6769,18 @@ h6,
   border-color: #222;
 }
 .ct-btn-motive--inverse {
-  color: #3eaefa;
+  color: $calm;
   background-color: #FFF;
-  border-color: #3eaefa;
+  border-color: $calm;
 }
 .ct-btn-motive--inverse i {
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-btn-motive--inverse:hover,
 .ct-btn-motive--inverse.active {
   color: #FFF;
   background-color: #0c99f9;
-  border-color: #3eaefa;
+  border-color: $calm;
 }
 .ct-btn-motive--inverse:hover i,
 .ct-btn-motive--inverse.active i {
@@ -6896,7 +6896,7 @@ ul.list-with-icons li {
   margin-left: 0;
   padding: 0;
   line-height: 2.2;
-  font-size: 14px;
+  font-size: $font-size-medium;
   color: #4d4d4d !important;
   color: rgba(0, 0, 0, 0.7) !important;
 }
@@ -6939,7 +6939,7 @@ ol.ol-list li,
 ul.list-with-icons li {
   margin-left: 0;
   padding: 0;
-  font-size: 14px;
+  font-size: $font-size-medium;
   line-height: 2.2;
   color: #4d4d4d !important;
   color: rgba(0, 0, 0, 0.7) !important;
@@ -6958,7 +6958,7 @@ ul.list-with-icons ol {
   margin-right: 10px;
   font-size: 20px;
   width: 18px;
-  color: #3eaefa;
+  color: $calm;
 }
 @media (max-width: 767px) {
   ul.ul-list,
@@ -6975,7 +6975,7 @@ ul.list-with-icons ol {
 .ct-iconBox-icon--circle {
   width: 70px;
   height: 70px;
-  background-color: #3eaefa;
+  background-color: $calm;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -7013,11 +7013,11 @@ ul.list-with-icons ol {
 }
 .ct-iconBox-content {
   word-break: break-word;
-  font-family: 'BrandomGrotesque-reg', sans-serif;
+  font-family: 'futura pt', sans-serif;
 }
 .ct-iconBox-content p {
   line-height: 27px;
-  font-size: 13px;
+  font-size: $font-size-medium;
   font-weight: 100;
 }
 .ct-iconBox--default .ct-iconBox-icon,
@@ -7063,7 +7063,7 @@ ul.list-with-icons ol {
   background-color: #c8e2f2;
 }
 .ct-iconBox--iconBg .ct-iconBox-icon i {
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-iconBox--iconBg .ct-iconBox-content {
   position: relative;
@@ -7253,10 +7253,10 @@ ul.list-with-icons ol {
   float: right;
   display: block;
   margin-top: -25px;
-  color: #3eaefa;
+  color: $calm;
   font-family: 'futura pt', sans-serif;
   font-weight: 900;
-  font-size: 14px;
+  font-size: $font-size-medium;
   min-width: 300px;
   text-align: right;
 }
@@ -7265,7 +7265,7 @@ ul.list-with-icons ol {
   text-align: right;
   color: #000000;
   padding-top: 10px;
-  font-size: 13px;
+  font-size: $font-size-medium;
   font-weight: 400;
 }
 .ct-skills--fat .ct-progressLink {
@@ -7281,7 +7281,7 @@ ul.list-with-icons ol {
   height: 36px;
   width: 70px;
   text-align: right;
-  color: #3eaefa;
+  color: $calm;
   font-size: 22px;
   margin-top: 6px;
 }
@@ -7302,7 +7302,7 @@ ul.list-with-icons ol {
   border-radius: 0;
 }
 .ct-skills--fat .progress .progress-bar {
-  background-color: #3eaefa;
+  background-color: $calm;
   height: 7px;
 }
 .ct-skills--fat .progress .progress-bar span {
@@ -7321,7 +7321,7 @@ ul.list-with-icons ol {
   padding-top: 0;
   font-size: 12px;
   padding-left: 18px;
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-skills--fat .progress:last-child {
   margin-bottom: 0;
@@ -7329,23 +7329,23 @@ ul.list-with-icons ol {
 blockquote,
 .ct-bloquote {
   font-family: 'clavo', sans-serif;
-  font-size: 14px;
+  font-size: $font-size-medium;
   line-height: 1.7;
 }
 .ct-blockquote--standard {
   font-style: italic;
   padding: 0px 20px;
-  color: #3eaefa;
-  border-left: solid 10px #3eaefa;
+  color: $calm;
+  border-left: solid 10px $calm;
 }
 .ct-blockquote--border {
-  border: solid 2px #3eaefa;
+  border: solid 2px $calm;
   padding: 25px 15px 10px;
 }
 .ct-blockquote--bgblue {
-  background-color: #3eaefa;
+  background-color: $calm;
   color: #fff;
-  border: solid 2px #3eaefa;
+  border: solid 2px $calm;
   padding: 25px 30px 21px 20px;
 }
 .ct-blockquote--quotetopmotive:before {
@@ -7365,7 +7365,7 @@ blockquote,
   -moz-osx-font-smoothing: grayscale;
   content: "\f10e";
   background: #fff;
-  color: #3eaefa;
+  color: $calm;
   border-radius: 50%;
 }
 .ct-blockquote--quotewhite:before {
@@ -7409,7 +7409,7 @@ blockquote,
   height: 0;
   margin-left: 2px;
   vertical-align: middle;
-  border-top: 10px solid #3eaefa;
+  border-top: 10px solid $calm;
   border-right: 10px solid transparent;
   border-left: 10px solid transparent;
   position: absolute;
@@ -7471,7 +7471,7 @@ blockquote + blockquote {
 }
 .ct-pricing .ct-pricing-sep {
   color: #ffffff;
-  background-color: #3eaefa;
+  background-color: $calm;
   opacity: .8;
   margin: 0;
 }
@@ -7541,7 +7541,7 @@ blockquote + blockquote {
 }
 .ct-pricing .ct-pricing-content .ct-pricing-content-ul li {
   list-style-type: none;
-  font-size: 14px;
+  font-size: $font-size-medium;
   line-height: 2.5;
   color: #ffffff;
 }
@@ -7564,7 +7564,7 @@ blockquote + blockquote {
 }
 .ct-pricing .ct-pricing-content .ct-pricing-content-ul li.ct-pricing-content-ul-activesep:before {
   content: "\f00c";
-  color: #3eaefa !important;
+  color: $calm !important;
 }
 .ct-princing--second section {
   padding: 0 15px;
@@ -7606,7 +7606,7 @@ blockquote + blockquote {
   display: block;
   width: 100%;
   height: 100%;
-  background: #3eaefa;
+  background: $calm;
   opacity: 0.8;
   position: absolute;
   top: 0;
@@ -7644,8 +7644,8 @@ blockquote + blockquote {
 .ct-pricing-buttontop .btn.ct-btn-pricing:hover,
 .ct-pricing-buttontop .btn.ct-btn-pricing:active,
 .ct-pricing-buttontop .btn.ct-btn-pricing:focus {
-  background: #3eaefa;
-  border-color: #3eaefa;
+  background: $calm;
+  border-color: $calm;
   color: #1e2223;
 }
 .ct-pricing-buttontop a.btn:hover {
@@ -7659,7 +7659,7 @@ blockquote + blockquote {
 .ct-pricing-buttontop .ct-pricing-overpricemo,
 .ct-pricing-buttontop .ct-pricing-overprice,
 .ct-pricing-buttontop .ct-pricing-topprice {
-  font-size: 14px !important;
+  font-size: $font-size-medium !important;
   font-weight: 500 !important;
   padding: 0 !important;
   margin: 0 !important;
@@ -7674,7 +7674,7 @@ blockquote + blockquote {
   border-top: 0;
 }
 table.table--blue > thead > tr > th {
-  background-color: #3eaefa;
+  background-color: $calm;
   color: #ffffff;
 }
 table.table {
@@ -7684,10 +7684,10 @@ table.table {
 table.table > thead > tr > th {
   border-top: 0px;
   border-bottom: 0px;
-  background-color: #3eaefa;
+  background-color: $calm;
   color: #ffffff;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: $font-size-medium;
   padding: 18px 0;
   font-family: 'futura pt', sans-serif;
   font-weight: 300;
@@ -7711,7 +7711,7 @@ table.table > tbody > tr > td {
   border-top: 0px;
   border-bottom: 0px;
   padding: 8px 0;
-  font-size: 13px;
+  font-size: $font-size-medium;
 }
 table.table > tbody > tr > td:first-child {
   padding-left: 30px;
@@ -7726,14 +7726,14 @@ table.table > tfoot > tr > th {
   border-top: 0px;
   border-bottom: 0px;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: $font-size-medium;
   padding: 14px 0;
 }
 table.table > tfoot > tr > td {
   border-top: 0px;
   border-bottom: 0px;
   padding: 8px 0;
-  font-size: 13px;
+  font-size: $font-size-medium;
 }
 table.ct-table--withBorder > thead > tr > th:first-child {
   padding-left: 20px;
@@ -7847,7 +7847,7 @@ table.ct-table--withBorder .btn {
 .ct-tooltip p,
 .ct-tooltip .ct-tooltip-text {
   font-family: 'clavo', sans-serif;
-  font-size: 14px;
+  font-size: $font-size-medium;
   line-height: 1.7;
   margin: 0;
 }
@@ -7860,7 +7860,7 @@ table.ct-table--withBorder .btn {
   font-size: 48px;
   float: left;
   padding: 1px 18px 0;
-  background-color: #3eaefa;
+  background-color: $calm;
   margin-top: 5px;
   margin-right: 10px;
   color: #fff;
@@ -7868,11 +7868,11 @@ table.ct-table--withBorder .btn {
 .ct-tooltip a[data-toggle="tooltip"],
 .ct-tooltip p a[data-toggle="tooltip"],
 .ct-tooltip .ct-tooltip-text a[data-toggle="tooltip"] {
-  background-color: #3eaefa;
+  background-color: $calm;
   color: #fff;
 }
 .ct-accordion {
-  border: solid 2px #3eaefa !important;
+  border: solid 2px $calm !important;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -7888,11 +7888,11 @@ table.ct-table--withBorder .btn {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 20px;
-  color: #3eaefa;
+  color: $calm;
   font-family: 'futura pt', sans-serif;
   display: block;
   padding: 15px 15px 16px;
-  border-top: solid 2px #3eaefa !important;
+  border-top: solid 2px $calm !important;
   background-color: transparent !important;
 }
 .ct-accordion .panel-heading + .panel-collapse > .panel-body {
@@ -7918,10 +7918,10 @@ table.ct-table--withBorder .btn {
   border-bottom-color: transparent;
 }
 .ct-accordion .panel:last-child .panel-title a.collapsed {
-  border-bottom: solid 2px #3eaefa !important;
+  border-bottom: solid 2px $calm !important;
 }
 .ct-accordion .panel .panel-body {
-  font-size: 14px;
+  font-size: $font-size-medium;
   line-height: 1.7;
   padding: 10px 15px 20px;
   margin-top: -10px;
@@ -7932,7 +7932,7 @@ table.ct-table--withBorder .btn {
 .ct-accordion--normal .panel-heading .panel-title a {
   border-top: solid 1px #ccc !important;
   border-bottom: 0 !important;
-  color: #3eaefa;
+  color: $calm;
   padding: 15px 15px 15px 40px;
   line-height: 26px;
 }
@@ -7966,7 +7966,7 @@ table.ct-table--withBorder .btn {
   width: 26px;
   height: 26px;
   line-height: 22px;
-  border: solid 1px #3eaefa;
+  border: solid 1px $calm;
   border-radius: 50%;
   padding-left: 1px;
 }
@@ -7997,11 +7997,11 @@ table.ct-table--withBorder .btn {
 .nav-tabs.nav-justified > .active > a,
 .nav-tabs.nav-justified > .active > a:hover,
 .nav-tabs.nav-justified > .active > a:focus {
-  font-size: 13px;
-  border-color: #3eaefa;
+  font-size: $font-size-medium;
+  border-color: $calm;
   font-weight: 300;
   color: #fff;
-  background-color: #3eaefa;
+  background-color: $calm;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -8014,26 +8014,26 @@ table.ct-table--withBorder .btn {
   max-width: 100%;
 }
 .ct-tabs .nav-tabs > li > a {
-  border: solid 1px #3eaefa;
+  border: solid 1px $calm;
   text-transform: uppercase;
-  color: #3eaefa;
+  color: $calm;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
   background-color: transparent;
   font-family: 'futura pt', sans-serif;
-  font-size: 13px;
+  font-size: $font-size-medium;
   font-weight: 500;
   padding: 15px 0;
 }
 .ct-tabs .nav-tabs > li > a:hover {
-  font-size: 13px;
-  border: solid 1px #3eaefa;
-  background-color: #3eaefa;
+  font-size: $font-size-medium;
+  border: solid 1px $calm;
+  background-color: $calm;
   color: #fff;
 }
 .ct-tabs .tab-content {
-  font-size: 14px;
+  font-size: $font-size-medium;
   line-height: 1.7;
   padding: 53px 0;
   border-color: rgba(0, 0, 0, 0.7) !important;
@@ -8049,21 +8049,21 @@ table.ct-table--withBorder .btn {
 .ct-tabs--border .nav-tabs.nav-justified > .active > a:hover,
 .ct-tabs--border .nav-tabs.nav-justified > .active > a:focus {
   font-size: 15px;
-  border: solid 2px #3eaefa;
+  border: solid 2px $calm;
   border-bottom: 0;
   font-weight: 300;
-  color: #3eaefa;
+  color: $calm;
   background-color: transparent;
   border-bottom: solid 2px transparent;
 }
 .ct-tabs--border .nav-tabs > li > a {
   border: 0;
-  border-bottom: solid 2px #3eaefa;
+  border-bottom: solid 2px $calm;
   border-top: solid 2px transparent;
   border-left: solid 2px transparent;
   border-right: solid 2px transparent;
   text-transform: uppercase;
-  color: #3eaefa;
+  color: $calm;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -8083,16 +8083,16 @@ table.ct-table--withBorder .btn {
   border-left: solid 2px transparent;
   border-right: solid 2px transparent;
   border-top: solid 2px transparent;
-  border-bottom: solid 2px #3eaefa;
+  border-bottom: solid 2px $calm;
   text-decoration: underline;
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-tabs--border .nav-tabs > li:first-child a {
   margin-left: 0;
 }
 .ct-tabs--border .tab-content {
-  border-color: #3eaefa !important;
-  border: solid 2px #3eaefa;
+  border-color: $calm !important;
+  border: solid 2px $calm;
   border-top: 0;
   margin-top: -2px;
   opacity: 1;
@@ -8116,7 +8116,7 @@ table.ct-table--withBorder .btn {
   font-size: 20px;
   border: none;
   font-weight: 300;
-  color: #3eaefa;
+  color: $calm;
   background: none;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -8164,7 +8164,7 @@ table.ct-table--withBorder .btn {
   border: 0;
   background-color: transparent;
   text-decoration: none;
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-tabs--witharrow .nav-tabs > li > a:hover:after,
 .ct-tabs--withSlider .nav-tabs > li > a:hover:after,
@@ -8213,17 +8213,17 @@ table.ct-table--withBorder .btn {
 .ct-tabs--courseList .nav-justified > .active > a:hover,
 .ct-tabs--courseList .nav-justified > .active > a:focus {
   line-height: 55px;
-  font-size: 14px;
+  font-size: $font-size-medium;
   font-weight: normal;
   text-transform: uppercase;
   color: #ffffff;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  background-color: #3eaefa;
+  background-color: $calm;
   font-family: 'futura pt', sans-serif;
   padding: 0;
-  border: solid 2px #3eaefa;
+  border: solid 2px $calm;
 }
 .ct-tabs--courseList .nav-tabs > li {
   width: 255px;
@@ -8236,28 +8236,28 @@ table.ct-table--withBorder .btn {
 .ct-tabs--courseList .nav-tabs > li > a {
   line-height: 55px;
   width: 100%;
-  font-size: 14px;
+  font-size: $font-size-medium;
   font-weight: normal;
   text-transform: uppercase;
-  color: #3eaefa;
+  color: $calm;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
   background-color: transparent;
   font-family: 'futura pt', sans-serif;
   padding: 0;
-  border: solid 2px #3eaefa;
+  border: solid 2px $calm;
   display: inline-block;
 }
 .ct-tabs--courseList .nav-tabs > li > a:after {
   display: none;
 }
 .ct-tabs--courseList .nav-tabs > li > a:hover {
-  font-size: 14px;
+  font-size: $font-size-medium;
   line-height: 55px;
   font-weight: normal;
-  border: solid 2px #3eaefa;
-  background-color: #3eaefa;
+  border: solid 2px $calm;
+  background-color: $calm;
   color: #fff;
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -8271,12 +8271,12 @@ table.ct-table--withBorder .btn {
   .ct-tabs--withSlider .nav-tabs.nav-justified > .active > a:hover,
   .ct-tabs--witharrow .nav-tabs.nav-justified > .active > a:focus,
   .ct-tabs--withSlider .nav-tabs.nav-justified > .active > a:focus {
-    font-size: 13px;
+    font-size: $font-size-medium;
   }
   .ct-tabs--witharrow .nav-tabs > li > a,
   .ct-tabs--withSlider .nav-tabs > li > a {
     border: 0;
-    font-size: 13px;
+    font-size: $font-size-medium;
   }
   .ct-tabs--witharrow .nav-tabs > li > a:hover,
   .ct-tabs--withSlider .nav-tabs > li > a:hover,
@@ -8284,7 +8284,7 @@ table.ct-table--withBorder .btn {
   .ct-tabs--withSlider .nav-tabs > li > a:focus,
   .ct-tabs--witharrow .nav-tabs > li > a:active,
   .ct-tabs--withSlider .nav-tabs > li > a:active {
-    font-size: 13px;
+    font-size: $font-size-medium;
   }
 }
 @media (max-width: 767px) {
@@ -8297,12 +8297,12 @@ table.ct-table--withBorder .btn {
   .ct-tabs--border .nav-tabs.nav-justified > .active > a:hover,
   .ct-tabs--border .nav-tabs.nav-justified > .active > a:focus {
     font-weight: 300;
-    color: #3eaefa;
+    color: $calm;
     background-color: transparent;
-    border-top: solid 2px #3eaefa;
-    border-left: solid 2px #3eaefa;
-    border-right: solid 2px #3eaefa;
-    border-bottom: solid 2px #3eaefa;
+    border-top: solid 2px $calm;
+    border-left: solid 2px $calm;
+    border-right: solid 2px $calm;
+    border-bottom: solid 2px $calm;
   }
   .ct-tabs--border .nav-tabs > li > a {
     margin-bottom: -2px;
@@ -8368,11 +8368,11 @@ table.ct-table--withBorder .btn {
   color: white;
   text-transform: uppercase;
   font-size: 17px;
-  font-family: 'BrandomGrotesque-reg', sans-serif;
+  font-family: 'futura pt', sans-serif;
   padding-bottom: 30px;
 }
 .ct-widget-adress {
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-widget-adress a:hover {
   text-decoration: underline;
@@ -8385,7 +8385,7 @@ table.ct-table--withBorder .btn {
   margin-bottom: 50px;
 }
 .ct-widget p {
-  font-size: 13px;
+  font-size: $font-size-medium;
   line-height: 1.7;
   padding-bottom: 12px;
   color: #666666;
@@ -8398,7 +8398,7 @@ table.ct-table--withBorder .btn {
   filter: alpha(opacity=60);
 }
 .ct-widget .ct-widget-adress {
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-widget ul {
   margin: 0;
@@ -8435,11 +8435,11 @@ table.ct-table--withBorder .btn {
 }
 .ct-widget .entry-title a {
   line-height: 1;
-  font-size: 14px;
+  font-size: $font-size-medium;
   color: #ccc;
 }
 .ct-widget .entry-meta .entry-date {
-  font-size: 14px;
+  font-size: $font-size-medium;
   padding: 0;
   color: #666666;
 }
@@ -8449,7 +8449,7 @@ table.ct-table--withBorder .btn {
 .ct-widget .img-circle-cont {
   width: 70px;
   height: 70px;
-  background-color: #3eaefa;
+  background-color: $calm;
   margin-right: 32px;
   color: #ccc;
 }
@@ -8462,13 +8462,13 @@ table.ct-table--withBorder .btn {
   height: 100%;
 }
 .ct-widget .number-of-comments {
-  font-size: 14px;
+  font-size: $font-size-medium;
   padding: 0;
   display: block;
   margin-top: -10px;
 }
 .ct-widget .number-of-comments:hover {
-  color: #3eaefa;
+  color: $calm;
   text-decoration: underline;
 }
 .ct-widget .media .media-body {
@@ -8478,7 +8478,7 @@ table.ct-table--withBorder .btn {
   margin-bottom: 30px;
 }
 .ct-u-ulMotiveLinks li a {
-  color: #3eaefa !important;
+  color: $calm !important;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 700;
   font-size: 18px !important;
@@ -8537,7 +8537,7 @@ table.ct-table--withBorder .btn {
   color: #a8a9a9;
 }
 .ct-copyright--motivetext p {
-  color: #3eaefa;
+  color: $calm;
 }
 @media (max-width: 767px) {
   .ct-copyright {
@@ -8578,16 +8578,16 @@ table.ct-table--withBorder .btn {
   color: #666666 !important;
 }
 .ct-formSubscribe ::-webkit-input-placeholder {
-  font-size: 13px !important;
+  font-size: $font-size-medium !important;
 }
 .ct-formSubscribe :-moz-placeholder {
-  font-size: 13px !important;
+  font-size: $font-size-medium !important;
 }
 .ct-formSubscribe ::-moz-placeholder {
-  font-size: 13px !important;
+  font-size: $font-size-medium !important;
 }
 .ct-formSubscribe :-ms-input-placeholder {
-  font-size: 13px !important;
+  font-size: $font-size-medium !important;
 }
 .ct-form--greyInp ::-webkit-input-placeholder {
   color: rgba(40, 43, 45, 0.3) !important;
@@ -8607,7 +8607,7 @@ textarea {
 }
 input:focus,
 textarea:focus {
-  border: 1px solid #3eaefa !important;
+  border: 1px solid $calm !important;
 }
 .ct-widget form .form-control {
   -webkit-border-radius: 2px;
@@ -8754,7 +8754,7 @@ textarea:focus {
 .ct-formGroupSelect {
   max-width: 100%;
   overflow: hidden;
-  border: solid 2px #3eaefa;
+  border: solid 2px $calm;
   position: relative;
 }
 .ct-formGroupSelect:before {
@@ -8768,16 +8768,16 @@ textarea:focus {
   margin-top: -2px;
   margin-left: 2px;
   vertical-align: middle;
-  border-top: 4px solid #3eaefa;
+  border-top: 4px solid $calm;
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
 }
 select.form-control {
   height: 45px;
-  color: #3eaefa !important;
+  color: $calm !important;
   background-color: transparent !important;
   border: 0 !important;
-  font-size: 13px;
+  font-size: $font-size-medium;
   font-family: 'futura pt', sans-serif;
   width: 295px;
   max-width: 295px;
@@ -8861,8 +8861,8 @@ select.form-control option {
 .ct-transparentInputs .btn-group .btn.active,
 .ct-transparentInputs .btn-group .btn:focus,
 .ct-transparentInputs .btn-group .btn:active {
-  background-color: #3eaefa;
-  border-color: #3eaefa;
+  background-color: $calm;
+  border-color: $calm;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -8913,7 +8913,7 @@ select.form-control option {
     background-clip: padding-box;
   }
   .ct-transparentInputs .btn-group .btn + .btn {
-    border-left: 2px solid #3eaefa;
+    border-left: 2px solid $calm;
     border-top: none;
   }
   .btn-group .btn + .btn,
@@ -8925,7 +8925,7 @@ select.form-control option {
 }
 .ct-breadcrumbs-text a {
   font-family: 'futura pt', sans-serif;
-  font-size: 13px;
+  font-size: $font-size-medium;
   color: #657275;
   color: rgba(30, 34, 35, 0.7);
   letter-spacing: 1px;
@@ -9017,7 +9017,7 @@ select.form-control option {
   margin: 30px 0;
 }
 .breadcrumb li.active a {
-  color: #3eaefa;
+  color: $calm;
 }
 .breadcrumb li a {
   color: #cccccc;
@@ -9025,7 +9025,7 @@ select.form-control option {
 .breadcrumb li a:hover,
 .breadcrumb li a:active,
 .breadcrumb li a:focus {
-  color: #3eaefa;
+  color: $calm;
 }
 @media (max-width: 768px) {
   .ct-breadcrumbs-sec--mini .ct-navbarIcons {
@@ -9835,10 +9835,10 @@ img.mfp-img {
   background-color: #ebeff0;
 }
 .ct-js-flexslider .flex-control-paging li a:hover {
-  background-color: #3eaefa;
+  background-color: $calm;
 }
 .ct-js-flexslider .flex-control-paging li a.flex-active {
-  background-color: #3eaefa;
+  background-color: $calm;
 }
 .ct-dualSection .flexslider {
   margin: 0 20%;
@@ -9973,9 +9973,9 @@ img.mfp-img {
 }
 .ct-blockquotetestimonial-content span.ct-blockquotetestimonial-author {
   font-style: normal;
-  color: #3eaefa;
+  color: $calm;
   margin-left: 20px;
-  font-size: 14px;
+  font-size: $font-size-medium;
   margin-bottom: 30px;
 }
 .ct-blockquotetestimonial-content span.ct-blockquotetestimonial-author:before {
@@ -9983,7 +9983,7 @@ img.mfp-img {
   width: 11px;
   height: 1px;
   margin-top: -2px;
-  border: solid 1px #3eaefa;
+  border: solid 1px $calm;
   position: absolute;
   content: " ";
   top: 50%;
@@ -10028,7 +10028,7 @@ img.mfp-img {
 .ct-coursesList-cont h4 a:hover,
 .ct-coursesList-cont h5 a:hover,
 .ct-coursesList-cont h6 a:hover {
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-coursesList-cont p {
   font-size: 15px;
@@ -10060,7 +10060,7 @@ img.mfp-img {
 }
 .ct-coursesList .cat-links i {
   padding-right: 5px;
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-coursesList .entry-date {
   text-transform: uppercase;
@@ -10068,7 +10068,7 @@ img.mfp-img {
   font-size: 15px;
   margin-top: -7px;
   display: block;
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-coursesList .entry-meta .btn {
   margin-bottom: 0 !important;
@@ -10129,7 +10129,7 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
   margin-right: 10px;
 }
 .ct-readrevievsLink:hover {
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-stars-container {
   margin-right: 15px;
@@ -10328,7 +10328,7 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
 .ct-btnDropdown:focus,
 .ct-btnDropdown:active {
   background-color: transparent;
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-dropdown .caret {
   margin-left: 27px;
@@ -10380,13 +10380,13 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
 }
 .ct-widget-sidebar ul li a {
   padding: 5px 0;
-  font-size: 14px;
+  font-size: $font-size-medium;
   line-height: 2;
 }
 .ct-widget-sidebar ul li a:hover,
 .ct-widget-sidebar ul li a:focus,
 .ct-widget-sidebar ul li a:active {
-  color: #3eaefa !important;
+  color: $calm !important;
 }
 .ct-widget-sidebar ul li a:before {
   display: none;
@@ -10419,14 +10419,14 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
 }
 .ct-blogItem--sidebar .entry-meta {
   font-family: 'futura pt', sans-serif;
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-blogItem--sidebar .entry-meta .entry-date {
-  color: #3eaefa;
+  color: $calm;
   text-transform: uppercase;
   font-family: 'futura pt', sans-serif;
   font-weight: 100;
-  font-size: 13px;
+  font-size: $font-size-medium;
 }
 .ct-widget-search {
   display: block;
@@ -10478,10 +10478,10 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
   }
 }
 .badge {
-  font-size: 13px;
+  font-size: $font-size-medium;
   padding: 3px 4px 4px 5px;
   min-width: 20px;
-  background-color: #3eaefa;
+  background-color: $calm;
 }
 .ct-listChoice {
   margin: 0 30px 0 0;
@@ -10503,8 +10503,8 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
 .ct-btn-listChoice-primary:hover,
 .ct-btn-listChoice-primary:focus,
 .ct-btn-listChoice-primary:active {
-  background-color: #3eaefa;
-  border-color: #3eaefa;
+  background-color: $calm;
+  border-color: $calm;
   color: #ffffff;
 }
 .ct-btn-listChoice-primary:hover i,
@@ -10544,7 +10544,7 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
 }
 .ct-graphBox-content p {
   line-height: 1.8;
-  font-size: 13px;
+  font-size: $font-size-medium;
 }
 .ct-graphBox--default {
   padding-bottom: 75px;
@@ -10599,7 +10599,7 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #3eaefa;
+  background-color: $calm;
   top: 0;
   left: 0;
   border-radius: 50%;
@@ -10690,7 +10690,7 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #3eaefa;
+  background-color: $calm;
   top: 0;
   left: 0;
   border-radius: 50%;
@@ -10717,7 +10717,7 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
   padding-top: 40px;
 }
 .ct-teamBox--small .ct-teaBox-content-position {
-  color: #3eaefa;
+  color: $calm;
   font-family: 'BrandomGrotesque-med', sans-serif;
   font-size: 16px;
 }
@@ -10726,25 +10726,25 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
   padding-left: 15px;
 }
 .ct-form--newsletter ::-webkit-input-placeholder {
-  color: #3eaefa !important;
+  color: $calm !important;
   text-align: center;
   text-transform: uppercase;
   font-family: 'futura pt', sans-serif;
 }
 .ct-form--newsletter :-moz-placeholder {
-  color: #3eaefa !important;
+  color: $calm !important;
   text-align: center;
   text-transform: uppercase;
   font-family: 'futura pt', sans-serif;
 }
 .ct-form--newsletter ::-moz-placeholder {
-  color: #3eaefa !important;
+  color: $calm !important;
   text-align: center;
   text-transform: uppercase;
   font-family: 'futura pt', sans-serif;
 }
 .ct-form--newsletter :-ms-input-placeholder {
-  color: #3eaefa !important;
+  color: $calm !important;
   text-align: center;
   text-transform: uppercase;
   font-family: 'futura pt', sans-serif;
@@ -10767,7 +10767,7 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
 }
 .ct-form--newsletter .form-group input {
   height: 55px;
-  color: #3eaefa !important;
+  color: $calm !important;
   text-align: center;
   font-family: 'futura pt', sans-serif;
 }
@@ -10794,19 +10794,19 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
   font-family: 'futura pt', sans-serif;
   font-size: 15px;
   margin-top: -7px;
-  color: #3eaefa;
+  color: $calm;
   padding-right: 30px;
 }
 .ct-singleCourse-introLinks .cat-links i {
   padding-right: 5px;
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-singleCourse-introLinks .entry-date {
   text-transform: uppercase;
   font-family: 'futura pt', sans-serif;
   font-size: 15px;
   margin-top: -7px;
-  color: #3eaefa;
+  color: $calm;
   padding-right: 30px;
   padding-left: 30px;
 }
@@ -10833,12 +10833,12 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
   padding-bottom: 20px;
 }
 .ct-widget--CoursesDetails ul li {
-  color: #3eaefa;
-  font-size: 13px;
+  color: $calm;
+  font-size: $font-size-medium;
 }
 .ct-widget--CoursesDetails ul li a {
-  color: #3eaefa;
-  font-size: 13px;
+  color: $calm;
+  font-size: $font-size-medium;
   transition: all 0.5s;
 }
 .ct-widget--CoursesDetails ul li a:hover {
@@ -10862,7 +10862,7 @@ h3.ct-titleSmaller {
 .ct-relatedCoursesSlider .flex-direction-nav a {
   width: 38px;
   height: 38px;
-  border: solid 2px #3eaefa;
+  border: solid 2px $calm;
   text-align: center;
   margin: -90px 0 0;
   top: 0;
@@ -10878,7 +10878,7 @@ h3.ct-titleSmaller {
 .ct-relatedCoursesSlider .flex-direction-nav a:before {
   font-size: 24px;
   line-height: 34px;
-  color: #3eaefa;
+  color: $calm;
   display: inline-block;
   font-family: FontAwesome;
   font-style: normal;
@@ -10936,7 +10936,7 @@ h3.ct-titleSmaller {
   text-transform: uppercase;
 }
 .ct-sec-header p {
-  font-size: 14px;
+  font-size: $font-size-medium;
   line-height: 1.9;
   margin: 0 0 10px !important;
   font-weight: 100;
@@ -10947,7 +10947,7 @@ h3.ct-titleSmaller {
   height: 100%;
   line-height: 40px;
   text-align: center;
-  color: #3eaefa;
+  color: $calm;
 }
 .pagination li + li {
   display: inline-block;
@@ -10957,11 +10957,11 @@ h3.ct-titleSmaller {
 .pagination li a,
 .pagination li span {
   background: #ffffff;
-  color: #3eaefa;
+  color: $calm;
   border: 0;
   width: 40px;
   height: 40px;
-  font-size: 13px !important;
+  font-size: $font-size-medium !important;
   line-height: 40px;
   padding: 0;
   text-align: center;
@@ -10979,7 +10979,7 @@ h3.ct-titleSmaller {
 .pagination li span:hover i,
 .pagination li a:focus i,
 .pagination li span:focus i {
-  background: #3eaefa;
+  background: $calm;
   color: #ffffff;
 }
 .pagination li:first-child a,
@@ -10996,7 +10996,7 @@ h3.ct-titleSmaller {
 .pagination .active span,
 .pagination .active span:hover,
 .pagination .active span:focus {
-  background: #3eaefa;
+  background: $calm;
   color: #ffffff;
 }
 .ct-navigation a {
@@ -11247,7 +11247,7 @@ video {
 .entry-date,
 .entry-lastAct,
 .entry-numOfCourse {
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-h-bigest + p {
   padding: 0 45px 25px 0;
@@ -11437,7 +11437,7 @@ video {
 .ct-playVideo {
   width: 130px;
   height: 130px;
-  background: #3eaefa;
+  background: $calm;
   background: rgba(255, 255, 255, 0.1);
   margin-top: 30px;
   margin-bottom: 60px;
@@ -11519,7 +11519,7 @@ video {
 .ct-blog-text h4 a:hover,
 .ct-blog-text h5 a:hover,
 .ct-blog-text h6 a:hover {
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-blog-text p {
   font-size: 15px;
@@ -11541,11 +11541,11 @@ video {
   font-size: 15px;
   margin-top: -7px;
   display: block;
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-blog .cat-links i {
   padding-right: 5px;
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-blog .cat-links:hover {
   color: inherit;
@@ -11556,7 +11556,7 @@ video {
   font-size: 15px;
   margin-top: -7px;
   display: block;
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-blog .entry-meta:last-child {
   padding-top: 20px;
@@ -11682,7 +11682,7 @@ video {
 a.ct-kindOfPost-icon:hover,
 a.ct-kindOfPost-icon:active,
 a.ct-kindOfPost-icon:focus {
-  background-color: #3eaefa;
+  background-color: $calm;
 }
 a.ct-kindOfPost-icon:hover i,
 a.ct-kindOfPost-icon:active i,
@@ -11699,11 +11699,11 @@ a.ct-kindOfPost-icon:focus i {
   font-size: 15px;
   margin-top: -7px;
   display: block;
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-singleArticleMeta .cat-links i {
   padding-right: 5px;
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-singleArticleMeta .entry-date {
   text-transform: uppercase;
@@ -11711,13 +11711,13 @@ a.ct-kindOfPost-icon:focus i {
   font-size: 15px;
   margin-top: -7px;
   display: block;
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-singleArticleMeta .entry-meta:last-child {
   padding-top: 0;
 }
 .ct-singleArticleContent a:hover {
-  color: #3eaefa;
+  color: $calm;
   text-decoration: underline;
 }
 .ct-singleArticleContent h1,
@@ -11831,10 +11831,10 @@ a.ct-kindOfPost-icon:focus i {
 .ct-program-cont h4 a:hover,
 .ct-program-cont h5 a:hover,
 .ct-program-cont h6 a:hover {
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-program-cont p {
-  font-size: 14px;
+  font-size: $font-size-medium;
   margin-bottom: 18px;
   line-height: 1.8;
   color: #333333;
@@ -11851,7 +11851,7 @@ a.ct-kindOfPost-icon:focus i {
 }
 .ct-program-links .cat-links {
   font-family: 'futura pt', sans-serif;
-  font-size: 13px;
+  font-size: $font-size-medium;
   margin-top: -7px;
   padding-right: 30px;
   padding-left: 30px;
@@ -11867,14 +11867,14 @@ a.ct-kindOfPost-icon:focus i {
   font-size: 96%;
 }
 .ct-program-links a.cat-links:hover {
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-program-links .entry-date {
   text-transform: uppercase;
   font-family: 'futura pt', sans-serif;
   font-size: 15px;
   margin-top: -7px;
-  color: #3eaefa;
+  color: $calm;
   padding-right: 30px;
   padding-left: 30px;
 }
@@ -11895,7 +11895,7 @@ a.ct-kindOfPost-icon:focus i {
 }
 .ct-program .cat-links {
   font-family: 'clavo', sans-serif;
-  font-size: 13px;
+  font-size: $font-size-medium;
   margin-top: -7px;
   display: block;
   color: #333333;
@@ -11920,7 +11920,7 @@ a.ct-kindOfPost-icon:focus i {
   font-size: 15px;
   margin-top: -7px;
   display: block;
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-program .entry-meta:last-child {
   padding-top: 20px;
@@ -12037,7 +12037,7 @@ a.ct-kindOfPost-icon:focus i {
   color: #8e9091;
 }
 .ct-socialIcons--fgrey li a:hover i {
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-socialIcons--fwhite li a i {
   color: #ffffff;
@@ -12064,7 +12064,7 @@ a.ct-kindOfPost-icon:focus i {
   display: block;
 }
 .ct-socialIcons--circle li a i {
-  font-size: 14px;
+  font-size: $font-size-medium;
   line-height: 30px;
   width: 30px;
   text-align: center;
@@ -12120,7 +12120,7 @@ a.ct-kindOfPost-icon:focus i {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  background: #3eaefa;
+  background: $calm;
 }
 .ct-socialIcons--bgMotive li a i {
   color: #1e2223;
@@ -12226,7 +12226,7 @@ a.ct-kindOfPost-icon:focus i {
 .ct-portfolioList .ct-portfolioList-content h4 a:hover,
 .ct-portfolioList .ct-portfolioList-content h5 a:hover,
 .ct-portfolioList .ct-portfolioList-content h6 a:hover {
-  color: #3eaefa;
+  color: $calm;
 }
 @media (max-width: 767px) {
   .ct-portfolioList .ct-portfolioList-content {
@@ -12290,13 +12290,13 @@ a.ct-kindOfPost-icon:focus i {
   height: 100%;
   width: 100%;
   z-index: 1;
-  background: #3eaefa;
-  background: -moz-radial-gradient(center, circle cover, transparent 0%, transparent 12%, #3eaefa 12%, #3eaefa 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, transparent), color-stop(12%, transparent), color-stop(12%, #3eaefa), color-stop(100%, #3eaefa));
-  background: -webkit-radial-gradient(center, circle cover, transparent 0%, transparent 12%, #3eaefa 12%, #3eaefa 100%);
-  background: -o-radial-gradient(center, circle cover, transparent 0%, transparent 12%, #3eaefa 12%, #3eaefa 100%);
-  background: -ms-radial-gradient(center, circle cover, #ffffff 0%, #ffffff 12%, #3eaefa 12%, #3eaefa 100%);
-  background: radial-gradient(circle at center, transparent 0%, transparent 12%, #3eaefa 12%, #3eaefa 100%);
+  background: $calm;
+  background: -moz-radial-gradient(center, circle cover, transparent 0%, transparent 12%, $calm 12%, $calm 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, transparent), color-stop(12%, transparent), color-stop(12%, $calm), color-stop(100%, $calm));
+  background: -webkit-radial-gradient(center, circle cover, transparent 0%, transparent 12%, $calm 12%, $calm 100%);
+  background: -o-radial-gradient(center, circle cover, transparent 0%, transparent 12%, $calm 12%, $calm 100%);
+  background: -ms-radial-gradient(center, circle cover, #ffffff 0%, #ffffff 12%, $calm 12%, $calm 100%);
+  background: radial-gradient(circle at center, transparent 0%, transparent 12%, $calm 12%, $calm 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='transparent', endColorstr='@motive', GradientType=1);
   -webkit-transition: 0.3s ease ease-out;
   -moz-transition: 0.3s ease ease-out;
@@ -12382,7 +12382,7 @@ a.ct-kindOfPost-icon:focus i {
   }
   .googlemapcontainer--withOverlay .googlemapcontainer-overlay {
     position: initial;
-    background-color: #3eaefa;
+    background-color: $calm;
   }
   .googlemapcontainer-textNoIcon {
     margin-top: 30px;
@@ -12480,7 +12480,7 @@ button.trigger::before {
   width: 300%;
   color: #fff;
   content: attr(data-info);
-  font-size: 14px;
+  font-size: $font-size-medium;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   text-transform: uppercase;
@@ -13011,7 +13011,7 @@ body {
   .yamm .yamm-content ul li a:hover,
   .yamm .yamm-content ul li a:active,
   .yamm .yamm-content ul li a:focus {
-    color: #3eaefa;
+    color: $calm;
     background: transparent;
   }
   .yamm .yamm-content a {
@@ -13068,7 +13068,7 @@ body {
 .widget ul li a:hover,
 .widget ul li a:focus,
 .widget ul li a:active {
-  color: #3eaefa;
+  color: $calm;
 }
 footer .widget ul li a:hover,
 footer .widget ul li a:focus,
@@ -13076,18 +13076,18 @@ footer .widget ul li a:active {
   color: #ffffff;
 }
 .ct-accordion {
-  border: solid 2px #3eaefa !important;
+  border: solid 2px $calm !important;
 }
 .ct-accordion .panel-heading .panel-title a {
-  color: #3eaefa;
-  border-top: solid 2px #3eaefa !important;
+  color: $calm;
+  border-top: solid 2px $calm !important;
 }
 .ct-accordion .panel:last-child .panel-title a.collapsed {
-  border-bottom: solid 2px #3eaefa !important;
+  border-bottom: solid 2px $calm !important;
 }
 .ct-accordion--normal .panel-heading .panel-title a {
-  color: #3eaefa;
+  color: $calm;
 }
 .ct-accordion--normal .panel-heading .panel-title a:before {
-  border: solid 1px #3eaefa;
+  border: solid 1px $calm;
 }

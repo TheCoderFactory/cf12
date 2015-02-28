@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'contact', to: 'contact#index'
+
   get 'enrolments', to: "enrolments#index"
 
   resources :feedback_forms do

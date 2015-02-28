@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require shoppe/stripe/form_handler
 //= require_tree .
