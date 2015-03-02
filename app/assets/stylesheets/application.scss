@@ -12,9 +12,64 @@
 // Typography
 "type.scss",
 
-"select2",
 "style",
 "zcf";
+
+.ct-pricing .ct-pricing-content {
+    padding: 38px 0px 30px;
+    border: medium none;
+    position: relative;
+    background-color: #EBEFF0;
+}
+.ct-pricing .ct-pricing-content .ct-pricing-content-ul {
+margin: 0;
+max-width: 500px;
+margin: 0 auto;
+padding: 41px 40px;
+}
+.ct-pricing .ct-pricing-content .ct-pricing-content-ul li {
+list-style-type: none;
+font-size: 1.06em;
+line-height: 2.5;
+color: $darknight;
+}
+
+.navbar-nav .dropdown-menu > li a {
+padding: 10px 0px;
+font-size: 1.06em;
+letter-spacing: 1px;
+color: #000;
+font-family: 'futura pt', sans-serif;
+padding: 14px 0; 
+color: rgba(0, 0, 0, 0.8);
+text-transform: uppercase;
+}
+
+.input-group .form-control {
+position: relative;
+z-index: 2;
+float: left;
+width: 100%;
+margin-bottom: -15px;
+}
+select.form-control {
+height: 45px;
+color: $calm !important;
+background-color: transparent !important;
+border: 2px solid $calm !important;
+font-size: 1.06em;
+font-family: 'futura pt', sans-serif;
+width: 295px;
+max-width: 295px;
+margin-left: -2px;
+}
+
+
+
+
+
+
+
 
 
 

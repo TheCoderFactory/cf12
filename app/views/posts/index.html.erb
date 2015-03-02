@@ -24,7 +24,7 @@
         <td><%= post.author.name if post.author %></td>
         <td><%= '<i class="fa fa-check"></i>'.html_safe if post.publish %></td>
         <td><%= post.published_date.strftime('%d/%b/%y') %></td>
-        <td><%= post.impressions_count %></td>
+        <td><span class="label label-info"><%= post.impressions_count %></span></td>
         <td><%= link_to '<i class="fa fa-pencil"></i>'.html_safe, edit_post_path(post) %></td>
         <td><%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

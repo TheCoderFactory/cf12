@@ -27,6 +27,8 @@ class ProductsController < ApplicationController
   def show
     @attributes = @product.product_attributes.public.to_a
     @product_variants = @product.variants
+    @next_course = @product_variants.where('start_date >= ?', Date.today).order(start_date: :asc).first
+    @upcoming_courses = @product_variants.where('start_date >= ?', Date.today).order(start_date: :asc).limit(5)
   end
   
   def add_to_basket

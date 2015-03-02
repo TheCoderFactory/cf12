@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ckeditor-jquery
 //= require twitter/bootstrap
 //= require shoppe/stripe/form_handler
 //= require_tree .

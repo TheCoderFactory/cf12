@@ -1,0 +1,104 @@
+.darkknight {
+  background-color: #2C3E50;
+}
+.dirty-gold {
+  background-color: #DBC034!important;
+}
+.vibrant {
+  background-color: #d44F99;
+}
+.slime {
+  background-color: #48A85A;
+}
+.burntsea {
+  background-color: #487AA8;
+}
+
+
+.ct-navbar--dark { 
+  background-color: #2C3E50; 
+}
+
+.ct-pricing .ct-pricing-sep { 
+    color: #000; 
+  }
+
+.ct-pricing .ct-pricing-pricebox { 
+         color: #000; 
+  } 
+
+  .ct-pricing .ct-pricing-content { 
+    background-color: #000; 
+    background-color: #ebeff0;
+  }
+
+  .ct-pricing .ct-pricing-content .ct-pricing-content-ul { 
+max-width: 400px; 
+padding: 10px 0; 
+}
+
+.ct-pricing .ct-pricing-content .ct-pricing-content-ul li { 
+color: #000; 
+}
+
+.ct-pricing .ct-pricing-content .ct-pricing-content-ul li:before { 
+/*  content: "\f00d";*/ 
+}
+
+.ct-princing--second .ct-pricing-content { 
+  background-color: #000; 
+}
+
+.ct-tabs--witharrow .nav-tabs > li > a, 
+.ct-tabs--withSlider .nav-tabs > li > a { 
+/*  border: 0;*/ 
+/*  font-size: 20px;*/ 
+
+}
+
+
+.ct-tabs--witharrow .nav-tabs > li > a:hover, 
+.ct-tabs--withSlider .nav-tabs > li > a:hover, 
+.ct-tabs--witharrow .nav-tabs > li > a:focus, 
+.ct-tabs--withSlider .nav-tabs > li > a:focus, 
+.ct-tabs--witharrow .nav-tabs > li > a:active, 
+.ct-tabs--withSlider .nav-tabs > li > a:active { 
+/*  font-size: 20px;*/ 
+  border: 1; 
+  text-decoration: bold; 
+}
+
+
+.ct-tabs--witharrow .nav-tabs > li > a:hover:after, 
+.ct-tabs--withSlider .nav-tabs > li > a:hover:after, 
+.ct-tabs--witharrow .nav-tabs > li > a:focus:after, 
+.ct-tabs--withSlider .nav-tabs > li > a:focus:after, 
+.ct-tabs--witharrow .nav-tabs > li > a:active:after, 
+.ct-tabs--withSlider .nav-tabs > li > a:active:after { 
+  bottom: -17px; 
+}
+
+
+.ct-widget p { 
+  color: #fff; 
+}
+
+select.form-control { 
+/*  color: #3eaefa !important; 
+*/  background-color: transparent !important; 
+
+}
+
+.ct-pageSectionHeader{ 
+background-color: #c4c4c4; 
+}
+
+.ct-tabs--courseList .nav-justified > .active > a, .ct-tabs--courseList .nav-justified > .active > a:hover, .ct-tabs--courseList .nav-justified > .active > a:focus{
+border: solid 2px;
+}
+
+.btn-primary{
+border: solid 2px;
+}
+
+

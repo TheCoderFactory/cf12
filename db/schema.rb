@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150226085028) do
+ActiveRecord::Schema.define(version: 20150228151645) do
 
   create_table "admissions", force: :cascade do |t|
     t.integer  "fast_track_application_id"
@@ -111,6 +111,31 @@ ActiveRecord::Schema.define(version: 20150226085028) do
     t.datetime "updated_at",   null: false
   end
 
+  create_table "impressions", force: :cascade do |t|
+    t.string   "impressionable_type"
+    t.integer  "impressionable_id"
+    t.integer  "user_id"
+    t.string   "controller_name"
+    t.string   "action_name"
+    t.string   "view_name"
+    t.string   "request_hash"
+    t.string   "ip_address"
+    t.string   "session_hash"
+    t.text     "message"
+    t.text     "referrer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "impressions", ["controller_name", "action_name", "ip_address"], name: "controlleraction_ip_index"
+  add_index "impressions", ["controller_name", "action_name", "request_hash"], name: "controlleraction_request_index"
+  add_index "impressions", ["controller_name", "action_name", "session_hash"], name: "controlleraction_session_index"
+  add_index "impressions", ["impressionable_type", "impressionable_id", "ip_address"], name: "poly_ip_index"
+  add_index "impressions", ["impressionable_type", "impressionable_id", "request_hash"], name: "poly_request_index"
+  add_index "impressions", ["impressionable_type", "impressionable_id", "session_hash"], name: "poly_session_index"
+  add_index "impressions", ["impressionable_type", "message", "impressionable_id"], name: "impressionable_type_message_index"
+  add_index "impressions", ["user_id"], name: "index_impressions_on_user_id"
+
   create_table "nifty_key_value_store", force: :cascade do |t|
     t.integer "parent_id"
     t.string  "parent_type"
@@ -131,6 +156,14 @@ ActiveRecord::Schema.define(version: 20150226085028) do
     t.string   "sponsorship"
   end
 
+  create_table "post_categories", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "icon"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.string   "lead"
@@ -143,9 +176,11 @@ ActiveRecord::Schema.define(version: 20150226085028) do
     t.datetime "updated_at",        null: false
     t.integer  "impressions_count"
     t.integer  "author_id"
+    t.integer  "post_category_id"
   end
 
   add_index "posts", ["author_id"], name: "index_posts_on_author_id"
+  add_index "posts", ["post_category_id"], name: "index_posts_on_post_category_id"
 
   create_table "pre_questionnaires", force: :cascade do |t|
     t.string   "name"
@@ -424,6 +459,26 @@ ActiveRecord::Schema.define(version: 20150226085028) do
   end
 
   add_index "shoppe_users", ["email_address"], name: "index_shoppe_users_on_email_address"
+
+  create_table "taggings", force: :cascade do |t|
+    t.integer  "tag_id"
+    t.integer  "taggable_id"
+    t.string   "taggable_type"
+    t.integer  "tagger_id"
+    t.string   "tagger_type"
+    t.string   "context",       limit: 128
+    t.datetime "created_at"
+  end
+
+  add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true
+  add_index "taggings", ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context"
+
+  create_table "tags", force: :cascade do |t|
+    t.string  "name"
+    t.integer "taggings_count", default: 0
+  end
+
+  add_index "tags", ["name"], name: "index_tags_on_name", unique: true
 
   create_table "testimonials", force: :cascade do |t|
     t.integer  "product_id"

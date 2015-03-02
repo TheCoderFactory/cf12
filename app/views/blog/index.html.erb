@@ -13,127 +13,35 @@
                 <div class="col-md-9 ct-colContent ct-u-paddingBoth60">
 
                 <div class="row">
+	                <% @posts.each do |post| %>
+	                  <div class="col-sm-12">
+	                     <div class="ct-blog ct-blog--imageTop ct-blog--text">
+	                       <div class="ct-blog-content">
+	                         <div class="entry-meta clearfix">
+	                             <span class="cat-links pull-left"><i class="fa fa-<%= post.post_category.icon if post.post_category %>"></i><a href="11-actly-blog-single.html"><%= post.post_category.name if post.post_category %></a></span>
+	                             <span class="entry-date pull-right"><%= post.published_date.strftime('%e %B, %Y') %></span>
+	                         </div>
+		                        <a  href="/posts/<%= post.slug %>" class="ct-blog-imageContainer">
+		                          <img src="<%= asset_path post.image %>" alt="Image for <%= post.title %>" />
+		                        </a>
+	                         <div class="ct-blog-text">
+	                               <h2 class="text-uppercase"><%= link_to post.title, post %></h2>
+	                               <p><%= post.lead %></p>
+	                           </div>
+	                           <div class="entry-meta ct-KindOfPostContainer clearfix">
+	                             <a href="18-actly-member-page.html" class="by-author clearfix">
+	                               <img src="<%= image_path post.author.profile_picture %>" alt="Image of <%= post.author.name %> " class="pull-left"/>
+	                               <span class="by-autor-name"><%= post.author.name %></span>, <span class="by-autor-prof"><%= post.author.title %></span>
+	                             </a>
+	                             <span class="ct-borderBlock"></span>
+	                             <span class="ct-kindOfPost-icon pull-right"><i class="fa fa-pencil"></i></span>
+	                           </div>
+	                         </div>
+	                     </div>
+	                   </div><!-- /col-sm-12 -->
+	                <% end %>
 
-                  <div class="col-sm-12">
-                     <div class="ct-blog ct-blog--imageTop ct-blog--text">
-                       <div class="ct-blog-content">
-                         <div class="entry-meta clearfix">
-                             <span class="cat-links pull-left"><i class="fa fa-calendar"></i><a href="11-actly-blog-single.html">Travel</a></span>
-                             <span class="entry-date pull-right">July 3, 2014</span>
-                         </div>
-                         <div class="ct-blog-text">
-                               <h2 class="text-uppercase"><a href="11-actly-blog-single.html">succession of day and night, which was usually indicative of a slower pace</a></h2>
-                               <p>I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker then—though I was still travelling with prodigious velocity—the blinking suc- cession of day and night. which was usually indicative of a slower pace, returned, and grew more and more marked.</p>
-                           </div>
-                           <div class="entry-meta ct-KindOfPostContainer clearfix">
-                             <a href="18-actly-member-page.html" class="by-author clearfix">
-                               <img src="assets/images/content/author.jpg" alt="author img" class="pull-left"/>
-                               <span class="by-autor-name">Frank Wright</span>, <span class="by-autor-prof">Teacher</span>
-                             </a>
-                             <span class="ct-borderBlock"></span>
-                             <span class="ct-kindOfPost-icon pull-right"><i class="fa fa-pencil"></i></span>
-                           </div>
-                         </div>
-                     </div>
-                   </div><!-- /col-sm-12 -->
-
-                  <div class="col-sm-12">
-                    <div class="ct-blog ct-blog--imageTop ct-blog--imageTop">
-                      <div class="ct-blog-content">
-                        <div class="entry-meta clearfix">
-                            <span class="cat-links pull-left"><i class="fa fa-calendar"></i><a href="11-actly-blog-single.html">Travel</a></span>
-                            <span class="entry-date pull-right">July 3, 2014</span>
-                        </div>
-                        <a  href="11-actly-blog-single.html" class="ct-blog-imageContainer">
-                          <img src="assets/images/content/img-blogpost.jpg" alt="author img" />
-                        </a>
-                        <div class="ct-blog-text">
-                            <h2 class="text-uppercase"><a href="11-actly-blog-single.html">succession of day and night, which was usually indicative of a slower pace</a></h2>
-                            <p>I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker then—though I was still travelling with prodigious velocity—the blinking suc- cession of day and night. which was usually indicative of a slower pace, returned, and grew more and more marked.</p>
-                          </div>
-                          <div class="entry-meta ct-KindOfPostContainer clearfix">
-                            <a href="18-actly-member-page.html" class="by-author clearfix">
-                              <img src="assets/images/content/author.jpg" alt="author img" class="pull-left"/>
-                              <span class="by-autor-name">Frank Wright</span>, <span class="by-autor-prof">Teacher</span>
-                            </a>
-                            <span class="ct-borderBlock"></span>
-                            <span class="ct-kindOfPost-icon pull-right"><i class="fa fa-camera"></i></span>
-                          </div>
-                        </div>
-                    </div>
-                  </div><!-- /col-sm-12 -->
-
-                  <div class="col-sm-12">
-                     <div class="ct-blog ct-blog--imageTop ct-blog--bloquote">
-                       <div class="ct-blog-content">
-                         <div class="entry-meta clearfix">
-                             <span class="cat-links pull-left"><i class="fa fa-calendar"></i><a href="11-actly-blog-single.html">Travel</a></span>
-                             <span class="entry-date pull-right">July 3, 2014</span>
-                         </div>
-                         <div class="ct-blog-text">
-                             <a href="11-actly-blog-single.html">
-                               <blockquote class="ct-blockquote ct-blockquote--bgblue ct-blockquote--blog text-uppercase ct-blockquote--withArrow">“Succession of day and night, which was usually indicative of a slower pace, returned, and grew more and more marked. This puzzled me very much at first. The alternations of night and day grew slower and slower, and so did the passage”
-                                 <footer>Albert Ainstein</footer>
-                               </blockquote>
-                             </a>
-                           </div>
-                         </div>
-                     </div>
-                   </div><!-- /col-sm-12 -->
-
-                    <div class="col-sm-12">
-                      <div class="ct-blog ct-blog--imageTop ct-blog--video">
-                        <div class="ct-blog-content">
-                          <div class="entry-meta clearfix">
-                              <span class="cat-links pull-left"><i class="fa fa-calendar"></i><a href="11-actly-blog-single.html">Travel</a></span>
-                              <span class="entry-date pull-right">July 3, 2014</span>
-                          </div>
-                          <div class="ct-blog-imageContainer">
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="obj-video" src="//player.vimeo.com/video/27261510?title=0&amp;byline=0&amp;portrait=0&amp;color=c9ff23" height="300" allowfullscreen ></iframe>
-                            </div>
-                          </div>
-                          <div class="ct-blog-text">
-                              <h2 class="text-uppercase"><a href="11-actly-blog-single.html">succession of day and night, which was usually indicative of a slower pace</a></h2>
-                              <p>I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker then—though I was still travelling with prodigious velocity—the blinking suc- cession of day and night. which was usually indicative of a slower pace, returned, and grew more and more marked.</p>
-                            </div>
-                            <div class="entry-meta ct-KindOfPostContainer clearfix">
-                              <a href="18-actly-member-page.html" class="by-author clearfix">
-                                <img src="assets/images/content/author.jpg" alt="author img" class="pull-left"/>
-                                <span class="by-autor-name">Frank Wright</span>, <span class="by-autor-prof">Teacher</span>
-                              </a>
-                              <span class="ct-borderBlock"></span>
-                              <span class="ct-kindOfPost-icon pull-right"><i class="fa fa-video-camera"></i></span>
-                            </div>
-                          </div>
-                      </div>
-                    </div><!-- /col-sm-12 -->
-
-                    <div class="col-sm-12">
-                      <div class="ct-blog ct-blog--imageTop ct-blog--audio">
-                        <div class="ct-blog-content">
-                          <div class="entry-meta clearfix">
-                              <span class="cat-links pull-left"><i class="fa fa-calendar"></i><a href="11-actly-blog-single.html">Travel</a></span>
-                              <span class="entry-date pull-right">July 3, 2014</span>
-                          </div>
-                          <div class="ct-blog--audio-container">
-                            <iframe height="150" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/117927267&amp;auto_play=false&amp;hide_related=false&amp;visual=true"></iframe>
-                          </div>
-                          <div class="ct-blog-text">
-                              <h2 class="text-uppercase"><a href="11-actly-blog-single.html">succession of day and night, which was usually indicative of a slower pace</a></h2>
-                              <p>I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker then—though I was still travelling with prodigious velocity—the blinking suc- cession of day and night. which was usually indicative of a slower pace, returned, and grew more and more marked.</p>
-                            </div>
-                            <div class="entry-meta ct-KindOfPostContainer clearfix">
-                              <a href="18-actly-member-page.html" class="by-author clearfix">
-                                <img src="assets/images/content/author.jpg" alt="author img" class="pull-left"/>
-                                <span class="by-autor-name">Frank Wright</span>, <span class="by-autor-prof">Teacher</span>
-                              </a>
-                              <span class="ct-borderBlock"></span>
-                              <span class="ct-kindOfPost-icon pull-right"><i class="fa fa-music"></i></span>
-                            </div>
-                          </div>
-                      </div>
-                    </div><!-- /col-sm-12 -->
+                  
 
                   </div><!-- /row -->
 
@@ -153,58 +61,34 @@
 
                    <div class="ct-colSidebar-container">
 
-                     <aside class="ct-widget ct-widget-sidebar">
+                     <!-- <aside class="ct-widget ct-widget-sidebar">
                        <form class="ct-widget-search" role="search">
                           <div class="form-group">
                               <input type="text" class="form-control search-input" placeholder="Search for...">
                           </div>
                            <button type="submit" class="btn btn-search"><i class="fa fa-search"></i> </button>
                       </form>
-                     </aside>
+                     </aside> -->
 
                      <aside class="ct-widget ct-widget-sidebar">
-                       <h4 class="ct-widget-title">Popular post</h4>
-                       <article class="blog-item ct-blogItem--sidebar">
-                             <div class="media stdbox">
-                                 <a class="pull-left blog-item-cont" href="11-actly-blog-single.html">
-                                     <img class="media-object" src="assets/images/content/popularpostwid01.jpg" alt=" ">
-                                 </a>
-                                 <div class="media-body">
-                                   <p class="entry-text"><a href="11-actly-blog-single.html">Succession of day and night, which was usually</a></p>
-                                   <div class="entry-meta">
-                                      <span class="entry-date">July 3, 2014</span>
-                                   </div>
+                       <h4 class="ct-widget-title">Popular articles</h4>
+                       <% @popular_posts.each do |popular_post| %>
+	                       <article class="blog-item ct-blogItem--sidebar">
+                           <div class="media stdbox">
+                               <a class="pull-left blog-item-cont" href="11-actly-blog-single.html">
+                                   <img class="media-object" src="<%= asset_path popular_post.image %>" alt=" ">
+                               </a>
+                               <div class="media-body">
+                                 <p class="entry-text"><a href="/<%= popular_post.slug %>" title="<%= popular_post.title %>"><%= popular_post.title %></a></p>
+                                 <div class="entry-meta">
+                                    <span class="entry-date"><%= popular_post.published_date.strftime('%e %B, %Y') %></span>
                                  </div>
-                             </div><!-- /media stdbox -->
-                         </article>
+                               </div>
+                           </div><!-- /media stdbox -->
+                       </article>
+                      <% end %>
 
-                         <article class="blog-item ct-blogItem--sidebar">
-                             <div class="media stdbox">
-                                 <a class="pull-left blog-item-cont" href="11-actly-blog-single.html">
-                                     <img class="media-object" src="assets/images/content/popularpostwid02.jpg" alt=" ">
-                                 </a>
-                                 <div class="media-body">
-                                   <p class="entry-text"><a href="11-actly-blog-single.html">Succession of day and night, which was usually</a></p>
-                                   <div class="entry-meta">
-                                      <span class="entry-date">July 3, 2014</span>
-                                   </div>
-                                 </div>
-                             </div><!-- /media stdbox -->
-                         </article>
-
-                          <article class="blog-item ct-blogItem--sidebar">
-                              <div class="media stdbox">
-                                  <a class="pull-left blog-item-cont" href="11-actly-blog-single.html">
-                                      <img class="media-object" src="assets/images/content/popularpostwid03.jpg" alt=" ">
-                                  </a>
-                                  <div class="media-body">
-                                      <p class="entry-text"><a href="11-actly-blog-single.html">Succession of day and night, which was usually</a></p>
-                                      <div class="entry-meta">
-                                         <span class="entry-date">July 3, 2014</span>
-                                      </div>
-                                  </div>
-                              </div><!-- /media stdbox -->
-                          </article>
+                        
 
                      </aside>
 
@@ -212,20 +96,18 @@
                      <aside class="ct-widget ct-widget-sidebar">
                        <h4 class="ct-widget-title">Categories</h4>
                        <ul>
-                           <li><a href="#">Travel</a></li>
-                           <li><a href="#">Food</a></li>
-                           <li><a href="#">People</a></li>
-                           <li><a href="#">City</a></li>
-                           <li><a href="#">Photos</a></li>
+                       	<% @post_categories.each do |post_category| %>
+                           <li><span style="color:#3498DB"><i class="fa fa-<%= post_category.icon %>"></i></span> &nbsp;<%= link_to post_category.name, blog_path(post_category: post_category) %></li>
+                        <% end %>
                        </ul>
                      </aside>
 
                      <aside class="ct-widget ct-widget-sidebar">
                         <h4 class="ct-widget-title">Tags</h4>
                         <ul>
-                            <li><a href="#">Dog <span class="badge pull-right">9</span></a></li>
-                            <li><a href="#">Cat <span class="badge pull-right">7</span></a></li>
-                            <li><a href="#">Eagle <span class="badge pull-right">3</span></a></li>
+                        	<% @tags.each do |tag| %>
+                            <li><%= link_to blog_path(tag: tag) do %><%= tag %> <span class="badge pull-right"><%= tag.taggings_count %></span><% end %></li>
+                          <% end %>
                         </ul>
                       </aside>
 
