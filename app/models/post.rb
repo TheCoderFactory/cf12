@@ -1,6 +1,9 @@
 class Post < ActiveRecord::Base
   belongs_to :author
+  belongs_to :post_category
 
+  acts_as_taggable
+  is_impressionable :counter_cache => true
   extend FriendlyId
 	friendly_id :title, use: :slugged
 	# acts_as_taggable

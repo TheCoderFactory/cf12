@@ -2035,8 +2035,8 @@
 }
 @font-face {
   font-family: 'futura pt';
-  src: url(../../assets/fonts/ct/BrandonGrotesque/Brandon_bld.otf);
-}
+  
+}/*
 @font-face {
   font-family: 'futura pt-it';
   src: url(../../assets/fonts/ct/BrandonGrotesque/Brandon_bld_it.otf);
@@ -2080,7 +2080,7 @@
 @font-face {
   font-family: 'BrandomGrotesque-thin-it';
   src: url(../../assets/fonts/ct/BrandonGrotesque/Brandon_thin.it.otf);
-}
+}*/
 /* mixins */
 /* Brandom Grotesque */
 /* Brandom Grotesque - instead */

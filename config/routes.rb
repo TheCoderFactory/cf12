@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :post_categories
+
   get 'contact', to: 'contact#index'
 
   get 'enrolments', to: "enrolments#index"

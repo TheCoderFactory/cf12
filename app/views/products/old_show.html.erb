@@ -1,0 +1,141 @@
+<% active_nav_item :catalogue %>
+<% content_for :header, "small-header" %>
+<%= content_for :title, "Enrol in Coder Factory&apos;s ".html_safe + @product.name %>
+<%= content_for :description, @product.short_description.html_safe %>
+
+<section class="workshop-header" style="background-color: #<%= @product.product_attributes.find_by(key: 'color').value if @product.product_attributes.find_by(key: 'color') %>">
+  <div class="call-to-action-wrapper">
+    <h1 class="call-to-action-headline"><%= @product.name %></h1>
+    <p class="lead call-to-action-info"><%= @product.short_description.html_safe %></p>
+  </div>
+</section>
+
+<section class="breadcrumbs hidden-xs hidden-sm">
+<div class="row">
+    <div class="col-xs-12 col-lg-offset-2 col-lg-8">
+    <ol class="breadcrumb">
+      <li><a href="/">Home</a></li>
+      <li><a href="/courses">Our Courses</a></li>
+      <% if @product.product_category.permalink == 'workshops' %>
+      <li><a href="/courses/workshops">Workshops</a></li>
+      <% end %>
+      <li class="active"><%= @product.name %></li>
+    </ol>
+    </div></div>
+</section>
+<section class="">
+
+      <%= @product.description.html_safe %>
+      
+  <div class="product">
+  <div style="background-color: #<%= @product.in_the_box %>">
+  <% if @product.has_variants? %>
+  <div class="row">
+      <div class="col-xs-12 col-lg-offset-2 col-lg-8">
+  <h3 class="section-heading">Choose your workshop</h3>
+
+    <table class="variants">
+      <% @product_variants.each do |variant| %>
+        <tr>
+          <td>
+            <% if variant.in_stock? %>
+              <% if variant.stock <= 5 %>
+                <p class="stock yes"><%= pluralize(variant.stock, 'place') %> left</p>
+              <% end %>
+            <% else %>
+              <p class="stock no">Class full</p>
+            <% end %>
+            <h4>
+              <span style="text-transform: uppercase;"><%= variant.location.city if variant.location %></span>, <%= variant.location.name if variant.location %> [<span style="text-transform: uppercase;"><%= variant.start_date.strftime('%B') if variant.start_date %></span>]
+            </h4>
+            <p class="date">
+              <%= variant.start_date.strftime('%d %b') if variant.start_date %> - <%= variant.end_date.strftime('%d %b %Y') if variant.start_date %>
+            </p>
+            <p class="price">
+              <%= number_to_currency(variant.price * 1.1) %> (incl. GST)
+            </p>
+          </td>
+          <td class="buy">
+          
+            <%= form_tag buy_product_path(@product.product_category.permalink, @product.permalink, :variant => variant.id), :class => (variant.in_stock? ? 'in-stock form-inline' : 'no-stock form-inline') do %>
+              <div class="form-group">
+                <%= select_tag 'quantity', options_for_select([1,2,3,4,5,6,7,8,9]), :disabled => !variant.in_stock?, id: 'dropdown', class: 'form-control' %>
+                <%= submit_tag 'Add to basket', :disabled => !variant.in_stock?, class: 'btn-block btn-block-dirtygold btn-block-small' %>
+              </div>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+    </div></div>
+  <% else %>
+    <div class="optionsBox">
+      <div class="top">
+        <p class="price">
+          <%= number_to_currency @product.price %>
+        </p>
+        <%= form_tag buy_product_path(@product.product_category.permalink, @product.permalink), :class => (@product.in_stock? ? 'in-stock' : 'no-stock') do %>
+          <p>
+            <%= select_tag 'quantity', options_for_select([1,2,3,4,5,6,7,8,9]), :disabled => !@product.in_stock? %>
+            <%= submit_tag 'Add to basket', :disabled => !@product.in_stock? %>
+          </p>
+        <% end %>
+      </div>
+      <div class="bottom">
+        <div class="stock">
+          <% if @product.in_stock? %>
+            <p class="yes">In stock</p>
+            <p class="time">Order in the next <b>#{time_until_next_delivery_cut_off}</b> for delivery #{next_delivery_day}.</p>
+          <% else %>
+            <p class="no">Out of stock</p>
+            <p class="time">Sorry - we don't have any stock of this product at the moment. #{link_to "Let me know when you do"}.</p>
+          <% end %>
+        </div>
+        <div class="links">
+          <ul>
+            <% if @product.data_sheet %>
+              <li class="item datasheet">
+                <%= link_to "Read product datasheet", @product.data_sheet.path %>
+              </li>
+            <% end %>
+            <% unless @product.in_the_box.blank? %>
+              <li class="item box">
+                <%= link_to "What's in the box?" %>
+                <div class="in_the_box">
+                  <h3>What's in the box?</h3>
+                  <%= markdown @product.in_the_box %>
+                </div>
+              </li>
+            <% end %>
+            <li class="item ask">
+              <%= mail_to Shoppe.settings.email_address, "Ask us a question about this", :subject => "Question about the #{@product.name}" %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr/>
+  <% end %>
+  <% unless @attributes.empty? %>
+    <table class="attributes">
+      <% for attribute in @attributes %>
+        <tr>
+          <th>
+            <%= attribute.key %>
+          </th>
+          <td>
+            <%= link_to attribute.value, product_filter_path(:key => attribute.key, :value => attribute.value) %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  <% end %>
+  <div class="description">
+    <%# markdown @product.description %>
+  </div>
+</div>
+
+</div></div></div>
+</section>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52ee398713b80ae1" async="async"></script>

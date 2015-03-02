@@ -27,6 +27,7 @@ class PostsController < ApplicationController
 
   def show
     @author = @post.author
+    impressionist(@post)
     respond_with(@post)
   end
 
@@ -60,6 +61,6 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:title, :lead, :content, :image, :slug, :publish, :published_date, :author_id)
+      params.require(:post).permit(:post_category_id, :tag_list, :title, :lead, :content, :image, :slug, :publish, :published_date, :author_id, :tag_list => [])
     end
 end

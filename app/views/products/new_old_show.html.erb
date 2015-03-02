@@ -248,7 +248,7 @@
 </div>
 
 
-<!-- <div class="row">
+<div class="row">
   <form role="form">
 <div class="ct-tabs ct-tabs--courseList ct-u-paddingBoth60">
 
@@ -304,14 +304,13 @@
 </div>
 </div>
                   </form>
-                  </div> -->
 
 
 
 
 <div class="ct-u-bgLightGrey ct-u-paddingTop40">
     <div class="container">
-                <h4 class="text-uppercase ct-fw-700 ct-titleSmaller ct-u-paddingBottom50 ct-u-paddingTop30">Upcoming Workshops</h4>
+                <h4 class="text-uppercase ct-fw-700 ct-titleSmaller ct-u-paddingBottom50 ct-u-paddingTop30">Upcomming Workshops</h4>
 
         <div class="table-responsive">
             <table class="table ct-table--withBorder ct-fw-300">
@@ -325,30 +324,14 @@
                 </tr>
                 </thead>
                 <tbody class="text-left">
-                <% @upcoming_courses.each do |course| %>
-                  <tr>
-                      <td><%= course.parent.name %></td>
-                      <td><%= course.location.city if course.location %></td>
-                      <td><%= course.start_date.strftime('%d') %> - <%= course.end_date.strftime('%d %B') %></td>
-                      <td><%= number_to_currency(course.price * 1.1) %> (incl. GST)</td>
-                      <td class="text-right">
-                        <!-- <a href="#" class="btn btn-link">Book Now <i class="fa fa-angle-right"></i></a> -->
-                        <% if course.in_stock? %>
-                          <%= form_tag buy_product_path(@product.product_category.permalink, @product.permalink, :variant => course.id), :class => 'form-inline' do %>
-                            <div class="form-group">
-                              
-                              <div class="input-group">
-                                <%= select_tag 'quantity', options_for_select([1,2,3,4,5,6,7,8,9]), :disabled => !course.in_stock?, class: 'form-control' %>
-                            </div>
-                            <button type="submit" name="commit" class="btn btn-primary btn-sm ct-u-displayInlineBlock"> <i class="fa fa-cart-plus"></i> Add to cart</button>
-                          <% end %>
-                        <% else %>
-                          No places left
-                        <% end %>
-                      </td>
-                  </tr>
-                <% end %>
-                <!-- <tr class="ct-u-tableBorderTop">
+                <tr>
+                    <td>Web design</td>
+                    <td>Brisbane</td>
+                    <td>14 - 16 March</td>
+                    <td>$395</td>
+                    <td class="text-right"><a href="#" class="btn btn-link">Book Now <i class="fa fa-angle-right"></i></a></td>
+                </tr>
+                <tr class="ct-u-tableBorderTop">
                     <td>Web design</td>
                     <td>Melbourne</td>
                     <td>23 - 25 April</td>
@@ -361,7 +344,7 @@
                     <td>23 - 25 June</td>
                     <td>$395</td>
                     <td class="text-right"><a href="#" class="btn btn-link">Book Now <i class="fa fa-angle-right"></i></a></td>
-                </tr> -->
+                </tr>
  
                 </tbody>
             </table>
@@ -426,7 +409,7 @@
                                                 <span class="cat-links"><i class="fa fa-calendar"></i><a href="technologyforteachers.html"> Technology for Teachers</a></span>
                                             </div>
                                             <div class="ct-coursesList-cont">
-                                                <h2 class="text-uppercase"><a href="technologyforteachers.html">Keep up with your students! Learn how to excite them with tech of the future.</a></h2>
+                                                <h2 class="text-uppercase"><a href="technologyforteachers.html">Keep up with your students! And learn how to excite them with tech of the future.</a></h2>
                                             </div>
                                             <div class="entry-meta clearfix">
                                                 <a href="technologyforteachers.html" class="btn btn-primary btn-block btn-sm">Read more</a>
@@ -451,7 +434,7 @@
                                                 <span class="cat-links"><i class="fa fa-calendar"></i><a href="wordpress.html"> Wordpress</a></span>
                                             </div>
                                             <div class="ct-coursesList-cont">
-                                                <h2 class="text-uppercase"><a href="wordpress.html">Build a Wordpress website for your business or just for fun. </a></h2>
+                                                <h2 class="text-uppercase"><a href="wordpress.html">Learn to use Wordpress and build a website for your business or just for fun. </a></h2>
                                             </div>
                                             <div class="entry-meta clearfix">
                                                 <a href="wordpress.html" class="btn btn-primary btn-block btn-sm">Read more</a>
