@@ -1,23 +1,49 @@
-<footer>
-    <div class="ct-mediaSection-inner">
+<footer class="ct-navbar--dark">
         <div class="container">
 
-            <div class="row ct-u-bgWhite">
+          <div class="row ct-u-paddingTop50">
 
-                <div class="col-sm-6 ct-copyright ct-copyright--sameauth ct-copyright--greytext">
-                    <p class="ct-copyright-name pull-left text-uppercase">Coder Factory Pty Ltd © <%= Date.today.strftime('%Y') %> All rights reserved.</p>
-                </div>
+                <div class="col-md-3 col-sm-6 ct-widget ct-link-widget">
+                    <h4 class="ct-widget-title ct-fw-100">Information</h4>
 
-                <div class="col-sm-6">
-                    <ul class="ct-socialIcons ct-socialIcons--fgrey ct-socialIcons--fgreySm pull-right list-inline list-unstyled ct-u-paddingBoth20">
-                        <li><a href="https://twitter.com/coderfactory" data-toggle="tooltip" data-placement="top" title="Coder Factory Twitter Page" data-original-title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="https://www.facebook.com/thecoderfactory" data-toggle="tooltip" data-placement="top" title="Coder Factory Facebook Page" data-original-title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="https://www.linkedin.com/company/the-coder-factory" data-toggle="tooltip" data-placement="top" title="Coder Factory LinkedIn Page" data-original-title="Pinterest"><i class="fa fa-linkedin"></i></a></li>
+                    <ul class="list-unstyled ct-u-ulMotiveLinks">
+                      <li><a href="/blog">Blog</a></li>
+                      <% if user_signed_in? %><li><a href="/admin">Admin</a></li><% end %>
+                      <li><a href="/privacypolicy">Privacy Policy</a></li>
                     </ul>
+
                 </div>
+
+                                <div class="col-md-3 col-sm-6 ct-widget ct-link-widget">
+                    <h4 class="ct-widget-title ct-fw-100"></h4>
+
+                    <ul class="list-unstyled ct-u-ulMotiveLinks">
+
+                    </ul>
+
+                </div>
+
+
+                <div class="col-md-6 col-sm-12 ct-widget ct-link-widget">
+                    <h4 class="ct-widget-title ct-fw-100">Coder Factory</h4>
+
+                    <ul class="list-unstyled ct-u-ulMotiveLinks">
+                     <p>Once you know how to code, you can build any application you like - a world of possibilities opens up to you. And I'm here to tell you, that anyone can do it, you don't need to be a maths wizz or computer nerd to be a coder. And it's fun! <br>
+                    -- Pete Argent, Director, Coder Factory</p>
+                    </ul>
+                    <ul class="ct-socialIcons ct-socialIcons--fwhite list-inline list-unstyled">
+
+                    <li><a href="https://www.facebook.com/thecoderfactory" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                   <li><a href="https://twitter.com/coderfactory" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/the-coder-factory" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                   <li><a href="https://www.youtube.com/user/CoderFactory/videos" target="_blank"><i class="fa fa-youtube"></i></a></li>
+
+                 </ul>
+
+                </div>
+
+
             </div><!-- /row -->
+        </div><!-- /containter -->
 
-        </div><!-- /container -->
-    </div>
-
-</footer><!-- /footer -->
+    </footer><!-- /footer -->
