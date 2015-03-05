@@ -57,7 +57,7 @@ $vibrant:                             #D44F99;
 /*--  Navbar  --*/
 
 .ct-navbar--dark {
-  background-color: #2C3E50;
+  background-color: $darknight;
 }
 
 .navbar .navbar-nav li a:hover, .navbar .navbar-nav li a:focus {

@@ -1,6 +1,6 @@
 <!-- MOBILE NAV -->
 <div class="navbar-header ct-navbarMobile ct-u-bgBlack">
-    <a class="navbar-brand" href="/"><img src="http://coderfactory.co/assets/cf-logo-fbbcce6a87e0b5735e42deba54c18fb1.svg" alt="Coder Factory"> </a>
+    <a class="navbar-brand" href="/"><img src="<%= asset_path 'cf-logo.svg' %>" alt="Coder Factory"> </a>
     <button type="button" class="navbar-toggle">
         <span class="sr-only">Navigation</span>
         <span class="icon-bar"></span>
@@ -41,14 +41,14 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.html"><img src="http://coderfactory.co/assets/cf-logo-fbbcce6a87e0b5735e42deba54c18fb1.svg" alt="Coder Factory"> </a>
+                <a class="navbar-brand" href="/"><img src="<%= asset_path 'cf-logo.svg' %>" alt="Coder Factory"></a>
             </div>
 
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav pull-right">
-                      <li class="active"><a href="/">Home</a></li>
-                      <li class="dropdown"><a href="#">Workshops <span class='caret'></span></a>
+                      <li class="<%= 'active' if current_page?(root_path) %>"><a href="/">Home</a></li>
+                      <li class="dropdown <%= 'active' if @workshops %>"><a href="#">Workshops <span class='caret'></span></a>
                         <ul class="dropdown-menu" role="menu">
                           <li><a href="/courses/workshops/learn-to-code-weekend-workshop">Learn to Code</a></li>
                           <li><a href="/courses/workshops/web-design-weekend-workshop">Web Design</a></li>
@@ -57,11 +57,11 @@
                           <li><a href="/courses/workshops/technology-for-teachers-workshop">Tech for Teachers</a></li>
                         </ul>
                       </li>
-                      <li class="onepage"><a href="/courses/part-time-courses/web-app-developer-pt">Part Time</a></li>
-                      <li class="onepage"><a href="/fast-track">Fast Track</a></li>
+                      <li class="<%= 'active' if current_page?('/courses/part-time-courses/web-app-developer-pt') %>"><a href="/courses/part-time-courses/web-app-developer-pt">Part Time</a></li>
+                      <li class="<%= 'active' if current_page?(fast_track_path) %>"><a href="/fast-track">Fast Track</a></li>
                       <!-- <li class="onepage"><a href="/community">Community</a></li> -->
-                      <li class="onepage"><a href="/blog">Blog</a></li>
-                      <li class="onepage"><a href="/contact">Contact</a></li>
+                      <li class="<%= 'active' if current_page?(blog_path) %>"><a href="/blog">Blog</a></li>
+                      <li class="<%= 'active' if current_page?(contact_path) %>"><a href="/contact">Contact</a></li>
                       <% if has_order? %>
                         <li class="cart">
                           <a href="/checkout">
