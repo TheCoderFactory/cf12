@@ -27,16 +27,12 @@
 <%= render 'layouts/google_analytics' %>
 <%= render 'layouts/facebook_pixel' %>
 </head>
-<body class="cssAnimate">
+<body class="cssAnimate ct-headroom--fixedMenu ct-headroom--scrollUpMenu">
   
-    <% if @home %>
-      <%= render 'layouts/home_nav' %>
-    <% elsif @dark_nav %>
-      <%= render 'layouts/dark_nav' %>
-      <div style="height:75px;"></div>
-    <% else %>
+    
+      
       <%= render 'layouts/nav' %>
-    <% end %>
+    
       
 
       <div id="content">
