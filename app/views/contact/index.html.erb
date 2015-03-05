@@ -1,4 +1,4 @@
-<div class="ct-mediaSection ct-u-bgBlack ct-u-bgdark-lightfont overflowHidden" data-stellar-background-ratio="0.2" data-height="230" data-type="parallax" data-bg-image="http://actly.html.themeforest.createit.pl/assets/images/demo-content/slider2.jpg" data-bg-image-mobile="http://actly.html.themeforest.createit.pl/assets/images/demo-content/slider2.jpg">
+<div class="ct-mediaSection ct-u-bgBlack ct-u-bgdark-lightfont overflowHidden" data-stellar-background-ratio="0.2" data-height="330" data-type="parallax" data-bg-image="http://actly.html.themeforest.createit.pl/assets/images/demo-content/slider2.jpg" data-bg-image-mobile="http://actly.html.themeforest.createit.pl/assets/images/demo-content/slider2.jpg">
         <div class="ct-mediaSection-inner">
             <div class="container">
                 <h3 class="ct-breadcrumbHeader text-uppercase pull-left">Contact</h3>
@@ -28,8 +28,11 @@
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                     Ups! An error occured. Please try again later.
                 </div>
-              <form class="ct-form--white ct-form--bigInput validateIt" role="form" method="post" data-email-subject="Contact Form" data-show-errors="true" data-hide-form="true" action="assets/form/send.php">
-                  <div class="form-group">
+                <%= simple_form_for(@enquiry, html: {class: "ct-form--white ct-form--bigInput validateIt" }) do |f| %>
+                  <%= f.error_notification %>
+                  <%= f.invisible_captcha :subtitle %>
+              <!-- <form class="ct-form--white ct-form--bigInput validateIt" role="form" method="post" data-email-subject="Contact Form" data-show-errors="true" data-hide-form="true" action="assets/form/send.php"> -->
+                  <!-- <div class="form-group">
                     <input type="text" class="form-control" id="exampleInputText"  name="field[]" required placeholder="Your Name">
                   </div>
                   <div class="form-group">
@@ -38,25 +41,26 @@
 
                 <div class="form-group">
                   <textarea class="form-control" rows="6"   name="field[]" placeholder="Your Message"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-sm ">Send message</button>
-              </form>
+                </div> -->
+                <%= f.input :name, label: false, placeholder: 'Your name' %>
+                <%= f.input :email, label: false, placeholder: 'Your email' %>
+                <%= f.input :content, label: false, placeholder: 'Your message', input_html: { rows: 6 } %>
+                <%= f.submit 'Send your message', class: 'btn btn-primary' %>
+              <% end %>
 
             </div>
             <div class="col-sm-4">
                 <div class="ct-address">
-                  <h4 class="ct-widget-title ct-adress-title">About us</h4>
-                   <p class="ct-widget-adress ct-adress-content">2319 Hilltop Haven Drive<br />Upper Greenwood Lake, NJ 07421<br /><br />
-                     Phone: 662-407-6792<br>
-                     Email: <a href="mailto:contact@actly.com">contact@actly.com</a>
+                  <h4 class="ct-widget-title ct-adress-title">Get in touch</h4>
+                   <p class="ct-widget-adress ct-adress-content">807/46 Kippax Street<br />Surry Hills (Sydney) NSW 2010<br /><br />
+                     Phone: 1300 884 095 <br>
+                     Email: <a href="mailto:info@thecoderfactory.com">info@thecoderfactory.com</a>
                    </p>
                 </div>
                 <ul class="ct-socialIcons ct-socialIcons--fgrey list-inline list-unstyled ct-u-paddingBoth15">
-                    <li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Vimeo"><i class="fa fa-vimeo-square"></i></a></li>
-                    <li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="LinkedIN"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="https://twitter.com/createitpl" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="https://www.facebook.com/createITpl" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/the-coder-factory" data-toggle="tooltip" data-placement="top" title="" data-original-title="LinkedIN"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://twitter.com/coderfactory" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/thecoderfactory" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"><i class="fa fa-facebook"></i></a></li>
                 </ul>
 
             </div>
@@ -78,7 +82,7 @@
 
 
 
-    <div class="ct-u-bgGrey">
+    <!-- <div class="ct-u-bgGrey">
         <div class="container">
 
           <header class="ct-sec-header text-center ct-u-paddingTop70 ct-u-paddingBottom50 ">
@@ -149,11 +153,11 @@
             </div>
           </div>
 
-        </div><!-- /container -->
-     </div>
+        </div>
+     </div> -->
 
 
-    <div class="ct-mediaSection ct-u-bgDarkgrey" data-stellar-background-ratio="0.2" data-height="420" data-type="parallax" data-bg-image="assets/images/content/newsletter-bg.jpg" data-bg-image-mobile="assets/images/content/newsletter-bg.jpg">
+    <div class="ct-mediaSection ct-u-bgDarkgrey" data-stellar-background-ratio="0.2" data-height="420" data-type="parallax" data-bg-image="<%= asset_path 'keyboard.jpg' %>" data-bg-image-mobile="<%= asset_path 'keyboard.jpg' %>">
        <div class="ct-mediaSection-inner">
          <div class="container">
 

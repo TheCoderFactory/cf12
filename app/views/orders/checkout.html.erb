@@ -1,119 +1,124 @@
 <% @page_title = 'Checkout' %>
 <% @hide_newsletter_registration = true %>
 <% @hide_basket = true %>
+<% @dark_nav = true %>
 <%= content_for :header, 'small-header' %>
 <%= content_for :title, "Coder Factory Checkout" %>
 <%= content_for :description, "The checkout page for Coder Factory's online store." %>
 
+<div class="ct-breadcrumbs-sec--mini ct-u-paddingBoth20 ct-u-bg-Grey">
+    <div class="container">
 
-<%# render 'checkout_sidebar' %>
-<div class="row"><div class="col-xs-12 col-lg-8 col-lg-offset-2">
-<div class="panel panel-default"><div class="panel-body">
-<div class="checkout">
-  <p class="secure">Secure connection</p>
-  <h2>Finalise your order</h2>
-  <p class="lead">
-    Fantastic! There are places available. Finalise your booking now to secure your space.<br><a href="/courses">Or look for more courses</a>.
-  </p>
- 
-  <%= render 'shared/order_items', :order => @order %>
-  <hr>
-  <% unless @order.delivery_required? && @order.delivery_service.nil? %>
-    <p class="lead">Fill out your details to complete your order:</p>
-    <%= form_for @order, :url => checkout_path, :html => {:class => 'checkout disableable'} do |f| %>
-      <%= f.error_messages %>
+      <div class="ct-breadcrumbs-text pull-left text-uppercase"><a href="13-actly-feature-section.html">Checkout</a></div>
+      <ul class="ct-navbarIcons list-unstyled list-inline pull-right">
+        <!-- <li>
+          <form class="header-search" role="search">
+            <div class="form-group pull-left">
+                <input type="text" class="form-control search-input" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+          </form>
+        </li>
+        <li class="ct-search-open-icon-js"><a href="#"><i class="fa fa-search"></i></a></li> -->
+        <li><i class="fa fa-lock slime-text"></i> <span class="slime-text">Secure Connection</span></li>
+      </ul>
+
+    </div><!-- /container -->
+</div>
+
+<div class="ct-u-bgGrey ct-u-paddingTop70 ct-u-paddingBottom40">
+  <div class="container">
+    <div class="checkout">
+      <!-- <p class="secure">Secure connection</p> -->
+      <header class="ct-sec-header text-center ct-u-paddingBottom50">
+        <h2 class="ct-sec-header-title">Secure your place</h2>
+      </header>
+      <p class="lead">
+        Welcome! There are places available. Finalise your booking now to secure your space. <a href="/courses">Or add more courses</a>.
+      </p>
+     
+      <%= render 'shared/order_items', :order => @order %>
+      <hr>
+      <% unless @order.delivery_required? && @order.delivery_service.nil? %>
+        <p class="lead">Fill out your details to complete your order:</p>
+        <%= form_for @order, :url => checkout_path, :html => {:class => 'checkout disableable'} do |f| %>
+          <%= f.error_messages %>
       <div class="customer">
-        <%= field_set_tag do %>
-          <dl>
-            <dt>
-              <%= f.label :first_name, "Name", :class => 'req' %>
-            </dt>
-            <dd class="name">
-              <%= f.text_field :first_name, :placeholder => 'First Name' %>
-              <%= f.text_field :last_name, :placeholder => 'Last Name' %>
-            </dd>
-          </dl>
-          <dl>
-            <dt>
+        <div class="row">
+          <div class="col-md-6">
+        
+          <%= f.label :first_name, "Name", :class => 'req' %>
+            <div class="row">
+              <div class="col-md-6">
+            
+              <%= f.text_field :first_name, :placeholder => 'First Name', class: 'form-control' %>
+              </div>
+              <div class="col-md-6">
+              <%= f.text_field :last_name, :placeholder => 'Last Name', class: 'form-control' %>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12">
               <%= f.label :company, "Company Name (optional)" %>
-            </dt>
-            <dd>
-              <%= f.text_field :company %>
-            </dd>
-          </dl>
-          <dl>
-            <dt>
+            
+              <%= f.text_field :company, class: 'form-control' %>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12">
               <%= f.label :email_address, 'Your E-Mail Address', :class => 'req' %>
-            </dt>
-            <dd>
-              <%= f.text_field :email_address %>
-            </dd>
-          </dl>
-          <dl>
-            <dt>
+            
+              <%= f.text_field :email_address, class: 'form-control' %>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+          
               <%= f.label :phone_number, 'Your Contact Phone Number', :class => 'req' %>
-            </dt>
-            <dd>
-              <%= f.text_field :phone_number %>
-            </dd>
-          </dl>
-        <% end %>
-        <%= field_set_tag do %>
-          <dl>
-            <dt>
+            
+              <%= f.text_field :phone_number, class: 'form-control' %>
+            </div>
+          </div>
+         
+        </div>
+        <div class="col-md-6">
+          
               <%= f.label :billing_address1, "Billing Address", :class => 'req' %>
-            </dt>
-            <dd>
-              <%= f.text_field :billing_address1, :placeholder => "Building, Street" %>
-            </dd>
-            <dd>
-              <%= f.text_field :billing_address3, :placeholder => "Town/City" %>
-            </dd>
-            <dd>
-              <%= f.text_field :billing_address4, :placeholder => "State" %>
-            </dd>
-            <dd>
-              <%= f.text_field :billing_postcode, :placeholder => "Postcode", :class => 'postcode' %>
-            </dd>
-            <dd>
-              <%= f.collection_select :billing_country_id, Shoppe::Country.ordered, :id, :name, {:selected => 13} %>
-            </dd>
-            <!-- <dd>
-              <%# f.check_box :separate_delivery_address %>
-              <%# f.label :separate_delivery_address, "Deliver to a different address?" %>
-            </dd> -->
-          </dl>
-          <dl class="delivery">
-            <dt>
-              <%= f.label :delivery_address1, "Delivery Address", :class => 'req' %>
-            </dt>
-            <dd>
-              <%= f.text_field :delivery_name, :placeholder => "Deliver to (name/company)" %>
-            </dd>
-            <dd>
-              <%= f.text_field :delivery_address1, :placeholder => "Line 1" %>
-            </dd>
-            <dd>
-              <%= f.text_field :delivery_address3, :placeholder => "Town/City" %>
-            </dd>
-            <dd>
-              <%= f.text_field :delivery_address4, :placeholder => "State" %>
-            </dd>
-            <dd>
-              <%= f.text_field :delivery_postcode, :placeholder => "Postcode", :class => 'postcode' %>
-            </dd>
-            <dd>
-              <%= f.collection_select :delivery_country_id, Shoppe::Country.ordered, :id, :name %>
-            </dd>
-          </dl>
-        <% end %>
+            
+           <div class="row">
+              <div class="col-md-12 form-group">
+              <%= f.text_field :billing_address1, :placeholder => "Building, Street", class: 'form-control', class: 'form-control' %>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12 form-group">
+              <%= f.text_field :billing_address3, :placeholder => "Town/City", class: 'form-control' %>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12 form-group">
+              <%= f.text_field :billing_address4, :placeholder => "State", class: 'form-control' %>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-md-4 form-group">
+              <%= f.text_field :billing_postcode, :placeholder => "Postcode", :class => 'form-control postcode' %>
+            </div>
+          
+              <div class="col-md-8 form-group">
+              <%= f.collection_select :billing_country_id, Shoppe::Country.ordered, :id, :name, {:selected => 13}, class: 'form-control' %>
+            </div>
+          </div>
+          <%= f.submit "Continue to payment", class: 'btn btn-success' %>
+        </div>
+          
+        
       </div>
       
-        <%= f.submit "Continue to payment", class: 'btn-block btn-block-calm' %>
+        
       
     <% end %>
   <% else %>
     <p>Please call us to place this order. </p>
   <% end %>
-</div>
-</div></div></div></div>
+  </div></div></div></div>

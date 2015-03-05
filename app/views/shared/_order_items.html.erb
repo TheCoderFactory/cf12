@@ -1,41 +1,42 @@
-<table class="orderItems">
-  <thead>
-    <tr>
-      <td>Qty</td>
-      <td>Item</td>
-      <td>Price</td>
-      <td>
-        <%= Shoppe.settings.tax_name %>
-      </td>
-      <td>Sub-Total</td>
-    </tr>
-  </thead>
+<div class="table-responsive">
+  <table class="table ct-table--withBorder ct-fw-300">
+    <thead class="text-left">
+      <tr>
+        <th>Qty</th>
+        <th>Item</th>
+        <th><span class="pull-right">Price</span></th>
+        <th>
+          <span class="pull-right"><%= Shoppe.settings.tax_name %></span>
+        </th>
+        <th><span class="pull-right">Sub-Total</span></th>
+      </tr>
+    </thead>
   <tbody>
     <% for item in order.order_items %>
-      <tr>
+      <tr style="background-color: #ddd">
         <td class="quantity">
           <% unless defined?(readonly) %>
             <span>
-              <%= link_to "+", adjust_basket_item_quantity_path(item.id), :method => :post, :class => 'ajax' %>
-              <%= link_to "-", adjust_basket_item_quantity_path(item.id), :method => :delete, :class => 'ajax' %>
-            </span>
+              <%= link_to "<i class='fa fa-plus-circle'></i>".html_safe, adjust_basket_item_quantity_path(item.id), :method => :post, :class => 'ajax' %>
+              <%= link_to "<i class='fa fa-minus-circle'></i>".html_safe, adjust_basket_item_quantity_path(item.id), :method => :delete, :class => 'ajax' %>
+            </span> 
           <% end %>
           <%= item.quantity %>
         </td>
         <td class="product">
           <%= item.ordered_item.full_name %>
           <% unless defined?(readonly) %>
-            <%= link_to "Delete", remove_basket_item_path(item), :method => :delete, :class => 'delete ajax' %>
+            <%= link_to "<i class='fa fa-times-circle'></i>".html_safe, remove_basket_item_path(item), :method => :delete, :class => 'delete ajax', title: 'remove' %>
           <% end %>
         </td>
         <td class="money price">
-          <%= number_to_currency item.sub_total %>
+          <span class="pull-right"><%= number_with_precision(item.sub_total, precision: 2, delimiter: ' ') %></span>
         </td>
         <td class="money tax">
-          <%= number_to_currency item.tax_amount %>
+          <span class="pull-right"><%= number_with_precision(item.tax_amount, precision: 2, delimiter: ' ') %></span>
         </td>
         <td class="money total">
-          <%= number_to_currency item.total %>
+          <span class="pull-right"><%= number_with_precision(item.total, precision: 2, delimiter: ' ') %></span>
         </td>
       </tr>
     <% end %>
@@ -53,7 +54,7 @@
           <% end %>
         </td>
         <td class="money">
-          <%= number_to_currency order.delivery_price %>
+          <%= number_with_precision(order.delivery_price, precision: 2, delimiter: ' ') %>
         </td>
       </tr>
     <% end %>
@@ -62,28 +63,31 @@
     <tr class="subtotal">
       <td colspan="4" class="no-border">Promotion discount</td>
       <td class="money">
-        <%= number_to_currency promotion_value %>
+        <%= number_with_precision(promotion_value, precision: 2, delimiter: ' ') %>
       </td>
     </tr>
     <% end %>
       <tr class="subtotal">
-        <td colspan="4">Total (ex. <%= Shoppe.settings.tax_name %>)</td>
+        <td></td>
+        <td colspan="3"><span class="pull-right">Total (ex. <%= Shoppe.settings.tax_name %>)</span></td>
         <td class="money">
-          <%= number_to_currency order.total_before_tax %>
+          <span class="pull-right"><%= number_with_precision(order.total_before_tax, precision: 2, delimiter: ' ') %></span>
         </td>
       </tr>
     <tr class="tax">
-      <td colspan="4">
-        <%= Shoppe.settings.tax_name %>
+      <td></td>
+      <td colspan="3"><span class="pull-right">
+        <%= Shoppe.settings.tax_name %></span>
       </td>
       <td class="money">
-        <%= number_to_currency order.tax %>
+        <span class="pull-right"><%= number_with_precision(order.tax, precision: 2, delimiter: ' ') %></span>
       </td>
     </tr>
     <tr class="total">
-      <td colspan="4">Total</td>
+      <td></td>
+      <td colspan="3"><span class="pull-right"><strong>Total</strong></span></td>
       <td class="money">
-        <strong><%= number_to_currency order.total %></strong>
+        <span class="pull-right"><strong><%= number_with_precision(order.total, precision: 2, delimiter: ' ') %></strong></span>
       </td>
     </tr>
   </tfoot>

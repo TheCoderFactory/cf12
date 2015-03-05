@@ -1,728 +1,483 @@
-<% active_nav_item :catalogue %>
-<% @show_forms = true %>
-<% content_for :header, 'fast-track-header' %>
-<% @fast_track_header = true %>
 <%= content_for :title, "Join the Fast Track to an exciting life. Coder Factory's full time programme for aspiring developers." %>
 <%= content_for :description, "Coder Factory's Fast Track is an accelerated and revolutionary 24 week programme that places you in a well paid, exciting career in the tech industry." %>
 
 
-
-
-<section class="breadcrumbs hidden-xs hidden-sm">
-    <ol class="breadcrumb text-center">
-      <li><a href="/">Home</a></li>
-      <li><a href="/courses">Our Courses</a></li>
-      <li class="active">Fast Track</li>
-    </ol>
-</section>
-	<!-- Choose your own adventure -->
-<section class="darknight">
-<div class="row">
-	<div class="col-xs-12 col-lg-offset-2 col-lg-8">
-		<h2 class="section-heading">Change Your Life in six months</h2>
-		<div class="row">
-			<div class="col-lg-6">
-				<div class="panel panel-default">
-					<div class="panel-heading text-center">
-						<h3 class=""><i class="fa fa-question-circle fa-lg"></i> What is the Fast Track?</h3>
-					</div>
-					<div class="panel-body">
-						<p>Coder Factory's <em>Fast Track</em> is an <strong>accelerated and revolutionary 24 week programme</strong> that places you in a well paid, exciting career in the tech industry.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="panel panel-default">
-					<div class="panel-heading text-center">
-						<h3 class=""><i class="fa fa-question-circle fa-lg"></i> Never coded before?</h3>
-					</div>
-					<div class="panel-body">
-						<p>No problem! Even if you've never coded before, you will have all the skills and experiences companies look for when hiring junior developers.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-6">
-				<div class="panel panel-default">
-					<div class="panel-heading text-center">
-						<h3 class=""><i class="fa fa-question-circle fa-lg"></i> How does it work?</h3>
-					</div>
-					<div class="panel-body">
-						<p><strong>Weeks 1 - 12:</strong> You'll be coding and using Agile development methodologies from day one in a fun and challenging classroom environment.</p>
-						<br>
-						<p><strong>Weeks 13 - 24:</strong> Work on real projects for potential employers, learn how to ace an interview and meet amazing mentors who will guide you into your exciting career.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="panel panel-default">
-					<div class="panel-heading text-center">
-						<h3 class=""><i class="fa fa-question-circle fa-lg"></i> Is the Fast Track for you?</h3>
-					</div>
-					<div class="panel-body">
-						<p>If you want to work with technology that makes a difference in the world, have opportunities to travel and you want it fast, then the Fast Track could be for you.</p>
-						<p>The programme is ideal for high school leavers, university students (current and completed) and people looking to level up their careers - no matter what their age.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-</section>			
-
-							
-<section class="calm">				
-<div class="row">
-	<div class="col-xs-12 col-lg-offset-2 col-lg-8">
-		<h2 class="section-heading">Expect The Best</h2>
-		<div class="row">
-			<div class="col-lg-6">
-				<div class="panel panel-default">
-					<div class="panel-heading text-center">
-				    <h3><i class="fa fa-lg fa-trophy"></i> Premium Quality</h3>
-				  </div>
-				  <div class="panel-body blue-font">
-				    <p class="panel-text">Australia's first, premium coding school. With a high-tech campus in the centre of Sydney, top rate hiring partners and a vibrant community, Coder Factory's Fast Track programme is the college of the future.</p>
-				  </div>
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="panel panel-default">
-					<div class="panel-heading text-center">
-				    <h3><i class="fa fa-lg fa-graduation-cap"></i> World Class Teachers</h3>
-				  </div>
-				  <div class="panel-body blue-font">
-				    <p class="panel-text">Visionary and respected teachers will guide your learning using our innovative Sprint Based Learning<sup>TM</sup> methodology. Their real world experience and contacts will ensure you're hired on graduation.</p>
-				  </div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-6">
-				<div class="panel panel-default">
-					<div class="panel-heading text-center">
-				    <h3><i class="fa fa-lg fa-plus"></i> Extra Experience</h3>
-				  </div>
-				  <div class="panel-body blue-font">
-				    <p class="panel-text">12 weeks of classes, another 12 weeks of real project work - 24 weeks of life-changing knowledge, skills, experience and connections.</p>
-				  </div>
-				</div>
-			</div>
-		
-		
-			<div class="col-lg-6">
-				<div class="panel panel-default">
-					<div class="panel-heading text-center">
-				    <h3><i class="fa fa-lg fa-certificate"></i> Women in Tech</h3>
-				  </div>
-				  <div class="panel-body blue-font">
-
-						<p class="panel-text">Coder Factory is offering a woman a full scholarship to the Fast Track course. Please apply to find out more.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-</section>				
-				
-					
-
-
- <!-- Section: Hiring Partners  -->
- <section class="hiring">
-<div class="row">
-	<div class="col-xs-12 text-center col-lg-offset-2 col-lg-8">
-		<h2 class="section-heading dark">Hiring Partners</h2>
-		<p class="lead">Just some of the companies lining up to hire Fast Track graduates:</p>
-		<div class="panel panel-default">
-			<div class="panel-body blue-font partner-logo-box">
-				
-				<div class="row">
-					<div class="col-xs-4">
-						<img class="img-responsive parnter-logo" src="<%=asset_path('lonelyplanet.png')%>" />
-					</div>
-					<div class="col-xs-4">
-						<img class="img-responsive parnter-logo" src="<%=asset_path('sitepoint.png')%>" />
-					</div>
-			    <div class="col-xs-4">
-			    	<img class="img-responsive parnter-logo" src="<%=asset_path('codehire.png')%>" />
-			    </div>
-		    </div>
-		    <div class="row">
-		    	<br><br>
-		    </div>
-		    <div class="row">
-			    	<div class="col-xs-4"><img class="img-responsive parnter-logo" src="<%=asset_path('locomote.jpg')%>" /></div>
-			    	<div class="col-xs-4"><img class="img-responsive parnter-logo" src="<%=asset_path('getvero.png')%>" /></div>
-			    	<div class="col-xs-4"><img class="img-responsive parnter-logo" src="<%=asset_path('learnable.jpg')%>" /></div>
-		    </div>
-		    <div class="row">
-		    	<br><br>
-		    </div>
-		    <div class="row">
-			    	<div class="col-xs-4"><img class="img-responsive parnter-logo" src="<%=asset_path('flippa.jpg')%>" /></div>
-			    	<div class="col-xs-4"><img class="img-responsive parnter-logo" src="<%=asset_path('Zoak.png')%>" /></div>
-			    	<div class="col-xs-4"><img class="img-responsive parnter-logo" src="<%=asset_path('dreamscape.png')%>" /></div>
-		    </div>
-
-			</div>
-		</div>
-		<div class="section-buttons">
-		<br>
-		<p>Looking for developers? 
-
-		<a href="#" data-toggle="modal" data-target="#partner">Become a hiring partner.</a>
-		</p>
-	</div>
-</div></div>
-</section>
-<div class="modal fade" id="partner" tabindex="-1" role="dialog" aria-labelledby="registerLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-				<h3 class="modal-title" id="registerLabel"><i class="fa fa-info-circle"></i> Become a hiring partner</h3>
-				<br>
-			</div>
-			<div class="modal-body blue-font">
-				<p>Please complete some details so we can get in touch with you.</p>
-				<hr>
-				<%= simple_form_for Partner.new do |f| %>
-				<%= invisible_captcha %>
-				<div class="form-group">
-					<%= f.input :name, input_html: { class: 'form-control' } %>
-				</div>
-				<div class="form-group">
-					<%= f.input :company, input_html: { class: 'form-control' } %>
-				</div>
-				<div class="form-group">
-					<%= f.input :email, input_html: { class: 'form-control' } %>
-				</div>
-				<div class="form-group">
-					<%= f.input :phone, input_html: { class: 'form-control' } %>
-				</div>
-				<div class="form-group">
-					<%= f.input :message, input_html: { class: 'form-control' } %>
-				</div>
-			</div>
-			<p><input class="btn-block btn-block-calm btn-small" name="commit" type="submit" value="Request Partnership"/></p>
-			<% end %>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				
-			</div>
-		</div>
-	</div>
+<div class="ct-mediaSection ct-u-bgWhite ct-u-bgdark-lightfont overflowHidden" data-stellar-background-ratio="0.2" data-height="430" data-type="parallax" data-bg-image="http://res.cloudinary.com/coder-factory/image/upload/v1418032899/ontrain2_u37tnf.jpg" data-bg-image-mobile="http://res.cloudinary.com/coder-factory/image/upload/v1418032899/ontrain2_u37tnf.jpg">
+    <div class="ct-mediaSection-inner">
+        <div class="container">
+            <h3 class="ct-breadcrumbHeader text-uppercase pull-left">Fast Track <br>
+            <span style="font-size:25px;">Your boarding pass to the world of tech.</span></h3>
+        </div><!-- /container -->
+    </div><!-- /ct-mediaSection-inner -->
 </div>
 
+<div class="ct-u-bgLightGrey ct-u-paddingBoth60 ct-u-bgGrey">
+  <div class="container">
+    <div class="ct-singleCourse">
+      <div class="ct-singleCourse-intro ct-u-bgWhite">
+        <img alt="Web Design Workshop" src="<%= asset_path 'julia.jpg' %>" />
 
-<!-- Section: What You Get -->
-<section class="dirty-gold">
-		<div class="row">
-			<div class="col-xs-12 col-lg-offset-2 col-lg-8">
-				<h2 class="section-heading">What You Get</h2>
-			<div class="row">
-			<div class="col-lg-6">
-				<div class="panel panel-default">
-				<div class="panel-heading text-center">
-					<h3><i class="fa fa-star fa-lg"></i>  Impressive Portfolio</h3>
-				</div>
-				<div class="panel-body blue-font">
-				  <p class="panel-text">Build a portfolio of top rate applications that demonstrates your ability to write quality code and shows off your skills, knowledge and experience to any future employer. </p>
-				</div></div>
-			</div>
-			<div class="col-lg-6">
-				<div class="panel panel-default">
-				<div class="panel-heading text-center">
-					<h3><i class="fa fa-lg fa-laptop"></i> Real Experience</h3>
-				</div>
-				<div class="panel-body blue-font">
-				    <p class="panel-text">Practical experience using the tools of a professional developer from day one. Working as part of a team and managing projects.</p>
-				</div></div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-6">
-				<div class="panel panel-default">
-				<div class="panel-heading text-center">
-					<h3><i class="fa fa-lg fa-sliders"></i> Full Stack Skills</h3>
-				</div>
-				<div class="panel-body blue-font">
-				    <p class="panel-text">You'll be a coder with skills in UX, database design, application architecture and sysops so you can be confident no matter what developer role you take on.</p>
-				</div></div>
-			</div>
-			<div class="col-lg-6">
-				<div class="panel panel-default">
-				<div class="panel-heading text-center">
-					<h3><i class="fa fa-lg fa-plug"></i> Upgraded Network</h3>
-				</div>
-				<div class="panel-body blue-font">
-				    <p class="panel-text">Upgrade your network with connections in the local startup community and tech industry. The right people will know your name.</p>
-				</div></div>
-			</div>
-		</div>
-</section>
+        <div class="ct-singleCourse-introLinks clearfix">
+          <div class="entry-meta pull-left">
+            <span class="cat-links ct-u-borderRight"><i class="fa fa-train"></i> Fast Track
+                </span>
+            <span class="entry-date ct-u-borderRight"><i class="fa fa-calendar"></i>&nbsp; 7 April</span>
+          </div>
+            <a href="teachers.html" class="by-author pull-left">
+                <img src="<%= asset_path 'dand.jpg' %>" alt="author img">
+                <span class="by-autor-name">Dan Draper</span>, <span class="by-autor-prof">Teacher</span>
+            </a>
 
+            <div class="entry-meta pull-right">
+                <div class="ct-u-displayInlineBlock">
+                    <a href="#" class="btn btn-primary btn-sm ct-u-displayInlineBlock">Download Info Pack</a> <a href="/fast-track-application" class="btn btn-warning btn-sm">Apply Now</a>
+                </div>
+            </div>
+        </div>
+                </div>
 
-<!-- Section: Programme -->
-<section class="section" id="programme">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12 col-lg-offset-1 col-lg-10">
-				<h2 class="section-heading dark">The Programme</h2>
-				<div class="row">
-					<div class="col-lg-6">
-						<div class="panel panel-default">
-							<div class="panel-heading text-center">
-								<h3><i class="fa fa-calendar-o fa-lg"></i> Programme Structure</h3>
-							</div>
-							<div class="panel-body blue-font content">
-							  <strong>Days & Times</strong>
-							  <ul>
-							  	<li>Monday - Friday</li>
-							  	<li>10am - 6pm</li>
-							  </ul>
-							  <hr>
-							  <strong>Weeks 1 - 12:</strong>
-							  <ul>
-							    <li>7th April -  26th June 2015</li>
-							  	<li>Intensive classroom learning (480 hours). </li>
-							  </ul>
-							  <hr>
-							  <strong>Weeks 13 - 24:</strong>
-							  <ul>
-							    <li>29th June - 21st September 2015</li>
-							  	<li>Gain experience working on real projects for potential employers</li>
-							  </ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="panel panel-default">
-							<div class="panel-heading text-center">
-								<h3><i class="fa fa-lg fa-graduation-cap"></i> Tuition</h3>
-							</div>
-							<div class="panel-body blue-font content">
-							    
-							    <strong>12 week programme</strong> 
-							    <ul>
-							    	<li>AUD 14200</li>
-							    	<li><a href="#" class="btn btn-material-lightblue btn-flat btn-xs" data-toggle="modal" data-target="#twelve">What's included?</a></li>
-							    </ul>
-							    <hr>
-							    <strong>Full 24 week programme </strong>
-							    <ul>
-							    	<li>AUD 21900</li>
-							    	<li><a href="#" class="btn btn-material-lightblue btn-flat btn-xs" data-toggle="modal" data-target="#included">What's included?</a></li>
-							    </ul>	
-							    <hr>
-							    <ul>
-							    <li>Full scholarships available to women - through a selective process. [<a href="/women-in-tech" target="_blank">Women in tech</a>]</li>
-							    <li>Indigenous Australians are encouraged to apply</li>
-							    <li>Discount for upfront payment</li>
-							    <li>Payment plans available
-							    [3 month, 6 month, 12 month]</li>
-							   </ul>
-
-							    
-							</div>
-						</div>
-					</div>
-				</div>
-				<h2 class="section-heading dark">What you'll learn</h2>
-				<div class="row">
-					<div class="col-lg-6">
-						<div class="panel panel-default">
-							<div class="panel-body blue-font">
-						    <h4>
-						    	<span class="fa-stack fa-lg">
-						    	  <i class="fa fa-circle fa-stack-2x"></i>
-						    	  <i class="fa fa-fighter-jet fa-stack-1x fa-inverse"></i>
-						    	</span> Agile Methodology</h4>
-					      <p>Sprint Based Learning<sup>TM</sup> means you're an expert by graduation.</p>
-						  </div>
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="panel panel-default">
-							<div class="panel-body blue-font">
-						    <h4>
-						    	<span class="fa-stack fa-lg">
-						    	  <i class="fa fa-circle fa-stack-2x"></i>
-						    	  <i class="fa fa-list-alt fa-stack-1x fa-inverse"></i>
-						    	</span> JavaScript Frameworks</h4>
-					      <p>Learn the hottest JavaScript frameworks - AngularJS + NodeJS.</p>
-						  </div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-6">
-						<div class="panel panel-default">
-							<div class="panel-body blue-font">
-						    <h4>
-						    	<span class="fa-stack fa-lg">
-						    	  <i class="fa fa-circle fa-stack-2x"></i>
-						    	  <i class="fa fa-trophy fa-stack-1x fa-inverse"></i>
-						    	</span> Team Work</h4>
-					      <p>Your team competes for code quality glory every day.</p>
-						  </div>
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="panel panel-default">
-							<div class="panel-body blue-font">
-						    <h4>
-						    	<span class="fa-stack fa-lg">
-						    	  <i class="fa fa-circle fa-stack-2x"></i>
-						    	  <i class="fa fa-code fa-stack-1x fa-inverse"></i>
-						    	</span> Web Programming</h4>
-					      <p>Ruby on Rails mastery is your ticket to developer fame and fortune.</p>
-						  </div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-6">
-						<div class="panel panel-default">
-							<div class="panel-body blue-font">
-						    <h4>
-						    	<span class="fa-stack fa-lg">
-						    	  <i class="fa fa-circle fa-stack-2x"></i>
-						    	  <i class="fa fa-cubes fa-stack-1x fa-inverse"></i>
-						    	</span> Projects</h4>
-					      <p>Complete a project every two weeks for a top rate portfolio.</p>
-						  </div>
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="panel panel-default">
-							<div class="panel-body blue-font">
-						    <h4>
-						    	<span class="fa-stack fa-lg">
-						    	  <i class="fa fa-circle fa-stack-2x"></i>
-						    	  <i class="fa fa-tablet fa-stack-1x fa-inverse"></i>
-						    	</span> UX and Design</h4>
-					      <p>Front end programming while keeping the user in mind.</p>
-						  </div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-6">
-						<div class="panel panel-default">
-							<div class="panel-body blue-font">
-						    <h4>
-						    	<span class="fa-stack fa-lg">
-						    	  <i class="fa fa-circle fa-stack-2x"></i>
-						    	  <i class="fa fa-puzzle-piece fa-stack-1x fa-inverse"></i>
-						    	</span> Application Architecture</h4>
-					      <p>Understand how all the pieces of an application fit together.</p>
-						  </div>
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="panel panel-default">
-							<div class="panel-body blue-font">
-						    <h4>
-						    	<span class="fa-stack fa-lg">
-						    	  <i class="fa fa-circle fa-stack-2x"></i>
-						    	  <i class="fa fa-cogs fa-stack-1x fa-inverse"></i>
-						    	</span> SysOps</h4>
-					      <p>Managing cloud based application infrastructure and resources.</p>
-						  </div>
-						</div>
-					</div>
-				</div>
-				
-				<br>
-				
-				<div class="section-buttons">
-					<a href="#" class="btn-block btn-block-darknight" data-toggle="modal" data-target="#register">Download Info Pack</a>  <a href="/fast-track-application" class="btn-block btn-block-dirtygold">Apply Now</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<div class="modal fade" id="twelve" tabindex="-1" role="dialog" aria-labelledby="registerLabel" aria-hidden="true">
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-				<h3 class="modal-title" id="registerLabel"><i class="fa fa-info-circle"></i> What's included - 12 week programme</h3>
-				<br>
-			</div>
-			<div class="modal-body blue-font">
-
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="row">
-							<div class="col-md-2">
-								<span class="fa-stack fa-2x">
-					  			<i class="fa fa-circle fa-stack-2x"></i>
-			  					<strong class="fa-stack-1x  fa-inverse">01</strong>
-								</span>
-							</div>
-							<div class="col-md-10">
-								<p><strong>Apple MacBook Air 13"</strong><br>
-								The ultimate developer machine</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="row">
-							<div class="col-md-2">
-								<span class="fa-stack fa-2x">
-					  			<i class="fa fa-circle fa-stack-2x"></i>
-			  					<strong class="fa-stack-1x  fa-inverse">02</strong>
-								</span>
-							</div>
-							<div class="col-md-10">
-								<p><strong>Amazing, industry experienced teachers.</strong><br>
-				Paid well to leave their current gigs and share their knowledge with you</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="row">
-							<div class="col-md-2">
-								<span class="fa-stack fa-2x">
-					  			<i class="fa fa-circle fa-stack-2x"></i>
-			  					<strong class="fa-stack-1x  fa-inverse">03</strong>
-								</span>
-							</div>
-							<div class="col-md-10">
-								<p><strong>High tech learning environment</strong><br>
-				A campus that makes you want to come to class</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="row">
-							<div class="col-md-2">
-								<span class="fa-stack fa-2x">
-					  			<i class="fa fa-circle fa-stack-2x"></i>
-			  					<strong class="fa-stack-1x  fa-inverse">04</strong>
-								</span>
-							</div>
-							<div class="col-md-10">
-								<p><strong>Perks galore</strong><br>
-				Weekly team lunches, Friday drinks</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="row">
-							<div class="col-md-2">
-								<span class="fa-stack fa-2x">
-					  			<i class="fa fa-circle fa-stack-2x"></i>
-			  					<strong class="fa-stack-1x  fa-inverse">05</strong>
-								</span>
-							</div>
-							<div class="col-md-10">
-								<p><strong>Industry events and excursions</strong><br>
-				Visit tech startup offices and mingle with the startup crowd</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				
-			</div>
-		</div>
-	</div>
+        </div>
+    </div>
 </div>
-<div class="modal fade" id="included" tabindex="-1" role="dialog" aria-labelledby="registerLabel" aria-hidden="true">
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-				<h3 class="modal-title" id="registerLabel"><i class="fa fa-info-circle"></i> What's included - 24 week programme</h3>
-				<br>
-			</div>
-			<div class="modal-body blue-font">
 
-			<p><span class="bold">Same as 12 week programme, plus:</span></p>
+ <header class="ct-sec-header text-center ct-u-paddingTop35 ct-u-paddingBottom30 ">
+               <h2 class="ct-sec-header-title">Change your life in 24 weeks</h2>
+           </header>
 
-			<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="row">
-							<div class="col-md-2">
-								<span class="fa-stack fa-2x">
-					  			<i class="fa fa-circle fa-stack-2x"></i>
-			  					<strong class="fa-stack-1x  fa-inverse">06</strong>
-								</span>
-							</div>
-							<div class="col-md-10">
-								<p><strong>Full recruitment support</strong><br>
-			We make it our mission to secure your dream position</p>
-							</div>
-						</div>
-					</div>
-				</div>
+        <div class="ct-mediaSection-inner ct-u-paddingBottom60">
+          <div class="container">
 
-			<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="row">
-							<div class="col-md-2">
-								<span class="fa-stack fa-2x">
-					  			<i class="fa fa-circle fa-stack-2x"></i>
-			  					<strong class="fa-stack-1x  fa-inverse">07</strong>
-								</span>
-							</div>
-							<div class="col-md-10">
-								<p><strong>12 weeks of bonus experience and master classes</strong><br>
-			Working with potential employers and non-profits with continued guidance and classes from Fast Track teachers.</p>
-							</div>
-						</div>
-					</div>
-				</div>
+            <div class="row ct-pricing">
 
-			<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="row">
-							<div class="col-md-2">
-								<span class="fa-stack fa-2x">
-					  			<i class="fa fa-circle fa-stack-2x"></i>
-			  					<strong class="fa-stack-1x  fa-inverse">08</strong>
-								</span>
-							</div>
-							<div class="col-md-10">
-								<p><strong>Interview preparation sessions</strong><br>
-			Coding challenges and practise interviews to help you prepare</p>
-							</div>
-						</div>
-					</div>
-				</div>
+                <section class="col-sm-6">
 
-			<!-- <div class="panel panel-default">
-					<div class="panel-body">
-						<div class="row">
-							<div class="col-md-2">
-								<span class="fa-stack fa-2x">
-					  			<i class="fa fa-circle fa-stack-2x"></i>
-			  					<strong class="fa-stack-1x  fa-inverse">09</strong>
-								</span>
-							</div>
-							<div class="col-md-10">
-								<p><strong>The guarantee</strong><br>
-			We guarantee you'll have a well paid developer position within 6 months of course completion - or your money back.</p>
-							</div>
-						</div>
-					</div>
-				</div> -->
-			</div>
-			
+                    <h4 class="ct-pricing-sep text-uppercase text-center dirty-gold white-text">
+                        What is Fast Track?
+                    </h4>
 
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				
-			</div>
-		</div>
-	</div>
+                    <div class="ct-pricing-content">
+                        <p class="main-box">Coder Factory's Fast Track is an <span style="font-weight:700;font-size:1em;">accelerated 24 week programme</span> that teaches you the skills for an exciting career in the tech industry. It's also ideal for those looking to launch their own web app or become a tech co-founder.</p>
+                    </div>
+
+                </section>
+
+                <section class="col-sm-6">
+
+                    <h4 class="ct-pricing-sep text-uppercase text-center dirty-gold white-text">
+                        Never coded before?
+                    </h4>
+
+                    <div class="ct-pricing-content">
+
+                        <p class="main-box">No problem! Fast Track assumes no prior coding knowledge. Our programme combines daily workshops with real life coding challenges, to provide you with the skills and knowledge to take you from a complete beginner to an accomplished full-stack developer. </p>
+                    </div>
+
+                </section>
+
+
+            </div><!-- /row -->
+
+                        <div class="row ct-pricing">
+
+                <section class="col-sm-6">
+
+                    <h4 class="ct-pricing-sep text-center text-uppercase dirty-gold white-text">
+                        What can i expect?
+                    </h4>
+
+                    <div class="ct-pricing-content">
+
+                        <p class="main-box">You'll learn to code in Ruby on Rails, the fastest growing web application framework. You'll also learn HTML5 and CSS3, along with NodeJS and AngularJS, the most popular Javascript technologies. <br><br>
+  You'll be coding using Agile development methodologies from day 1 in a fun and challenging environment.
+</p>
+                    </div>
+
+                </section>
+
+                <section class="col-sm-6">
+
+                    <h4 class="ct-pricing-sep text-center text-uppercase dirty-gold white-text">
+                        Fast Track options?
+                    </h4>
+
+                    <div class="ct-pricing-content">
+
+                        <p class="main-box">Fast Track offers 2 programme strcutures:<br>
+<span style="font-weight:700;font-size:1em;">12 week programme:</span> Learn faster in our small classrooms, and benefit from the experience of our world class teachers. <br>
+<span style="font-weight:700;font-size:1em;">24 week programme:</span> Continue to learn in our master classes. Work on real projects for potential employers, or work on your own app idea with the help of our teachers.
+</p>
+                    </div>
+
+                </section>
+
+
+            </div><!-- /row -->
+
+          </div><!-- /container -->
+    </div>
+
+
+
+    <div class="ct-mediaSection-inner ct-u-paddingBoth60 ct-u-bgGrey">
+            <div class="ct-mediaSection-inner">
+              <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-11 col-sm-offset-1">
+                      <div class="ct-iconBox ct-iconBox--default ct-iconBox--left text-center ct-iconBox--bgDark animated" data-fx="fadeInUp" data-time="0">
+                          <div class="ct-iconBox-icon ct-iconBox-icon--default ct-iconBox-icon--left dirty-gold">
+                            <i class="fa fa-graduation-cap"></i>
+                            </div>
+                            <div class="ct-iconBox-content ct-iconBox-content--defaul ct-u-paddingMoreL text-left">
+                                <h4 class="ct-iconBox-title">
+                                  Premium Quality, The Best Teachers
+                                </h4>
+                              <p>
+                                Learning to code is a journey, and we recognise that everyone learns in different ways. We've invested in the best teachers and incentivised them well. We've organised everything around ensuring a collaborative learning environment, one where you can learn with your fellow classmates but that also allows personalisation to suit your needs.  <br>
+                                We're based in a newly renovated premise in the creative and technology hub of Surry Hills, Sydney. You'll enjoy coming to class for the learning opportunities, the challenges and the chance to mix with interesting people. 
+                                  </p>
+                                  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-11 col-sm-offset-1">
+                      <div class="ct-iconBox ct-iconBox--default ct-iconBox--right ct-iconBox--bgDark text-center animated" data-fx="fadeInUp" data-time="0">
+                          <div class="ct-iconBox-icon ct-iconBox-icon--default ct-iconBox-icon--right dirty-gold ">
+                            <i class="fa fa-laptop"></i>
+                            </div>
+                            <div class="ct-iconBox-content ct-iconBox-content--default ct-u-paddingMoreR text-right">
+                                <h4 class="ct-iconBox-title">
+                                  Real Experience
+                                </h4>
+                              <p>
+                                Unlike some other schools, we put a huge focus on teaching relevant skills. Classroom learning is combined with projects that help you gain practical experience using the tools and methodologies of a professional developer. During both the 12 week and 24 week programmes you'll get to build a portfolio of applications that both help you learn and also enable you to showcase your skills. Coder Factory is very active in the local technology and startup communities, which benefits our students greatly. We work alongside our industry contacts to ensure our courses are up to date and relevant. Our network is your network. 
+                                  </p>
+                                </p>
+                                <p>
+                                
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-11 col-sm-offset-1">
+                      <div class="ct-iconBox ct-iconBox--default ct-iconBox--left ct-iconBox--bgDark text-center animated" data-fx="fadeInUp" data-time="0">
+                          <div class="ct-iconBox-icon ct-iconBox-icon--secondary ct-iconBox-icon--left dirty-gold">
+                              <i class="fa fa-tasks"></i>
+                            </div>
+                            <div class="ct-iconBox-content ct-iconBox-content--default  ct-u-paddingMoreL text-left">
+                                <h4 class="ct-iconBox-title">
+                                  Full Stack Skills
+                                </h4>
+                              <p>
+                                You'll graduate as a proficient coder, with skills in UX, database design, application architecture and sysops.  Whether you choose to work as a developer in an exciting new tech startup or an established enterprise, or become a tech co-founder in your own startup, you'll be confident that you have the skills and network to succeed. 
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+              </div><!-- /container -->
+            </div><!-- /ct-mediaSection-inner -->
+        </div>
+
+
+
+    <div class="ct-u-paddingBoth60">
+         <div class="inner-sec">
+           <div class="container">
+
+           <header class="ct-sec-header text-center ct-u-paddingTop35 ct-u-paddingBottom30 ">
+               <h2 class="ct-sec-header-title">Our partners</h2>
+           </header>
+
+               <div class="flexslider ct-js-flexslider ct-flexslider--chevronDark ct-js-flexslider-noMargin ct-u-navArrow-marginTop-80" data-controlnav="false" data-directionnav="true" data-minitems="1" data-maxitems="4"
+                    data-move="1" data-itemwidth="260" data-itemmargin="0">
+                   <ul class="slides partnerSlider">
+                       <li>
+                           <a href="http://www.lonelyplanet.com/" target="_blank" class="ct-teamBox ct-teamBox--small">
+                               <div>
+                               <img src="<%= asset_path 'lonelyplanet.png' %>" alt="Lonely Planet">
+                               </div>
+                           </a>
+                       </li>
+                        <li>
+                           <a href="http://www.sitepoint.com/" target="_blank" class="ct-teamBox ct-teamBox--small">
+                               <div>
+                               <img src="<%= asset_path 'sitepoint.png' %>" alt="Sitepoint">
+                               </div>
+                           </a>
+                       </li>
+                       <li>
+                           <a href="http://www.codehire.com/" target="_blank" class="ct-teamBox ct-teamBox--small">
+                               <div>
+                               <img src="<%= asset_path 'codehire.png' %>" alt="Code Hire">
+                               </div>
+                           </a>
+                       </li>
+                        <li>
+                           <a href="http://www.getvero.com/" target="_blank" class="ct-teamBox ct-teamBox--small">
+                               <div>
+                               <img src="<%= asset_path 'getvero.png' %>" alt="Vero">
+                               </div>
+                           </a>
+                       </li>
+                       <li>
+                           <a href="https://learnable.com/" target="_blank" class="ct-teamBox ct-teamBox--small">
+                               <div>
+                               <img src="<%= asset_path 'learnable.jpg' %>" alt="Learnable">
+                               </div>
+                           </a>
+                       </li>
+                        <li>
+                           <a href="https://flippa.com/" target="_blank" class="ct-teamBox ct-teamBox--small">
+                               <div>
+                               <img src="<%= asset_path 'flippa.jpg' %>" alt="Flippa">
+                               </div>
+                           </a>
+                       </li>
+                        <li>
+                           <a href="https://zoak.solutions/" target="_blank" class="ct-teamBox ct-teamBox--small">
+                               <div>
+                               <img src="<%= asset_path 'Zoak.png' %>" alt="Zoak">
+                               </div>
+                           </a>
+                       </li>
+                        <li>
+                           <a href="http://www.dreamscapenetworks.com/" target="_blank" class="ct-teamBox ct-teamBox--small">
+                               <div>
+                               <img src="<%= asset_path 'dreamscape.png' %>" alt="Dreamscape">
+                               </div>
+                           </a>
+                       </li>
+                        <li>
+                           <a href="http://www.locomote.com/" target="_blank" class="ct-teamBox ct-teamBox--small">
+                               <div>
+                               <img src="<%= asset_path 'locomote.jpg' %>" alt="Locomote">
+                               </div>
+                           </a>
+                       </li>
+                   </ul>
+               </div>
+
+          </div><!-- /container -->
+        </div><!-- /ct-mediaSection-inner -->
+      </div>
+
+
+
+
+           <header class="ct-sec-header text-center ct-u-paddingTop35 ct-u-paddingBottom30 ">
+               <h2 class="ct-sec-header-title">The Programme</h2>
+           </header>
+
+        <div class="ct-mediaSection-inner ct-u-paddingBottom60">
+          <div class="container">
+
+            <div class="row ct-pricing">
+
+                <section class="col-sm-6">
+                    <h4 class="ct-pricing-sep text-center text-uppercase dirty-gold">
+                        12 week programme
+                    </h4>
+
+                    <div class="ct-pricing-content">
+                        <ul class="ct-pricing-content-ul">
+                            <li>7th April - 26th June 2015</li>
+                            <li>Monday - Friday: 10am - 6pm</li>
+                            <li>Intensive classroom learning (480 hours)</li>
+                            <li>AUD $14,200</li>
+                            <br>
+                            <li>Included:</li>
+                            <li class="ct-pricing-content-ul-activesep">Apple MacBook Air 13" * </li>
+                            <li class="ct-pricing-content-ul-activesep">Amazing, industry experienced teachers.</li>
+                            <li class="ct-pricing-content-ul-activesep">High tech learning environment</li>
+                            <li class="ct-pricing-content-ul-activesep">Industry events and excursions</li>
+                            <li><br>* $1,000 discount if you have your own MacBook</li>
+                        </ul>
+                    </div>
+
+                </section>
+
+                <section class="col-sm-6">
+                    <h4 class="ct-pricing-sep text-center text-uppercase dirty-gold">
+                        24 week programme
+                    </h4>
+                    <div class="ct-pricing-content">
+                        <ul class="ct-pricing-content-ul">
+                            <li>7th April - 21st Sept 2015</li>
+                            <li>Monday - Friday: 10am - 6pm</li>
+                            <li>Intensive classroom learning (960 hours)</li>
+                            <li>AUD $21,900</li>
+                            <br>
+                            <li>Included:</li>
+                            <li class="ct-pricing-content-ul-activesep">Everything from the 12 week programme, plus </li>
+                            <li class="ct-pricing-content-ul-activesep">Full recruitment support</li>
+                            <li class="ct-pricing-content-ul-activesep">12 weeks of bonus experience and master classes</li>
+                            <li class="ct-pricing-content-ul-activesep">Interview preparation sessions</li>
+                            <li><br><br></li>
+                        </ul>
+                    </div>
+
+                </section>
+
+
+            </div><!-- /row -->
+
+          </div><!-- /container -->
+    </div>
+
+
+
+
+   <div class="ct-u-paddingTop50 ct-u-bgGrey">
+      <div class="container">
+         <header class="ct-sec-header text-center ct-u-paddingTop35 ct-u-paddingBottom30">
+               <h2 class="ct-sec-header-title">What you'll Learn</h2>
+           </header>
+           <br>
+           <div class="row">
+                <div class="col-sm-4">
+                    <div class="ct-iconBox ct-iconBox--left">
+                        <div class="ct-iconBox-icon ct-iconBox-icon--circle ct-iconBox-icon--left dirty-gold">
+                            <i class="fa fa-fighter-jet"></i>
+                        </div>
+                        <div class="ct-iconBox-content">
+                            <h4 class="ct-iconBox-title text-uppercase ct-fw-900">
+                              Agile Methodology
+                            </h4>
+                            <p>
+                              Sprint Based Learning means you're an expert by graduation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="ct-iconBox ct-iconBox--left">
+                        <div class="ct-iconBox-icon ct-iconBox-icon--circle ct-iconBox-icon--left dirty-gold">
+                            <i class="fa fa-list"></i>
+                        </div>
+                        <div class="ct-iconBox-content">
+                            <h4 class="ct-iconBox-title text-uppercase ct-fw-900">
+                              Javascript Frameworks
+                            </h4>
+                            <p>
+                              Learn the hottest JavaScript frameworks - AngularJS + NodeJS.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+              <div class="col-sm-4">
+                    <div class="ct-iconBox ct-iconBox--left">
+                        <div class="ct-iconBox-icon ct-iconBox-icon--circle ct-iconBox-icon--left dirty-gold">
+                          <i class="fa fa fa-trophy"></i>
+                        </div>
+                        <div class="ct-iconBox-content">
+                            <h4 class="ct-iconBox-title text-uppercase ct-fw-900">
+                              Team Work
+                            </h4>
+                            <p>
+                              Your team competes for code quality glory every day.
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+            </div><!-- /row -->
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="ct-iconBox ct-iconBox--left">
+                        <div class="ct-iconBox-icon ct-iconBox-icon--circle ct-iconBox-icon--left dirty-gold">
+                            <i class="fa fa-code"></i>
+                        </div>
+                        <div class="ct-iconBox-content">
+                            <h4 class="ct-iconBox-title text-uppercase ct-fw-900">
+                              Web Programming
+                            </h4>
+                            <p>
+                              Ruby on Rails mastery is your ticket to developer fame and fortune.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="ct-iconBox ct-iconBox--left">
+                        <div class="ct-iconBox-icon ct-iconBox-icon--circle ct-iconBox-icon--left dirty-gold">
+                            <i class="fa fa-cubes"></i>
+                        </div>
+                        <div class="ct-iconBox-content">
+                            <h4 class="ct-iconBox-title text-uppercase ct-fw-900">
+                              Projects
+                            </h4>
+                            <p>
+                              Complete a project every two weeks for a top rate portfolio.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="ct-iconBox ct-iconBox--left">
+                        <div class="ct-iconBox-icon ct-iconBox-icon--circle ct-iconBox-icon--left dirty-gold">
+                            <i class="fa fa-tablet"></i>
+                        </div>
+                        <div class="ct-iconBox-content">
+                            <h4 class="ct-iconBox-title text-uppercase ct-fw-900">
+                              UX and design
+                            </h4>
+                            <p>
+                              Front end programming while keeping the user in mind.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /row -->
+                        <div class="row">
+                <div class="col-sm-4">
+                    <div class="ct-iconBox ct-iconBox--left">
+                        <div class="ct-iconBox-icon ct-iconBox-icon--circle ct-iconBox-icon--left dirty-gold">
+                            <i class="fa fa-puzzle-piece"></i>
+                        </div>
+                        <div class="ct-iconBox-content">
+                            <h4 class="ct-iconBox-title text-uppercase ct-fw-900">
+                              Application Architecture
+                            </h4>
+                            <p>
+                              Understand how all the pieces of an application fit together.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="ct-iconBox ct-iconBox--left">
+                        <div class="ct-iconBox-icon ct-iconBox-icon--circle ct-iconBox-icon--left dirty-gold">
+                            <i class="fa fa-cogs"></i>
+                        </div>
+                        <div class="ct-iconBox-content">
+                            <h4 class="ct-iconBox-title text-uppercase ct-fw-900">
+                              Sysops
+                            </h4>
+                            <p>
+                              Managing cloud based application infrastructure and resources.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="ct-iconBox ct-iconBox--left">
+                        <div class="ct-iconBox-icon ct-iconBox-icon--circle ct-iconBox-icon--left dirty-gold">
+                            <i class="fa fa-globe"></i>
+                        </div>
+                        <div class="ct-iconBox-content">
+                            <h4 class="ct-iconBox-title text-uppercase ct-fw-900">
+                              HTML and CSS
+                            </h4>
+                            <p>
+                              The bones wrapped around every type of Web App.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /row -->
+
+          </div><!-- /container -->
 </div>
-<!-- Section: Opportunities -->
-<section class="vibrant">
-		<div class="row">
-			<div class="col-xs-12 col-lg-offset-2 col-lg-8">
-				<h2 class="section-heading">Choose your own adventure</h2>
-				<p class="lead text-center" style="color:white;">The world is your oyster when you're a coder.<br>There are amazing opportunities awaiting you when you graduate from the Fast Track programme.</p>
-				<br>
-				<!-- <hr> -->
-				<div class="row">
-					<div class="col-md-6">
-						<div class="panel panel-default">
-							<div class="panel-heading text-center">
-						    <h3>
-									<span class="fa-stack">
-									    <i class="fa fa-circle-thin fa-stack-2x"></i>
-									    <strong class="fa-stack-1x fa-stack-text">1</strong>
-									  </span>
-									Be hired by a tech startup</h3>
-						  </div>
-						  <div class="panel-body blue-font">
-						    <p class="panel-text">The demand for coders is huge in the tech startup scene. Whether you want to work for an established startup company, or become a tech co-founder, you will be spoiled for choice. Work in Australia in the burgeoning tech sector, or be snapped up by startups in the US, Europe and Asia.</p>
-						  </div>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="panel panel-default">
-							<div class="panel-heading text-center">
-						    <h3>
-									<span class="fa-stack">
-									    <i class="fa fa-circle-thin fa-stack-2x"></i>
-									    <strong class="fa-stack-1x fa-stack-text">2</strong>
-									  </span>
-									Be a digital nomad</h3>
-						  </div>
-						  <div class="panel-body blue-font">
-
-								<p class="panel-text">Travel the world, freelancing here, contracting there. Join thousands of other coders finding great places to live by the beach in exciting destinations all while coding for someone on the other side of the world. Your location doesn't matter anymore.<br>Work from anywhere. Live the dream.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-
-				
-				<div class="row">
-					<div class="col-md-6">
-						<div class="panel panel-default">
-							<div class="panel-heading text-center">
-						    <h3>
-									<span class="fa-stack">
-									    <i class="fa fa-circle-thin fa-stack-2x"></i>
-									    <strong class="fa-stack-1x fa-stack-text">3</strong>
-									  </span>
-									Build your own startup</h3>
-						  </div>
-						  <div class="panel-body blue-font">
-						    <p class="panel-text">You will have the skills, knowledge and network to create your own tech startup. Graduates of Coder Factory are out there launching their startups now.</p>
-						  </div>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="panel panel-default">
-							<div class="panel-heading text-center">
-						    <h3>
-									<span class="fa-stack">
-									    <i class="fa fa-circle-thin fa-stack-2x"></i>
-									    <strong class="fa-stack-1x fa-stack-text">4</strong>
-									  </span>
-									Teach others how to code</h3>
-						  </div>
-						  <div class="panel-body blue-font">
-
-								<p class="panel-text">As coding starts to go mainstream, the demand for passionate and knowledgeable teachers is growing. It's a very rewarding career choice, take it from us :)</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="section-buttons">
-					<a href="#" class="btn-block btn-block-darknight" data-toggle="modal" data-target="#register">Download Info Pack</a>  <a href="/fast-track-application" class="btn-block btn-block-dirtygold">Apply Now</a>
-				</div>
-				
-			</div>
-		</div>
-</section>
-
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52ee398713b80ae1" async="async"></script>

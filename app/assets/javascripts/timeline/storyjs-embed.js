@@ -137,8 +137,8 @@ function createStoryJS(e, t) {
 
 	var n, r, i, s, o = !1, u = "2.24", a = "1.7.1", f = "", l = {timeout: "", checks: 0, finished: !1, js: !1, css: !1, jquery: !1, has_jquery: !1, language: !1, font: {css: !1, js: !1}}, c = {base: embed_path, css: embed_path + "css/", js: embed_path + "js/", locale: embed_path + "js/locale/", jquery: "//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js", font: {google: !1, css: embed_path + "css/themes/font/", js: "//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"}}, h = {version: u, debug: !1, type: "timeline", id: "storyjs", embed_id: "timeline-embed", embed: !0, width: "100%", height: "100%", source: "https://docs.google.com/spreadsheet/pub?key=0Agl_Dv6iEbDadFYzRjJPUGktY0NkWXFUWkVIZDNGRHc&output=html", lang: "en", font: "default", css: c.css + "timeline.css?" + u, js: "", api_keys: {google: "", flickr: "", twitter: ""}, gmap_key: ""}, p =
 					[
-						{name: "clavo-NewsCycle", google: ["News+Cycle:400,700:latin", "clavo:400,700,900:latin"]},
-						{name: "NewsCycle-clavo", google: ["News+Cycle:400,700:latin", "clavo:300,400,700:latin"]},
+						{name: "freight-text-pro-NewsCycle", google: ["News+Cycle:400,700:latin", "freight-text-pro:400,700,900:latin"]},
+						{name: "NewsCycle-freight-text-pro", google: ["News+Cycle:400,700:latin", "freight-text-pro:300,400,700:latin"]},
 						{name: "PoiretOne-Molengo", google: ["Poiret+One::latin", "Molengo::latin"]},
 						{name: "Arvo-PTSans", google: ["Arvo:400,700,400italic:latin", "PT+Sans:400,700,400italic:latin"]},
 						{name: "PTSerif-PTSans", google: ["PT+Sans:400,700,400italic:latin", "PT+Serif:400,700,400italic:latin"]},

@@ -1,4 +1,4 @@
-<div class="ct-mediaSection ct-u-bgBlack ct-u-bgdark-lightfont overflowHidden" data-stellar-background-ratio="0.2" data-height="230" data-type="parallax" data-bg-image="assets/images/content/slider4.jpg" data-bg-image-mobile="assets/images/content/slider4.jpg">
+<div class="ct-mediaSection ct-u-bgBlack ct-u-bgdark-lightfont overflowHidden" data-stellar-background-ratio="0.2" data-height="330" data-type="parallax" data-bg-image="<%= asset_path 'defaulthead.jpg' %>" data-bg-image-mobile="<%= asset_path 'slider4.jpg' %>">
     <div class="ct-mediaSection-inner">
         <div class="container">
             <h3 class="ct-breadcrumbHeader text-uppercase pull-left">Blog</h3>
@@ -18,7 +18,7 @@
 	                     <div class="ct-blog ct-blog--imageTop ct-blog--text">
 	                       <div class="ct-blog-content">
 	                         <div class="entry-meta clearfix">
-	                             <span class="cat-links pull-left"><i class="fa fa-<%= post.post_category.icon if post.post_category %>"></i><a href="11-actly-blog-single.html"><%= post.post_category.name if post.post_category %></a></span>
+	                             <span class="cat-links pull-left"><i class="fa fa-<%= post.post_category.icon if post.post_category %>"></i><a href="<%= blog_filter_path(post_category: post.post_category) %>"><%= post.post_category.name if post.post_category %></a></span>
 	                             <span class="entry-date pull-right"><%= post.published_date.strftime('%e %B, %Y') %></span>
 	                         </div>
 		                        <a  href="/posts/<%= post.slug %>" class="ct-blog-imageContainer">
@@ -44,83 +44,18 @@
                   
 
                   </div><!-- /row -->
-
-                  <ul class="pagination">
-                    <li class="disabled"><span><i class="fa fa-angle-left"></i></span></li>
-                    <li class="active"><a href="#">1 </a></li>
-                    <li><a href="#">2 </a></li>
-                    <li><a href="#">3 </a></li>
-                    <li><a href="#">4 </a></li>
-                    <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                  </ul>
+                  <div class="digg_pagination">
+                    <%= will_paginate @posts %>
+                  </div>
+                 
 
                 </div><!-- /col-md-9 -->
 
 
-                <div class="col-md-3 ct-colSidebar ct-u-paddingBoth60">
-
-                   <div class="ct-colSidebar-container">
-
-                     <!-- <aside class="ct-widget ct-widget-sidebar">
-                       <form class="ct-widget-search" role="search">
-                          <div class="form-group">
-                              <input type="text" class="form-control search-input" placeholder="Search for...">
-                          </div>
-                           <button type="submit" class="btn btn-search"><i class="fa fa-search"></i> </button>
-                      </form>
-                     </aside> -->
-
-                     <aside class="ct-widget ct-widget-sidebar">
-                       <h4 class="ct-widget-title">Popular articles</h4>
-                       <% @popular_posts.each do |popular_post| %>
-	                       <article class="blog-item ct-blogItem--sidebar">
-                           <div class="media stdbox">
-                               <a class="pull-left blog-item-cont" href="11-actly-blog-single.html">
-                                   <img class="media-object" src="<%= asset_path popular_post.image %>" alt=" ">
-                               </a>
-                               <div class="media-body">
-                                 <p class="entry-text"><a href="/<%= popular_post.slug %>" title="<%= popular_post.title %>"><%= popular_post.title %></a></p>
-                                 <div class="entry-meta">
-                                    <span class="entry-date"><%= popular_post.published_date.strftime('%e %B, %Y') %></span>
-                                 </div>
-                               </div>
-                           </div><!-- /media stdbox -->
-                       </article>
-                      <% end %>
-
-                        
-
-                     </aside>
+                <%= render 'layouts/blog_sidebar' %>
 
 
-                     <aside class="ct-widget ct-widget-sidebar">
-                       <h4 class="ct-widget-title">Categories</h4>
-                       <ul>
-                       	<% @post_categories.each do |post_category| %>
-                           <li><span style="color:#3498DB"><i class="fa fa-<%= post_category.icon %>"></i></span> &nbsp;<%= link_to post_category.name, blog_path(post_category: post_category) %></li>
-                        <% end %>
-                       </ul>
-                     </aside>
-
-                     <aside class="ct-widget ct-widget-sidebar">
-                        <h4 class="ct-widget-title">Tags</h4>
-                        <ul>
-                        	<% @tags.each do |tag| %>
-                            <li><%= link_to blog_path(tag: tag) do %><%= tag %> <span class="badge pull-right"><%= tag.taggings_count %></span><% end %></li>
-                          <% end %>
-                        </ul>
-                      </aside>
-
-                   </div>
-
-                 </div><!-- /col-md-3 -->
-
-               </div><!-- /row -->
-           </div><!-- /container -->
-     </div>
-
-
-    <div class="ct-mediaSection ct-u-bgDarkgrey" data-stellar-background-ratio="0.2" data-height="420" data-type="parallax" data-bg-image="assets/images/content/newsletter-bg.jpg" data-bg-image-mobile="assets/images/content/newsletter-bg.jpg">
+    <div class="ct-mediaSection ct-u-bgDarkgrey" data-stellar-background-ratio="0.2" data-height="420" data-type="parallax" data-bg-image="<%= asset_path 'keyboard.jpg' %>" data-bg-image-mobile="<%= asset_path 'keyboard.jpg' %>">
        <div class="ct-mediaSection-inner">
          <div class="container">
 

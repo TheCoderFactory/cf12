@@ -5,10 +5,10 @@ $light:										      	   		 #FFF;
 $darknight:										     		#2C3E50;
 $midnight:										     	   	 #333;
 $midnight-light: 			 lighten($midnight, 50);
-$dirty-gold:													#DBC034;
+$dirty-gold:													#FF6A26;
 $calm:                                #3498DB;
 $subtle:                              #F8F8F8;
-$slime:                               #48A85A;
+$slime:                               #1ABC9C;
 $burntsea:                            #487AA8;
 $vibrant:                             #D44F99;
 
@@ -16,7 +16,7 @@ $vibrant:                             #D44F99;
 // Typography
 //--------------------------------------------
 
-$body-font: 					 clavo, garamond, serif;
+$body-font: 					 freight-text-pro, garamond, serif;
 $heading-font: 	futura-pt, roboto, sans-serif;
 
 $font-size-xxxlarge:                   2.95em;

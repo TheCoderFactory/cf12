@@ -1,9 +1,12 @@
-<div class="ct-mediaSection ct-u-bgWhite ct-u-bgdark-lightfont overflowHidden" data-stellar-background-ratio="0.2" data-height="330" data-type="parallax" data-bg-image="<%= asset_path 'desk.jpg' %>" data-bg-image-mobile="assets/images/content/slider4.jpg">
-    <div class="ct-mediaSection-inner">
-        <div class="container">
-            <h3 class="ct-breadcrumbHeader text-uppercase pull-left">Web design workshop</h3>
-        </div><!-- /container -->
-    </div><!-- /ct-mediaSection-inner -->
+<div class="ct-mediaSection ct-u-bgWhite ct-u-bgdark-lightfont overflowHidden" data-stellar-background-ratio="0.2" data-height="430" data-type="parallax" data-bg-image="<%= asset_path 'webdev.jpg' %>" data-bg-image-mobile="<%= asset_path 'slider4.jpg' %>">
+  <div class="ct-mediaSection-inner">
+    <div class="container">
+      <h3 class="ct-breadcrumbHeader text-uppercase pull-left">
+        Workshops<br>
+        <span style="font-size:25px;color:#1f2b3a;">Learn Fast. Have Fun.</span>
+      </h3>
+    </div><!-- /container -->
+  </div><!-- /ct-mediaSection-inner -->
 </div>
 
 
@@ -14,11 +17,11 @@
 
         <div class="ct-tabs ct-tabs--witharrow">
             <ul class="nav nav-tabs nav-justified ct-mytab-js" role="tablist">
-                <li class="active"><a href="webdesign.html" role="tab" data-toggle="tab">Web Design</a></li>
-                <li><a href="wordpress.html" role="tab" data-toggle="tab">Wordpress</a></li>
-                <li><a href="learntocode.html" role="tab" data-toggle="tab">Learn To Code</a></li>
-                <li><a href="teenslearntocode" role="tab" data-toggle="tab">Highschool: Coding</a></li>
-                <li><a href="technologyforteachers" role="tab" data-toggle="tab">Tech for Teachers</a></li>
+                <li class="<%= 'active' if @product.permalink == 'web-design-weekend-workshop' %>"><a href="/courses/workshops/web-design-weekend-workshop">Web Design</a></li>
+                <li class="<%= 'active' if @product.permalink == 'wordpress-weekend-workshop' %>"><a href="/courses/workshops/wordpress-weekend-workshop">Wordpress</a></li>
+                <li class="<%= 'active' if @product.permalink == 'learn-to-code-weekend-workshop' %>"><a href="/courses/workshops/learn-to-code-weekend-workshop">Learn To Code</a></li>
+                <li class="<%= 'active' if @product.permalink == 'learn-to-code-for-highschoolers' %>"><a href="/courses/workshops/learn-to-code-for-highschoolers">Highschool: Coding</a></li>
+                <li class="<%= 'active' if @product.permalink == 'technology-for-teachers-workshop' %>"><a href="/courses/workshops/technology-for-teachers-workshop">Tech for Teachers</a></li>
             </ul>
         </div>
 
@@ -41,8 +44,13 @@
 
                     <div class="ct-singleCourse-introLinks clearfix">
                         <div class="entry-meta pull-left">
-                            <span class="cat-links ct-u-borderRight"><i class="fa fa-calendar"></i><%= @product.name %></span>
-                            <span class="entry-date ct-u-borderRight"><%= @next_course.start_date.strftime('%d %B') %></span>
+                            <span class="cat-links ct-u-borderRight slime-text">
+                            <i class="fa fa-forward"></i> <%= @product.name %>
+                            </span>
+                            <span class="entry-date ct-u-borderRight slime-text">
+                              <i class="fa fa-calendar"></i>
+                              <%= @next_course.start_date.strftime('%d %B') %>
+                            </span>
                         </div>
                         <a href="teachers.html" class="by-author pull-left">
                             <img src="<%= asset_path 'matt.jpg' %>" alt="author img">
@@ -59,7 +67,7 @@
                            <i class="fa fa-star"></i>
                        </span> -->
                                 <a href="#testimonials" class="ct-readrevievsLink ct-u-displayInlineBlock">Read reviews</a>
-                                <a href="#" class="btn btn-primary btn-sm ct-u-displayInlineBlock">Book Now</a>
+                                <a href="#" class="btn btn-slime btn-sm ct-u-displayInlineBlock">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -71,240 +79,7 @@
 
 
 
-        <div class="ct-mediaSection-inner ct-u-paddingBoth60">
-          <div class="container">
-
-            <div class="row ct-pricing">
-
-                <section class="col-sm-6">
-
-                    <h4 class="ct-pricing-sep text-center text-uppercase">
-                        WHY?
-                    </h4>
-
-                    <div class="ct-pricing-content">
-
-                        <ul class="ct-pricing-content-ul">
-                        
-                            <li><p>Anyone in business either has a website - or needs a website. Knowing the basics of designing for the web helps you understand what is possible and can save you money.</p>
-
-<p>Perhaps you want to create a stylish web presence for yourself to showcase your achievements or a portfolio of your work. Sure, there are a lot of web applications out there that will help you do this but if you want to individualise it with your own style, you need to know HTML and CSS.</p>
-
-<p>HTML and CSS are the building blocks of the web and a great entry point into learning more about creating technology.</p></li>
-                        </ul>
-                    </div>
-
-                </section>
-
-                <section class="col-sm-6">
-
-                    <h4 class="ct-pricing-sep text-center text-uppercase">
-                        WHAT?
-                    </h4>
-
-                    <div class="ct-pricing-content">
-
-                        <ul class="ct-pricing-content-ul">
-                            <li class="ct-pricing-content-ul-activesep">The past, present and future of the web.</li>
-                            <li class="ct-pricing-content-ul-activesep">The plumbing of the internet (how it works).</li>
-                            <li class="ct-pricing-content-ul-activesep">Planning a website and the design process.</li>
-                            <li class="ct-pricing-content-ul-activesep">Using wireframes and other design tools.</li>
-                            <li class="ct-pricing-content-ul-activesep">HTML, CSS and modern, time-saving frameworks.</li>
-                            <li class="ct-pricing-content-ul-activesep">Bootstrap v3.0 and its ease of integration.</li>     
-                            <li class="ct-pricing-content-ul-activesep">Web hosting and publishing your site to the web.</li>    
-                            <li class="ct-pricing-content-ul-activesep">Getting a domain name.</li>     
-                            <li class="ct-pricing-content-ul-activesep">How to optimise your site for search ranking.</li>     
-                            <li class="ct-pricing-content-ul-activesep">Analytics - see who is using your site.</li>
-                       <br>
-                        </ul>
-                    </div>
-
-                </section>
-
-
-            </div><!-- /row -->
-
-                        <div class="row ct-pricing">
-
-                <section class="col-sm-6">
-
-                    <h4 class="ct-pricing-sep text-center text-uppercase">
-                        HOW?
-                    </h4>
-
-                    <div class="ct-pricing-content">
-
-                        <ul class="ct-pricing-content-ul">
-                        
-                            <li><p>This hands on workshop is interesting, fun, and you'll get to be creative.</p>
-                              <p>Learn about the great free tools and heaps of tips and tricks.</p>
-                              <p>The teachers are passionate, smart and have been building websites for years.Small groups of less than 12.</p>
-                              <p>Teachers who have been building websites for years.</p>
-                              <p>An understanding of websites in simple terms.</p>
-                              <p>Meet some great like minded people.</p>
-
-                              <p><strong>You will have fun!</strong></p>
-                            </li>
-                        </ul>
-                    </div>
-
-                </section>
-
-                <section class="col-sm-6">
-
-                    <h4 class="ct-pricing-sep text-center text-uppercase">
-                        WHERE?
-                    </h4>
-
-                    <div class="ct-pricing-content">
-
-                        <ul class="ct-pricing-content-ul">
-                            <li class="ct-pricing-content-ul-activesep">Days: Saturday & Sunday</li>
-                            <li class="ct-pricing-content-ul-activesep">Times: 10am - 4pm.</li>
-                            <br>
-                            <li class="ct-pricing-content-ul-activesep">What to bring: </li>
-                            <li class="ct-pricing-content-ul-activesep">Your own laptop, lunch money.</li>
-                            <br>
-                            <li class="ct-pricing-content-ul-activesep">Small groups of less than 12. </li>
-                            <li class="ct-pricing-content-ul-activesep">An understanding of websites in simple terms.</li>
-                            <li class="ct-pricing-content-ul-activesep">... You will have fun!</li>
-                     
-                        </ul>
-                    </div>
-
-                </section>
-
-
-            </div><!-- /row -->
-
-          </div><!-- /container -->
-    </div>
-
-
-
-
-
-<a name="testimonials"></a>
-<div class="ct-mediaSection ct-navbar--dark ct-u-bgdark-lightfont" data-height="300">
-    <div class="ct-mediaSection-inner">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-sm-11 col-sm-offset-1 col-xs-12">
-                    <div class="ct-js-flexslider ct-testimonialslider">
-                        <ul class="slides">
-                            <li>
-                                <blockquote class="ct-blockquotetestimonial ct-blockquotetestimonial--left">
-
-                                    <div class="ct-blockquotetestimonial-pic">
-                                        <img src="http://res.cloudinary.com/coder-factory/image/upload/c_scale,w_100/v1424229698/profile_heloise_vf7dhp.jpg" alt="Heloise" />
-                                    </div>
-                                    <div class="ct-blockquotetestimonial-content">
-                                      <span class="ct-blockquotetestimonial-text h4 ct-fs-i ct-fw-300 ct-u-arapey">
-                                         If you want to work in tech, you need to know code. Completing the weekend workshop gave me a good understanding and knowledge of building a website for my Startup, and helps me talk tech with the team.
-                                       </span>
-                                        <span class="ct-blockquotetestimonial-author">Heloise - Web Design Workshop</span>
-                                    </div>
-
-                                </blockquote>
-                            </li>
-                            <li>
-                                <blockquote class="ct-blockquotetestimonial ct-blockquotetestimonial--left">
-
-                                    <div class="ct-blockquotetestimonial-pic">
-                                        <img src="http://res.cloudinary.com/coder-factory/image/upload/c_scale,w_100/v1424229698/profile_mark_socz7n.jpg" alt="Mark Collins" />
-                                    </div>
-                                    <div class="ct-blockquotetestimonial-content">
-                                    <span class="ct-blockquotetestimonial-text h4 ct-fs-i ct-fw-300 ct-u-arapey">
-                                       The team of students was great to bounce ideas off, and it worked well in classroom style to share your ideas and designs. Practical development was an easy way for me to learn, share and help in the class.
-                                     </span>
-                                        <span class="ct-blockquotetestimonial-author">Mark Collins - Web Design Workshop</span>
-                                    </div>
-
-                                </blockquote>
-                            </li>
-                            <li>
-                                <blockquote class="ct-blockquotetestimonial ct-blockquotetestimonial--left">
-
-                                    <div class="ct-blockquotetestimonial-pic">
-                                        <img src="http://res.cloudinary.com/coder-factory/image/upload/c_scale,w_100/v1424229698/profile_tim_u4zxtq.jpg" alt="Tim Moylan" />
-                                    </div>
-                                    <div class="ct-blockquotetestimonial-content">
-                                    <span class="ct-blockquotetestimonial-text h4 ct-fs-i ct-fw-300 ct-u-arapey">
-                                       The course through Coder Factory was well structured. The staff were really helpful in getting each person to interact and was great using bootstrap to develop a website during the class. My new site is well underway
-                                     </span>
-                                        <span class="ct-blockquotetestimonial-author">Tim Moylan - Web Design Workshop</span>
-                                    </div>
-
-                                </blockquote>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </div><!-- /container -->
-    </div><!-- /ct-mediaSection-inner -->
-</div>
-
-
-<!-- <div class="row">
-  <form role="form">
-<div class="ct-tabs ct-tabs--courseList ct-u-paddingBoth60">
-
-    <div class="col-md-6 col-md-offset-3">
-        <ul class="nav nav-tabs nav-justified ct-mytab-js text-center" role="tablist">
-            <li class="active"><a class="btn btn-primary btn-block">CITY</a></li>
-            <li>                      <div class="form-group">
-                          <select id="city" class="form-control text-uppercase ">
-                              <option>SYDNEY</option>
-                              <option>ACT</option>
-                              <option>Melbourne</option>
-                              <option>Brisbane</option>
-                              <option>Perth</option>
-                          </select>
-                      </div></li>
-        </ul>
-    </div>
-        <div class="col-md-6 col-md-offset-3">
-        <ul class="nav nav-tabs nav-justified ct-mytab-js text-center" role="tablist">
-            <li class="active"><a class="btn btn-primary btn-block">DATE</a></li>
-            <li>                      <div class="form-group">
-                          <select id="date" class="form-control text-uppercase ">
-                              <option>March</option>
-                              <option>April</option>
-                              <option>May</option>
-                          </select>
-                      </div></li>
-        </ul>
-    </div>
-        <div class="col-md-6 col-md-offset-3">
-        <ul class="nav nav-tabs nav-justified ct-mytab-js text-center" role="tablist">
-            <li class="active"><a class="btn btn-primary btn-block">NUMBER</a></li>
-            <li>                      <div class="form-group">
-                          <select id="students" class="form-control text-uppercase ">
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
-                          </select>
-                      </div></li>
-                      
-
-        </ul>
-    </div>
-            <div class="col-md-6 col-md-offset-3">
-        <ul class="nav nav-tabs nav-justified ct-mytab-js text-center" role="tablist">
-            <li class="active"><a class="btn btn-primary btn-block">COST</a></li>
-            <li> <input type="text" readonly value="$395"></li>
-            <li><button type="submit" class="btn btn-default btn-icon-right  btn-block ct-btn-motive--inverse">BOOK NOW <i class="fa fa- fa-star"></i></button> </li>
-        </ul>
-    </div>
-
-</div>
-</div>
-                  </form>
-                  </div> -->
+        <%= @product.description.html_safe %>
 
 
 
@@ -331,16 +106,15 @@
                       <td><%= course.location.city if course.location %></td>
                       <td><%= course.start_date.strftime('%d') %> - <%= course.end_date.strftime('%d %B') %></td>
                       <td><%= number_to_currency(course.price * 1.1) %> (incl. GST)</td>
-                      <td class="text-right">
-                        <!-- <a href="#" class="btn btn-link">Book Now <i class="fa fa-angle-right"></i></a> -->
+                      <td class="pull-right">
                         <% if course.in_stock? %>
                           <%= form_tag buy_product_path(@product.product_category.permalink, @product.permalink, :variant => course.id), :class => 'form-inline' do %>
                             <div class="form-group">
-                              
                               <div class="input-group">
                                 <%= select_tag 'quantity', options_for_select([1,2,3,4,5,6,7,8,9]), :disabled => !course.in_stock?, class: 'form-control' %>
+                              </div>
+                              <button type="submit" name="commit" class="btn btn-slime btn-sm ct-u-displayInlineBlock"> Add to cart</button>
                             </div>
-                            <button type="submit" name="commit" class="btn btn-primary btn-sm ct-u-displayInlineBlock"> <i class="fa fa-cart-plus"></i> Add to cart</button>
                           <% end %>
                         <% else %>
                           No places left
@@ -348,20 +122,6 @@
                       </td>
                   </tr>
                 <% end %>
-                <!-- <tr class="ct-u-tableBorderTop">
-                    <td>Web design</td>
-                    <td>Melbourne</td>
-                    <td>23 - 25 April</td>
-                    <td>$395</td>
-                    <td class="text-right"><a href="#" class="btn btn-link">Book Now <i class="fa fa-angle-right"></i></a></td>
-                </tr>
-                <tr class="ct-u-tableBorderTop">
-                    <td>Web design</td>
-                    <td>ACT</td>
-                    <td>23 - 25 June</td>
-                    <td>$395</td>
-                    <td class="text-right"><a href="#" class="btn btn-link">Book Now <i class="fa fa-angle-right"></i></a></td>
-                </tr> -->
  
                 </tbody>
             </table>
@@ -380,105 +140,38 @@
                     <div class="ct-js-flexslider ct-relatedCoursesSlider" data-controlnav="false"
                          data-directionnav="true" data-animationloop="true">
                         <ul class="slides">
-                            <li>
-                                <div class="row">
-
-                                    <div class="col-sm-4">
+                          <% @product_category.products.each_with_index do |workshop, index| %>
+                            <% if index == 0 or index == 3 %>
+                              <li>
+                                <div class="row ct-u-paddingTop20 workshop">
+                            <% end %>
+                                    
+                                      <div class="col-sm-4">
                                         <article class="ct-coursesList ct-u-bgWhite">
                                             <div class="ct-courseList-image">
-                                                <img src="http://res.cloudinary.com/coder-factory/image/upload/c_scale,w_401/v1421879436/qetzogehrzzfrcsntvkk.png" alt="Learn to Code">
+                                                <a href="LEARNTOCODE.HTML"><img src="<%= asset_path workshop.product_attributes.find_by(key: 'card_image').value %>" alt="<%= workshop.name %>"></a>
                                             </div>
                                             <div class="entry-meta">
-                                                <span class="cat-links"><i class="fa fa-calendar"></i><a href="learntocode.html"> Learn to Code</a></span>
+                                                <span class="cat-links pull-left"><i class="fa fa-calendar"></i><%= workshop.name %></span>
+                                                <br>
                                             </div>
                                             <div class="ct-coursesList-cont">
-                                                <h2 class="text-uppercase"><a href="learntocode.html">Learning to code is not rocket science. Anyone can do it. And it's FUN! </a></h2>
+                                                <h3><%= workshop.short_description %> </h3>
                                             </div>
-                                            <div class="entry-meta clearfix">
-                                                <a href="learntocode.html" class="btn btn-primary btn-block btn-sm">Read more</a>
-                                            </div>
+                                            <div class="entry-meta clearfix ct-u-borderTop">
+                                          <span class="entry-date pull-left"><%= workshop.product_attributes.find_by(key: 'num_days').value %></span>
+                                          <a href="/courses/workshops/<%= workshop.permalink %>" class="btn btn-success btn-sm pull-right">Learn More</a>
+                                      </div>
                                         </article>
-                                    </div>
+                                      </div>
+                                      <% if index == 2 %>
+                                          </div>
+                                          <!-- /row -->
+                                        </li>
+                                      <% end %>
+                                    <% end %>
 
-                                    <div class="col-sm-4">
-                                        <article class="ct-coursesList ct-u-bgWhite">
-                                            <div class="ct-courseList-image">
-                                                <img src="http://coderfactory.co/assets/highschool-0d8cca78e95dc787bfe89bac1d632efb.jpg" alt="Highschoolers">
-                                            </div>
-                                            <div class="entry-meta">
-                                                <span class="cat-links"><i class="fa fa-calendar"></i><a href="teenslearntocode.html"> Teens Learn to Code</a></span>
-                                            </div>
-                                            <div class="ct-coursesList-cont">
-                                                <h2 class="text-uppercase"><a href="teenslearntocode.html">Highschoolers can code too. The adults don't always have to have all the fun. </a></h2>
-                                            </div>
-                                            <div class="entry-meta clearfix">
-                                                <a href="teenslearntocode.html" class="btn btn-primary btn-block btn-sm">Read more</a>
-                                            </div>
-                                        </article>
-                                    </div>
-
-                                    <div class="col-sm-4">
-                                        <article class="ct-coursesList ct-u-bgWhite">
-                                            <div class="ct-courseList-image">
-                                                <img src="http://res.cloudinary.com/coder-factory/image/upload/bo_0px_solid_rgb:000,c_fill,h_270,w_410/v1424044389/teachers-technology_k5w6er.jpg" alt="Technology for Teachers">
-                                            </div>
-                                            <div class="entry-meta">
-                                                <span class="cat-links"><i class="fa fa-calendar"></i><a href="technologyforteachers.html"> Technology for Teachers</a></span>
-                                            </div>
-                                            <div class="ct-coursesList-cont">
-                                                <h2 class="text-uppercase"><a href="technologyforteachers.html">Keep up with your students! Learn how to excite them with tech of the future.</a></h2>
-                                            </div>
-                                            <div class="entry-meta clearfix">
-                                                <a href="technologyforteachers.html" class="btn btn-primary btn-block btn-sm">Read more</a>
-                                            </div>
-                                        </article>
-                                    </div>
-
-                                </div>
-                                <!-- /row -->
-                            </li>
-
-                            <li>
-
-                                <div class="row">
-
-                                    <div class="col-sm-4">
-                                        <article class="ct-coursesList ct-u-bgWhite">
-                                            <div class="ct-courseList-image">
-                                                <img src="http://res.cloudinary.com/coder-factory/image/upload/c_crop,h_172,w_400,x_0,y_10/v1425106315/http_coderfactory.co_assets_wordpress-8d7041f0c3835aa714391506ed32abdc_r1pj8u.png" alt="Wordpress">
-                                            </div>
-                                            <div class="entry-meta">
-                                                <span class="cat-links"><i class="fa fa-calendar"></i><a href="wordpress.html"> Wordpress</a></span>
-                                            </div>
-                                            <div class="ct-coursesList-cont">
-                                                <h2 class="text-uppercase"><a href="wordpress.html">Build a Wordpress website for your business or just for fun. </a></h2>
-                                            </div>
-                                            <div class="entry-meta clearfix">
-                                                <a href="wordpress.html" class="btn btn-primary btn-block btn-sm">Read more</a>
-                                            </div>
-                                        </article>
-                                    </div>
-
-                                    <div class="col-sm-4">
-                                        <article class="ct-coursesList ct-u-bgWhite">
-                                            <div class="ct-courseList-image">
-                                                <img src="http://res.cloudinary.com/coder-factory/image/upload/v1421384765/webdesign3_x1ngh6.png" alt="Part Time">
-                                            </div>
-                                            <div class="entry-meta">
-                                                <span class="cat-links"><i class="fa fa-calendar"></i><a href="parttime.html"> Part Time</a></span>
-                                            </div>
-                                            <div class="ct-coursesList-cont">
-                                                <h2 class="text-uppercase"><a href="parttime.html">Learn web app development while keeping your day job - 3 months part time. </a></h2>
-                                            </div>
-                                            <div class="entry-meta clearfix">
-                                                <a href="parttime.html" class="btn btn-primary btn-block btn-sm">Read more</a>
-                                            </div>
-                                        </article>
-                                    </div>
-
-
-                                </div>
-                                <!-- /row -->
+                                    
 
                             </li>
 

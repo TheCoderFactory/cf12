@@ -1,13 +1,34 @@
-<div class="ct-mediaSection ct-u-bgBWhite ct-u-bgdark-lightfont overflowHidden cf-header" data-stellar-background-ratio="0.2" data-height="400" data-type="parallax" data-bg-image="<%= asset_path 'main-hero-compressor.jpg' %>" data-bg-image-mobile="<%= asset_path 'contact_robot.jpg' %>">
-        <div class="ct-mediaSection-inner">
-            <div class="container">
-                <h3 class="ct-breadcrumbHeader text-uppercase pull-left">Technology is your future</h3>
-            </div><!-- /container -->
-        </div><!-- /ct-mediaSection-inner -->
+<div class="ct-mediaSection  ct-u-bgdark-lightfont" data-height="100%" data-type="video"
+     data-bg-image-mobile="assets/images/content/mainpageparallax-bg1.jpg">
+    <div class="ct-mediaSection-video embed-responsive embed-responsive-16by9">
+        <!-- in order for video to be muted you must add  &amp;api=1&amp;player_id=vimeoplayer1 to the end of the video src
+            If you have more than one video, make sure that player_id and id have dif names on each video
+    -->
+        <video id="video1" muted loop autoplay="autoplay" preload="auto">
+            <source src='<%= asset_path "car2.webm" %>' type='video/webm'/>
+        </video>
     </div>
-
-
-    <div class="ct-u-bgGrey ct-u-paddingTop70 ct-u-paddingBottom40">
+    <div class="ct-u-displayTable">
+        <div class="ct-mediaSection-inner">
+            <div class="container-fluid" data-stellar-ratio="0.2">
+                <h2 class="ct-h-big text-center text-uppercase">create the future<br> learn fast. have fun.</h2>
+                <p class="ct-p-intro text-center"></p>
+            </div>
+            <!-- <div class="container" data-stellar-ratio="0.2">
+                <div class="row">
+                    <div class="col-md-4 col-lg-3 col-lg-offset-3 col-md-offset-2 col-xs-12">
+                        <a href="16-actly-login-page.html" class="btn btn-primary btn-block ct-u-marginBottom5  animated" data-fx="fadeInUp" data-time="0">Register Now it’s Free</a>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xs-12">
+                        <a href="08-actly-courses-alt.html" class="btn btn-default btn-block animated" data-fx="fadeInUp" data-time="400">Browse Courses</a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+<%= render 'layouts/topbar' %>
+ <!--    <div class="ct-u-bgGrey ct-u-paddingTop70 ct-u-paddingBottom40">
                 <div class="container">
 
               <header class="ct-sec-header text-center ct-u-paddingBottom50">
@@ -18,15 +39,15 @@
                   <div class="col-sm-4">
 
                       <div class="ct-iconBox ct-iconBox--top ct-iconBox--bg text-center ct-u-bgWhite animated" data-fx="fadeInUp" data-time="0">
-                          <div class="ct-iconBox-icon ct-iconBox-icon--default">
-                              <i class="fa fa-desktop"></i>
+                          <div class="ct-iconBox-icon ct-iconBox-icon--default" style="background:#1ABC9C;">
+                              <i class="fa fa-forward"></i>
                           </div>
 
                           <div class="ct-iconBox-content text-left">
                               <h4 class="ct-iconBox-title text-uppercase text-center ct-fw-600">
                                   Workshops
                               </h4>
-                              <p>
+                              <p class="lead">
                                   I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker; then—though I was still travelling with prodigious velocity—the blinking
                                   Suc- cession of day and night, which was usually indicative of a slower pace.
                               </p>
@@ -36,15 +57,15 @@
 
                   <div class="col-sm-4">
                       <div class="ct-iconBox ct-iconBox--top ct-iconBox--bg text-center ct-u-bgWhite animated" data-fx="fadeInUp" data-time="200">
-                          <div class="ct-iconBox-icon ct-iconBox-icon--default">
-                              <i class="fa fa-users"></i>
+                          <div class="ct-iconBox-icon ct-iconBox-icon--default" style="background:#09A0EF;">
+                              <i class="fa fa-graduation-cap"></i>
                           </div>
 
                           <div class="ct-iconBox-content text-left">
                               <h4 class="ct-iconBox-title text-uppercase text-center ct-fw-600">
                                   Part Time
                               </h4>
-                              <p>
+                              <p style="font-family:verdana ;">
                                   I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker; then—though I was still travelling with prodigious velocity—the blinking
                                   Suc- cession of day and night, which was usually indicative.
                               </p>
@@ -54,13 +75,13 @@
 
                   <div class="col-sm-4">
                       <div class="ct-iconBox ct-iconBox--top ct-iconBox--bg text-center ct-u-bgWhite animated" data-fx="fadeInUp" data-time="400">
-                          <div class="ct-iconBox-icon ct-iconBox-icon--default">
-                              <i class="fa fa-rocket"></i>
+                          <div class="ct-iconBox-icon ct-iconBox-icon--default" style="background:#FF6A26;">
+                              <i class="fa fa-train"></i>
                           </div>
 
                           <div class="ct-iconBox-content text-left">
                               <h4 class="ct-iconBox-title text-uppercase text-center ct-fw-600">
-                                  Full Time
+                                  Fast Track
                               </h4>
                               <p>
                                   I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker; then—though I was still travelling with prodigious velocity—the blinking Suc- cession of day and night, which was usually
@@ -70,15 +91,15 @@
                   </div>
               </div>
 
-          </div><!-- /container -->
-      </div>
+          </div>
+      </div> -->
 
 
 
     <div class="ct-u-bgLightGrey ct-u-paddingBottom80 ct-u-paddingTop30">
          <div class="container">
 
-         <div class="dropdown ct-dropdown">
+         <!-- <div class="dropdown ct-dropdown">
            <button class="btn btn-default dropdown-toggle ct-btnDropdown" type="button" id="dropdownMenu1" data-toggle="dropdown">
              SYDNEY
              <span class="caret"></span>
@@ -93,7 +114,7 @@
                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CANBERRA</a></li>
            </ul>
 
-         </div>
+         </div> -->
 
         <header class="ct-sec-header text-left ct-u-paddingTop35">
             <h2 class="ct-sec-header-title">WORKSHOPS</h2>
@@ -103,18 +124,18 @@
                                     <div class="col-sm-4">
                                         <article class="ct-coursesList ct-u-bgWhite">
                                             <div class="ct-courseList-image">
-                                                <a href="LEARNTOCODE.HTML"><img src="http://res.cloudinary.com/coder-factory/image/upload/c_scale,w_401/v1421879436/qetzogehrzzfrcsntvkk.png" alt="Learn to Code"></a>
+                                                <a href="/courses/workshops/learn-to-code-weekend-workshop"><img src="http://res.cloudinary.com/coder-factory/image/upload/c_scale,w_401/v1421879436/qetzogehrzzfrcsntvkk.png" alt="Learn to Code"></a>
                                             </div>
                                             <div class="entry-meta">
                                                 <span class="cat-links pull-left"><i class="fa fa-calendar"></i>Learn to Code</span>
                                                 <br>
                                             </div>
                                             <div class="ct-coursesList-cont">
-                                                <h2 class="text-uppercase">Learning to code is not rocket science. Anyone can do it. And it's FUN! </h2>
+                                                <h3>Learning to code is not rocket science. Anyone can do it. And it's FUN! </h3>
                                             </div>
                                             <div class="entry-meta clearfix ct-u-borderTop">
                                           <span class="entry-date pull-left">2 days</span>
-                                          <a href="learntocode.html" class="btn btn-primary btn-sm pull-right slime">Learn More</a>
+                                          <a href="/courses/workshops/learn-to-code-weekend-workshop" class="btn btn-success btn-sm pull-right">Learn More</a>
                                       </div>
                                         </article>
                                     </div>
@@ -129,11 +150,11 @@
                                                 <br>
                                             </div>
                                             <div class="ct-coursesList-cont">
-                                                <h2 class="text-uppercase">Highschoolers can code too. The adults don't always have to have all the fun.</h2>
+                                                <h3>Highschoolers can code too. The adults don't always have to have all the fun.</h3>
                                             </div>
                                                                  <div class="entry-meta clearfix ct-u-borderTop">
                                           <span class="entry-date pull-left">2 days</span>
-                                          <a href="learntocode.html" class="btn btn-primary btn-sm pull-right slime">Learn More</a>
+                                          <a href="/courses/workshops/learn-to-code-for-highschoolers" class="btn btn-success btn-sm pull-right">Learn More</a>
                                       </div>
                                         </article>
                                     </div>
@@ -148,11 +169,11 @@
                                                 <br>
                                             </div>
                                             <div class="ct-coursesList-cont">
-                                                <h2 class="text-uppercase">Keep up with your students! Learn how to excite them with tech of the future.</h2>
+                                                <h3>Keep up with your students! Learn how to excite them with tech of the future.</h3>
                                             </div>
                                                                  <div class="entry-meta clearfix ct-u-borderTop">
                                           <span class="entry-date pull-left">2 days</span>
-                                          <a href="learntocode.html" class="btn btn-primary btn-sm pull-right slime">Learn More</a>
+                                          <a href="/courses/workshops/technology-for-teachers-workshop" class="btn btn-success btn-sm pull-right">Learn More</a>
                                       </div>
                                         </article>
                                     </div>
@@ -166,7 +187,7 @@
                                     <div class="col-sm-4">
                                         <article class="ct-coursesList ct-u-bgWhite">
                                             <div class="ct-courseList-image">
-                                                <a href="LEARNTOCODE.HTML"><img src="http://res.cloudinary.com/coder-factory/image/upload/c_scale,w_401/v1421879436/qetzogehrzzfrcsntvkk.png" alt="Part Time"></a>
+                                                <a href="/courses/part-time-courses/web-app-developer-pt"><img src="http://res.cloudinary.com/coder-factory/image/upload/c_scale,w_401/v1421879436/qetzogehrzzfrcsntvkk.png" alt="Part Time"></a>
                                             </div>
                                             <div class="entry-meta">
                                                 <span class="cat-links pull-left"><i class="fa fa-calendar"></i>Part Time</span>
@@ -177,7 +198,7 @@
                                             </div>
                                             <div class="entry-meta clearfix ct-u-borderTop">
                                           <span class="entry-date pull-left">12 weeks</span>
-                                          <a href="parttime.html" class="btn btn-primary btn-sm pull-right burntsea">Learn More</a>
+                                          <a href="/courses/part-time-courses/web-app-developer-pt" class="btn btn-info btn-sm pull-right">Learn More</a>
                                       </div>
                                         </article>
                                     </div>
@@ -191,7 +212,7 @@
                                     <div class="col-sm-4">
                                         <article class="ct-coursesList ct-u-bgWhite">
                                             <div class="ct-courseList-image">
-                                                <a href="LEARNTOCODE.HTML"><img src="http://res.cloudinary.com/coder-factory/image/upload/c_scale,w_401/v1421879436/qetzogehrzzfrcsntvkk.png" alt="Part Time"></a>
+                                                <a href="/fast-track"><img src="http://res.cloudinary.com/coder-factory/image/upload/c_scale,w_401/v1421879436/qetzogehrzzfrcsntvkk.png" alt="Part Time"></a>
                                             </div>
                                             <div class="entry-meta">
                                                 <span class="cat-links pull-left"><i class="fa fa-calendar"></i>Full Time</span>
@@ -202,7 +223,7 @@
                                             </div>
                                             <div class="entry-meta clearfix ct-u-borderTop">
                                           <span class="entry-date pull-left">6 months</span>
-                                          <a href="parttime.html" class="btn btn-primary btn-sm pull-right darkknight">Learn More</a>
+                                          <a href="/fast-track" class="btn btn-warning btn-sm pull-right">Learn More</a>
                                       </div>
                                         </article>
                                     </div>
@@ -233,7 +254,7 @@
   </div>
 
 
-    <div class="ct-mediaSection ct-u-bgDarkgrey" data-stellar-background-ratio="0.2" data-height="420" data-type="parallax" data-bg-image="assets/images/content/newsletter-bg.jpg" data-bg-image-mobile="assets/images/content/newsletter-bg.jpg">
+    <div class="ct-mediaSection ct-u-bgDarkgrey" data-stellar-background-ratio="0.2" data-height="420" data-type="parallax" data-bg-image="<%= asset_path 'keyboard.jpg' %>" data-bg-image-mobile="<%= asset_path 'keyboard.jpg' %>">
        <div class="ct-mediaSection-inner">
          <div class="container">
 

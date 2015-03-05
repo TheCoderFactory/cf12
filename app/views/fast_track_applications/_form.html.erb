@@ -3,11 +3,8 @@
 <% else %>
   <section class="darknight">
 <% end %>
-<div class="row">
-  <div class="col-xs-12 col-lg-offset-2 col-lg-8">
-    <br>
-    <div class="panel panel-default">
-      <div class="panel-body">
+
+  
       <% if @scholarships %>
         <p class="lead">You are now applying for a Fast Track Scholarship. Please complete every field to the best of your ability as your answers will determine whether you proceed to the next stage.</p>
         <p>You will be put forward for all available scholarships. Good luck!</p>
@@ -18,7 +15,7 @@
           <%= f.error_notification %>
             <%= invisible_captcha %>
             <%= f.input :scholarship_id, as: :hidden, input_html: { value: params[:scholarship]} %>
-            <h2>Part 1</h2>
+            <h3>Part 1</h3>
             <br>
             <div class="form-group">
               <%= f.input :one_line, label: 'Use one sentence to describe yourself', input_html: { class: 'form-control' } %>
@@ -58,7 +55,7 @@
             </div>
             <hr>
             <br>
-            <h2>Part 2: Personal information</h2>
+            <h3>Part 2: Personal information</h3>
             <br>
             <div class="row">
               <div class="form-group col-md-6">
@@ -88,27 +85,34 @@
               </div>
             </div>
           </div>
-            <br>
             <div class="row">
-              <div class="form-group col-md-6">
+              <div class="form-group col-md-1">
                 <%= f.input :age, input_html: { class: 'form-control' } %>
               </div>
-              <div class="form-group col-md-6">
-                <%= f.input :gender, label: 'Which gender do you identify as?', collection: ['Female', 'Male', 'Neither'], input_html: { class: 'form-control' } %>
+              <div class="col-md-3">
+                <div class="form-group ">
+                  <%= f.input :gender, label: 'Which gender do you identify as?', collection: ['Female', 'Male', 'Neither'], input_html: { class: 'form-control' } %>
+                </div>
               </div>
             </div>
-            <br>
-              <div class="form-group">
-                <%= f.input :email, input_html: { class: 'form-control' } %>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <%= f.input :email, input_html: { class: 'form-control' } %>
+                </div>
               </div>
-          <div class="submit">
-            <%= f.submit 'Apply for Fast Track', class: 'btn-block btn-block-dirtygold' %>
+
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <%= f.submit 'Apply for Fast Track', class: 'btn btn-success btn-sm' %>
+                </div>
+              </div>
+            </div>
             <br><br>
             <p class="blue-font">A confirmation will be sent to you almost immediately.</p>
           </div>
 
         <% end %>
-      </div>
-    </div>
-  </div>
-</div>
+     

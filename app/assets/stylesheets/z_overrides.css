@@ -1,104 +1,253 @@
+/*--  Colours
+
+$light:                                  #FFF;
+$darknight:                           #2C3E50;
+$midnight:                               #333;
+$midnight-light:       lighten($midnight, 50);
+$dirty-gold:                          #DBC034;
+$calm:                                #3498DB;
+$subtle:                              #F8F8F8;
+$slime:                               #48A85A;
+$burntsea:                            #487AA8;
+$vibrant:                             #D44F99;
+
+--*/
+
+
+
+/*--  Bg Colours  --*/
+
 .darkknight {
   background-color: #2C3E50;
 }
-.dirty-gold {
-  background-color: #DBC034!important;
+
+.darkknight:hover {
+  background-color: #0F2031;
+  border-color: #0F2031;
 }
+
+.dirty-gold {
+  background-color: $dirty-gold !important;
+}
+
 .vibrant {
   background-color: #d44F99;
 }
+
 .slime {
-  background-color: #48A85A;
+  background-color: $slime;
 }
+
+.slime:hover {
+  background: #107823;
+  border-color: #107823;
+}
+
 .burntsea {
   background-color: #487AA8;
 }
 
-
-.ct-navbar--dark { 
-  background-color: #2C3E50; 
-}
-
-.ct-pricing .ct-pricing-sep { 
-    color: #000; 
-  }
-
-.ct-pricing .ct-pricing-pricebox { 
-         color: #000; 
-  } 
-
-  .ct-pricing .ct-pricing-content { 
-    background-color: #000; 
-    background-color: #ebeff0;
-  }
-
-  .ct-pricing .ct-pricing-content .ct-pricing-content-ul { 
-max-width: 400px; 
-padding: 10px 0; 
-}
-
-.ct-pricing .ct-pricing-content .ct-pricing-content-ul li { 
-color: #000; 
-}
-
-.ct-pricing .ct-pricing-content .ct-pricing-content-ul li:before { 
-/*  content: "\f00d";*/ 
-}
-
-.ct-princing--second .ct-pricing-content { 
-  background-color: #000; 
-}
-
-.ct-tabs--witharrow .nav-tabs > li > a, 
-.ct-tabs--withSlider .nav-tabs > li > a { 
-/*  border: 0;*/ 
-/*  font-size: 20px;*/ 
-
+.burntsea:hover {
+  background: #113A60;
+  border-color: #113A60;
 }
 
 
-.ct-tabs--witharrow .nav-tabs > li > a:hover, 
-.ct-tabs--withSlider .nav-tabs > li > a:hover, 
-.ct-tabs--witharrow .nav-tabs > li > a:focus, 
-.ct-tabs--withSlider .nav-tabs > li > a:focus, 
-.ct-tabs--witharrow .nav-tabs > li > a:active, 
-.ct-tabs--withSlider .nav-tabs > li > a:active { 
-/*  font-size: 20px;*/ 
-  border: 1; 
-  text-decoration: bold; 
+
+/*--  Navbar  --*/
+
+.ct-navbar--dark {
+  background-color: #2C3E50;
+}
+
+.navbar .navbar-nav li a:hover, .navbar .navbar-nav li a:focus {
+  color: #2C3E50;
+}
+
+.ct-pricing .ct-pricing-sep {
+  color: #000;
+}
+
+.ct-pricing .ct-pricing-pricebox {
+    color: #000;
+}
+
+.ct-pricing .ct-pricing-content {
+  background-color: #000;
+  background-color: #ebeff0;
+}
+
+.ct-coursesList {
+  transition: 0.33s ease-in transform;
+  border-bottom: 5px solid transparent;
+}
+
+.workshop .ct-coursesList:hover {
+  border-bottom: 5px solid #48A85A;
+  /*transform: translateY(-5px);*/
+}
+
+.partime .ct-coursesList:hover {
+  border-bottom: 5px solid #487AA8;
+  /*transform: translateY(-5px);*/
+}
+.fulltime .ct-coursesList:hover {
+  border-bottom: 5px solid #2C3E50;
+  /*transform: translateY(-5px);*/
+}
+
+.ct-pricing .ct-pricing-content .ct-pricing-content-ul {
+  max-width: 400px;
+  padding: 10px 0;
+}
+
+.ct-pricing .ct-pricing-content .ct-pricing-content-ul li {
+  color: #000;
+}
+
+.ct-pricing .ct-pricing-content .ct-pricing-content-ul li:before {
+/*  content: "\f00d";*/
+}
+
+.ct-princing--second .ct-pricing-content {
+  background-color: #000;
+}
+
+.ct-u-bgBlack {
+  background: #2C3E50;
+}
+
+.ct-tabs--witharrow .nav-tabs > li > a,
+.ct-tabs--withSlider .nav-tabs > li > a {
+/*  border: 0;*/
+/*  font-size: 20px;*/
 }
 
 
-.ct-tabs--witharrow .nav-tabs > li > a:hover:after, 
-.ct-tabs--withSlider .nav-tabs > li > a:hover:after, 
-.ct-tabs--witharrow .nav-tabs > li > a:focus:after, 
-.ct-tabs--withSlider .nav-tabs > li > a:focus:after, 
-.ct-tabs--witharrow .nav-tabs > li > a:active:after, 
-.ct-tabs--withSlider .nav-tabs > li > a:active:after { 
-  bottom: -17px; 
+.ct-tabs--witharrow .nav-tabs > li > a:hover,
+.ct-tabs--withSlider .nav-tabs > li > a:hover,
+.ct-tabs--witharrow .nav-tabs > li > a:focus,
+.ct-tabs--withSlider .nav-tabs > li > a:focus,
+.ct-tabs--witharrow .nav-tabs > li > a:active,
+.ct-tabs--withSlider .nav-tabs > li > a:active {
+/*  font-size: 20px;*/
+  border: 1;
+  text-decoration: bold;
 }
 
-
-.ct-widget p { 
-  color: #fff; 
+.ct-tabs--witharrow .nav-tabs > li > a:hover:after,
+.ct-tabs--withSlider .nav-tabs > li > a:hover:after,
+.ct-tabs--witharrow .nav-tabs > li > a:focus:after,
+.ct-tabs--withSlider .nav-tabs > li > a:focus:after,
+.ct-tabs--witharrow .nav-tabs > li > a:active:after,
+.ct-tabs--withSlider .nav-tabs > li > a:active:after {
+  bottom: -17px;
 }
 
-select.form-control { 
-/*  color: #3eaefa !important; 
-*/  background-color: transparent !important; 
+.ct-widget p {
+  color: #fff;
+}
+
+select.form-control {
+/*  color: #3eaefa !important; */
+  background-color: transparent !important;
 
 }
 
-.ct-pageSectionHeader{ 
-background-color: #c4c4c4; 
+.ct-pageSectionHeader{
+  background-color: #c4c4c4;
 }
 
 .ct-tabs--courseList .nav-justified > .active > a, .ct-tabs--courseList .nav-justified > .active > a:hover, .ct-tabs--courseList .nav-justified > .active > a:focus{
-border: solid 2px;
-}
-
-.btn-primary{
-border: solid 2px;
+  border: solid 2px;
 }
 
 
+
+/*--  Buttons  --*/
+
+.btn-primary {
+  border: solid 2px;
+}
+
+
+
+
+/*--  Course Card Module  --*/
+
+.ct-coursesList .entry-date, .ct-coursesList .cat-links, .ct-coursesList .cat-links i {
+  color: #666666;
+}
+
+.ct-coursesList .entry-date {
+  position: relative;
+  top: 13px;
+}
+
+
+
+/*--  Workshop Template  --*/
+
+.ct-singleCourse-introLinks .cat-links, .ct-singleCourse-introLinks .cat-links i, .ct-singleCourse-introLinks .entry-date {
+  color: #333;
+}
+
+.workshop .ct-tabs--witharrow .nav-tabs.nav-justified > .active > a, .workshop .ct-tabs .nav-tabs > li > a:hover, .workshop .ct-pricing .ct-pricing-content .ct-pricing-content-ul li.ct-pricing-content-ul-activesep:before, .workshop .btn-link, .workshop .ct-relatedCoursesSlider .flex-direction-nav a:before {
+  color: #48A85A !important;
+}
+
+.workshop .ct-tabs .nav-tabs > li > a, .workshop .ct-relatedCoursesSlider .flex-direction-nav a {
+  border-color: #48A85A;
+}
+
+.workshop .ct-relatedCoursesSlider .flex-direction-nav a:hover {
+  border-color: #107823;
+}
+
+.workshop .table.table > thead > tr > th {
+  background-color: #48A85A;
+}
+
+/*.ct-pricing-content-ul li {
+  padding: 0 20px;
+}*/
+
+.cf-header {
+  background-position: 50% 0px;
+}
+
+.ct-iconBox--left .ct-iconBox-content, .ct-iconBox--right .ct-iconBox-content {
+/*  display: none;
+*/
+}
+
+.ct-iconBox--bgDark .ct-iconBox-icon
+{
+  border-color: #333;
+}
+
+.ct-iconBox--bgDark .ct-iconBox-icon i
+{
+  color: #333;
+}
+
+
+/*--  Fulltime Template  --*/
+.fulltime .ct-pricing .ct-pricing-content .ct-pricing-content-ul li.ct-pricing-content-ul-activesep:before {
+  color: #2C3E50 !important;
+}
+
+.fulltime .ct-iconBox-icon--circle {
+  background-color: #2C3E50;
+}
+
+/*--  Media Queries  --*/
+@media screen and (min-width: 992px) {
+
+  /*--  Navbar Position  --*/
+  .nav.navbar-nav {
+    position: relative;
+    top: 8px;
+  }
+
+}

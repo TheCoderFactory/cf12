@@ -1,0 +1,45 @@
+<div class="ct-mediaSection ct-u-bgBlack ct-u-bgdark-lightfont overflowHidden" data-stellar-background-ratio="0.2" data-height="330" data-type="parallax" data-bg-image="<%= asset_path 'slider4.jpg' %>" data-bg-image-mobile="<%= asset_path 'slider4.jpg' %>">
+    <div class="ct-mediaSection-inner">
+        <div class="container">
+            <h3 class="ct-breadcrumbHeader text-uppercase pull-left">Articles</h3>
+        </div><!-- /container -->
+    </div><!-- /ct-mediaSection-inner -->
+</div>
+ 
+<div class="ct-u-bgLightGrey">
+    <div class="container">
+      <h3 class="text-uppercase">Articles tagged with: <%= params[:tag] %> (<%= @posts.count %>)</h3>
+       
+        <div class="row"><div class="col-md-9 ct-colContent ct-u-paddingBoth60">
+                    <div class="col-sm-12">
+            <% @posts.each do |post| %>
+                
+                      <div class="ct-coursesList ct-courseList--image animated" data-fx="fadeInUp">
+                        <div class="ct-courseList--image-image pull-left">
+                          <img src="<%= asset_path post.image %>" alt="post img" />
+                          
+                        </div>
+                        <div class="ct-courseList--image-content">
+                          <div class="entry-meta clearfix">
+                              <span class="cat-links pull-left"><i class="fa fa-<%= post.post_category.icon if post.post_category %>"></i> <a href="<%= blog_filter_path(post_category: post.post_category) %>"><%= post.post_category.name if post.post_category %></a></span>
+                              <span class="cat-links pull-right"><%= post.published_date.strftime('%e %B, %Y') %></span>
+                          </div>
+                          <div class="ct-coursesList-cont">
+                                <h2 class="text-uppercase"><a href="<%= post_path(post) %>"><%= post.title %></a></h2>
+                                <p><%= post.lead %></p>
+                            </div>
+                            <div class="entry-meta clearfix ct-u-borderTop">
+                              <a href="07-actly-courses-masonry.html" class="by-author pull-left">
+                                <img src="<%= post.author.profile_picture %>" alt="author img" class="pull-left"/>
+                                <span class="by-autor-name"><%= post.author.name %></span>, <span class="by-autor-prof"><%= post.author.title %></span>
+                              </a>
+                              
+                            </div>
+                          </div>
+                      </div>
+
+    <% end %>
+    </div><!-- /col-sm-12 -->
+                  
+    </div>
+     <%= render 'layouts/blog_sidebar' %></div></div></div>

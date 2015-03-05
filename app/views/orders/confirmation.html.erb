@@ -4,17 +4,43 @@
 <%= content_for :header, 'small-header' %>
 <%= content_for :title, "Finalise your Coder Factory order." %>
 <%= content_for :description, "The payment page of Coder Factory's online store." %>
+<div class="ct-mediaSection ct-u-bgBlack ct-u-bgdark-lightfont overflowHidden" data-stellar-background-ratio="0.2" data-height="330" data-type="parallax" data-bg-image="<%= asset_path 'slider4.jpg' %>" data-bg-image-mobile="<%= asset_path 'slider4.jpg' %>">
+    <div class="ct-mediaSection-inner">
+        <div class="container">
+            <h3 class="ct-breadcrumbHeader text-uppercase pull-left">Almost there..</h3>
+        </div><!-- /container -->
+    </div><!-- /ct-mediaSection-inner -->
+</div>
+<div class="ct-breadcrumbs-sec--mini ct-u-paddingBoth20 ct-u-bg-Grey">
+    <div class="container">
 
-<div class="row"><div class="col-xs-12 col-lg-8 col-lg-offset-2">
-<div class="panel panel-default"><div class="panel-body">
-<div class="checkout">
-  <h2>Payment</h2>
+      <div class="ct-breadcrumbs-text pull-left text-uppercase"><a href="13-actly-feature-section.html">Payment</a></div>
+      <ul class="ct-navbarIcons list-unstyled list-inline pull-right">
+        <!-- <li>
+          <form class="header-search" role="search">
+            <div class="form-group pull-left">
+                <input type="text" class="form-control search-input" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+          </form>
+        </li>
+        <li class="ct-search-open-icon-js"><a href="#"><i class="fa fa-search"></i></a></li> -->
+        <li><i class="fa fa-lock slime-text"></i> <span class="slime-text">Secure Connection</span></li>
+      </ul>
+
+    </div><!-- /container -->
+</div>
+<div class="ct-u-bgGrey">
+  <div class="container">
+    <div class="checkout">
+      <!-- <p class="secure">Secure connection</p> -->
+     <!--  <header class="ct-sec-header text-center">
+        <h2 class="ct-sec-header-title">Final step</h2>
+      </header> -->
+
   <p class="intro">
     Please click on the Pay button to secure your place.
-  </p>
-  <%= render 'shared/order_items', :order => current_order, :readonly => true %>
-  <div class="pull-right">
-  <form accept-charset="UTF-8" action="<%= checkout_payment_path %>" method="post">
+    <form accept-charset="UTF-8" action="<%= checkout_payment_path %>" method="post">
   <div style="display:none">
     <input name="utf8" type="hidden" value="&#x2713;" />
     <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
@@ -32,13 +58,17 @@
     data-label="Pay now">
   </script>
 </form>
+  </p>
+  <%= render 'shared/order_items', :order => current_order, :readonly => true %>
+  <div class="pull-right">
+  
 </div>
-
+<div class="ct-u-paddingBottom50"></div>
   <%# form_tag checkout_confirmation_path, :method => :patch, :class => 'disableable' do %>
     <!-- <p class="submit">
       <%# submit_tag "Place Order", :class => 'order' %>
     </p> -->
   <%# end %>
 </div>
-</div></div></div></div>
+</div></div>
 

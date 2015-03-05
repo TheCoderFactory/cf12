@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150228151645) do
+ActiveRecord::Schema.define(version: 20150303050115) do
 
   create_table "admissions", force: :cascade do |t|
     t.integer  "fast_track_application_id"
@@ -62,6 +62,15 @@ ActiveRecord::Schema.define(version: 20150228151645) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "course_teachers", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "teacher_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "course_teachers", ["teacher_id"], name: "index_course_teachers_on_teacher_id"
 
   create_table "enquiries", force: :cascade do |t|
     t.string   "name"
@@ -479,6 +488,16 @@ ActiveRecord::Schema.define(version: 20150228151645) do
   end
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true
+
+  create_table "teachers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "image"
+    t.string   "title"
+    t.string   "link"
+    t.text     "blurb"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "testimonials", force: :cascade do |t|
     t.integer  "product_id"

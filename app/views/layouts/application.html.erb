@@ -27,12 +27,18 @@
 <%= render 'layouts/google_analytics' %>
 <%= render 'layouts/facebook_pixel' %>
 </head>
-<body class="cssAnimate ct-headroom--fixedMenu ct-headroom--scrollUpMenu">
-  <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
-  <%# render 'layouts/topbar' %>
-  <%= display_flash %>
-
+<body class="cssAnimate">
+  
+    <% if @home %>
+      <%= render 'layouts/home_nav' %>
+    <% elsif @dark_nav %>
+      <%= render 'layouts/dark_nav' %>
+      <div style="height:75px;"></div>
+    <% else %>
       <%= render 'layouts/nav' %>
+    <% end %>
+      
+
       <div id="content">
         <%= yield %>
       </div>

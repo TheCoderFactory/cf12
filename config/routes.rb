@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :teachers
+
   resources :post_categories
 
   get 'contact', to: 'contact#index'
@@ -26,6 +28,7 @@ Rails.application.routes.draw do
 
   root 'home#index'
   get 'blog', to: 'blog#index'
+  get 'blog_filter', to: 'blog#blog_filter'
   get 'community', to: 'community#index'
   get 'women-in-tech', to: 'women_in_tech#index'
   resources :scholarships
