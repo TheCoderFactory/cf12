@@ -13,3 +13,4 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components', 'bootstrap-sass-official', 'assets', 'fonts')
 # Rails.application.config.assets.precompile << %r(.*.(?:eot|svg|ttf|woff)$)
 # Rails.application.config.assets.precompile = ['*.js', '*.css', '*.css.erb']
+Rails.application.config.assets.precompile += %w( *.js )
