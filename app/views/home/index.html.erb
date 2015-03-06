@@ -2,8 +2,8 @@
     <div class="ct-mediaSection-video embed-responsive embed-responsive-16by9">
       
         <video id="video1" muted loop autoplay="autoplay" preload="auto">
-            <source src='<%= asset_path "car2.webm" %>' type='video/webm'/>
             <source src='<%= asset_path "car1.m4v" %>' type='video/mp4'/>
+            <source src='<%= asset_path "car2.webm" %>' type='video/webm'/>
         </video>
     </div>
     <div class="ct-u-displayTable">
@@ -106,121 +106,121 @@
          </div> -->
 
         <header class="ct-sec-header text-left ct-u-paddingTop35">
-            <h2 class="ct-sec-header-title">WORKSHOPS</h2>
-        </header>
+                    <h2 class="ct-sec-header-title">WORKSHOPS</h2>
+                </header>
 
-           <div class="row ct-u-paddingTop20 workshop">
-                                    <div class="col-sm-4">
-                                        <article class="ct-coursesList ct-u-bgWhite">
-                                            <div class="ct-courseList-image">
-                                                <a href="/courses/workshops/learn-to-code-weekend-workshop"><img src="http://res.cloudinary.com/coder-factory/image/upload/c_scale,w_401/v1421879436/qetzogehrzzfrcsntvkk.png" alt="Learn to Code"></a>
-                                            </div>
-                                            <div class="entry-meta">
-                                                <span class="cat-links pull-left"><i class="fa fa-calendar"></i>Learn to Code</span>
-                                                <br>
-                                            </div>
-                                            <div class="ct-coursesList-cont">
-                                                <h3>Learning to code is not rocket science. Anyone can do it. And it's FUN! </h3>
-                                            </div>
-                                            <div class="entry-meta clearfix ct-u-borderTop">
-                                          <span class="entry-date pull-left">2 days</span>
-                                          <a href="/courses/workshops/learn-to-code-weekend-workshop" class="btn btn-success btn-sm pull-right">Learn More</a>
-                                      </div>
-                                        </article>
-                                    </div>
+                   <div class="row ct-u-paddingTop20 workshop">
+                    <div class="col-sm-4">
+                        <article class="ct-coursesList ct-u-bgWhite">
+                            <div class="ct-courseList-image">
+                                <a href="/courses/workshops/learn-to-code-weekend-workshop"><img src="<%= asset_path 'class.jpg' %>" alt="Learn to Code"></a>
+                            </div>
+                            <div class="entry-meta">
+                                <span class="cat-links pull-left"><i class="fa fa-calendar"></i>Learn to Code</span>
+                                <br>
+                            </div>
+                            <div class="ct-coursesList-cont">
+                                <h2 class="">Learning to code is not rocket science. Anyone can do it. And it's FUN! </h2>
+                            </div>
+                            <div class="entry-meta clearfix ct-u-borderTop">
+                          <span class="entry-date pull-left">2 days</span>
+                          <a href="/courses/workshops/learn-to-code-weekend-workshop" class="btn btn-primary btn-sm pull-right slime" ng-click="courses.changeWorkshop('learnToCode')">Learn More</a>
+                      </div>
+                        </article>
+                    </div>
 
-                                    <div class="col-sm-4">
-                                        <article class="ct-coursesList ct-u-bgWhite">
-                                            <div class="ct-courseList-image">
-                                              <img src="http://coderfactory.co/assets/highschool-0d8cca78e95dc787bfe89bac1d632efb.jpg" alt="Highschoolers">
-                                            </div>
-                                            <div class="entry-meta">
-                                                <span class="cat-links pull-left"><i class="fa fa-calendar"></i>Highschool Coders</span>
-                                                <br>
-                                            </div>
-                                            <div class="ct-coursesList-cont">
-                                                <h3>Highschoolers can code too. The adults don't always have to have all the fun.</h3>
-                                            </div>
-                                                                 <div class="entry-meta clearfix ct-u-borderTop">
-                                          <span class="entry-date pull-left">2 days</span>
-                                          <a href="/courses/workshops/learn-to-code-for-highschoolers" class="btn btn-success btn-sm pull-right">Learn More</a>
-                                      </div>
-                                        </article>
-                                    </div>
+                    <div class="col-sm-4">
+                        <article class="ct-coursesList ct-u-bgWhite">
+                            <div class="ct-courseList-image">
+                              <a href="/courses/workshops/learn-to-code-for-highschoolers"><img src="<%= asset_path 'highschool.jpg' %>" alt="Highschoolers"></a>
+                            </div>
+                            <div class="entry-meta">
+                                <span class="cat-links pull-left"><i class="fa fa-calendar"></i>Teens Learn to Code</span>
+                                <br>
+                            </div>
+                            <div class="ct-coursesList-cont">
+                                <h2 class="">Highschoolers can code too. The adults shouldn't have all the fun.</h2>
+                            </div>
+                                                 <div class="entry-meta clearfix ct-u-borderTop">
+                          <span class="entry-date pull-left">2 days</span>
+                          <a href="/courses/workshops/learn-to-code-for-highschoolers" class="btn btn-primary btn-sm pull-right slime" ng-click="courses.changeWorkshop('teensLearnToCode')">Learn More</a>
+                      </div>
+                        </article>
+                    </div>
 
-                                    <div class="col-sm-4">
-                                        <article class="ct-coursesList ct-u-bgWhite">
-                                            <div class="ct-courseList-image">
-                                              <img src="http://res.cloudinary.com/coder-factory/image/upload/bo_0px_solid_rgb:000,c_fill,h_270,w_410/v1424044389/teachers-technology_k5w6er.jpg" alt="Technology for Teachers">
-                                            </div>
-                                            <div class="entry-meta">
-                                                <span class="cat-links pull-left"><i class="fa fa-calendar"></i>Technology for Teachers</span>
-                                                <br>
-                                            </div>
-                                            <div class="ct-coursesList-cont">
-                                                <h3>Keep up with your students! Learn how to excite them with tech of the future.</h3>
-                                            </div>
-                                                                 <div class="entry-meta clearfix ct-u-borderTop">
-                                          <span class="entry-date pull-left">2 days</span>
-                                          <a href="/courses/workshops/technology-for-teachers-workshop" class="btn btn-success btn-sm pull-right">Learn More</a>
-                                      </div>
-                                        </article>
-                                    </div>
-           </div><!-- /row -->
+                    <div class="col-sm-4">
+                        <article class="ct-coursesList ct-u-bgWhite">
+                            <div class="ct-courseList-image">
+                              <a href="/courses/workshops/technology-for-teachers-workshop"><img src="http://res.cloudinary.com/coder-factory/image/upload/bo_0px_solid_rgb:000,c_fill,h_270,w_410/v1424044389/teachers-technology_k5w6er.jpg" alt="Technology for Teachers"></a>
+                            </div>
+                            <div class="entry-meta">
+                                <span class="cat-links pull-left"><i class="fa fa-calendar"></i>Technology for Teachers</span>
+                                <br>
+                            </div>
+                            <div class="ct-coursesList-cont">
+                                <h2 class="">Keep up with your students! Learn how to excite them with tech of the future.</h2>
+                            </div>
+                                                 <div class="entry-meta clearfix ct-u-borderTop">
+                          <span class="entry-date pull-left">2 days</span>
+                          <a href="/courses/workshops/technology-for-teachers-workshop" class="btn btn-primary btn-sm pull-right slime" ng-click="courses.changeWorkshop('technologyForTeachers')">Learn More</a>
+                      </div>
+                        </article>
+                    </div>
+                   </div><!-- /row -->
 
-         <header class="ct-sec-header text-left ct-u-paddingTop35">
-            <h2 class="ct-sec-header-title">PART TIME</h2>
-        </header>
+                 <header class="ct-sec-header text-left ct-u-paddingTop35">
+                    <h2 class="ct-sec-header-title">PART TIME</h2>
+                </header>
 
-           <div class="row ct-u-paddingTop20 partime">
-                                    <div class="col-sm-4">
-                                        <article class="ct-coursesList ct-u-bgWhite">
-                                            <div class="ct-courseList-image">
-                                                <a href="/courses/part-time-courses/web-app-developer-pt"><img src="http://res.cloudinary.com/coder-factory/image/upload/c_scale,w_401/v1421879436/qetzogehrzzfrcsntvkk.png" alt="Part Time"></a>
-                                            </div>
-                                            <div class="entry-meta">
-                                                <span class="cat-links pull-left"><i class="fa fa-calendar"></i>Part Time</span>
-                                                <br>
-                                            </div>
-                                            <div class="ct-coursesList-cont">
-                                                <h2 class="text-uppercase">Learn to build web applications while you keep you day job. </h2>
-                                            </div>
-                                            <div class="entry-meta clearfix ct-u-borderTop">
-                                          <span class="entry-date pull-left">12 weeks</span>
-                                          <a href="/courses/part-time-courses/web-app-developer-pt" class="btn btn-info btn-sm pull-right">Learn More</a>
-                                      </div>
-                                        </article>
-                                    </div>
-           </div><!-- /row -->
+                   <div class="row ct-u-paddingTop20 partime">
+                      <div class="col-sm-4">
+                          <article class="ct-coursesList ct-u-bgWhite">
+                              <div class="ct-courseList-image">
+                                  <a href="/courses/part-time-courses/web-app-developer-pt"><img src="http://res.cloudinary.com/coder-factory/image/upload/c_scale,w_401/v1421879436/qetzogehrzzfrcsntvkk.png" alt="Part Time"></a>
+                              </div>
+                              <div class="entry-meta">
+                                  <span class="cat-links pull-left"><i class="fa fa-calendar"></i>Part Time</span>
+                                  <br>
+                              </div>
+                              <div class="ct-coursesList-cont">
+                                  <h2 class="">Learn to build web applications while you keep you day job. </h2>
+                              </div>
+                              <div class="entry-meta clearfix ct-u-borderTop">
+                            <span class="entry-date pull-left">12 weeks</span>
+                            <a href="/courses/part-time-courses/web-app-developer-pt" class="btn btn-primary btn-sm pull-right burntsea">Learn More</a>
+                        </div>
+                          </article>
+                      </div>
+                   </div><!-- /row -->
 
-        <header class="ct-sec-header text-left ct-u-paddingTop35">
-            <h2 class="ct-sec-header-title">FULL TIME</h2>
-        </header>
+                <header class="ct-sec-header text-left ct-u-paddingTop35">
+                    <h2 class="ct-sec-header-title">FULL TIME</h2>
+                </header>
 
-           <div class="row ct-u-paddingTop20 fulltime">
-                                    <div class="col-sm-4">
-                                        <article class="ct-coursesList ct-u-bgWhite">
-                                            <div class="ct-courseList-image">
-                                                <a href="/fast-track"><img src="http://res.cloudinary.com/coder-factory/image/upload/c_scale,w_401/v1421879436/qetzogehrzzfrcsntvkk.png" alt="Part Time"></a>
-                                            </div>
-                                            <div class="entry-meta">
-                                                <span class="cat-links pull-left"><i class="fa fa-calendar"></i>Full Time</span>
-                                                <br>
-                                            </div>
-                                            <div class="ct-coursesList-cont">
-                                                <h2 class="text-uppercase">LMake a career change with our 24 week intensive full time courses. </h2>
-                                            </div>
-                                            <div class="entry-meta clearfix ct-u-borderTop">
-                                          <span class="entry-date pull-left">6 months</span>
-                                          <a href="/fast-track" class="btn btn-warning btn-sm pull-right">Learn More</a>
-                                      </div>
-                                        </article>
-                                    </div>
-           </div><!-- /row -->
+                   <div class="row ct-u-paddingTop20 fulltime">
+                      <div class="col-sm-4">
+                          <article class="ct-coursesList ct-u-bgWhite">
+                              <div class="ct-courseList-image">
+                                  <a href="/fast-track"><img src="http://res.cloudinary.com/coder-factory/image/upload/c_scale,w_401/v1421879436/qetzogehrzzfrcsntvkk.png" alt="Part Time"></a>
+                              </div>
+                              <div class="entry-meta">
+                                  <span class="cat-links pull-left"><i class="fa fa-calendar"></i>Full Time</span>
+                                  <br>
+                              </div>
+                              <div class="ct-coursesList-cont">
+                                  <h2 class="">Make a career change with our 24 week intensive full time courses. </h2>
+                              </div>
+                              <div class="entry-meta clearfix ct-u-borderTop">
+                            <span class="entry-date pull-left">6 months</span>
+                            <a href="/fast-track" class="btn btn-primary btn-sm pull-right darkknight">Learn More</a>
+                        </div>
+                          </article>
+                      </div>
+                   </div><!-- /row -->
 
 
-        </div><!-- /container -->
-     </div>
+                </div><!-- /container -->
+             </div>
 
 
   <!-- <div class="ct-mediaSection ct-u-paddingBoth50 ct-u-bgMotive">
