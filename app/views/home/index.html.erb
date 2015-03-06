@@ -1,10 +1,6 @@
-
- <div class="ct-mediaSection ct-u-bgdark-lightfont" data-height="100%" data-type="video"
-     data-bg-image-mobile="<%= asset_path 'tunnel3.jpg' %>">
+<div class="ct-mediaSection ct-u-bgdark-lightfont" data-height="100%" data-type="video" data-bg-image-mobile="<%= asset_path 'tunnel3.jpg' %>" style="background-color: #000;">
     <div class="ct-mediaSection-video embed-responsive embed-responsive-16by9">
-        <!-- in order for video to be muted you must add  &amp;api=1&amp;player_id=vimeoplayer1 to the end of the video src
-            If you have more than one video, make sure that player_id and id have dif names on each video
-    -->
+      
         <video id="video1" muted loop autoplay="autoplay" preload="auto">
             <source src='<%= asset_path "car2.webm" %>' type='video/webm'/>
             <source src='<%= asset_path "car1.m4v" %>' type='video/mp4'/>
@@ -16,16 +12,7 @@
                 <h2 class="ct-h-big text-center text-uppercase">create the future<br> learn fast. have fun.</h2>
                 <p class="ct-p-intro text-center"></p>
             </div>
-            <!-- <div class="container" data-stellar-ratio="0.2">
-                <div class="row">
-                    <div class="col-md-4 col-lg-3 col-lg-offset-3 col-md-offset-2 col-xs-12">
-                        <a href="16-actly-login-page.html" class="btn btn-primary btn-block ct-u-marginBottom5  animated" data-fx="fadeInUp" data-time="0">Register Now it’s Free</a>
-                    </div>
-                    <div class="col-md-4 col-lg-3 col-xs-12">
-                        <a href="08-actly-courses-alt.html" class="btn btn-default btn-block animated" data-fx="fadeInUp" data-time="400">Browse Courses</a>
-                    </div>
-                </div>
-            </div> -->
+           
         </div>
     </div>
 </div>
@@ -263,21 +250,17 @@
              <div class="col-sm-6 col-sm-offset-3">
                <div class="ct-newsletter ct-u-bgdark-lightfont text-center">
                  <h2 class="text-uppercase">Recieve tips and tutorials</h2>
-                   <div class="successMessage alert alert-success" style="display: none">
-                       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                       Thank You!
-                   </div>
-                   <div class="errorMessage alert alert-danger" style="display: none">
-                       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                       Oops! An error occured. Please try again later.
-                   </div>
-                 <form role="form" class="ct-form--newsletter validateIt" action="assets/form/send.php" method="post" data-email-subject="Newsletter Form" data-show-errors="true" data-hide-form="true">
-
-                   <div class="form-group animated" data-fx="fadeInUp" data-time="0">
-                     <input type="email" class="form-control" id="exampleInputEmail2"  name="field[]" required placeholder="Your Email Address">
-                   </div>
-                   <button type="submit" class="btn btn-primary   animated" data-fx="fadeInUp" data-time="0">Get Freebies</button>
-
+                   
+                 <form action="//coderfactory.us7.list-manage.com/subscribe/post?u=1c644187b6d7e06d32bcae158&amp;id=2afdc8b0c3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="ct-form--newsletter validateIt" target="_blank" novalidate>
+                 <div class="form-group animated" data-fx="fadeInUp" data-time="0">
+                 <input type="email" value="" name="EMAIL" id="mce-EMAIL" class="form-control" placeholder="Enter Email Address" />
+                   <div id="mce-responses" class="clear">
+                     <div class="response" id="mce-error-response" style="display:none"></div>
+                     <div class="response" id="mce-success-response" style="display:none"></div>
+                   </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                     <div style="position: absolute; left: -5000px;"><input type="text" name="b_1c644187b6d7e06d32bcae158_2afdc8b0c3" tabindex="-1" value=""></div>
+                     <br><br>
+                 <input type="submit" class="btn btn-primary animated" data-fx="fadeInUp" data-time="0" value="Receive Updates!" name="subscribe" id="mc-embedded-subscribe" >
                  </form>
                </div>
              </div>
