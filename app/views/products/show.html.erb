@@ -153,7 +153,7 @@
                                       <div class="col-sm-4">
                                         <article class="ct-coursesList ct-u-bgWhite">
                                             <div class="ct-courseList-image">
-                                                <a href="LEARNTOCODE.HTML"><img src="<%= asset_path workshop.product_attributes.find_by(key: 'card_image').value %>" alt="<%= workshop.name %>"></a>
+                                                <a href="/courses/workshops/<%= workshop.permalink %>"><img src="<%= asset_path workshop.product_attributes.find_by(key: 'card_image').value %>" alt="<%= workshop.name %>"></a>
                                             </div>
                                             <div class="entry-meta">
                                                 <span class="cat-links pull-left"><i class="fa fa-calendar"></i><%= workshop.name %></span>
@@ -163,7 +163,7 @@
                                                 <h3><%= workshop.short_description %> </h3>
                                             </div>
                                             <div class="entry-meta clearfix ct-u-borderTop">
-                                          <span class="entry-date pull-left"><%= workshop.product_attributes.find_by(key: 'num_days').value %></span>
+                                          
                                           <a href="/courses/workshops/<%= workshop.permalink %>" class="btn btn-success btn-sm pull-right">Learn More</a>
                                       </div>
                                         </article>
