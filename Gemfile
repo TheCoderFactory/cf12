@@ -22,7 +22,7 @@ gem 'ckeditor_rails', :git => 'https://github.com/tsechingho/ckeditor-rails'
 gem 'carrierwave'
 gem 'cloudinary'
 gem 'sitemap_generator'
-gem 'rack-zippy'
+# gem 'rack-zippy'
 # gem 'whenever', :require => false
 gem "autoprefixer-rails"
 # Delayed jobs
@@ -31,7 +31,7 @@ gem 'sucker_punch', '~> 1.0'
 gem 'newrelic_rpm'
 # gem "html_truncator", "~>0.2"
 gem "browser"
-gem 'jquery-turbolinks'
+# gem 'jquery-turbolinks'
 gem 'utf8-cleaner'
 group :development do
   gem "better_errors"
