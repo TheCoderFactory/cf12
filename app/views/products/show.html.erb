@@ -108,7 +108,7 @@
                   <tr>
                       <td><%= course.parent.name %></td>
                       <td><%= course.location.city if course.location %></td>
-                      <td><%= course.start_date.strftime('%d') %> - <%= course.end_date.strftime('%d %B') %></td>
+                      <td><%= course.start_date.strftime('%d %B') %> - <%= course.end_date.strftime('%d %B') %></td>
                       <td><%= number_to_currency(course.price * 1.1) %> (incl. GST)</td>
                       <td class="pull-right">
                         <% if course.in_stock? %>

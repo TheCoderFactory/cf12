@@ -38,33 +38,33 @@
   </div>
   <div class="panel panel-default">
     <div class="panel-body">
-      <h4>Select your preferred programme</h4>
-      <%= f.input :programme, collection: ['12 week programme', '24 week programme'] %>
+      <h4>Select your preferred program</h4>
+      <%= f.input :programme, collection: ['12 week program', '24 week program'] %>
       <% if @ft_application.gender != 'Male' %>
         <h4>Scholarships</h4>
         <%= f.input :scholarship, label: "Tick this box if you wish to be put forward for any available scholarships?" %>
-        <p>You are advised to reserve your place in the Fast Track programme by paying the deposit. If you are awarded a scholarship, your deposit will be refunded to you.</p>
+        <p>You are advised to reserve your place in the Fast Track program by paying the deposit. If you are awarded a scholarship, your deposit will be refunded to you.</p>
       <% end %>
     </div>
   </div>
   <div class="panel panel-default">
     <div class="panel-body">
       <h4>Laptop</h4>
-      <p>A brand new Apple MacBook Air will be supplied as part of your programme fees.</p>
-      <p>Check the box if have a late model (2013+) MacBook Air or Pro that you will use for the programme.<br>($1000 will be deducted from your programme fees).</p>
+      <p>A brand new Apple MacBook Air will be supplied as part of your program fees.</p>
+      <p>Check the box if have a late model (2013+) MacBook Air or Pro that you will use for the program.<br>($1000 will be deducted from your program fees).</p>
       <%= f.input :laptop, label: "I will bring my own laptop" %>
     </div>
   </div>
   <div class="panel panel-default">
     <div class="panel-body">
       <h4>Please choose a payment plan</h4>
-      <%= f.input :payment_plan, label: 'Choose from the following:', collection: ['I want to pay upfront ($1000 will be deducted from your programme fees)', '3 x monthly payments', '6 x monthly payments', '12 x monthly payments (only available for 24 week programme)'] %>
+      <%= f.input :payment_plan, label: 'Choose from the following:', collection: ['I want to pay upfront ($1000 will be deducted from your program fees)', '3 x monthly payments', '6 x monthly payments', '12 x monthly payments (only available for 24 week program)'] %>
       <small>
       <table class="table table-condensed table-striped">
         <tr>
           <th>PLAN</th>
-          <th>12wk PROGRAMME</th>
-          <th>24wk PROGRAMME</th>
+          <th>12wk PROGram</th>
+          <th>24wk PROGram</th>
         </tr>
         <tr>
           <th>Upfront</th>
@@ -94,7 +94,7 @@
   <div class="panel panel-default">
     <div class="panel-body">
       <h4>Accommodation</h4>
-      <p>A number of the Fast Track students are travelling to Sydney for the programme. Let us know if you would like us to assist you to find accommodation.</p>
+      <p>A number of the Fast Track students are travelling to Sydney for the program. Let us know if you would like us to assist you to find accommodation.</p>
         <%= f.input :accommodation, label: false %>
     </div>
   </div>
@@ -124,18 +124,18 @@
       <h2>Fast Track Terms and Conditions</h2>
 
       <h3>The Agreement</h3>
-      <p>This agreement is between the student, (<%= @ft_application.full_name %>), and Coder Factory, Pty ltd (Coder Factory) regarding the Fast Track Programme.</p>
+      <p>This agreement is between the student, (<%= @ft_application.full_name %>), and Coder Factory, Pty ltd (Coder Factory) regarding the Fast Track Program.</p>
 
       <h3>Training Course</h3>
       <p>Coder Factory is committed to providing hands-on training in their Sydney premises to <%= @ft_application.full_name %>, Monday through Friday, from 9:00 a.m. to 5:00 p.m. during the training period. Training will be a combination of lectures, curated content (books, screencasts, and tutorials), exercises, challenges, games, code competitions and reviews. Training will be instructor led, and student driven. There is no requirement for after-hours work, but it is expected that because of the intense nature of the training <%= @ft_application.full_name %> might need to work evenings and weekends. Training will include some physical exercises and challenges that are optional. <%= @ft_application.full_name %> assumes full responsibility for their physical and emotional wellbeing.</p>
 
-      <h3>Programme fees</h3>
-      <p><%= @ft_application.full_name %> understands that deposit (AUD 1000) is required to reserve their place in the programme. The remainder of full tuition is due 21 days before the start of their assigned cohort or later depending on the payment option. The AUD 1000 deposit is only refundable if 7 days notice is given prior to the start of the programme they are accepted in.</p>
+      <h3>Program fees</h3>
+      <p><%= @ft_application.full_name %> understands that deposit (AUD 1000) is required to reserve their place in the program. The remainder of full tuition is due 21 days before the start of their assigned cohort or later depending on the payment option. The AUD 1000 deposit is only refundable if 7 days notice is given prior to the start of the program they are accepted in.</p>
 
       <h3>Job Placement</h3>
       <p>Coder Factory will make earnest efforts to connect <%= @ft_application.full_name %> with tech companies and recruitment firms looking for job candidates. <%= @ft_application.full_name %> is free to work for whomever they want and apply everywhere they are able.</p>
 
-      <p><%= @ft_application.full_name %> understands that there is no guarantee of job, or job interview, and that the onus is on <%= @ft_application.full_name %> successfully completing the programme and making themselves available for interviews with employers.</p>
+      <p><%= @ft_application.full_name %> understands that there is no guarantee of job, or job interview, and that the onus is on <%= @ft_application.full_name %> successfully completing the program and making themselves available for interviews with employers.</p>
 
       <h3>Termination of this Agreement</h3>
       <p><%= @ft_application.full_name %> may leave the training during their first week and get all of their tuition back minus their AUD 1000 deposit. Coder Factory reserves the right to terminate <%= @ft_application.full_name %>'s training at any point and return their pro-rated tuition to them.</p>
