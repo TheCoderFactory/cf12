@@ -29,7 +29,7 @@
 	                               <p><%= post.lead %></p>
 	                           </div>
 	                           <div class="entry-meta ct-KindOfPostContainer clearfix">
-	                             <a href="18-actly-member-page.html" class="by-author clearfix">
+	                             <a href="<%= author_path(post.author) %>" class="by-author clearfix">
 	                               <img src="<%= image_path post.author.profile_picture %>" alt="Image of <%= post.author.name %> " class="pull-left"/>
 	                               <span class="by-autor-name"><%= post.author.name %></span>, <span class="by-autor-prof"><%= post.author.title %></span>
 	                             </a>

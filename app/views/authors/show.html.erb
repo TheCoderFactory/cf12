@@ -1,13 +1,22 @@
 <%= content_for :header, 'small-header' %>
 <%= content_for :title, "Coder Factory's " + @author.name %>
-<%= content_for :description, @author.name + ": " + @author.title + ". " + @author.info %>
+<%= content_for :description, @author.name.to_s + ": " + @author.title.to_s + ". " + @author.info.to_s %>
 <%= content_for :image, @author.profile_picture %>
+<div class="ct-mediaSection ct-u-bgBlack ct-u-bgdark-lightfont overflowHidden" data-stellar-background-ratio="0.2" data-height="330" data-type="parallax" data-bg-image="<%= asset_path 'defaulthead.jpg' %>" data-bg-image-mobile="<%= asset_path 'slider4.jpg' %>">
+    <div class="ct-mediaSection-inner">
+        <div class="container">
+            <h3 class="ct-breadcrumbHeader text-uppercase pull-left">Author</h3>
+        </div><!-- /container -->
+    </div><!-- /ct-mediaSection-inner -->
+</div>    
 
-<section class="calm">        
-  <div class="row">
-    <div class="col-xs-12 col-lg-offset-2 col-lg-8">
-      <h2 class="section-heading"><%= @author.name %></h2>
-      <div class="panel panel-default"><div class="panel-body">
+          
+
+
+
+<div class="container">  
+          <div class="row ct-contactContent">
+      
 <aside class="col-md-4">
     <div class="author" itemscope itemtype="http://data-vocabulary.org/Person">
       <h3><span itemprop="name"><%= @author.name %></span></h3>
