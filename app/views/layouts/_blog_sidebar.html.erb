@@ -20,7 +20,7 @@
                                    <img class="media-object" src="<%= asset_path popular_post.image %>" alt=" ">
                                </a>
                                <div class="media-body">
-                                 <p class="entry-text"><a href="/<%= popular_post.slug %>" title="<%= popular_post.title %>"><%= popular_post.title %></a></p>
+                                 <p class="entry-text"><a href="/posts/<%= popular_post.slug %>" title="<%= popular_post.title %>"><%= popular_post.title %></a></p>
                                  <div class="entry-meta">
                                     <span class="entry-date"><%= popular_post.published_date.strftime('%e %B, %Y') %></span>
                                  </div>
