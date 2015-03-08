@@ -8,7 +8,9 @@
  
 <div class="ct-u-bgLightGrey">
     <div class="container">
-      <h3 class="text-uppercase">Articles tagged with: <%= params[:tag] %> (<%= @posts.count %>)</h3>
+      <h3 class="text-uppercase">
+        <% if params[:tag] %>Articles tagged with: <%= params[:tag] %> (<%= @posts.count %>)<% end %>
+        <% if params[:post_category] %>Articles category: <%= PostCategory.find(params[:post_category]).name %> <% end %></h3>
        
         <div class="row"><div class="col-md-9 ct-colContent ct-u-paddingBoth60">
                     <div class="col-sm-12">

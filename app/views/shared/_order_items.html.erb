@@ -87,7 +87,7 @@
       <td></td>
       <td colspan="3"><span class="pull-right"><strong>Total</strong></span></td>
       <td class="money">
-        <span class="pull-right"><strong><%= number_with_precision(order.total, precision: 2, delimiter: ' ') %></strong></span>
+        <span class="pull-right"><strong><%= number_to_currency(order.total, delimiter: ' ') %></strong></span>
       </td>
     </tr>
   </tfoot>

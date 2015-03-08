@@ -38,7 +38,9 @@
                        <h4 class="ct-widget-title">Categories</h4>
                        <ul>
                         <% @post_categories.each do |post_category| %>
-                           <li><span style="color:#3498DB"><i class="fa fa-<%= post_category.icon %>"></i></span> &nbsp;<%= link_to post_category.name, blog_filter_path(post_category: post_category) %></li>
+                          <% if post_category.posts.count > 0 %>
+                           <li><span style="color:#3498DB"><i class="fa fa-<%= post_category.icon %>"></i></span> &nbsp;<%= link_to post_category.name, blog_filter_path(post_category: post_category) %> <span class="badge pull-right"><%= post_category.posts.count %></span></li>
+                          <% end %>
                         <% end %>
                        </ul>
                      </aside>

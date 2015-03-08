@@ -10,6 +10,8 @@ class Post < ActiveRecord::Base
 	# mount_uploader :image, PostImageUploader
 	require 'csv'
 
+  after_save :update_post_category_count
+
   def self.import(file)
     CSV.foreach(file.path, headers: true) do |row|
 
@@ -35,4 +37,8 @@ class Post < ActiveRecord::Base
 	def self.popular_posts
 		order(impressions_count: :desc)
 	end
+
+  def update_post_category_count
+    
+  end
 end

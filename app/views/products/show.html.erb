@@ -56,10 +56,12 @@
                               <%= @next_course.start_date.strftime('%d %B') %>
                             </span>
                         </div>
-                        <a href="teachers.html" class="by-author pull-left">
-                            <img src="<%= asset_path 'matt.jpg' %>" alt="author img">
-                            <span class="by-autor-name">Matt Werth</span>, <span class="by-autor-prof">Teacher</span>
-                        </a>
+                        <% if @teacher %>
+                          <a href="<%= @teacher.link %>" class="by-author pull-left" target="_blank">
+                            <img src="<%= @teacher.image %>" alt="author img">
+                            <span class="by-autor-name"><%= @teacher.name %></span>, <span class="by-autor-prof"><%= @teacher.title %></span>
+                          </a>
+                        <% end %>
 
                         <div class="entry-meta pull-right">
                             <div class="ct-u-displayInlineBlock">
@@ -89,104 +91,94 @@
 
 
 <div class="ct-u-bgLightGrey ct-u-paddingTop40">
-    <div class="container">
-                <h4 class="text-uppercase ct-fw-700 ct-titleSmaller ct-u-paddingBottom50 ct-u-paddingTop30" id="schedule">Upcoming Workshops</h4>
-
-        <div class="table-responsive">
-            <table class="table ct-table--withBorder ct-fw-300">
-                <thead class="text-left">
-                <tr>
-                    <th>Workshop</th>
-                    <th>Location</th>
-                    <th>Date</th>
-                    <th>Cost</th>
-                    <th class="text-right"></th>
-                </tr>
-                </thead>
-                <tbody class="text-left">
-                <% @upcoming_courses.each do |course| %>
-                  <tr>
-                      <td><%= course.parent.name %></td>
-                      <td><%= course.location.city if course.location %></td>
-                      <td><%= course.start_date.strftime('%d %B') %> - <%= course.end_date.strftime('%d %B') %></td>
-                      <td><%= number_to_currency(course.price * 1.1) %> (incl. GST)</td>
-                      <td class="pull-right">
-                        <% if course.in_stock? %>
-                          <%= form_tag buy_product_path(@product.product_category.permalink, @product.permalink, :variant => course.id), :class => 'form-inline' do %>
-                            <div class="form-group">
-                              <div class="input-group">
-                                <%= select_tag 'quantity', options_for_select([1,2,3,4,5,6,7,8,9]), :disabled => !course.in_stock?, class: 'form-control' %>
-                              </div>
-                              <button type="submit" name="commit" class="btn btn-slime btn-sm ct-u-displayInlineBlock"> Add to cart</button>
-                            </div>
-                          <% end %>
-                        <% else %>
-                          No places left
-                        <% end %>
-                      </td>
-                  </tr>
+  <div class="container">
+    <h4 class="text-uppercase ct-fw-700 ct-titleSmaller ct-u-paddingBottom50 ct-u-paddingTop30" id="schedule">Upcoming Workshops</h4>
+    <div class="table-responsive">
+        <table class="table ct-table--withBorder ct-fw-300">
+          <thead class="text-left">
+          <tr>
+            <th>Workshop</th>
+            <th>Location</th>
+            <th>Date</th>
+            <th>Cost</th>
+            <th class="text-right"></th>
+          </tr>
+        </thead>
+        <tbody class="text-left">
+          <% @upcoming_courses.each do |course| %>
+            <tr>
+              <td><%= course.parent.name %></td>
+              <td><%= course.location.city if course.location %></td>
+              <td><%= course.start_date.strftime('%d %B') %> - <%= course.end_date.strftime('%d %B') %></td>
+              <td><%= number_to_currency(course.price * 1.1) %> (incl. GST)</td>
+              <td class="pull-right">
+                <% if course.in_stock? %>
+                  <%= form_tag buy_product_path(@product.product_category.permalink, @product.permalink, :variant => course.id), :class => 'form-inline' do %>
+                    <div class="form-group">
+                      <div class="input-group">
+                        <%= select_tag 'quantity', options_for_select([1,2,3,4,5,6,7,8,9]), :disabled => !course.in_stock?, class: 'form-control' %>
+                      </div>
+                      <button type="submit" name="commit" class="btn btn-slime btn-sm ct-u-displayInlineBlock"> Add to cart</button>
+                    </div>
+                  <% end %>
+                <% else %>
+                  No places left
                 <% end %>
- 
-                </tbody>
-            </table>
-        </div>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
     </div>
+  </div>
 </div>
 
 <div class="ct-u-paddingBottom30 ct-u-bgGrey">
-        <div class="container">
-
-            <h4 class="text-uppercase ct-fw-700 ct-titleSmaller ct-u-paddingBottom50 ct-u-paddingTop30">Related Workshops</h4>
-
-            <div class="row">
-                <div class="col-sm-12">
-
-                    <div class="ct-js-flexslider ct-relatedCoursesSlider" data-controlnav="false"
+  <div class="container">
+    <h4 class="text-uppercase ct-fw-700 ct-titleSmaller ct-u-paddingBottom50 ct-u-paddingTop30">Related Workshops</h4>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="ct-js-flexslider ct-relatedCoursesSlider" data-controlnav="false"
                          data-directionnav="true" data-animationloop="true">
-                        <ul class="slides">
-                          <% @product_category.products.each_with_index do |workshop, index| %>
-                            <% if index == 0 or index == 3 %>
-                              <li>
-                                <div class="row ct-u-paddingTop20 workshop">
-                            <% end %>
-                                    
-                                      <div class="col-sm-4">
-                                        <article class="ct-coursesList ct-u-bgWhite">
-                                            <div class="ct-courseList-image">
-                                                <a href="/courses/workshops/<%= workshop.permalink %>"><img src="<%= asset_path workshop.product_attributes.find_by(key: 'card_image').value %>" alt="<%= workshop.name %>"></a>
-                                            </div>
-                                            <div class="entry-meta">
-                                                <span class="cat-links pull-left"><i class="fa fa-calendar"></i><%= workshop.name %></span>
-                                                <br>
-                                            </div>
-                                            <div class="ct-coursesList-cont">
-                                                <h3><%= workshop.short_description.html_safe %> </h3>
-                                            </div>
-                                            <div class="entry-meta clearfix ct-u-borderTop">
-                                          
-                                          <a href="/courses/workshops/<%= workshop.permalink %>" class="btn btn-success btn-sm pull-right">Learn More</a>
-                                      </div>
-                                        </article>
-                                      </div>
-                                      <% if index == 2 %>
-                                          </div>
-                                          <!-- /row -->
-                                        </li>
-                                      <% end %>
-                                    <% end %>
-
-                                    
-
-                            </li>
-
-                        </ul>
-
+          <ul class="slides">
+            <% @product_category.products.each_with_index do |workshop, index| %>
+              <% if index == 0 or index == 3 %>
+                <li>
+                  <div class="row ct-u-paddingTop20 workshop">
+              <% end %>
+              <div class="col-sm-4">
+                <article class="ct-coursesList ct-u-bgWhite">
+                  <div class="ct-courseList-image">
+                    <a href="/courses/workshops/<%= workshop.permalink %>">
+                      <img src="<%= asset_path workshop.product_attributes.find_by(key: 'card_image').value %>" alt="<%= workshop.name %>">
+                    </a>
                     </div>
-                    <!-- /flexslider -->
+                    <div class="entry-meta">
+                      <span class="cat-links pull-left">
+                        <i class="fa fa-calendar"></i> <%= workshop.name %>
+                      </span>
+                      <br>
+                    </div>
+                    <div class="ct-coursesList-cont">
+                      <h3><%= workshop.short_description.html_safe %> </h3>
+                    </div>
+                    <div class="entry-meta clearfix ct-u-borderTop">
+                      <%= workshop.product_attributes.find_by(key: 'num_days').value if workshop.product_attributes.find_by(key: 'num_days') %>
+                      <a href="/courses/workshops/<%= workshop.permalink %>" class="btn btn-success btn-sm pull-right">
+                        Learn More
+                      </a>
+                    </div>
+                  </article>
                 </div>
-            </div>
-            <!-- /row -->
-
-        </div>
-        <!-- /container -->
+                <% if index == 2 %>
+                  </div><!-- /row -->
+                </li>
+              <% end %>
+            <% end %>
+          </li>
+        </ul>
+      </div><!-- /flexslider -->
+    </div>
+  </div><!-- /row -->
+</div><!-- /container -->
 </div>

@@ -23,7 +23,7 @@ gem 'carrierwave'
 gem 'cloudinary'
 gem 'sitemap_generator'
 # gem 'rack-zippy'
-# gem 'whenever', :require => false
+gem 'whenever', :require => false
 gem "autoprefixer-rails"
 # Delayed jobs
 gem 'sucker_punch', '~> 1.0'
