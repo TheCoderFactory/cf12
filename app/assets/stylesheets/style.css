@@ -7917,7 +7917,7 @@ table.ct-table--withBorder .btn {
   border-bottom-color: transparent;
 }
 .ct-accordion .panel:last-child .panel-title a.collapsed {
-  border-bottom: solid 2px $calm ;
+  border-bottom: solid 2px $calm !important;
 }
 .ct-accordion .panel .panel-body {
   font-size: $font-size-medium;
@@ -7979,14 +7979,14 @@ table.ct-table--withBorder .btn {
   margin-top: 1px;
 }
 .ct-accordion--normal .panel:last-child .panel-title a.collapsed {
-  border-bottom: 0 ;
+  border-bottom: 0 !important;
   border-top: solid 1px #ccc;
 }
 .ct-accordion--normal .panel:first-child .panel-title a {
-  border-top: 0 ;
+  border-top: 0 !important;
 }
 .ct-accordion--normal .panel:first-child .panel-title a.collapsed {
-  border-bottom: 0 ;
+  border-bottom: 0 !important;
   border-top: solid 1px #ccc;
 }
 .ct-accordion--normal .panel {
@@ -9853,7 +9853,7 @@ img.mfp-img {
   content: "";
   width: 36px;
   height: 121px;
-  background: url("../images/flex-chevron.png") no-repeat;
+  background: url("http://res.cloudinary.com/coder-factory/image/upload/v1425899021/flex-chevron-dark_jwdbw6.png") no-repeat;
 }
 .flexslider.ct-flexslider--chevron .flex-direction-nav a.flex-next:before,
 .ct-flexslider--chevronDark .flex-direction-nav a.flex-next:before {
@@ -9873,7 +9873,7 @@ img.mfp-img {
   right: -50px;
 }
 .ct-flexslider--chevronDark .flex-direction-nav a:before {
-  background: url("../images/flex-chevron-dark.png") no-repeat;
+  background: url("http://res.cloudinary.com/coder-factory/image/upload/v1425899021/flex-chevron-dark_jwdbw6.png") no-repeat;
 }
 .ct-flexslider--adjacentVisible {
   overflow: hidden;
@@ -13075,14 +13075,14 @@ footer .widget ul li a:active {
   color: #ffffff;
 }
 .ct-accordion {
-  border: solid 2px $calm ;
+  border: solid 2px $calm !important;
 }
 .ct-accordion .panel-heading .panel-title a {
   color: $calm;
-  border-top: solid 2px $calm ;
+  border-top: solid 2px $calm !important;
 }
 .ct-accordion .panel:last-child .panel-title a.collapsed {
-  border-bottom: solid 2px $calm ;
+  border-bottom: solid 2px $calm !important;
 }
 .ct-accordion--normal .panel-heading .panel-title a {
   color: $calm;

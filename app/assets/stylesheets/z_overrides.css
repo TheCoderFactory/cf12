@@ -88,6 +88,7 @@ $fasttrack:                           #FF6A26;
 
 .ct-pricing .ct-pricing-sep {
   color: #000;
+  opacity: inherit;
 }
 
 .ct-pricing .ct-pricing-pricebox {
