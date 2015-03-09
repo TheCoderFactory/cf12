@@ -7,15 +7,19 @@ $midnight-light:       lighten($midnight, 50);
 $dirty-gold:                          #DBC034;
 $calm:                                #3498DB;
 $subtle:                              #F8F8F8;
-$slime:                               #48A85A;
+$slime:                               #1ABC9C;
 $burntsea:                            #487AA8;
 $vibrant:                             #D44F99;
+$parttime:                            #09A0EF;
+$fasttrack:                           #FF6A26;
 
 --*/
 
 
 
 /*--  Bg Colours  --*/
+
+
 
 .darkknight {
   background-color: #2C3E50;
@@ -39,8 +43,26 @@ $vibrant:                             #D44F99;
 }
 
 .slime:hover {
-  background: #107823;
-  border-color: #107823;
+  background: #1ABC9C;
+  border-color: #1ABC9C;
+}
+
+.parttime {
+  background-color: $slime;
+}
+
+.parttime:hover {
+  background: #09A0EF;
+  border-color: #09A0EF;
+}
+
+.fastrack {
+  background-color: $fasttrack;
+}
+
+.fasttrack:hover {
+  background: #FF6A26;
+  border-color: #FF6A26;
 }
 
 .burntsea {
@@ -82,17 +104,17 @@ $vibrant:                             #D44F99;
   border-bottom: 5px solid transparent;
 }
 
-.workshop .ct-coursesList:hover {
-  border-bottom: 5px solid #48A85A;
+.ct-coursesList-workshop:hover {
+  border-bottom: 5px solid $slime;
   /*transform: translateY(-5px);*/
 }
 
-.partime .ct-coursesList:hover {
-  border-bottom: 5px solid #487AA8;
+.ct-coursesList-parttime:hover {
+  border-bottom: 5px solid $parttime;
   /*transform: translateY(-5px);*/
 }
-.fulltime .ct-coursesList:hover {
-  border-bottom: 5px solid #2C3E50;
+.ct-coursesList-fasttrack:hover {
+  border-bottom: 5px solid $fasttrack;
   /*transform: translateY(-5px);*/
 }
 
@@ -193,11 +215,11 @@ select.form-control {
 }
 
 .workshop .ct-tabs--witharrow .nav-tabs.nav-justified > .active > a, .workshop .ct-tabs .nav-tabs > li > a:hover, .workshop .ct-pricing .ct-pricing-content .ct-pricing-content-ul li.ct-pricing-content-ul-activesep:before, .workshop .btn-link, .workshop .ct-relatedCoursesSlider .flex-direction-nav a:before {
-  color: #48A85A !important;
+  color: $slime !important;
 }
 
 .workshop .ct-tabs .nav-tabs > li > a, .workshop .ct-relatedCoursesSlider .flex-direction-nav a {
-  border-color: #48A85A;
+  border-color: $slime;
 }
 
 .workshop .ct-relatedCoursesSlider .flex-direction-nav a:hover {
@@ -205,7 +227,7 @@ select.form-control {
 }
 
 .workshop .table.table > thead > tr > th {
-  background-color: #48A85A;
+  background-color: $slime;
 }
 
 /*.ct-pricing-content-ul li {
@@ -229,6 +251,16 @@ select.form-control {
 .ct-iconBox--bgDark .ct-iconBox-icon i
 {
   color: #333;
+}
+
+.workshop .ct-tabs .nav-tabs > li > a, .workshop .ct-relatedCoursesSlider .flex-direction-nav a
+{
+  border-color: $slime;
+}
+
+.workshop .ct-tabs--witharrow .nav-tabs.nav-justified > .active > a, .workshop .ct-tabs .nav-tabs > li > a:hover, .workshop .ct-pricing .ct-pricing-content .ct-pricing-content-ul li.ct-pricing-content-ul-activesep:before, .workshop .btn-link, .workshop .ct-relatedCoursesSlider .flex-direction-nav a:before
+{
+  border-color: $slime;
 }
 
 
