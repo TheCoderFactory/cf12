@@ -1,18 +1,28 @@
-<%= simple_form_for(@course_registration) do |f| %>
-  <%= f.error_notification %>
+<div class='row'>
+          <div class="col-md-6">
+            <%= image_tag 'FrontPageThumb.jpg', class: 'img-responsive img-thumbnail' %>
+          </div>
+          <div class="col-md-6">
+          <p class="lead blue-font">Register your details to receive the 13 page information pack plus a link to the application form.</p>
+        
+            
+          
+        <hr>
+        <%= simple_form_for CourseRegistration.new do |f| %>
+        <%= invisible_captcha %>
+        
+        <div class="form-group">
+          <%= f.input :first_name, input_html: { class: 'form-control' } %>
+        </div>
+        <div class="form-group">
+          <%= f.input :email, input_html: { class: 'form-control' } %>
+        </div>
+        
+        <div class="form-group">
+          <%= f.input :country, priority: ['Australia', 'Belgium', 'Canada', 'Cyprus', 'Denmark', 'Estonia', 'Finland', 'France', 'Germany', 'Hong Kong', 'Ireland', 'Italy', 'Japan', 'Malta', 'Netherlands', 'New Zealand', 'Norway', 'Sweden', 'United States', 'United Kingdom', ], input_html: { class: 'form-control' } %>
+        </div>
 
-  <div class="form-inputs">
-    <%= f.input :course_id %>
-    <%= f.input :first_name %>
-    <%= f.input :last_name %>
-    <%= f.input :city %>
-    <%= f.input :country %>
-    <%= f.input :reason %>
-    <%= f.input :bio %>
-    <%= f.input :email %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+        <%= f.submit "Receive Info Pack", class: 'btn btn-primary' %>
+        
+      <% end %>
+      </div>
