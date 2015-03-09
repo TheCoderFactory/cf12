@@ -157,34 +157,4 @@
      </div> -->
 
 
-    <div class="ct-mediaSection ct-u-bgDarkgrey" data-stellar-background-ratio="0.2" data-height="420" data-type="parallax" data-bg-image="<%= asset_path 'keyboard.jpg' %>" data-bg-image-mobile="<%= asset_path 'keyboard.jpg' %>">
-       <div class="ct-mediaSection-inner">
-         <div class="container">
-
-           <div class="row">
-             <div class="col-sm-6 col-sm-offset-3">
-               <div class="ct-newsletter ct-u-bgdark-lightfont text-center">
-                 <h2 class="text-uppercase">Newsletter subscribe</h2>
-                   <div class="successMessage alert alert-success" style="display: none">
-                       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                       Thank You!
-                   </div>
-                   <div class="errorMessage alert alert-danger" style="display: none">
-                       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                       Ups! An error occured. Please try again later.
-                   </div>
-                 <form role="form" class="ct-form--newsletter validateIt" action="assets/form/send.php" method="post" data-email-subject="Newsletter Form" data-show-errors="true" data-hide-form="true">
-
-                   <div class="form-group animated" data-fx="fadeInUp" data-time="0">
-                     <input type="email" class="form-control" id="exampleInputEmail2"  name="field[]" required placeholder="Your Email Address">
-                   </div>
-                   <button type="submit" class="btn btn-primary   animated" data-fx="fadeInUp" data-time="0">Subscribe</button>
-
-                 </form>
-               </div>
-             </div>
-           </div><!-- /row -->
-         </div><!-- /container -->
-       </div><!-- /ct-mediaSection-inner -->
-     </div>
-
+    <%= render 'layouts/subscribe' %>
