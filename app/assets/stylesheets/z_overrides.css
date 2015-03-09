@@ -48,7 +48,7 @@ $fasttrack:                           #FF6A26;
 }
 
 .parttime {
-  background-color: $slime;
+  background-color: $parttime;
 }
 
 .parttime:hover {
@@ -56,7 +56,7 @@ $fasttrack:                           #FF6A26;
   border-color: #09A0EF;
 }
 
-.fastrack {
+.fasttrack {
   background-color: $fasttrack;
 }
 
@@ -271,6 +271,12 @@ select.form-control {
 
 .fulltime .ct-iconBox-icon--circle {
   background-color: #2C3E50;
+}
+
+.tweets_display
+{
+  color: #fff;
+  font-size: 20px;
 }
 
 /*--  Media Queries  --*/
