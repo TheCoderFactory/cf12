@@ -1,12 +1,12 @@
 <%= content_for :title, "Enrol in Coder Factory&apos;s ".html_safe + @product.name %>
 <%= content_for :description, @product.short_description.html_safe %>
 
-<div class="ct-mediaSection ct-u-bgWhite ct-u-bgdark-lightfont overflowHidden" data-stellar-background-ratio="0.2" data-height="450" data-type="parallax" data-bg-image="<%= asset_path 'webdev.jpg' %>" data-bg-image-mobile="<%= asset_path 'slider4.jpg' %>">
+<div class="ct-mediaSection ct-u-bgWhite ct-u-bgdark-lightfont overflowHidden" data-stellar-background-ratio="0.2" data-height="450" data-type="parallax" data-bg-image="http://res.cloudinary.com/coder-factory/image/upload/v1425963693/parttime_vkyigp.jpg" data-bg-image-mobile="http://res.cloudinary.com/coder-factory/image/upload/v1425963693/parttime_vkyigp.jpg">
   <div class="ct-mediaSection-inner">
     <div class="container">
       <h1 class="ct-breadcrumbHeader text-uppercase pull-left">
         <%= @product.name %><br>
-        <span style="font-size:25px;color:#1f2b3a;"><%= @product.short_description.html_safe %></span>
+        <span style="font-size:25px;color:#fff;"><%= @product.short_description.html_safe %></span>
       </h1>
     </div><!-- /container -->
   </div><!-- /ct-mediaSection-inner -->
@@ -65,13 +65,6 @@
 
                         <div class="entry-meta pull-right">
                             <div class="ct-u-displayInlineBlock">
-                       <!-- <span class="ct-stars-container">
-                           <i class="fa fa-star active"></i>
-                           <i class="fa fa-star active"></i>
-                           <i class="fa fa-star active"></i>
-                           <i class="fa fa-star active"></i>
-                           <i class="fa fa-star"></i>
-                       </span> -->
                                 
                                 <a href="#schedule" class="btn btn-slime btn-sm ct-u-displayInlineBlock">Book Now</a>
                             </div>
@@ -164,7 +157,7 @@
                     </div>
                     <div class="entry-meta clearfix ct-u-borderTop">
                       <%= workshop.product_attributes.find_by(key: 'num_days').value if workshop.product_attributes.find_by(key: 'num_days') %>
-                      <a href="/courses/workshops/<%= workshop.permalink %>" class="btn btn-success btn-sm pull-right">
+                      <a href="/courses/workshops/<%= workshop.permalink %>" class="btn btn-<%= @product_category.permalink == 'workshops' ? 'slime' : 'parttime' %> btn-sm pull-right">
                         Learn More
                       </a>
                     </div>
