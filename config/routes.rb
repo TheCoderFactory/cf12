@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   resources :teachers
 
   resources :post_categories
@@ -61,6 +61,7 @@ Rails.application.routes.draw do
   
 
   get 'privacy', to: 'privacy#index'
+  get 'about', to: 'about#index'
 
   devise_for :users, :skip => :registrations
 
