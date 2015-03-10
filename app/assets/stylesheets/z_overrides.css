@@ -280,6 +280,8 @@ select.form-control {
   font-size: 20px;
 }
 
+
+
 /*--  Media Queries  --*/
 @media screen and (min-width: 992px) {
 
@@ -288,5 +290,17 @@ select.form-control {
     position: relative;
     top: 8px;
   }
+
+}
+
+@media screen and (max-width: 767px) {
+
+  /*--  Logo Position  --*/
+  .navbar-brand > img {
+    display: inline-block;
+    position: relative;
+    top: 13px;
+  }
+
 
 }
