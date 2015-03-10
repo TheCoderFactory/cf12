@@ -2034,7 +2034,7 @@
 }
 @font-face {
   font-family: 'futura pt';
-  
+
 }/*
 @font-face {
   font-family: 'futura pt-it';
@@ -2599,7 +2599,7 @@ footer {
   }
   .navbar-nav > li > a {
     letter-spacing: 1px;
-    padding: 15px 12px;
+    padding: 15px 20px;
   }
   .navbar-nav > li > a:hover,
   .navbar-nav > li > a:active,
@@ -12974,7 +12974,7 @@ body {
 /*!
  * Yamm!3
  * Yet another megamenu for Bootstrap 3
- * 
+ *
  * http://geedmo.github.com/yamm3
  */
 .yamm-wrapper {
