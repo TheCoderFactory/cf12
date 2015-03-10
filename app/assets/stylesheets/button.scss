@@ -1,0 +1,62 @@
+// Extends
+//--------------------------------------------
+
+
+
+// Presentational
+//--------------------------------------------
+
+$hover-tint: 15;
+
+.btn-slime {
+  background-color: $slime;
+  color: white;
+  &:hover {
+    background: darken($slime, $hover-tint);
+    border-color: darken($slime, $hover-tint);
+  }
+}
+
+.btn-parttime {
+  background-color: $parttime;
+  color: white;
+  &:hover {
+    background: darken($parttime, $hover-tint);
+    border-color: darken($parttime, $hover-tint);
+  }
+}
+
+.btn-fasttrack {
+  background-color: $fasttrack;
+  color: white;
+  &:hover {
+    background: darken($fasttrack, $hover-tint);
+    border-color: darken($fasttrack, $hover-tint);
+  }
+}
+
+.btn-warning {
+  background-color: $dirty-gold;
+}
+
+.btn-info {
+  background-color: $calm;
+}
+
+.btn-primary {
+  background-color: $darknight;
+  border: solid 2px;
+}
+
+.btn-success {
+  background-color: $slime;
+}
+
+.btn {
+  &:hover {
+    color: $light;
+  }
+  &:active {
+    opacity: 0.5;
+  }
+}

@@ -17,65 +17,6 @@ $fasttrack:                           #FF6A26;
 
 
 
-/*--  Bg Colours  --*/
-
-
-
-.darkknight {
-  background-color: #2C3E50;
-}
-
-.darkknight:hover {
-  background-color: #0F2031;
-  border-color: #0F2031;
-}
-
-.dirty-gold {
-  background-color: $dirty-gold !important;
-}
-
-.vibrant {
-  background-color: #d44F99;
-}
-
-.slime {
-  background-color: $slime;
-}
-
-.slime:hover {
-  background: #1ABC9C;
-  border-color: #1ABC9C;
-}
-
-.parttime {
-  background-color: $parttime;
-}
-
-.parttime:hover {
-  background: #09A0EF;
-  border-color: #09A0EF;
-}
-
-.fasttrack {
-  background-color: $fasttrack;
-}
-
-.fasttrack:hover {
-  background: #FF6A26;
-  border-color: #FF6A26;
-}
-
-.burntsea {
-  background-color: #487AA8;
-}
-
-.burntsea:hover {
-  background: #113A60;
-  border-color: #113A60;
-}
-
-
-
 /*--  Navbar  --*/
 
 .ct-navbar--dark {
@@ -98,25 +39,6 @@ $fasttrack:                           #FF6A26;
 .ct-pricing .ct-pricing-content {
   background-color: #000;
   background-color: #ebeff0;
-}
-
-.ct-coursesList {
-  transition: 0.33s ease-in transform;
-  border-bottom: 5px solid transparent;
-}
-
-.ct-coursesList-workshop:hover {
-  border-bottom: 5px solid $slime;
-  /*transform: translateY(-5px);*/
-}
-
-.ct-coursesList-parttime:hover {
-  border-bottom: 5px solid $parttime;
-  /*transform: translateY(-5px);*/
-}
-.ct-coursesList-fasttrack:hover {
-  border-bottom: 5px solid $fasttrack;
-  /*transform: translateY(-5px);*/
 }
 
 .ct-pricing .ct-pricing-content .ct-pricing-content-ul {
@@ -184,15 +106,6 @@ select.form-control {
 .ct-tabs--courseList .nav-justified > .active > a, .ct-tabs--courseList .nav-justified > .active > a:hover, .ct-tabs--courseList .nav-justified > .active > a:focus{
   border: solid 2px;
 }
-
-
-
-/*--  Buttons  --*/
-
-.btn-primary {
-  border: solid 2px;
-}
-
 
 
 
@@ -278,29 +191,4 @@ select.form-control {
 {
   color: #fff;
   font-size: 20px;
-}
-
-
-
-/*--  Media Queries  --*/
-@media screen and (min-width: 992px) {
-
-  /*--  Navbar Position  --*/
-  .nav.navbar-nav {
-    position: relative;
-    top: 8px;
-  }
-
-}
-
-@media screen and (max-width: 767px) {
-
-  /*--  Logo Position  --*/
-  .navbar-brand > img {
-    display: inline-block;
-    position: relative;
-    top: 13px;
-  }
-
-
 }

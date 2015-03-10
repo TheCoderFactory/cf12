@@ -5,15 +5,25 @@
 "config.scss",
 "reset.scss",
 
+"style",
+
 // Global Classes,
 "util.scss",
-
-
 
 // Typography
 "type.scss",
 
-"style",
+// Elements
+"button",
+"nav",
+"footer",
+
+// Util
+"color",
+
+// Modules
+"course-list",
+
 "z_overrides";
 
 /*.embed-responsive {
@@ -23,6 +33,21 @@
   padding: 0;
   overflow: hidden;
 }*/
+
+$ring-tint:  15;
+
+.ct-iconBox--top .ct-iconBox-icon.slime {
+  border-color: darken($slime, $ring-tint);
+}
+
+.ct-iconBox--top .ct-iconBox-icon.parttime {
+  border-color: darken($parttime, $ring-tint);
+}
+
+.ct-iconBox--top .ct-iconBox-icon.fasttrack {
+  border-color: darken($fasttrack, $ring-tint);
+}
+
 .huge {
   font-size: 8em;
 }
@@ -98,7 +123,7 @@ font-size: 1.06em;
 letter-spacing: 1px;
 color: #1f2b3a;
 font-family: 'futura pt', sans-serif;
-padding: 14px 0; 
+padding: 14px 0;
 color: rgba(0, 0, 0, 0.8);
 text-transform: uppercase;
 }
@@ -209,21 +234,6 @@ font-weight: 300;
 color: $slime;
 background: none;
 border-radius: 0;
-}
-
-.btn-slime {
-  background-color: $slime;
-  color: white;
-}
-
-.btn-parttime {
-  background-color: $parttime;
-  color: white;
-}
-
-.btn-fasttrack {
-  background-color: $fasttrack;
-  color: white;
 }
 
 .digg_pagination {
@@ -388,18 +398,6 @@ color: #e5e5e5;
 color: rgba(255, 255, 255, 0.5);
 }
 
-.btn-warning {
-  background-color: $dirty-gold;
-}
-.btn-info {
-  background-color: $calm;
-}
-.btn-primary {
-  background-color:$darknight;
-}
-.btn-success {
-  background-color: $slime;
-}
 
 .ct-iconBox--bgDark .ct-iconBox-icon {
 border-color: #1f2b3a;
@@ -3573,4 +3571,3 @@ Copyright (c) 2014 Daniel Eden
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
 }
-

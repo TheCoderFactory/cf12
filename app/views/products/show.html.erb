@@ -66,7 +66,7 @@
 
                         <div class="entry-meta pull-right">
                             <div class="ct-u-displayInlineBlock">
-                                
+
                                 <a href="#schedule" class="btn btn-slime btn-sm ct-u-displayInlineBlock">Book Now</a>
                             </div>
                         </div>
@@ -141,7 +141,7 @@
                   <div class="row ct-u-paddingTop20 workshop">
               <% end %>
               <div class="col-sm-4">
-                <article class="ct-coursesList ct-u-bgWhite">
+                <article class="ct-coursesList ct-u-bgWhite ct-coursesList-workshop">
                   <div class="ct-courseList-image">
                     <a href="/courses/workshops/<%= workshop.permalink %>">
                       <img src="<%= asset_path workshop.product_attributes.find_by(key: 'card_image').value %>" alt="<%= workshop.name %>">
@@ -169,7 +169,7 @@
                 </li>
               <% end %>
             <% end %>
-         
+
         </ul>
       </div><!-- /flexslider -->
     </div>

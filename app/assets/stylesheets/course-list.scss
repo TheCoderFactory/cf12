@@ -1,0 +1,23 @@
+// Extends
+//--------------------------------------------
+
+
+
+// Presentational
+//--------------------------------------------
+
+.ct-coursesList {
+  transition: 0.33s ease-in all;
+  border-bottom: 5px solid transparent;
+}
+
+.ct-coursesList-workshop:hover {
+  border-color: $slime;
+}
+
+.ct-coursesList-parttime:hover {
+  border-color: $parttime;
+}
+.ct-coursesList-fasttrack:hover {
+  border-color: $fasttrack;
+}

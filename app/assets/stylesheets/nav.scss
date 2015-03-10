@@ -1,0 +1,29 @@
+// Extends
+//--------------------------------------------
+
+
+
+// Presentational
+//--------------------------------------------
+
+@media screen and (min-width: 992px) {
+
+  /*--  Navbar Position  --*/
+  .nav.navbar-nav {
+    position: relative;
+    top: 8px;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+
+  /*--  Logo Position  --*/
+  .navbar-brand > img {
+    display: inline-block;
+    position: relative;
+    top: 13px;
+    right: 8px;
+  }
+
+}
