@@ -1,4 +1,6 @@
 class TeachersController < ApplicationController
+    skip_before_action :authenticate_user!
+
   before_action :set_teacher, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
