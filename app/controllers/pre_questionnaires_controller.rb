@@ -47,6 +47,6 @@ class PreQuestionnairesController < ApplicationController
     end
 
     def pre_questionnaire_params
-      params.require(:pre_questionnaire).permit(:name, :gender, :age, :reason, :background, :experience, :hobbies, :order_id)
+      params.require(:pre_questionnaire).permit(:referral, :name, :gender, :age, :reason, :background, :experience, :hobbies, :order_id)
     end
 end

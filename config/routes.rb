@@ -98,7 +98,7 @@ Rails.application.routes.draw do
   # Checkout
   #
   match 'checkout' => 'orders#checkout', :as => 'checkout', :via => [:get, :patch]
-  match 'checkout/delivery' => 'orders#change_delivery_service', :as => 'change_delivery_service', :via => [:post]
+  # match 'checkout/delivery' => 'orders#change_delivery_service', :as => 'change_delivery_service', :via => [:post]
   match 'checkout/pay' => 'orders#payment', :as => 'checkout_payment', :via => [:get, :post]
   match 'checkout/confirm' => 'orders#confirmation', :as => 'checkout_confirmation', :via => [:get, :patch]
 end

@@ -36,6 +36,15 @@
 
 $ring-tint:  15;
 
+#flash-alert {
+  background-color: $dirty-gold;
+  font-size: $font-size-medium;
+  font-family: $heading-font;
+  color: white;
+  padding: 10px;
+  margin: 20px 0 0 0;
+}
+
 .ct-iconBox--top .ct-iconBox-icon.slime {
   border-color: darken($slime, $ring-tint);
 }

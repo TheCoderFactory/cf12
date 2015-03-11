@@ -82,131 +82,48 @@ class OrdersController < ApplicationController
                                                 :last_name, 
                                                 :company, :billing_address1, :billing_address2, :billing_address3, :billing_address4, :billing_country_id, :billing_postcode, :email_address, :phone_number, :delivery_name, :delivery_address1, :delivery_address2, :delivery_address3, :delivery_address4, :delivery_postcode, :delivery_country_id, :separate_delivery_address)
       @order.ip_address = request.ip
-      if @order.proceed_to_confirm
-        redirect_to checkout_confirmation_path
-      end
-    else
-      # Add some example order data for the example. In a real application
-      # this shouldn't be present.
-      # Faker::Config.locale = 'en-gb'
-      # @order.first_name = Faker::Name.first_name                                            if @order.first_name.blank?
-      # @order.last_name = Faker::Name.last_name                                              if @order.last_name.blank?
-      # @order.company = Faker::Company.name                                                  if @order.company.blank?
-      # @order.email_address = Faker::Internet.email                                          if @order.email_address.blank?
-      # @order.phone_number = Faker::PhoneNumber.phone_number                                 if @order.phone_number.blank?
-      # @order.billing_address1 = Faker::Address.building_number + " " + Faker::Address.street_name   if @order.billing_address1.blank?
-      # @order.billing_address3 = Faker::Address.city                                                 if @order.billing_address3.blank?
-      # @order.billing_address4 = Faker::Address.county                                               if @order.billing_address4.blank?
-      # @order.billing_postcode = Faker::Address.zip                                                  if @order.billing_postcode.blank?
+      redirect_to checkout_payment_path
     end
   end
   
   def payment
     @order = Shoppe::Order.find(current_order.id)
-    if request.post?
-      begin
-        current_order.confirm!
-        # This payment method should usually be called in a payment module or elsewhere but for the demo
-        # we are adding a payment to the order straight away.
-        current_order.payments.create(:method => "Credit Card", :amount => current_order.total, :reference => rand(10000) + 10000, :refundable => true)
-        # Set your secret key: remember to change this to your live secret key in production
-        # See your keys here https://dashboard.stripe.com/account
-        Stripe.api_key = Shoppe.settings.stripe_api_key
+    Stripe.api_key = Shoppe.settings.stripe_api_key
+    
+    customer = Stripe::Customer.create(
+      :card => params[:stripeToken],
+      :email => current_order.email_address
+    )
 
-        # # Get the credit card details submitted by the form
-        # token = params[:stripeToken]
-
-        # # Create a Customer
-        customer = Stripe::Customer.create(
-          :card => params[:stripeToken],
-          :email => current_order.email_address
-        )
-
-        # Charge the Customer instead of the card
-        Stripe::Charge.create(
-            :amount => current_order.total.to_i * 100, # in cents
-            :currency => "aud",
-            :description => "Order number: " + current_order.id.to_s,
-            :customer => customer.id
-        )
-
-        # # Save the customer ID in your database so you can use it later
-        # save_stripe_customer_id(user, customer.id)
-
-        # # Later...
-        # customer_id = get_stripe_customer_id(user)
-
-        # Stripe::Charge.create(
-        #   :amount   => 1500, # $15.00 this time
-        #   :currency => "usd",
-        #   :customer => customer_id
-        # )
-        session[:order_id] = nil
-        EnrolmentMailer.received.deliver
-        redirect_to new_pre_questionnaire_path(order: @order.id), :notice => "Your place in these courses have been booked!"
-      rescue Shoppe::Errors::PaymentDeclined => e
-        flash[:alert] = "Payment was declined by the bank. #{e.message}"
-        redirect_to checkout_path
-      rescue Shoppe::Errors::InsufficientStockToFulfil
-        flash[:alert] = "We're terribly sorry but while you were checking out we ran out of stock of some of the items in your basket. Your basket has been updated with the maximum we can currently supply. If you wish to continue just use the button below."
-        redirect_to checkout_path
-      end
+    charge = Stripe::Charge.create(
+        :amount => current_order.total.to_i * 100, # in cents
+        :currency => "aud",
+        :description => "Order number: " + current_order.id.to_s,
+        :customer => customer.id
+    )
+    if charge["paid"] == true
+      current_order.confirm!
+      current_order.payments.create(:method => "Credit Card", :amount => current_order.total, :reference => rand(10000) + 10000, :refundable => true)
+      session[:order_id] = nil
+      EnrolmentMailer.received.deliver
+      redirect_to new_pre_questionnaire_path(order: @order.id), :notice => "Your place in these courses have been booked!"
     end
+
+  rescue Stripe::CardError => e
+      # flash[:error] = e.message
+      # render :confirmation
+      flash[:alert] = "Payment was declined by the bank. #{e.message}"
+      redirect_to checkout_confirmation_path
+      # rescue Shoppe::Errors::PaymentDeclined => e
+      #   flash[:alert] = "Payment was declined by the bank. #{e.message}"
+      #   redirect_to checkout_payment_path
+      # rescue Shoppe::Errors::InsufficientStockToFulfil
+      #   flash[:alert] = "We're terribly sorry but while you were checking out we ran out of stock of some of the items in your basket. Your basket has been updated with the maximum we can currently supply. If you wish to continue just use the button below."
+      #   redirect_to checkout_payment_path
   end
   
   def confirmation
-    unless current_order.confirming?
-      redirect_to checkout_path
-      return
-    end
-    
-    # if request.patch?
-    #   begin
-    #     current_order.confirm!
-    #     # This payment method should usually be called in a payment module or elsewhere but for the demo
-    #     # we are adding a payment to the order straight away.
-    #     current_order.payments.create(:method => "Credit Card", :amount => current_order.total, :reference => rand(10000) + 10000, :refundable => true)
-    #     # Set your secret key: remember to change this to your live secret key in production
-    #     # See your keys here https://dashboard.stripe.com/account
-    #     Stripe.api_key = Shoppe.settings.stripe_api_key
-
-    #     # # Get the credit card details submitted by the form
-    #     # token = params[:stripeToken]
-
-    #     # # Create a Customer
-    #     # customer = Stripe::Customer.create(
-    #     #   :card => current_order.properties.values.first,
-    #     #   :description => current_order.email_address
-    #     # )
-
-    #     # Charge the Customer instead of the card
-    #     Stripe::Charge.create(
-    #         :amount => current_order.total.to_i * 100, # in cents
-    #         :currency => "aud",
-    #         :customer => current_order.properties.values.first
-    #     )
-
-    #     # # Save the customer ID in your database so you can use it later
-    #     # save_stripe_customer_id(user, customer.id)
-
-    #     # # Later...
-    #     # customer_id = get_stripe_customer_id(user)
-
-    #     # Stripe::Charge.create(
-    #     #   :amount   => 1500, # $15.00 this time
-    #     #   :currency => "usd",
-    #     #   :customer => customer_id
-    #     # )
-    #     session[:order_id] = nil
-    #     redirect_to thanks_path, :notice => "Your place in these courses have been booked!"
-    #   rescue Shoppe::Errors::PaymentDeclined => e
-    #     flash[:alert] = "Payment was declined by the bank. #{e.message}"
-    #     redirect_to checkout_path
-    #   rescue Shoppe::Errors::InsufficientStockToFulfil
-    #     flash[:alert] = "We're terribly sorry but while you were checking out we ran out of stock of some of the items in your basket. Your basket has been updated with the maximum we can currently supply. If you wish to continue just use the button below."
-    #     redirect_to checkout_path
-    #   end
-    # end
+    @order = Shoppe::Order.find(current_order.id)
   end
     
 end

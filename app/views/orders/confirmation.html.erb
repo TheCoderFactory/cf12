@@ -29,7 +29,10 @@
       </ul>
 
     </div><!-- /container -->
+  
 </div>
+
+
 <div class="ct-u-bgGrey">
   <div class="container">
     <div class="checkout">
@@ -58,6 +61,7 @@
     data-label="Pay now">
   </script>
 </form>
+<%= display_flash %>
   </p>
   <%= render 'shared/order_items', :order => current_order, :readonly => true %>
   <div class="pull-right">
