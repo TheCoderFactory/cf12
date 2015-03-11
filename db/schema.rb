@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150311135249) do
+ActiveRecord::Schema.define(version: 20150311141903) do
 
   create_table "admissions", force: :cascade do |t|
     t.integer  "fast_track_application_id"
@@ -102,6 +102,7 @@ ActiveRecord::Schema.define(version: 20150311135249) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.integer  "scholarship_id"
+    t.string   "phone"
   end
 
   add_index "fast_track_applications", ["scholarship_id"], name: "index_fast_track_applications_on_scholarship_id"

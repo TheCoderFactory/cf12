@@ -63,6 +63,6 @@ class FastTrackApplicationsController < ApplicationController
     end
 
     def fast_track_application_params
-      params.require(:fast_track_application).permit(:first_name, :last_name, :city, :country, :email, :age, :gender, :one_line, :reason, :info, :passion, :experience, :challenge, :special, :links, :referral, :visa, :programme_choice, :scholarship_id)
+      params.require(:fast_track_application).permit(:phone, :first_name, :last_name, :city, :country, :email, :age, :gender, :one_line, :reason, :info, :passion, :experience, :challenge, :special, :links, :referral, :visa, :programme_choice, :scholarship_id)
     end
 end

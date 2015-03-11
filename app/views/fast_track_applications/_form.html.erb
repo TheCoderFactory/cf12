@@ -53,11 +53,14 @@
             <h3>Part 2: Personal information</h3>
             <br>
             <div class="row">
-              <div class="form-group col-md-6">
+              <div class="form-group col-md-4">
                 <%= f.input :first_name, input_html: { class: 'form-control' } %>
               </div>
-              <div class="form-group col-md-6">
+              <div class="form-group col-md-4">
                 <%= f.input :last_name, input_html: { class: 'form-control' } %>
+              </div>
+              <div class="form-group col-md-4">
+                <%= f.input :phone, input_html: { class: 'form-control' } %>
               </div>
             </div>
             <br>
@@ -81,19 +84,17 @@
             </div>
           </div>
             <div class="row">
-              <div class="form-group col-md-1">
-                <%= f.input :age, input_html: { class: 'form-control' } %>
-              </div>
-              <div class="col-md-3">
-                <div class="form-group ">
-                  <%= f.input :gender, label: 'Which gender do you identify as?', collection: ['Female', 'Male', 'Neither'], input_html: { class: 'form-control' } %>
-                </div>
-              </div>
-            </div>
-            <div class="row">
               <div class="col-md-4">
                 <div class="form-group">
                   <%= f.input :email, input_html: { class: 'form-control' } %>
+                </div>
+              </div>
+              <div class="form-group col-md-1">
+                <%= f.input :age, input_html: { class: 'form-control' } %>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group ">
+                  <%= f.input :gender, label: 'Which gender do you identify as?', collection: ['Female', 'Male', 'Neither'], input_html: { class: 'form-control' } %>
                 </div>
               </div>
 
@@ -105,7 +106,7 @@
                 </div>
               </div>
             </div>
-            <br><br>
+            <br>
             <p class="blue-font">A confirmation will be sent to you almost immediately.</p>
           </div>
 
