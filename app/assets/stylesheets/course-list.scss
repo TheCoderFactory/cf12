@@ -40,3 +40,11 @@
 .workshop .ct-pricing .ct-pricing-content .ct-pricing-content-ul li.ct-pricing-content-ul-activesep:before {
   color: $slime;
 }
+
+.dirty-gold {
+  background: $fasttrack;
+}
+
+.fasttrack .ct-iconBox--default .ct-iconBox-icon {
+  border-color: darken($fasttrack, 15);
+}
