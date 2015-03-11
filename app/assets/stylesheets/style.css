@@ -2033,11 +2033,11 @@
   box-shadow: none;
 }
 @font-face {
-  font-family: 'futura pt';
+  font-family: $heading-font;
 
 }/*
 @font-face {
-  font-family: 'futura pt-it';
+  font-family: '$heading-font pt-it';
   src: url(../../assets/fonts/ct/BrandonGrotesque/Brandon_bld_it.otf);
 }
 @font-face {
@@ -2065,7 +2065,7 @@
   src: url(../../assets/fonts/ct/BrandonGrotesque/Brandon_med.it.otf);
 }
 @font-face {
-  font-family: 'futura pt';
+  font-family: $heading-font;
   src: url(../../assets/fonts/ct/BrandonGrotesque/Brandon_reg.otf);
 }
 @font-face {
@@ -2192,7 +2192,7 @@ footer {
   color: #fff;
   font-size: 12px;
   background: transparent;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -2236,7 +2236,7 @@ footer {
   font-size: $font-size-medium;
   letter-spacing: 1px;
   color: #000;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   /*padding: 14px 18px 13px;*/
   color: rgba(0, 0, 0, 0.8);
   text-transform: none;
@@ -6188,7 +6188,7 @@ Copyright (c) 2014 Daniel Eden
   border-bottom: 4px solid $calm;
 }
 body {
-  font-family: 'freight-text-pro', sans-serif;
+  font-family: $body-font, sans-serif;
   font-size: 15px;
   line-height: 2em;
 }
@@ -6263,7 +6263,7 @@ h5,
 h6,
 .h6 {
   color: #222222;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
 }
 h1 small,
 .h1 small,
@@ -6439,14 +6439,14 @@ h6.ct-u-hrMid:after,
 }
 .ct-h-big {
   font-size: 68px;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-weight: 600;
   line-height: 1.3;
   margin-bottom: 25px;
 }
 .ct-h-bigest {
   font-size: 200px;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-weight: 600;
   line-height: 1;
   margin-bottom: 0;
@@ -6506,7 +6506,7 @@ h6,
   padding-right: 25px;
 }
 .btn {
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -7004,7 +7004,7 @@ ul.list-with-icons ol {
 }
 .ct-iconBox-title {
   word-break: break-word;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   margin: 0;
   padding: 0 0 17px;
   font-size: 18px;
@@ -7012,7 +7012,7 @@ ul.list-with-icons ol {
 }
 .ct-iconBox-content {
   word-break: break-word;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
 }
 .ct-iconBox-content p {
   line-height: 27px;
@@ -7090,7 +7090,7 @@ ul.list-with-icons ol {
   margin-bottom: 30px;
 }
 .ct-iconBox--top .ct-iconBox-title {
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-size: 28px;
 }
 .ct-iconBox--top i {
@@ -7101,7 +7101,7 @@ ul.list-with-icons ol {
   color: #3d4042;
 }
 .ct-iconBox--top .ct-iconBox-content p {
-  font-family: 'freight-text-pro', sans-serif;
+  font-family: $body-font, sans-serif;
 }
 .ct-iconBox--left .ct-iconBox-content,
 .ct-iconBox--right .ct-iconBox-content {
@@ -7253,7 +7253,7 @@ ul.list-with-icons ol {
   display: block;
   margin-top: -25px;
   color: $calm;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-weight: 900;
   font-size: $font-size-medium;
   min-width: 300px;
@@ -7311,7 +7311,7 @@ ul.list-with-icons ol {
   padding-top: 0;
   margin-top: -30px;
   font-weight: 100;
-  font-family: 'freight-text-pro', sans-serif;
+  font-family: $body-font, sans-serif;
   color: #000000;
 }
 .ct-skills--fat .progress .progress-bar span strong {
@@ -7327,7 +7327,7 @@ ul.list-with-icons ol {
 }
 blockquote,
 .ct-bloquote {
-  font-family: 'freight-text-pro', sans-serif;
+  font-family: $body-font, sans-serif;
   font-size: $font-size-medium;
   line-height: 1.7;
 }
@@ -7394,7 +7394,7 @@ blockquote,
 .ct-blockquote--blog {
   padding: 30px 35px;
   font-size: 25px;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   word-wrap: break-word;
   font-style: italic;
 }
@@ -7464,7 +7464,7 @@ blockquote + blockquote {
 .ct-pricing h4 {
   padding: 26px;
   font-size: 17px;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-weight: 500;
   font-size: 21px;
 }
@@ -7688,7 +7688,7 @@ table.table > thead > tr > th {
   text-transform: uppercase;
   font-size: $font-size-medium;
   padding: 18px 0;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-weight: 300;
   text-align: center;
 }
@@ -7836,7 +7836,7 @@ table.ct-table--withBorder .btn {
 }
 .ct-cta p {
   color: #ffffff;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-weight: 300;
   font-size: 36px;
   padding-bottom: 5px;
@@ -7845,7 +7845,7 @@ table.ct-table--withBorder .btn {
 .ct-tooltip,
 .ct-tooltip p,
 .ct-tooltip .ct-tooltip-text {
-  font-family: 'freight-text-pro', sans-serif;
+  font-family: $body-font, sans-serif;
   font-size: $font-size-medium;
   line-height: 1.7;
   margin: 0;
@@ -7888,7 +7888,7 @@ table.ct-table--withBorder .btn {
   font-weight: 700;
   font-size: 20px;
   color: $calm;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   display: block;
   padding: 15px 15px 16px;
   border-top: solid 2px $calm ;
@@ -8020,7 +8020,7 @@ table.ct-table--withBorder .btn {
   -moz-border-radius: 0;
   border-radius: 0;
   background-color: transparent;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-size: $font-size-medium;
   font-weight: 500;
   padding: 15px 0;
@@ -8067,7 +8067,7 @@ table.ct-table--withBorder .btn {
   -moz-border-radius: 0;
   border-radius: 0;
   background-color: transparent;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-size: 15px;
   font-weight: 300;
   padding: 18px 15px;
@@ -8148,7 +8148,7 @@ table.ct-table--withBorder .btn {
   -moz-border-radius: 0;
   border-radius: 0;
   background-color: transparent;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-size: 20px;
   font-weight: 300;
   position: relative;
@@ -8220,7 +8220,7 @@ table.ct-table--withBorder .btn {
   -moz-border-radius: 2px;
   border-radius: 2px;
   background-color: $calm;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   padding: 0;
   border: solid 2px $calm;
 }
@@ -8243,7 +8243,7 @@ table.ct-table--withBorder .btn {
   -moz-border-radius: 2px;
   border-radius: 2px;
   background-color: transparent;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   padding: 0;
   border: solid 2px $calm;
   display: inline-block;
@@ -8367,7 +8367,7 @@ table.ct-table--withBorder .btn {
   color: white;
   text-transform: uppercase;
   font-size: 17px;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   padding-bottom: 30px;
 }
 .ct-widget-adress {
@@ -8497,7 +8497,7 @@ table.ct-table--withBorder .btn {
 }
 .ct-copyright,
 .ct-copyright--withlink {
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-weight: 300;
   font-size: 12px;
   padding-top: 25px;
@@ -8777,7 +8777,7 @@ select.form-control {
   background-color: transparent ;
   border: 0 ;
   font-size: $font-size-medium;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   width: 295px;
   max-width: 295px;
   margin-left: -2px;
@@ -8829,7 +8829,7 @@ select.form-control option {
   vertical-align: text-bottom;
   background: url("../../assets/images/checkbox.png") -5px top no-repeat;
   cursor: pointer;
-  font-family: 'freight-text-pro', sans-serif;
+  font-family: $body-font, sans-serif;
   margin-right: 5px;
 }
 .ct-checkbox input[type="checkbox"]:checked + label span:before {
@@ -8923,7 +8923,7 @@ select.form-control option {
   }
 }
 .ct-breadcrumbs-text a {
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-size: $font-size-medium;
   color: #657275;
   color: rgba(30, 34, 35, 0.7);
@@ -9006,7 +9006,7 @@ select.form-control option {
 .ct-breadcrumbHeader {
   position: relative;
   z-index: 3;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-size: 62px;
   font-weight: 500;
 }
@@ -9956,17 +9956,17 @@ img.mfp-img {
 }
 .ct-blockquotetestimonial-content {
   display: table-cell;
-  font-family: 'freight-text-pro', sans-serif;
+  font-family: $body-font, sans-serif;
 }
 .ct-blockquotetestimonial-content span {
   display: block;
   position: relative;
-  font-family: 'freight-text-pro', sans-serif;
+  font-family: $body-font, sans-serif;
   font-size: 16px;
   line-height: 1.7;
 }
 .ct-blockquotetestimonial-content span.ct-blockquotetestimonial-text {
-  font-family: 'freight-text-pro', sans-serif;
+  font-family: $body-font, sans-serif;
   font-size: 16px;
   line-height: 1.7;
 }
@@ -10008,7 +10008,7 @@ img.mfp-img {
 .ct-coursesList-cont h6 {
   font-size: 26px;
   font-weight: 500;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   word-wrap: break-word;
   margin-top: 8px;
   margin-bottom: 12px;
@@ -10052,7 +10052,7 @@ img.mfp-img {
 }
 .ct-coursesList .cat-links {
   text-transform: uppercase;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-size: 15px;
   margin-top: -7px;
   display: block;
@@ -10063,7 +10063,7 @@ img.mfp-img {
 }
 .ct-coursesList .entry-date {
   text-transform: uppercase;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-size: 15px;
   margin-top: -7px;
   display: block;
@@ -10122,7 +10122,7 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
 .ct-readrevievsLink {
   font-size: 12px;
   text-transform: uppercase;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   line-height: 44px;
   color: #282b2d;
   margin-right: 10px;
@@ -10345,7 +10345,7 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
 }
 .dropdown.open .dropdown-menu li a {
   padding: 14px 18px 13px;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.7);
 }
@@ -10417,13 +10417,13 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
   border-bottom: 0;
 }
 .ct-blogItem--sidebar .entry-meta {
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   color: $calm;
 }
 .ct-blogItem--sidebar .entry-meta .entry-date {
   color: $calm;
   text-transform: uppercase;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-weight: 100;
   font-size: $font-size-medium;
 }
@@ -10532,7 +10532,7 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
 }
 .ct-graphBox-title {
   word-break: break-word;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   margin: 0;
   padding: 0 0 17px;
   font-size: 20px;
@@ -10728,25 +10728,25 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
   color: $calm ;
   text-align: center;
   text-transform: uppercase;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
 }
 .ct-form--newsletter :-moz-placeholder {
   color: $calm ;
   text-align: center;
   text-transform: uppercase;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
 }
 .ct-form--newsletter ::-moz-placeholder {
   color: $calm ;
   text-align: center;
   text-transform: uppercase;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
 }
 .ct-form--newsletter :-ms-input-placeholder {
   color: $calm ;
   text-align: center;
   text-transform: uppercase;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
 }
 .ct-newsletter h1,
 .ct-newsletter h2,
@@ -10756,7 +10756,7 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
 .ct-newsletter h6 {
   font-size: 32px;
   font-weight: 300;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
 }
 .ct-form--newsletter {
   margin-bottom: 25px;
@@ -10768,7 +10768,7 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
   height: 55px;
   color: $calm ;
   text-align: center;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
 }
 @media screen and (max-width: 991px) {
   .ct-newsletter h1,
@@ -10790,7 +10790,7 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
 }
 .ct-singleCourse-introLinks .cat-links {
   text-transform: uppercase;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-size: 15px;
   margin-top: -7px;
   color: $calm;
@@ -10802,7 +10802,7 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
 }
 .ct-singleCourse-introLinks .entry-date {
   text-transform: uppercase;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-size: 15px;
   margin-top: -7px;
   color: $calm;
@@ -10969,7 +10969,7 @@ h3.ct-titleSmaller {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   overflow: hidden;
 }
 .pagination li a:hover,
@@ -11238,7 +11238,7 @@ video {
   display: block;
   float: left;
   padding-right: 10px;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-size: 12px;
   margin-bottom: -6px;
 }
@@ -11336,7 +11336,7 @@ video {
   margin-bottom: -48px;
   right: 55px;
   text-transform: uppercase;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-size: 12px;
 }
 .tweet_time a {
@@ -11366,7 +11366,7 @@ video {
   left: 0;
 }
 .tweet_text {
-  font-family: 'freight-text-pro', sans-serif;
+  font-family: $body-font, sans-serif;
   font-style: italic;
   color: #ffffff;
 }
@@ -11501,7 +11501,7 @@ video {
 .ct-blog-text h6 {
   font-size: 28px;
   font-weight: 500;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   word-wrap: break-word;
   margin-top: 5px;
   margin-bottom: 12px;
@@ -11538,7 +11538,7 @@ video {
 }
 .ct-blog .cat-links {
   text-transform: uppercase;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-size: 15px;
   margin-top: -7px;
   display: block;
@@ -11553,7 +11553,7 @@ video {
 }
 .ct-blog .entry-date {
   text-transform: uppercase;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-size: 15px;
   margin-top: -7px;
   display: block;
@@ -11696,7 +11696,7 @@ a.ct-kindOfPost-icon:focus i {
 }
 .ct-singleArticleMeta .cat-links {
   text-transform: uppercase;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-size: 15px;
   margin-top: -7px;
   display: block;
@@ -11708,7 +11708,7 @@ a.ct-kindOfPost-icon:focus i {
 }
 .ct-singleArticleMeta .entry-date {
   text-transform: uppercase;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-size: 15px;
   margin-top: -7px;
   display: block;
@@ -11729,7 +11729,7 @@ a.ct-kindOfPost-icon:focus i {
 .ct-singleArticleContent h6 {
   font-size: 28px;
   font-weight: 600;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   word-wrap: break-word;
   margin-top: 5px;
   margin-bottom: 12px;
@@ -11813,7 +11813,7 @@ a.ct-kindOfPost-icon:focus i {
 .ct-program-cont h6 {
   font-size: 21px;
   font-weight: 500;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   word-wrap: break-word;
   margin-top: 0;
   margin-bottom: 20px;
@@ -11851,7 +11851,7 @@ a.ct-kindOfPost-icon:focus i {
   padding: 0;
 }
 .ct-program-links .cat-links {
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-size: $font-size-medium;
   margin-top: -7px;
   padding-right: 30px;
@@ -11872,7 +11872,7 @@ a.ct-kindOfPost-icon:focus i {
 }
 .ct-program-links .entry-date {
   text-transform: uppercase;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-size: 15px;
   margin-top: -7px;
   color: $calm;
@@ -11895,7 +11895,7 @@ a.ct-kindOfPost-icon:focus i {
   padding: 0;
 }
 .ct-program .cat-links {
-  font-family: 'freight-text-pro', sans-serif;
+  font-family: $body-font, sans-serif;
   font-size: $font-size-medium;
   margin-top: -7px;
   display: block;
@@ -11917,7 +11917,7 @@ a.ct-kindOfPost-icon:focus i {
 }
 .ct-program .entry-date {
   text-transform: uppercase;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-size: 15px;
   margin-top: -7px;
   display: block;
@@ -11927,7 +11927,7 @@ a.ct-kindOfPost-icon:focus i {
   padding-top: 20px;
 }
 .ct-program .entry-level {
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   font-size: 28px;
   color: #bcc2c3;
 }
@@ -12208,7 +12208,7 @@ a.ct-kindOfPost-icon:focus i {
 .ct-portfolioList .ct-portfolioList-content h6 {
   font-size: 28px;
   font-weight: 600;
-  font-family: 'futura pt', sans-serif;
+  font-family: $heading-font, sans-serif;
   word-wrap: break-word;
   margin-top: 5px;
   margin-bottom: 12px;
