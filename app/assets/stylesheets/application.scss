@@ -140,7 +140,7 @@ text-transform: uppercase;
   color: $dirty-gold;
 }
 .navbar-nav li.active a {
-  background-color: transparent;
+  background-color: $light;
   color: $calm;
 }
 .form-control {

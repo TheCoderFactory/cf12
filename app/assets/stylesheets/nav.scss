@@ -31,3 +31,8 @@
 .navbar-nav {
   color: $light;
 }
+
+.navbar-nav li.active a {
+  background-color: $light;
+  color: $calm;
+}

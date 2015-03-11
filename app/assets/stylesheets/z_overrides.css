@@ -27,11 +27,6 @@ $fasttrack:                           #FF6A26;
   color: #2C3E50;
 }
 
-.ct-pricing .ct-pricing-sep {
-  color: #000;
-  opacity: inherit;
-}
-
 .ct-pricing .ct-pricing-pricebox {
     color: #000;
 }
@@ -128,7 +123,7 @@ select.form-control {
   color: #333;
 }
 
-.workshop .ct-tabs--witharrow .nav-tabs.nav-justified > .active > a, .workshop .ct-tabs .nav-tabs > li > a:hover, .workshop .ct-pricing .ct-pricing-content .ct-pricing-content-ul li.ct-pricing-content-ul-activesep:before, .workshop .btn-link, .workshop .ct-relatedCoursesSlider .flex-direction-nav a:before {
+.ct-tabs--witharrow .nav-tabs.nav-justified > .active > a, .workshop .ct-tabs .nav-tabs > li > a:hover, .workshop .ct-pricing .ct-pricing-content .ct-pricing-content-ul li.ct-pricing-content-ul-activesep:before, .workshop .btn-link, .workshop .ct-relatedCoursesSlider .flex-direction-nav a:before {
   color: $slime !important;
 }
 

@@ -21,3 +21,22 @@
 .ct-coursesList-fasttrack:hover {
   border-color: $fasttrack;
 }
+
+.ct-relatedCoursesSlider {
+  .flex-direction-nav {
+    a {
+      border-color: $slime;
+      &:before {
+        color: $slime;
+      }
+    }
+  }
+}
+
+.ct-pricing .ct-pricing-sep {
+  color: $light;
+}
+
+.workshop .ct-pricing .ct-pricing-content .ct-pricing-content-ul li.ct-pricing-content-ul-activesep:before {
+  color: $slime;
+}

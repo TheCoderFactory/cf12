@@ -10815,6 +10815,8 @@ div[class^='col-']:first-child .ct-coursesList--withSecundaryBox .ct-coursesList
 }
 .ct-singleCourse-introLinks .by-author img {
   margin-bottom: 0;
+  position: relative;
+  top: 6px;
 }
 .ct-singleCourse-introLinks .ct-readrevievsLink {
   margin-right: 25px;
