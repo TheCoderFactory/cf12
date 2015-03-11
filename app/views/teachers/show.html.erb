@@ -19,14 +19,14 @@
 
                <ul class="list-unstyled">
                  <li>
-                   <span class="entry-date-tit">Position</span><a href=""><span class="ct-member-name-tit"> <%= @teacher.title %></span></a>
+                   <span class="entry-date-tit">Position:</span><a href=""><span class="ct-member-name-tit"> <%= @teacher.title %></span></a>
                  </li>
                 <li class="ct-u-shortBorderBefore">
-                 <span class="entry-numOfCourse-tit">LinkedIn</span>
+                 <span class="entry-numOfCourse-tit">LinkedIn:</span>
                     <a href="<%= @teacher.link %>" target="_blank"><span class="ct-member-name-tit"> Profile</span></a>
                  </li>
                  <li class="ct-u-shortBorderBefore">
-                   <span class="entry-numOfCourse-tit">Active Courses</span><span class="entry-numOfCourse">1</span>
+                   <span class="entry-numOfCourse-tit">Active Courses:</span><span class="entry-numOfCourse">1</span>
                  </li>
                </ul>
 
@@ -35,7 +35,7 @@
 
            <h4 class="text-uppercase ct-fw-700 ct-titleSmaller ct-u-paddingBoth20"><%= @teacher.name %> Bio</h4>
 
-           <p><%= @teacher.blurb %></p>
+           <p><%= @teacher.blurb.html_safe %></p>
 
         </div><!-- /container -->
       </div>
@@ -53,37 +53,3 @@
          </div><!-- /container -->
      </div>
 
-
-
-
-
-
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @teacher.name %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @teacher.image %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @teacher.title %>
-</p>
-
-<p>
-  <strong>Link:</strong>
-  <%= @teacher.link %>
-</p>
-
-<p>
-  <strong>Blurb:</strong>
-  <%= @teacher.blurb %>
-</p>
-
-<%= link_to 'Edit', edit_teacher_path(@teacher) %> |
-<%= link_to 'Back', teachers_path %>
