@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :position_applications
+
   resources :teachers
 
   resources :post_categories

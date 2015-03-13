@@ -1,0 +1,40 @@
+<h3>Apply here</h3>
+<br>
+<%= simple_form_for(@position_application) do |f| %>
+  <%= f.error_notification %>
+    <div class="row">
+      <div class="col-md-4">
+        <%= f.input :name, label: 'Your name' %><br>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :phone, label: 'Phone number' %><br>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :email, label: 'Email address' %><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <%= f.input :linkedin, label: 'LinkedIn link' %><br>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :github, label: 'Github (optional)' %><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <%= f.input :position, as: :check_boxes, collection: ['Internship', 'Teacher', 'Developer'], label: 'Desired position/s' %>
+      </div>
+    </div>
+    <br>
+    <%= f.input :experience, input_html: { class: 'form-control', rows: 8 }, label: 'Describe your background and experience' %><br>
+    <%= f.input :reason, input_html: { class: 'form-control', rows: 8 }, label: 'Why do you want to be a part of Coder Factory?' %><br>
+    <%= f.input :special, input_html: { class: 'form-control', rows: 8 }, label: 'Why should we choose you to be a part of Coder Factory?'  %>
+  
+<div class="row">
+      <div class="col-md-4">
+  <div class="form-actions">
+    <%= f.button :submit, 'Send your application' %>
+  </div>
+  </div></div>
+<% end %>

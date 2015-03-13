@@ -23,7 +23,6 @@ gem 'carrierwave'
 gem 'cloudinary'
 gem 'sitemap_generator'
 gem 'carrierwave-dropbox'
-# gem 'rack-zippy'
 gem 'whenever', :require => false
 gem "autoprefixer-rails"
 # Delayed jobs

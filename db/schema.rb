@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150311141903) do
+ActiveRecord::Schema.define(version: 20150313014118) do
 
   create_table "admissions", force: :cascade do |t|
     t.integer  "fast_track_application_id"
@@ -164,6 +164,20 @@ ActiveRecord::Schema.define(version: 20150311141903) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "sponsorship"
+  end
+
+  create_table "position_applications", force: :cascade do |t|
+    t.string   "name"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "linkedin"
+    t.string   "github"
+    t.text     "experience"
+    t.text     "reason"
+    t.text     "special"
+    t.string   "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "post_categories", force: :cascade do |t|
