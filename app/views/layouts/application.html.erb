@@ -21,13 +21,11 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <%= yield :head %>
-    <% unless Rails.env.production? %>
-      <script src="//use.typekit.net/dsk1ewq.js"></script>
-      <script>try{Typekit.load();}catch(e){}</script>
-    <% else %>
+    
+    
       <script src="//use.typekit.net/hpa2uqd.js"></script>
       <script>try{Typekit.load();}catch(e){}</script>
-    <% end %>
+    
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <%= render 'layouts/google_analytics' %>
 <%= render 'layouts/facebook_pixel' %>

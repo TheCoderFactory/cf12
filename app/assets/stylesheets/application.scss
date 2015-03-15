@@ -36,6 +36,16 @@
 
 $ring-tint:  15;
 
+.ct-singleArticleContent p, .ct-blog-text p {
+  font-size: $font-size-medium;
+  margin-bottom: 18px;
+  line-height: $line-height-relaxed;
+  color: $darknight;
+  word-wrap: break-word;
+}
+.ct-widget ul li a {
+  color: $darknight;
+}
 @media (min-width: 768px) {
   .modal-dialog {
     width: 600px;
