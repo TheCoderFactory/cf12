@@ -21,7 +21,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <%= yield :head %>
-    <% if Rails.env.production? %>
+    <% unless Rails.env.production? %>
       <script src="//use.typekit.net/dsk1ewq.js"></script>
       <script>try{Typekit.load();}catch(e){}</script>
     <% else %>

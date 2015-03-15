@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'beginners/index'
+
   resources :position_applications
 
   resources :teachers
