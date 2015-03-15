@@ -14,7 +14,10 @@
  <div class="ct-u-bgGrey ct-u-paddingTop70 ct-u-paddingBottom40">
                 <div class="container">
                   <h2 class="ct-sec-header-title">We're hiring</h2>
-                  <p>Do you want to help more people learn to code? Or want to work on exciting projects? Then apply for a position at Coder Factory.</p>
+                  <p>Do you want to help people learn to code? Or be a developer on exciting, tech startup projects?</p> 
+                  <p>Then apply for a position at Coder Factory.</p>
+                 <h3>The culture</h3>
+                 <p>Coder Factory is a fun place to be. We love that we're helping people empower themselves by learning to code. We believe the technology revolution is just beginning and we're excited to be a major part of it.</p>
 			<p>These are some of the positions on offer:</p>
               </header>
 
@@ -30,8 +33,12 @@
                               <h4 class="ct-iconBox-title text-uppercase text-center ct-fw-600">
                                   Teachers
                               </h4>
-                              <p>If you have experience as a developer, with Ruby on Rails or JavaScript, we need you! Our growing range of workshops aim to help more people learn coding and empower themselves in the digital economy. Coder Factory also delivers high quality part time and full time classes for entrepreneurs and aspiring developers.</p>
-															<p>Coder Factory teachers know their stuff and can make learning fun. If this is you, please get in touch.</p>
+                              
+															<p>Coder Factory teachers know their stuff and make learning fun. If you have an engaging personality and want to share your love of code, apply now to meet the team.</p>
+															
+															<button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#teacher">
+															  More info
+															</button>
                           </div>
                       </div>
                   </div>
@@ -47,7 +54,10 @@
                               <h4 class="ct-iconBox-title text-uppercase text-center ct-fw-600">
                                   Developers
                               </h4>
-                              <p>Beginner and experienced developers are in high demand everywhere. Coder Factory included. If you'd like to advance your career and gain valuable experience working on fun and challenging projects, tell us about yourself in the application form below.</p>
+                              <p>Do you like the idea of being involved with exciting, tech startup development projects and being a part of a fun and friendly team? Coder Factory has opportunities for you.</p>
+                              <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#developer">
+															  More info
+															</button>
                           </div>
                       </div>
                   </div>
@@ -64,9 +74,10 @@
                                   Interns
                               </h4>
                               <p>Coder Factory offers an exciting three month internship program that allows you to gain valuable experience in a startup company that is helping people change their lives.</p>
-                              <p>No matter what your background, skills or experience, you can try out different roles and responsibilities that makes a real difference to a business and Coder Factory's customers. 
-                                 
-                              </p>
+                              
+                              <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#intern">
+															  More info
+															</button>
                           </div>
                       </div>
                   </div>
@@ -78,4 +89,78 @@
   <div class="container">
 		<%= render 'form' %>
 	</div>
+</div>
+
+<div class="modal fade" id="teacher" tabindex="-1" role="dialog" aria-labelledby="teacherModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="teacherModal">Be a Coder Factory teacher</h4>
+      </div>
+      <div class="modal-body">
+        <p>If you have experience as a developer and a real love of code, we need you! Our growing range of workshops aim to help more people learn coding and empower themselves in the digital economy.</p> 
+        <p>Coder Factory also delivers high quality part time and full time classes for entrepreneurs and aspiring developers.</p>
+        <p>We're looking for developers with these skills:</p>
+        <ul class="ct-pricing">
+        	<li>Ruby on Rails</li>
+        	<li>Javascript (pure, jQuery, Angular, Node)</li>
+        	<li>Web design</li>
+        	<li>Wordpress</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="developer" tabindex="-1" role="dialog" aria-labelledby="developerModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="developerModal">Join the Coder Factory developer team</h4>
+      </div>
+      <div class="modal-body">
+        <p>Coder Factory development clients vary from tech startup entrepreneurs to large corporates looking to disrupt their own industries.</p> 
+        <p>We build MVPs in weekly sprints so you continually see the results and impact of your coding.</p>
+        <p>We encourage new developers and experienced code masters to apply.</p>
+        <p>We're looking for developers with these skills:</p>
+        <ul class="ct-pricing">
+        	<li>Full stack Ruby on Rails</li>
+        	<li>Front end JavaScript (pure, jQuery, Angular, Node)</li>
+        	
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="intern" tabindex="-1" role="dialog" aria-labelledby="internModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="internModal">Join the Coder Factory team</h4>
+      </div>
+      <div class="modal-body">
+        <p>No matter what your background, skills or experience, you can try out different roles and responsibilities that makes a real difference to a business and Coder Factory's customers. </p>
+        <p>We offer free coding workshops, opportunities to network with the tech startup community, and a fun environment.
+        <p>We're looking for interns who would like to improve these skills:</p>
+        <ul class="ct-pricing">
+        	<li>Community engagement (social media/events)</li>
+        	<li>Writing or journalism</li>
+        	<li>Marketing</li>
+        	<li>Design & UX</li>
+        	
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>

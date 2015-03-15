@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   get 'blog_filter', to: 'blog#blog_filter'
   get 'community', to: 'community#index'
   get 'women-in-tech', to: 'women_in_tech#index'
+  get 'were-hiring', to: 'position_applications#new'
   resources :scholarships
 
   resources :authors

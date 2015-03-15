@@ -23,8 +23,12 @@ class PositionApplicationsController < ApplicationController
 
   def create
     @position_application = PositionApplication.new(position_application_params)
-    @position_application.save
-    respond_with(@position_application)
+    if @position_application.save
+      PositionApplicationMailerJob.new.async.perform(@position_application.id)
+      redirect_to thanks_path(ref: 'position-application')
+    else
+      respond_with(@position_application)
+    end
   end
 
   def update

@@ -22,18 +22,22 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $heading-font;
+  font-weight: $font-weight-bold;
 }
 
 h1 {
   font-size: $font-size-xxxlarge;
+  font-weight: $font-weight-black;
 }
 
 h2 {
   font-size: $font-size-xxlarge;
+  font-weight: $font-weight-bold;
 }
 
 h3 {
   font-size: $font-size-xlarge;
+  font-weight: $font-weight-bold;
 }
 
 h4 {
@@ -49,8 +53,9 @@ h6 {
 }
 
 p {
-  font-size: $font-size-medium;
+  font-size: $font-size-large;
   line-height: $line-height-base;
+  font-weight: $font-weight-base;
 }
 
 a {
