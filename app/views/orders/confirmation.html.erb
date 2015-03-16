@@ -61,7 +61,9 @@
     data-label="Pay now">
   </script>
 </form>
+<% if @order.errors.any? %>
 <%= display_flash %>
+<% end %>
   </p>
   <%= render 'shared/order_items', :order => current_order, :readonly => true %>
   <div class="pull-right">
