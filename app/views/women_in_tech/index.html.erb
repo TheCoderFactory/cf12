@@ -1,4 +1,3 @@
-<% active_nav_item :women_in_tech %>
 <% @women_in_tech = true %>
 <% content_for :header, 'women-header' %>
 <% content_for :title, 'The world needs more women in tech - Coder Factory Champions of Change Scholarship Programme' %>
@@ -12,165 +11,177 @@
     </div><!-- /ct-mediaSection-inner -->
 </div>
 
-<section class="calm">				
-	<div class="row">
-		<div class="col-xs-12 col-lg-offset-2 col-lg-8">
-			<h2 class="section-heading">Champions for Change</h2>
-			<div class="panel panel-default"><div class="panel-body">
-			<p class="lead">The Change Champion Scholarship Programme is Coder Factory’s solution to every company’s diversity problem.</p> 
-			<p>Recent reports show that the percentage of women in programming and software engineering roles is as low as 13%. There are so many great reasons why the world needs more women in technical roles. Here are just six of them:</p>
-			<div class="highlight">
-			<div class="row"><div class="col-md-10 col-md-offset-1">
-				<h3>Why we need more women in tech.</h3>
-				<ol>
-					<li>We need more people in tech, period.</li>
-					<li>There will be <strong>less sexual harassment</strong> and discomfort when there are more women around.</li>
-					<li>There will be <strong>less discrimination</strong> if it's not considered unusual for women to pursue tech careers.</li>
-					<li>More women in tech now will <strong>encourage more girls</strong> to pursue their own interest in tech (and will therefore enable greater equality).</li>
-					<li>A current lack of innovation in industries because there are fewer women in tech.</li>
-					<li>Women think, act, and approach problems differently.</li>
-				</ol>
-				<small>Source: <a href="https://www.quora.com/Why-do-we-need-more-women-in-technology/answer/Gayle-Laakmann-McDowell?srid=dmne&share=1" target="_blank">Gayle McDowell</a> (Quora)</small>
-			</div></div></div>
-			</div></div>
-		</div>
-	</div>
-</section>
+   <div class="ct-mediaSection ct-u-bgGrey">
+      <div class="ct-mediaSection-inner">
+        <div class="container">
 
-<section class="">				
-	<div class="row">
-		<div class="col-xs-12 col-lg-offset-2 col-lg-8">
-			<h2 class="section-heading dark">WHY?</h2>
-			<div class="panel panel-default"><div class="panel-body">
-				<p class="lead">At Coder Factory, we all <em>love</em> what we do.</p>
-				<p>Creating technology is an empowering pursuit that has the potential to improve the lives of people everywhere. <strong>We want more women to have the opportunity to love working in the tech industry.</strong></p>
-
-				
-			</div></div>
-
-			<div class="thumbnail">
-	      <img src="<%= asset_path 'ada.jpg' %>" alt="Ada Lovelace">
-	      <div class="caption">
-					<p><a href="https://en.wikipedia.org/wiki/Ada_Lovelace" target="_blank">Ada Lovelace</a> is famous for being the first person to create an algorithm to be run on a machine, the Analytical Engine, in the mid-19th century.</p>
-
-					<p>Our modern world is lacking a visionary female technologist. We want to do our part to change that.</p>
-
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="dirty-gold">				
-	<div class="row">
-		<div class="col-xs-12 col-lg-offset-2 col-lg-8">
-			<h2 class="section-heading dark">Take action</h2>
-			<div class="panel panel-default"><div class="panel-body">
-				<p class="lead">Perhaps your company needs more diversity in your development team, or your organisation wants to publicly show its support for growing the numbers of women in tech, here is what you can do about it.</p>
-				<p>Coder Factory's revolutionary <a href="/fast-track" target="_blank">Fast Track</a> programme produces quality, job-ready coders in just 24 weeks. Organisations can choose from the following sponsorship options to grow the number of women in the technology industry or their own tech workforce.</p>
-				<div class="callout callout-danger">
-				<h4>Change Champion</h4>
-				<p><strong>FULL Fast Track scholarships for TWO female students.<br>
-				$50K</strong></p>
-
-				<p>Your sponsorship will provide two totally free places in the Fast Track programme for your chosen students.</p>
-				<p><a href="/partners/new?sponsorship=champion" class="">Be a Change Champion</a></p>
-				</div>
-
-				<div class="callout callout-warning">
-					<h4>Change Maker</h4>
-					<p><strong>FULL Fast Track scholarship for ONE female student.<br>
-					$25K</strong></p>
-
-				<p>Your sponsorship will provide one free place in the Fast Track programme for your chosen student.</p>
-				<p><a href="/partners/new?sponsorship=maker" class="">Be a Change Maker</a></p>
-				</div>
-
-				<div class="callout callout-info">
-				<h4>Change Supporter</h4>
-				<p><strong>HALF Fast Track scholarship for one female student.<br>
-				$15K</strong></p>
-
-				<p>Your sponsorship will provide one half scholarship in the Fast Track programme for your chosen student.</p>
-				<p><a href="/partners/new?sponsorship=supporter" class="">Be a Change Supporter</a></p>
-				</div>
-
-				<p>Sponsoring organisations will have the option to view the profiles of the top applicants and interview them to determine which student they would like to award the scholarship.</p>
-				<p>Organisations can enter into an agreement with their chosen student to commence an internship or employment with your company upon their completion of the Fast Track programme.</p>
-			</div></div>
-		</div>
-	</div>
-</section>
+          <header class="ct-sec-header text-center ct-u-paddingTop35 ct-u-paddingBottom30 ">
+              <h2 class="ct-sec-header-title">Champions for Change</h2>
+              <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
+                  <p class="ct-p-bigger">The Change Champion Scholarship Programme is Coder Factory’s solution to every company’s diversity problem.</p>
+                </div>
+              </div>
+          </header>
 
 
-<section class="">				
-	<div class="row">
-		<div class="col-xs-12 col-lg-offset-2 col-lg-8">
-			<h2 class="section-heading dark">Current Sponsors</h2>
-			<div class="panel panel-default"><div class="panel-body">
-				<p class="lead">Women! Start your journey into the exciting world of tech by applying for one of the following scholarships.</p>
-				<div class="row">
-					<% @scholarships.each do |scholarship| %>
-						<div class="col-lg-4">
-							<div class="thumbnail">
-					      <img src="<%= scholarship.logo %>" alt="<%= scholarship.company %> logo" class="img-responsive">
-					      <div class="caption">
-									<table class="table">
-										<tr>
-											<td>Company</td>
-											<td><a href="<%= scholarship.website %>" target="_blank"><%= scholarship.company %></a></td>
-										</tr>
-										<tr>
-											<td>Type</td>
-											<td><strong><%= scholarship.scholarship_type %></strong></td>
-										</tr>
-										<tr>
-											<td>Available?</td>
-											<td><%= scholarship.available ? 'YES' : 'AWARDED' %></td>
-										</tr>
-										<tr>
-											<td>Closing date</td>
-											<td><%= scholarship.close_date ? scholarship.close_date.strftime('%e %B %y') : 'Closed' %></td>
-										</tr>
-										<tr>
-											<td>Announced</td>
-											<td><%= scholarship.announce_date.strftime('%e %B %y') if scholarship.announce_date %></td>
-										</tr>
-										<tr>
-											<td></td>
-											<td>
-												<%= link_to 'Apply now', new_fast_track_application_path(scholarship: scholarship.id) %></td>
-										</tr>
-									</table>
-									
-								</div>
-							</div>
-						</div>
-					<% end %>
-					<div class="col-lg-4">
-						<div class="thumbnail">
-				      <a href="http://localhost:3000/partners/new?sponsorship=maker" target="_blank"><img src="<%= asset_path 'your-logo2.png' %>" alt="Coder Factory logo" class="img-responsive"></a>
-				      <div class="caption">
-								
-								
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4">
-						<div class="thumbnail">
-				      <a href="http://localhost:3000/partners/new?sponsorship=maker" target="_blank"><img src="<%= asset_path 'your-logo2.png' %>" alt="Coder Factory logo" class="img-responsive"></a>
-				      <div class="caption">
-								
-								
-							</div>
-						</div>
-					</div>
-				</div>
+          <div class="row ct-u-paddingBottom30">
+            <div class="col-sm-12 ct-u-marginTop-10">
+              <img alt="Champions for Change" src="http://coderfactory.co/assets/julia-750f4754dd2985ba1da827232bdd07a7.jpg" />
+            </div>
+            <div class="col-sm-6">
+              <h3 class="text-uppercase ct-u-paddingBottom10 ct-u-paddingBoth20">Why?</h3>
+            <p>At Coder Factory, we all love what we do.<br>
+            
+              Creating technology is an empowering pursuit that has the potential to improve the lives of people everywhere. We want more women to have the opportunity to love working in the tech industry.</p>
+              <p>Our modern world is lacking a visionary female technologist. We want to do our part to change that.</p>
+            </div>
+            <div class="col-sm-6">
+              <h3 class="text-uppercase ct-u-paddingBottom10 ct-u-paddingBoth20">Champions for Change</h3>
+           <p>Recent reports show that the percentage of women in programming and software engineering roles is as low as 13%. There are so many great reasons why the world needs more women in technical roles.<br>
+           Perhaps your company needs more diversity in your development team, or your organisation wants to publicly show its support for growing the numbers of women in tech.<br>
+           No matter what level of professional development you have, or what technology related field you are in, Coder Factory promotes the Champions for Change scholarship program to help empower more women in tech.
+</p>            </div>
+          </div>
 
-			</div></div>
-		</div>
-	</div>
-</section>
+              <div class="row ct-u-paddingTop50">
+                  <div class="col-sm-4 col-md-4">
+                      <div class="ct-graphBox ct-graphBox--default">
+                          <div class="ct-graphBox-graph">
+                              <div class="row">
+                                  <div class="col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
+                                      <canvas width="130" height="130" class="ct-js-pieChart" data-ct-percentage="13" data-ct-middleSpace="95" data-ct-secondColor="#d9ddde" data-ct-firstColor="#3eaefa"></canvas>
+                                      <span class="ct-graphBox-graphPercentage">13%</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="ct-graphBox-content ct-graphBox-content--default text-center">
+                              <h4 class="ct-graphBox-title">
+                                  Women programming
+                              </h4>
+                              <p>
+                                  Recent reports show that the percentage of women in programming and software engineering roles is as low as 13%
+                              </p>
+                          </div>
+                      </div>
+                  </div>
 
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52ee398713b80ae1" async="async"></script>
+
+                  <div class="col-sm-4 col-md-4">
+                      <div class="ct-graphBox ct-graphBox--default">
+                          <div class="ct-graphBox-graph">
+                              <div class="row">
+                                  <div class="col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
+                                      <canvas width="130" height="130" class="ct-js-pieChart" data-ct-percentage="30" data-ct-middleSpace="95" data-ct-secondColor="#d9ddde" data-ct-firstColor="#3eaefa"></canvas>
+                                      <span class="ct-graphBox-graphPercentage">30%</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="ct-graphBox-content ct-graphBox-content--default text-center">
+                              <h4 class="ct-graphBox-title">
+                                  Google's female workforce
+                              </h4>
+                              <p>
+                                  Google <a href="http://www.washingtonpost.com/blogs/the-switch/wp/2014/06/19/no-really-how-do-we-get-girls-to-code/" target="_blank">announced</a> in May 2014 their workforce was only 30% female.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-sm-4 col-md-4">
+                      <div class="ct-graphBox ct-graphBox--default">
+                          <div class="ct-graphBox-graph">
+                              <div class="row">
+                                  <div class="col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
+                                      <canvas width="130" height="130" class="ct-js-pieChart" data-ct-percentage="100" data-ct-middleSpace="95" data-ct-secondColor="#d9ddde" data-ct-firstColor="#3eaefa"></canvas>
+                                      <span class="ct-graphBox-graphPercentage">100%</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="ct-graphBox-content ct-graphBox-content--default text-center">
+                              <h4 class="ct-graphBox-title">
+                                  Our commitment
+                              </h4>
+                              <p>
+                                  Coder Fctory is offereing scholarships to help more women into tech
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+
+
+        </div><!-- /container -->
+      </div><!-- /ct-mediaSection-inner -->
+    </div><!-- /section -->
+
+
+
+          <header class="ct-sec-header text-center ct-u-paddingTop35 ct-u-paddingBottom30 ">
+              <h2 class="ct-sec-header-title">Take Action</h2>
+              <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
+                  <p class="ct-p-bigger">Coder Factory's Fast Track programme produces quality, job-ready coders in just 24 weeks</p>
+                </div>
+              </div>
+          </header>
+
+
+        <div class="ct-mediaSection-inner ct-u-paddingBottom60">
+          <div class="container">
+
+            <div class="row ct-pricing">
+
+                <section class="col-sm-6">
+                    <h4 class="ct-pricing-sep text-center text-uppercase vibrant">
+                        Student Scholarship
+                    </h4>
+
+                    <div class="ct-pricing-content">
+                        <ul class="ct-pricing-content-ul">
+                            <li><p>Applications currently closed. Women! Start your journey into the exciting world of tech. Coder Factory is offereing limited scholarships to the 24 week Fast Track programme. Our Champions for Change scholarhship campaign is designed to help more women in tech.</p>
+                            </li>
+                            <br>
+                            <li>Our programme offers:</li>
+                            <li class="ct-pricing-content-ul-activesep"></li>
+                            <li class="ct-pricing-content-ul-activesep">1x free 24 week scholarship</li>
+                            <li class="ct-pricing-content-ul-activesep">Teach you the skills for an exciting career in tech</li>
+                            <li class="ct-pricing-content-ul-activesep">Everything listed in the Fast Track programme</li>
+                            <li><br><br></li>                        
+                            </ul>
+                        <div class="ct-pricing-buttontop">
+                        <a href="" class="btn vibrant btn-default">Closed</a>
+                    </div>
+                    </div>
+
+                </section>
+
+                <section class="col-sm-6">
+                    <h4 class="ct-pricing-sep text-center text-uppercase vibrant">
+                        Corporate Sponsorship
+                    </h4>
+                    <div class="ct-pricing-content">
+                        <ul class="ct-pricing-content-ul">
+                            <li><p>Organisations can choose to sponsor an individual to help grow the number of women in the technology industry. Perhaps your company needs more diversity in your development team, or you want to be part of the Champions for Change programme. </li></p>
+                            <br>
+                            <li>Your sponsorship will:</li>
+                            <li class="ct-pricing-content-ul-activesep">Help more women enter the tech workforce </li>
+                            <li class="ct-pricing-content-ul-activesep">Publicly show your support for women in tech</li>
+                            <li class="ct-pricing-content-ul-activesep">Have the option to interview scholarship applicants</li>
+                            <li class="ct-pricing-content-ul-activesep">Offer internship or employment to Fast Track students</li>
+                            <li><br></li>
+                        </ul>
+
+                      <div class="ct-pricing-buttontop">
+                        <a href="/partners/new?sponsorship=champion" class="btn btn-default vibrant">Enquire</a>
+                    </div>
+                    </div>
+
+                </section>
+
+
+            </div><!-- /row -->
+
+          </div><!-- /container -->
+    </div>
