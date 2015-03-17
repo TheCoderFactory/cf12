@@ -28,7 +28,7 @@
 							<td><%= future_course.parent.name %></td>
 							<td><%= future_course.start_date.strftime('%d/%m/%y') if future_course.start_date %></td>
 							<td><%= future_course.location.city if future_course.location %></td>
-							<td><%= Shoppe::OrderItem.where(ordered_item_id: future_course.id).received.count %></td>
+							<td><%= future_course.orders.ordered.received.count %></td>
 						</tr>
 					<% end %>
 				<% end %>
