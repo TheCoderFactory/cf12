@@ -88,7 +88,26 @@
 
 
 
+<section class="ct-mediaSection ct-u-paddingBoth50 ct-u-bgGrey" data-height="740" data-type="kenburns"
+                  data-bg-image-mobile="<%= asset_path 'vid.jpg' %>">
+             <div class="ct-mediaSection-kenburnsImageContainer">
+                 <img src="<%= asset_path 'vid.jpg' %>" alt="video image">
+             </div>
+             <div class="ct-mediaSection-inner">
+                 <div class="container">
+                     <header class="ct-sec-header text-center  ct-u-paddingTop50 ct-u-bgdark-lightfont">
+                         <h2 class="ct-sec-header-title">Inside the Coder Factory</h2>
+                        <!--  <div class="row">
+                             <div class="col-sm-6 col-sm-offset-3 col-xs-12 col-xs-offset-0">
+                                 <p>I drove on, a peculiar change crept over the appearance of things. The palpitating greyness grew darker; then—though I was still travelling with prodigious velocity—the blinking suc- cession of day and night. which was usually indicative of a slower pace, returned, and grew more and more marked. This puzzled me very much at first.</p>
+                             </div> -->
+                         </div>
+                     </header>
 
+                     <a href="https://www.youtube.com/watch?v=Dthd3_-IS20" class="ct-playVideo ct-playVideo-js ct-u-border-radius50 element-center"><i class="fa fa-play"></i></a>
+                 </div>
+             </div>
+         </section>
 <div class="ct-u-paddingBottom30 ct-u-bgGrey workshop">
         <div class="container">
 <!-- 
@@ -108,6 +127,7 @@
            </ul>
 
          </div> -->
+         
 
 
         <header class="ct-sec-header text-left ct-u-paddingTop35">
@@ -243,12 +263,12 @@
 
 
 
+        <div class="row ct-u-paddingTop20">
+
+                                    <div class="col-sm-4">
          <header class="ct-sec-header text-left ct-u-paddingTop35">
             <h2 class="ct-sec-header-title">PART TIME</h2>
         </header>
-
-           <div class="row ct-u-paddingTop20">
-                                    <div class="col-sm-4">
                                         <article class="ct-coursesList ct-coursesList-parttime ct-u-bgWhite">
                                             <div class="ct-courseList-image">
                                                 <a href="/courses/part-time-courses/web-app-developer-pt"><img src="http://res.cloudinary.com/coder-factory/image/upload/c_scale,w_401/v1421879436/qetzogehrzzfrcsntvkk.png" alt="Part Time"></a>
@@ -266,14 +286,10 @@
                                       </div>
                                         </article>
                                     </div>
-           </div><!-- /row -->
-
+                                    <div class="col-sm-4">
         <header class="ct-sec-header text-left ct-u-paddingTop35">
             <h2 class="ct-sec-header-title">FAST TRACK</h2>
         </header>
-
-           <div class="row ct-u-paddingTop20">
-                                    <div class="col-sm-4">
                                         <article class="ct-coursesList ct-coursesList-fasttrack ct-u-bgWhite">
                                             <div class="ct-courseList-image">
                                                 <a href="/fast-track"><img src="http://res.cloudinary.com/coder-factory/image/upload/c_scale,w_400/v1425834094/14_10_17_04_01_22front-page_1_bg6sl2_i4d5me.jpg" alt="Fast Track Full Time"></a>
@@ -291,6 +307,10 @@
                                       </div>
                                         </article>
                                     </div>
+           </div><!-- /row -->
+
+
+           <div class="row ct-u-paddingTop20">
            </div><!-- /row -->
 
 
@@ -319,3 +339,5 @@
 
 
     <%= render 'layouts/subscribe' %>
+
+
