@@ -1,15 +1,26 @@
-<%= content_for :header, 'small-header' %>
- <div class="row">
-  <div class="col-xs-12 col-lg-offset-2 col-lg-8">
-    <h2>Enrolments</h2>
-    <div class="panel panel-default">
-      <div class="panel-body">
+<div class="ct-mediaSection ct-u-bgWhite ct-u-bgdark-lightfont overflowHidden" data-stellar-background-ratio="0.2" data-height="130" data-type="parallax" data-bg-image="" data-bg-image-mobile="">
+    <div class="ct-mediaSection-inner">
+        <div class="container">
+            <h1 class="ct-breadcrumbHeader text-uppercase">Fast Track <br>
+              <span style="font-size:25px;">Your boarding pass to the world of tech.</span> 
+              <!-- <span class=" pull-right"><a href="/fast-track-application" class="btn btn-fasttrack btn-sm">Apply Now</a></span> -->
+            </h1>
+
+        </div><!-- /container -->
+    </div><!-- /ct-mediaSection-inner -->
+</div>
+
+<div class="ct-u-bgLightGrey ct-u-paddingBoth60 ct-u-bgGrey">
+  <div class="container">
+    <div class="ct-singleCourse">
+      <div class="ct-singleCourse-intro ct-u-bgWhite">
+ 			<h2>Enrolments</h2>
       <table class="table">
       	<tr>
-      		<td>Course name</td>
-      		<td>Date</td>
-      		<td>City</td>
-      		<td>Number of enrolments</td>
+      		<th>Course name</th>
+      		<th>Date</th>
+      		<th>City</th>
+      		<th>Enrolments</th>
       	</tr>
 				<% @future_courses.each do |future_course| %>
 					<% if future_course.variant? %>

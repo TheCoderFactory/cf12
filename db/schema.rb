@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150313014118) do
+ActiveRecord::Schema.define(version: 20150317041301) do
 
   create_table "admissions", force: :cascade do |t|
     t.integer  "fast_track_application_id"
@@ -514,7 +514,10 @@ ActiveRecord::Schema.define(version: 20150313014118) do
     t.text     "blurb"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "slug"
   end
+
+  add_index "teachers", ["slug"], name: "index_teachers_on_slug", unique: true
 
   create_table "testimonials", force: :cascade do |t|
     t.integer  "product_id"

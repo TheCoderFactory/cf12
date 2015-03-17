@@ -18,14 +18,11 @@
   </thead>
 
   <tbody>
-    <% @enrolments.each do |@enrolment| %>
+    <% @enrolments.each do |enrolment| %>
       <tr>
-        <td><%= @enrolment.first_name %></td>
-        <td><%= @enrolment.country %></td>
-        <td><%= @enrolment.email %></td>
-        <td><%= link_to 'Show', @enrolment %></td>
-        <td><%= link_to 'Edit', edit_@enrolment_path(@enrolment) %></td>
-        <td><%= link_to 'Destroy', @enrolment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= enrolment.first_name %></td>
+        <td><%= enrolment.phone_number %></td>
+        <td><%= enrolment.email_address %></td>
       </tr>
     <% end %>
   </tbody>

@@ -1,0 +1,28 @@
+<%= content_for :title, 'See where Coder Factory is located' %>
+<%= content_for :description, "Coder Factory has locations across Australia, including Sydney, Melbourne, Brisbane, Perth and Adelaide." %>
+<div class="ct-mediaSection ct-u-bgBlack ct-u-bgdark-lightfont overflowHidden" data-stellar-background-ratio="0.2" data-height="400" data-type="parallax" data-bg-image="<%= asset_path 'planet.jpg' %>" data-bg-image-mobile="<%= asset_path 'planet.jpg' %>">
+  	<div class="ct-mediaSection-inner">
+        <div class="container">
+            <h1 class="ct-breadcrumbHeader text-uppercase pull-left">Coder Factory Locations</h1>
+        </div><!-- /container -->
+    </div><!-- /ct-mediaSection-inner -->
+</div>
+
+
+
+    <div class="ct-u-paddingBoth40">
+    <div class="container">
+
+      <div class="ct-tabs ct-tabs--witharrow">
+        <ul class="nav nav-tabs nav-justified ct-mytab-js" role="tablist">
+          <% @locations.each do |location| %>
+          	<li class="<%= 'active' if current_page?('/locations/' + location.city) %>"><a href="/locations/<%= location.city %>"><%= location.city %></a></li>
+          <% end %>
+        </ul>
+      </div>
+
+
+    </div><!-- /container -->
+</div>
+
+

@@ -40,7 +40,7 @@ class TeachersController < ApplicationController
 
   private
     def set_teacher
-      @teacher = Teacher.find(params[:id])
+      @teacher = Teacher.friendly.find(params[:id])
     end
 
     def teacher_params

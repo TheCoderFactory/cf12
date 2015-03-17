@@ -1,5 +1,5 @@
 class CourseEnrolmentsController < ApplicationController
   def index
-  	@enrolments = Shoppe::OrderItem.all
+  	@enrolments = Shoppe::Order.all
   end
 end

@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'locations', to: 'locations#index'
+
+  get 'locations/:id', to: 'locations#show', as: 'location'
+
   get 'beginners', to: 'beginners#index'
 
   resources :position_applications
