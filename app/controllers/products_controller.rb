@@ -27,7 +27,7 @@ class ProductsController < ApplicationController
   def show
     @attributes = @product.product_attributes.public.to_a
     @product_variants = @product.variants
-    @next_course = @product_variants.where('start_date >= ?', Date.today).order(start_date: :asc).first
+    @next_course = @product_variants.active.where('start_date >= ?', Date.today).order(start_date: :asc).first
     @upcoming_courses = @product_variants.active.where('start_date >= ?', Date.today).order(start_date: :asc).limit(5)
     @teacher = Teacher.find(@product.product_attributes.find_by(key: 'teacher').value)
   end

@@ -1,2 +1,15 @@
-<h1>Beginners#index</h1>
-<p>Find me in app/views/beginners/index.html.erb</p>
+<%= content_for :title, "Get started with code here." %>
+<%= content_for :description, "Find out the best way to get started when you want to learn to code." %>
+
+
+<div class="ct-mediaSection ct-u-bgWhite ct-u-bgdark-lightfont overflowHidden" data-stellar-background-ratio="0.2" data-height="550" data-type="parallax" data-bg-image="<%= asset_path 'girl.jpg' %>" data-bg-image-mobile="<%= asset_path 'girl.jpg' %>">
+    <div class="ct-mediaSection-inner">
+        <div class="container">
+            <h1 class="ct-breadcrumbHeader text-uppercase">Get started with code <br>
+              <span style="font-size:25px;">If you're a beginner, we're here to help.</span> 
+              <!-- <span class=" pull-right"><a href="/fast-track-application" class="btn btn-fasttrack btn-sm">Apply Now</a></span> -->
+            </h1>
+
+        </div><!-- /container -->
+    </div><!-- /ct-mediaSection-inner -->
+</div>
