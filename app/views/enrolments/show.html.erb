@@ -10,26 +10,30 @@
   <div class="container">
     <div class="ct-singleCourse">
       <div class="ct-singleCourse-intro ct-u-bgWhite">
- 			<h2>Enrolments</h2>
+ 			<h2>Students - <%= @course.name %></h2>
       <table class="table">
       	<tr>
-      		<th>Course name</th>
-      		<th>Date</th>
-      		<th>City</th>
-      		<th>Enrolments</th>
+      		<th>Name</th>
+      		<th>Email</th>
+      		<th>Prequestionnaire</th>
+      		<th></th>
       	</tr>
-				<% @future_courses.each do |future_course| %>
-					<% if future_course.variant? %>
-						<tr>
-							<td><%= link_to future_course.parent.name, enrolment_path(future_course) %></td>
-							<td><%= future_course.start_date.strftime('%d/%m/%y') if future_course.start_date %></td>
-							<td><%= future_course.location.city if future_course.location %></td>
-							<td><%= future_course.orders.ordered.received.count %></td>
-						</tr>
-					<% end %>
-				<% end %>
+				<% @students.each do |student| %>
+          
+            <tr>
+              <td><%= student.first_name %></td>
+              <td><%= student.email_address %></td>
+              <% if PreQuestionnaire.find_by(order_id: student.id) %>
+                <td><%= link_to 'Link', pre_questionnaire_path(PreQuestionnaire.find_by(order_id: student.id)) %></td>
+              <% else %>
+                <td>None</td>
+              <% end %>
+              <td></td>
+            </tr>
+          
+        <% end %>
 			</table>
 		</div>
+<%= link_to 'Back to enrolments', enrolments_path %>
 	</div>
 </div>
-

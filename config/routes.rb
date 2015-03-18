@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get 'contact', to: 'contact#index'
 
   get 'enrolments', to: "enrolments#index"
+  get 'enrolments/:id', to: 'enrolments#show', as: 'enrolment'
 
   resources :feedback_forms do
     member do

@@ -4,4 +4,9 @@ class EnrolmentsController < ApplicationController
   	@future_courses = Shoppe::Product.active.where('start_date >= ?', Date.today).order(start_date: :asc)
   	# Shoppe::Order.ordered.received.includes(:order_items => :ordered_item)
   end
+
+  def show
+  	@course = Shoppe::Product.find(params[:id])
+  	@students = @course.orders.ordered.received
+  end
 end
