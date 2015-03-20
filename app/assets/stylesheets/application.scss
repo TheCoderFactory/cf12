@@ -81,7 +81,7 @@ $ring-tint:  15;
 }
 .ct-iconBox-content p {
   line-height: 27px;
-  font-size: $font-size-medium;
+  font-size: $font-size-medium + 0.06em;
   font-weight: $font-weight-light;
 }
 .ct-singleCourse-introLinks .entry-date {
@@ -148,7 +148,7 @@ padding: 41px 40px;
 }
 .ct-pricing .ct-pricing-content .ct-pricing-content-ul li {
 list-style-type: none;
-font-size: $font-size-medium;
+font-size: $font-size-medium + 0.10em;
 line-height: 1.5;
 color: $darknight;
 }
