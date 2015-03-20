@@ -5,6 +5,6 @@ class LocationsController < ApplicationController
 
   def show
   	@locations = Shoppe::Location.all
-  	@location = Shoppe::Location.find_by(city: params[:city])
+  	@location = Shoppe::Location.find_by(city: params[:id])
   end
 end

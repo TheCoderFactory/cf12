@@ -1,19 +1,4 @@
-/*--  Colours
 
-$light:                                  #FFF;
-$darknight:                           #2C3E50;
-$midnight:                               #333;
-$midnight-light:       lighten($midnight, 50);
-$dirty-gold:                          #DBC034;
-$calm:                                #3498DB;
-$subtle:                              #F8F8F8;
-$slime:                               #1ABC9C;
-$burntsea:                            #487AA8;
-$vibrant:                             #D44F99;
-$parttime:                            #09A0EF;
-$fasttrack:                           #FF6A26;
-
---*/
 
 
 
@@ -24,7 +9,7 @@ $fasttrack:                           #FF6A26;
 }
 
 .navbar .navbar-nav li a:hover, .navbar .navbar-nav li a:focus {
-  color: #2C3E50;
+  color: $darknight;
 }
 
 .ct-pricing .ct-pricing-pricebox {
@@ -54,7 +39,7 @@ $fasttrack:                           #FF6A26;
 }
 
 .ct-u-bgBlack {
-  background: #2C3E50;
+  background: $darknight;
 }
 
 .ct-tabs--witharrow .nav-tabs > li > a,
@@ -175,11 +160,11 @@ select.form-control {
 
 /*--  Fulltime Template  --*/
 .fulltime .ct-pricing .ct-pricing-content .ct-pricing-content-ul li.ct-pricing-content-ul-activesep:before {
-  color: #2C3E50 !important;
+  color: $darknight !important;
 }
 
 .fulltime .ct-iconBox-icon--circle {
-  background-color: #2C3E50;
+  background-color: $darknight;
 }
 
 .tweets_display
