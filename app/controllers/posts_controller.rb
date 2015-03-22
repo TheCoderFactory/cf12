@@ -30,7 +30,7 @@ class PostsController < ApplicationController
     @popular_posts = Post.popular_posts.limit(3)
     @post_categories = PostCategory.all
     @tags = ActsAsTaggableOn::Tag.most_used(10)
-    impressionist(@post)
+    # impressionist(@post)
     respond_with(@post)
   end
 

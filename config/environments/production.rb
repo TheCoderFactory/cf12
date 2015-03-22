@@ -26,7 +26,7 @@ Rails.application.configure do
 
   # Puts ActionDispatch::Static in middleware stack which we are going to replace with
   # Rack::Zippy::AssetServer
-  config.serve_static_assets = true
+  config.serve_static_files = true
   
   # Compress JavaScripts and CSS.
   # config.assets.js_compressor = :uglifier
