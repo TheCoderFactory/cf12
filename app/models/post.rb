@@ -3,14 +3,14 @@ class Post < ActiveRecord::Base
   belongs_to :post_category
 
   acts_as_taggable
-  is_impressionable :counter_cache => true
+  # is_impressionable :counter_cache => true
   extend FriendlyId
 	friendly_id :title, use: :slugged
 	# acts_as_taggable
 	# mount_uploader :image, PostImageUploader
 	require 'csv'
 
-  after_save :update_post_category_count
+  # after_save :update_post_category_count
 
   def self.import(file)
     CSV.foreach(file.path, headers: true) do |row|
