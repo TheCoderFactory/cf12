@@ -6189,8 +6189,8 @@ Copyright (c) 2014 Daniel Eden
 }
 body {
   font-family: $body-font;
-  font-size: 15px;
-  line-height: 2em;
+  font-size: $font-size-medium;
+  line-height: $line-height-base;
 }
 a,
 button,
