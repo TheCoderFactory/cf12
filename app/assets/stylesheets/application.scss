@@ -151,7 +151,18 @@ font-weight: 700;
     background-color: #EBEFF0;
     
 }
-
+.ct-pricing .ct-pricing-content .ct-pricing-content-ul {
+margin: 0;
+max-width: 500px;
+margin: 0 auto;
+padding: 41px 40px;
+}
+.ct-pricing .ct-pricing-content .ct-pricing-content-ul li {
+list-style-type: none;
+font-size: $font-size-medium + 0.10em;
+line-height: 1.5;
+color: $darknight;
+}
 
 .cart {
   background-color: $dirty-gold;
