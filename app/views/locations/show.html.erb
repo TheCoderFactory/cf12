@@ -27,7 +27,20 @@
 <div class="ct-singleCourse-intro ct-u-bgWhite">
 	<div class="container">
 		<h2><%= @location.name %></h2>
-		
+		<div class="panel panel-default">
+      <div class="panel-body">
+        <div class='row'>
+          <div class="col-md-3">
+            <img src="<%= asset_path @location.logo %>" alt="<%= @location.name + ' logo' %>">
+          </div>
+          <div class="col-md-3">
+            <p><%= @location.street %></p>
+            <p><%= @location.suburb %> <%= @location.state %> <%= @location.postcode %></p>
+            <p><%= @location.website %></p>
+          </div>
+        </div>
+      </div>
+    </div>
 
 	</div>
 </div>
