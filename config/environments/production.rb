@@ -89,7 +89,7 @@ Rails.application.configure do
     domain: 'thecoderfactory.com',
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: 'pete@thecoderfactory.com',
-    password: 'R_IFjQoQNNkqfxc0hVLHWA'
+    user_name: 'email@email.com',
+    password: 'password'
   }
 end
