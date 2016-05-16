@@ -42,8 +42,8 @@ Rails.application.configure do
     domain: 'thecoderfactory.com',
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: 'peterargent',
-    password: '8ec9c5dd-c686-47bd-b2e6-68695992d916'
+    user_name: 'username',
+    password: 'password'
   }
   # Send email in development mode.
   config.action_mailer.perform_deliveries = true
